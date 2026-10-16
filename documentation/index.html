@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrightPath Academy Template Documentation</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <style>
+    :root {
+      --doc-primary: #2563eb;
+      --doc-sidebar-w: 280px;
+      --doc-bg: #f8fafc;
+      --doc-surface: #ffffff;
+      --doc-text: #0f172a;
+      --doc-muted: #64748b;
+      --doc-border: #e2e8f0;
+    }
+    [data-theme="dark"] {
+      --doc-bg: #0b1120;
+      --doc-surface: #1e293b;
+      --doc-text: #f8fafc;
+      --doc-muted: #94a3b8;
+      --doc-border: #334155;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--doc-bg);
+      color: var(--doc-text);
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+    }
+    code, pre {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    pre {
+      background: #0f172a;
+      color: #38bdf8;
+      padding: 1.25rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    .doc-sidebar {
+      width: var(--doc-sidebar-w);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      border-right: 1px solid var(--doc-border);
+      background: var(--doc-surface);
+      padding: 2rem 1.25rem;
+    }
+    .doc-nav-link {
+      display: block;
+      padding: 0.5rem 0.75rem;
+      color: var(--doc-muted);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .doc-nav-link:hover, .doc-nav-link.active {
+      color: var(--doc-primary);
+      background-color: rgba(37, 99, 235, 0.08);
+    }
+    .doc-content {
+      padding: 3rem 2.5rem;
+      max-width: 960px;
+    }
+    .badge-soft {
+      background-color: rgba(37, 99, 235, 0.1);
+      color: var(--doc-primary);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+    @media (max-width: 992px) {
+      .doc-sidebar {
+        display: none;
+      }
+      .doc-content {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="d-flex min-vh-100">
+    <!-- Sidebar -->
+    <aside class="doc-sidebar">
+      <div class="d-flex align-items-center gap-2 mb-4">
+        <div style="width: 36px; height: 36px; background: #2563eb; color: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+          <svg class="bp-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          </svg>
+        </div>
+        <div>
+          <h6 class="mb-0 font-heading">BrightPath</h6>
+          <span class="badge bg-primary-subtle text-primary" style="font-size: 0.65rem;">Docs v1.0.0</span>
+        </div>
+      </div>
+
+      <nav>
+        <div class="text-uppercase small fw-bold text-muted mb-2" style="font-size: 0.7rem;">Getting Started</div>
+        <a href="#overview" class="doc-nav-link active">1. Overview</a>
+        <a href="#file-structure" class="doc-nav-link">2. File Structure</a>
+        <a href="#installation" class="doc-nav-link">3. Installation Guide</a>
+
+        <div class="text-uppercase small fw-bold text-muted mt-4 mb-2" style="font-size: 0.7rem;">Customization</div>
+        <a href="#colors-fonts" class="doc-nav-link">4. Colors & Fonts</a>
+        <a href="#dark-mode" class="doc-nav-link">5. Dark / Light Mode</a>
+        <a href="#rtl-support" class="doc-nav-link">6. RTL Support</a>
+        <a href="#integrations" class="doc-nav-link">7. Form & Map Integrations</a>
+
+        <div class="text-uppercase small fw-bold text-muted mt-4 mb-2" style="font-size: 0.7rem;">Reference</div>
+        <a href="#page-structure" class="doc-nav-link">8. Page Walkthrough</a>
+        <a href="#credits" class="doc-nav-link">9. Credits & Third-Party</a>
+        <a href="#support" class="doc-nav-link">10. Support & License</a>
+      </nav>
+
+      <div class="mt-5 pt-3 border-top">
+        <a href="../pages/index.html" class="btn btn-outline-primary btn-sm w-100 mb-2">
+          <i class="fa-solid fa-arrow-left me-1"></i> View Live Template
+        </a>
+        <a href="../pages/dashboard.html" class="btn btn-primary btn-sm w-100">
+          <i class="fa-solid fa-gauge-high me-1"></i> Parent Dashboard
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Documentation Content -->
+    <main class="doc-content flex-grow-1">
+      
+      <!-- Section 1: Overview -->
+      <section id="overview" class="mb-5">
+        <span class="badge-soft mb-2 d-inline-block">Template Manual</span>
+        <h1 class="font-heading fs-1 mb-2">BrightPath Academy HTML Template</h1>
+        <p class="lead text-muted">
+          A modern, responsive HTML5, CSS3, JavaScript, Bootstrap 5 & Tailwind-ready template built for After-School Homework Help, STEM Discovery, and Academic Enrichment Centers.
+        </p>
+        <div class="alert alert-info border-0 shadow-sm d-flex align-items-center gap-3">
+          <i class="fa-solid fa-circle-check fs-4"></i>
+          <div>
+            <strong>Production Ready:</strong> Includes full Dark Mode, Right-To-Left (RTL) layout, WCAG 2.1 AA accessibility features, Parent Sign In portal, and an interactive Parent Dashboard for booking session slots, tracking homework completion notes, and viewing attendance logs.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: File Structure -->
+      <section id="file-structure" class="mb-5">
+        <h2 class="font-heading fs-3 mb-3">2. File Structure</h2>
+        <p class="text-muted">The template follows clean, modular separation of assets, pages, and documentation:</p>
+        <pre><code>Tuition center/
+├── assets/
+│   ├── css/
+│   │   ├── style.css           # Core styling, variables & responsive breakpoints
+│   │   ├── dark-mode.css       # Complete dark theme styling overrides
+│   │   └── rtl.css             # Right-to-Left language layout mirroring
+│   ├── js/
+│   │   ├── main.js             # Theme switcher, RTL manager, counters, filters & toasts
+│   │   └── dashboard.js        # Slot booking, homework note filter, attendance CSV export
+│   ├── images/                 # Image assets placeholder directory
+│   └── fonts/                  # Web font files
+├── pages/
+│   ├── index.html              # Academic homepage with trial booking modal & stats
+│   ├── about.html              # Mission, safety protocols, facility photo tour
+│   ├── programs.html           # Subject-organized programs (Math, STEM, Reading, etc.)
+│   ├── services.html           # Core care options, weekend camps & private tutoring
+│   ├── tutors.html             # Certified educator directory, ratings & bios
+│   ├── login.html              # Parent & Student Sign In portal with 1-click demo
+│   ├── register.html           # Multi-step enrollment registration form
+│   ├── dashboard.html          # Full Parent Dashboard (Slot booking, notes, attendance)
+│   ├── blog.html               # Study tips, homework strategies & parenting articles
+│   └── contact.html            # Contact inquiry, tour booking, interactive map
+├── documentation/
+│   └── index.html              # Interactive documentation guide
+├── index.html                  # Seamless root landing entry redirector
+├── robots.txt                  # Production search engine crawler rules
+├── sitemap.xml                 # Search engine XML sitemap
+└── README.md                   # Comprehensive Markdown repository documentation</code></pre>
+      </section>
+
+      <!-- Section 3: Installation -->
+      <section id="installation" class="mb-5">
+        <h2 class="font-heading fs-3 mb-3">3. Installation Guide</h2>
+        <p class="text-muted">You do not need Node.js or complex build tools to run this template. It runs directly in any modern browser.</p>
+        
+        <h5 class="font-heading fs-6 mt-3">Option A: Quick Local Preview</h5>
+        <ol class="text-muted small">
+          <li>Unzip the template folder to your local drive.</li>
+          <li>Double-click <code>index.html</code> (or <code>pages/index.html</code>) to open in Chrome, Firefox, Safari, or Edge.</li>
+        </ol>
+
+        <h5 class="font-heading fs-6 mt-3">Option B: VS Code Live Server</h5>
+        <ol class="text-muted small">
+          <li>Open the folder in VS Code.</li>
+          <li>Install the <strong>Live Server</strong> extension.</li>
+          <li>Right-click <code>index.html</code> and select <strong>"Open with Live Server"</strong>.</li>
+        </ol>
+
+        <h5 class="font-heading fs-6 mt-3">Option C: Web Server Deployment (Apache, Nginx, Netlify, Vercel)</h5>
+        <p class="text-muted small">
+          Upload all files directly to your public webroot (e.g. <code>public_html/</code>, <code>/var/www/html</code>, or drag & drop onto Netlify Drop).
+        </p>
+      </section>
+
+      <!-- Section 4: Colors & Fonts -->
+      <section id="colors-fonts" class="mb-5">
+        <h2 class="font-heading fs-3 mb-3">4. Customization: Colors & Fonts</h2>
+        <p class="text-muted">All visual branding colors are organized as CSS Variables in <code>assets/css/style.css</code>:</p>
+        <pre><code>:root {
+  --bp-primary: #2563eb;        /* Primary Brand Blue */
+  --bp-secondary: #059669;      /* Growth Emerald Green */
+  --bp-accent: #f59e0b;         /* Warm Gold/Amber */
+  --bp-coral: #f43f5e;          /* Attention Coral */
+  --bp-purple: #8b5cf6;         /* STEM Purple */
+
+  /* Typography */
+  --bp-font-heading: 'Outfit', sans-serif;
+  --bp-font-body: 'Plus Jakarta Sans', sans-serif;
+}</code></pre>
+        <p class="text-muted small">
+          To change the primary color to violet, simply change <code>--bp-primary: #7c3aed;</code> and all buttons, badges, icons, and hero highlights update automatically.
+        </p>
+      </section>
+
+      <!-- Section 5: Dark / Light Mode -->
+      <section id="dark-mode" class="mb-5">
+        <h2 class="font-heading fs-3 mb-3">5. Dark / Light Mode Toggle</h2>
+        <p class="text-muted">
+          The template features automatic system color scheme detection (via <code>prefers-color-scheme</code>) and persistent manual switching.
+        </p>
+        <ul class="text-muted small">
+          <li>User preference is saved in <code>localStorage</code> under <code>brightpath_theme</code>.</li>
+          <li>Theme switches the <code>data-theme="dark"</code> and <code>data-bs-theme="dark"</code> attributes on the root <code>&lt;html&gt;</code> element.</li>
+          <li>Dark styles are neatly isolated in <code>assets/css/dark-mode.css</code> for effortless maintenance.</li>
+        </ul>
+      </section>
+
+      <!-- Section 6: RTL Support -->
+      <section id="rtl-support" class="mb-5">
+        <h2 class="font-heading fs-3 mb-3">6. Right-to-Left (RTL) Layout Compatibility</h2>
+        <p class="text-muted">
+          For Arabic, Hebrew, and Persian audiences, click the <strong>"RTL"</strong> button in the navigation bar.
+        </p>
+        <ul class="text-muted small">
+          <li>Toggles <code>dir="rtl"</code> on <code>&lt;html&gt;</code>.</li>
+          <li>Mirrors directional icons, chevron arrows, dashboard sidebars, and form inputs via <code>assets/css/rtl.css</code>.</li>
+        </ul>
+      </section>
+
+      <!-- Section 7: Integrations -->
+      <section id="integrations" class="mb-5">
+        <h2 class="font-heading fs-3 mb-3">7. Form & API Integrations</h2>
+        
+        <h5 class="font-heading fs-6">Contact Form (Formspree / Netlify Forms)</h5>
+        <p class="text-muted small">In <code>pages/contact.html</code>, replace the form action with your endpoint:</p>
+        <pre><code>&lt;form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="needs-validation" novalidate&gt;</code></pre>
+
+        <h5 class="font-heading fs-6 mt-3">Google Maps</h5>
+        <p class="text-muted small">In <code>pages/contact.html</code>, replace the iframe embed URL with your Google Maps embed URL.</p>
+
+        <h5 class="font-heading fs-6 mt-3">Stripe / PayPal Checkout Placeholders</h5>
+        <p class="text-muted small">In <code>pages/register.html</code>, the credit card placeholder form is positioned for Stripe Elements or PayPal Buttons SDK.</p>
+      </section>
+
+      <!-- Section 8: Page Walkthrough -->
+      <section id="page-structure" class="mb-5">
+        <h2 class="font-heading fs-3 mb-3">8. Page Walkthrough</h2>
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead class="table-light">
+              <tr>
+                <th>Page</th>
+                <th>File Path</th>
+                <th>Purpose & Key Features</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Home</strong></td>
+                <td><code>pages/index.html</code></td>
+                <td>Academic pillars, subjects preview, verified stats counter, tutor spotlight, free trial booking modal.</td>
+              </tr>
+              <tr>
+                <td><strong>Programs</strong></td>
+                <td><code>pages/programs.html</code></td>
+                <td>Curriculum organized by subject: Math, STEM, Reading, Science, Study Skills with interactive filter.</td>
+              </tr>
+              <tr>
+                <td><strong>Tutors</strong></td>
+                <td><code>pages/tutors.html</code></td>
+                <td>Certified educators, background check verification badges, degrees, ratings, and bio modal.</td>
+              </tr>
+              <tr>
+                <td><strong>Parent Sign In</strong></td>
+                <td><code>pages/login.html</code></td>
+                <td>Parent & Student portal login, 1-Click demo autofill, password toggle, password reset modal.</td>
+              </tr>
+              <tr>
+                <td><strong>Parent Dashboard</strong></td>
+                <td><code>pages/dashboard.html</code></td>
+                <td>Interactive session slot booking, live homework completion notes tracker with sign-offs, attendance history table with CSV export.</td>
+              </tr>
+              <tr>
+                <td><strong>Student Enrollment</strong></td>
+                <td><code>pages/register.html</code></td>
+                <td>Multi-step admission form for parents, grade selection, dietary notes, and payment placeholder.</td>
+              </tr>
+              <tr>
+                <td><strong>About Center</strong></td>
+                <td><code>pages/about.html</code></td>
+                <td>Center mission, philosophy, facility photo tour gallery, child protection protocols.</td>
+              </tr>
+              <tr>
+                <td><strong>Blog & Tips</strong></td>
+                <td><code>pages/blog.html</code></td>
+                <td>Study guides, homework tips, growth mindset math articles, search & categories.</td>
+              </tr>
+              <tr>
+                <td><strong>Contact & Tours</strong></td>
+                <td><code>pages/contact.html</code></td>
+                <td>Tour booking form, Google maps placeholder, parking & pickup guide.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 9: Credits -->
+      <section id="credits" class="mb-5">
+        <h2 class="font-heading fs-3 mb-3">9. Credits & Third-Party Resources</h2>
+        <ul class="text-muted small">
+          <li><strong>Framework:</strong> <a href="https://getbootstrap.com" target="_blank">Bootstrap 5.3.3</a> (MIT License)</li>
+          <li><strong>Icons:</strong> <a href="https://fontawesome.com" target="_blank">Font Awesome 6.5.2</a> (Free License)</li>
+          <li><strong>Typography:</strong> Google Fonts (<a href="https://fonts.google.com/specimen/Outfit" target="_blank">Outfit</a> & <a href="https://fonts.google.com/specimen/Plus+Jakarta+Sans" target="_blank">Plus Jakarta Sans</a>)</li>
+          <li><strong>Images:</strong> <a href="https://unsplash.com" target="_blank">Unsplash</a> (Free educational license, unique and relevant educational photography)</li>
+        </ul>
+      </section>
+
+      <!-- Section 10: Support -->
+      <section id="support" class="mb-5">
+        <h2 class="font-heading fs-3 mb-3">10. Changelog & Support</h2>
+        <p class="text-muted small">
+          <strong>Version 1.0.0 (October 2026):</strong> Initial release with full Parent Dashboard, Session Slot Booking, Homework Notes Tracker, Attendance Log, Dark/Light mode, RTL support, and WCAG 2.1 AA accessibility.
+        </p>
+        <p class="text-muted small">
+          For questions, technical support, or customizations, please reach out via the <a href="../pages/contact.html">Contact Page</a> or submit an inquiry to <code>support@brightpathacademy.example.com</code>.
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

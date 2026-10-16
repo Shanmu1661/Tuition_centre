@@ -1,0 +1,96 @@
+/* ==========================================================================
+   BrightPath Academy - After-School Homework Help & Enrichment Center
+   RTL (Right-to-Left) Stylesheet (rtl.css)
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] body {
+  text-align: right;
+}
+
+/* Mirrored Typography & Headings */
+[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+/* Mirrored Navbar Elements */
+[dir="rtl"] .bp-brand {
+  margin-right: 0 !important;
+  margin-left: clamp(1.25rem, 2vw, 2.5rem) !important;
+}
+
+[dir="rtl"] .bp-controls-group {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+[dir="rtl"] .rtl-toggle-btn {
+  direction: ltr !important;
+}
+
+/* Floating Badges on Hero Mirrored */
+[dir="rtl"] .bp-floating-badge-1 {
+  left: auto;
+  right: -20px;
+}
+
+[dir="rtl"] .bp-floating-badge-2 {
+  right: auto;
+  left: -20px;
+}
+
+/* Skip Link */
+[dir="rtl"] .skip-link {
+  left: auto;
+  right: 20px;
+}
+
+/* Dashboard Sidebar Mirrored */
+[dir="rtl"] .bp-dash-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--bp-border);
+}
+
+/* Arrow & Directional Icons Flip */
+[dir="rtl"] .fa-arrow-right,
+[dir="rtl"] .fa-chevron-right,
+[dir="rtl"] .fa-angle-right {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .fa-arrow-left,
+[dir="rtl"] .fa-chevron-left,
+[dir="rtl"] .fa-angle-left {
+  transform: scaleX(-1);
+}
+
+/* Footer Link Hover Padding Mirror */
+[dir="rtl"] .bp-footer-links a:hover {
+  padding-left: 0;
+  padding-right: 4px;
+}
+
+/* Tutor Verified Badge */
+[dir="rtl"] .bp-verified-badge {
+  right: auto;
+  left: 4px;
+}
+
+/* Program Overlay Badge */
+[dir="rtl"] .bp-program-overlay-badge {
+  right: auto;
+  left: 1rem;
+}
+
+/* Modal Close Button */
+[dir="rtl"] .modal-header .btn-close {
+  margin: -0.5rem auto -0.5rem -0.5rem;
+}

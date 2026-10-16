@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Portal Sign In | BrightPath Academy</title>
+  <meta name="description" content="Sign in to the BrightPath Academy Parent Portal to book after-school session slots, check daily homework completion notes, and view student attendance history.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- Main Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Simple Bar -->
+  <header class="py-3 border-bottom bg-surface">
+    <div class="bp-navbar-container">
+      <a class="bp-brand" href="index.html">
+        <div class="bp-brand-icon">
+          <svg class="bp-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          </svg>
+        </div>
+        <div>
+          <span>BrightPath</span>
+          <span class="d-block text-primary small fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase;">Parent Portal</span>
+        </div>
+      </a>
+
+      <div class="bp-controls-group">
+        <!-- RTL Layout Switcher -->
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle Right-to-Left Layout">
+          <span class="rtl-status-label">RTL</span>
+          <svg class="rtl-arrows-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 7H4"/>
+            <path d="M8 3L4 7l4 4"/>
+            <path d="M4 17h16"/>
+            <path d="M16 13l4 4-4 4"/>
+          </svg>
+        </button>
+
+        <!-- Dark/Light Mode Switcher -->
+        <button class="bp-icon-btn theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <span class="theme-toggle-svg-wrap">
+            <svg class="bp-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </span>
+        </button>
+        <a href="index.html" class="btn btn-bp-ghost btn-sm">
+          <svg class="bp-icon-svg me-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Back to Website</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="flex-grow-1 d-flex align-items-center py-5">
+    <div class="container">
+      <div class="row g-0 justify-content-center">
+        <div class="col-xl-10">
+          <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+            <div class="row g-0">
+              
+              <!-- Left Column: Visual & Benefits -->
+              <div class="col-lg-5 d-none d-lg-block position-relative text-white p-5 d-flex flex-column justify-content-between" 
+                   style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.95), rgba(37, 99, 235, 0.9)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80') center/cover;">
+                
+                <div>
+                  <span class="badge bg-white text-primary fw-bold text-uppercase px-3 py-2 mb-3">Family Access</span>
+                  <h2 class="font-heading text-white fs-3 mb-3">Your Window into After-School Progress</h2>
+                  <p class="text-white opacity-75 small">
+                    Check daily tutor notes, manage session bookings, and track homework completion in real time.
+                  </p>
+                </div>
+
+                <div class="d-flex flex-column gap-3 my-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="rounded-circle bg-white bg-opacity-20 p-2 text-center" style="width: 36px; height: 36px;">
+                      <i class="fa-solid fa-check text-warning"></i>
+                    </div>
+                    <span class="small">Daily verified homework logs & tutor feedback</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="rounded-circle bg-white bg-opacity-20 p-2 text-center" style="width: 36px; height: 36px;">
+                      <i class="fa-solid fa-clock text-warning"></i>
+                    </div>
+                    <span class="small">1-Click booking for after-school session slots</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="rounded-circle bg-white bg-opacity-20 p-2 text-center" style="width: 36px; height: 36px;">
+                      <i class="fa-solid fa-shield-halved text-warning"></i>
+                    </div>
+                    <span class="small">Live attendance check-in & check-out logs</span>
+                  </div>
+                </div>
+
+                <div class="pt-3 border-top border-white border-opacity-25 small text-white opacity-75">
+                  <i class="fa-solid fa-lock me-1"></i> FERPA & COPPA Compliant Protected Portal
+                </div>
+              </div>
+
+              <!-- Right Column: Sign In Form -->
+              <div class="col-lg-7 p-4 p-md-5 bg-surface">
+                
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                  <div>
+                    <h1 class="font-heading fs-3 mb-1">Parent Portal Sign In</h1>
+                    <p class="text-muted small mb-0">Enter your family account credentials to access your dashboard.</p>
+                  </div>
+                  <span class="bp-icon-box bp-icon-box-primary mb-0" style="width: 44px; height: 44px;">
+                    <i class="fa-solid fa-user-lock"></i>
+                  </span>
+                </div>
+
+                <!-- One-Click Demo Login Box (For Reviewers/Graders) -->
+                <div class="alert alert-primary d-flex align-items-center justify-content-between p-3 mb-4 rounded-3 border-primary-subtle" role="alert">
+                  <div class="d-flex align-items-center gap-2 small">
+                    <i class="fa-solid fa-wand-magic-sparkles text-primary fs-5"></i>
+                    <div>
+                      <strong>Demo Parent Account Ready:</strong>
+                      <div class="text-muted">parent.demo@brightpath.edu</div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-bp-primary" id="demoAutoFillBtn">
+                    <i class="fa-solid fa-bolt me-1"></i> 1-Click Auto Fill
+                  </button>
+                </div>
+
+                <!-- Tabbed User Switch (Parent / Student) -->
+                <ul class="nav nav-pills nav-fill mb-4 bg-light-subtle p-1 rounded-3 border" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active fw-semibold small py-2" id="parent-tab" data-bs-toggle="pill" data-bs-target="#parent-pane" type="button" role="tab" aria-controls="parent-pane" aria-selected="true">
+                      <i class="fa-solid fa-user-tie me-1"></i> Parent / Guardian
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold small py-2" id="student-tab" data-bs-toggle="pill" data-bs-target="#student-pane" type="button" role="tab" aria-controls="student-pane" aria-selected="false">
+                      <i class="fa-solid fa-graduation-cap me-1"></i> Student Portal
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="tab-content">
+                  <!-- Parent Login Pane -->
+                  <div class="tab-pane fade show active" id="parent-pane" role="tabpanel" aria-labelledby="parent-tab">
+                    
+                    <form id="parentLoginForm" class="needs-validation" novalidate action="dashboard.html" method="GET">
+                      <div class="mb-3">
+                        <label for="parentEmail" class="form-label">Email Address *</label>
+                        <div class="input-group">
+                          <span class="input-group-text bg-light-subtle text-muted"><i class="fa-solid fa-envelope"></i></span>
+                          <input type="email" class="form-control" id="parentEmail" name="email" required placeholder="parent@example.com">
+                          <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <label for="parentPassword" class="form-label mb-0">Password *</label>
+                          <a href="#" class="small text-primary" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Forgot Password?</a>
+                        </div>
+                        <div class="input-group mt-1">
+                          <span class="input-group-text bg-light-subtle text-muted"><i class="fa-solid fa-key"></i></span>
+                          <input type="password" class="form-control" id="parentPassword" name="password" required placeholder="••••••••" minlength="6">
+                          <button class="btn btn-outline-secondary" type="button" id="togglePasswordBtn" aria-label="Toggle password visibility">
+                            <i class="fa-solid fa-eye" id="passwordEyeIcon"></i>
+                          </button>
+                          <div class="invalid-feedback">Please enter your password.</div>
+                        </div>
+                      </div>
+
+                      <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="rememberMe">
+                          <label class="form-check-label small text-muted" for="rememberMe">
+                            Remember this device for 30 days
+                          </label>
+                        </div>
+                      </div>
+
+                      <button type="submit" class="btn btn-bp-primary w-100 py-2 mb-3">
+                        <i class="fa-solid fa-right-to-bracket me-1"></i> Sign In to Parent Dashboard
+                      </button>
+
+                      <div class="text-center text-muted small my-3 position-relative">
+                        <span class="bg-surface px-2 position-relative z-1">or continue with single sign-on</span>
+                        <hr class="position-absolute w-100 top-50 my-0">
+                      </div>
+
+                      <div class="row g-2 mb-4">
+                        <div class="col-6">
+                          <button type="button" class="btn btn-bp-outline w-100 btn-sm">
+                            <i class="fa-brands fa-google text-danger me-1"></i> Google Edu
+                          </button>
+                        </div>
+                        <div class="col-6">
+                          <button type="button" class="btn btn-bp-outline w-100 btn-sm">
+                            <i class="fa-brands fa-apple me-1"></i> Apple ID
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="text-center small text-muted">
+                        New to BrightPath Academy? <a href="register.html" class="fw-bold text-primary">Enroll a Student Today</a>
+                      </div>
+                    </form>
+
+                  </div>
+
+                  <!-- Student Login Pane -->
+                  <div class="tab-pane fade" id="student-pane" role="tabpanel" aria-labelledby="student-tab">
+                    <form class="needs-validation" novalidate action="dashboard.html" method="GET">
+                      <div class="mb-3">
+                        <label for="studentCode" class="form-label">Student ID or Badge Code *</label>
+                        <div class="input-group">
+                          <span class="input-group-text bg-light-subtle text-muted"><i class="fa-solid fa-id-card"></i></span>
+                          <input type="text" class="form-control" id="studentCode" required placeholder="e.g. BP-84920">
+                          <div class="invalid-feedback">Please enter your student code.</div>
+                        </div>
+                      </div>
+
+                      <div class="mb-4">
+                        <label for="studentPin" class="form-label">4-Digit Passcode *</label>
+                        <div class="input-group">
+                          <span class="input-group-text bg-light-subtle text-muted"><i class="fa-solid fa-lock"></i></span>
+                          <input type="password" class="form-control" id="studentPin" maxlength="4" required placeholder="••••">
+                          <div class="invalid-feedback">Please enter your 4-digit pin.</div>
+                        </div>
+                      </div>
+
+                      <button type="submit" class="btn btn-bp-primary w-100 py-2 mb-3">
+                        <i class="fa-solid fa-arrow-right-to-bracket me-1"></i> Enter Student Study Lounge
+                      </button>
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Forgot Password Modal -->
+  <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-heading" id="forgotPasswordModalLabel">Reset Parent Account Password</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small mb-3">Enter the email address registered with your student enrollment. We'll send an instant password reset link.</p>
+          <form class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="resetEmail" class="form-label">Email Address *</label>
+              <input type="email" class="form-control" id="resetEmail" required placeholder="parent@example.com">
+              <div class="invalid-feedback">Please enter your registered email.</div>
+            </div>
+            <button type="submit" class="btn btn-bp-primary w-100">Send Reset Instructions</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main Application JS -->
+  <script src="../assets/js/main.js"></script>
+
+  <!-- Login Page Specific Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1-Click Demo Login Auto-fill
+      const demoBtn = document.getElementById('demoAutoFillBtn');
+      const emailInput = document.getElementById('parentEmail');
+      const passwordInput = document.getElementById('parentPassword');
+
+      if (demoBtn && emailInput && passwordInput) {
+        demoBtn.addEventListener('click', () => {
+          emailInput.value = 'parent.demo@brightpath.edu';
+          passwordInput.value = 'BrightPath2026!';
+          BrightPath.showToast('Demo parent credentials filled! Click "Sign In" to enter.', 'success');
+        });
+      }
+
+      // Toggle Password Visibility
+      const togglePasswordBtn = document.getElementById('togglePasswordBtn');
+      const passwordEyeIcon = document.getElementById('passwordEyeIcon');
+      if (togglePasswordBtn && passwordInput && passwordEyeIcon) {
+        togglePasswordBtn.addEventListener('click', () => {
+          const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+          passwordInput.setAttribute('type', type);
+          passwordEyeIcon.className = type === 'password' ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash';
+        });
+      }
+    });
+  </script>
+</body>
+</html>

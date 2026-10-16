@@ -1,0 +1,173 @@
+/* ==========================================================================
+   BrightPath Academy - After-School Homework Help & Enrichment Center
+   Dark Mode Stylesheet (dark-mode.css)
+   ========================================================================== */
+
+[data-theme="dark"],
+[data-bs-theme="dark"] {
+  /* Surface & Background Dark Tokens */
+  --bp-bg-body: #0b1120;             /* Very dark slate */
+  --bp-bg-surface: #1e293b;          /* Dark card surface */
+  --bp-bg-surface-secondary: #0f172a;/* Darker surface */
+  --bp-bg-surface-elevated: #334155; /* Floating card surface */
+
+  /* Text Overrides */
+  --bp-text-main: #f8fafc;           /* Slate 50 */
+  --bp-text-muted: #94a3b8;          /* Slate 400 */
+  --bp-text-light: #64748b;          /* Slate 500 */
+
+  /* Borders */
+  --bp-border: #334155;              /* Slate 700 */
+  --bp-border-subtle: #1e293b;       /* Slate 800 */
+
+  /* Brand Adjustments for Dark Contrast */
+  --bp-primary-light: rgba(37, 99, 235, 0.2);
+  --bp-secondary-light: rgba(5, 150, 105, 0.2);
+  --bp-accent-light: rgba(245, 158, 11, 0.2);
+  --bp-purple-light: rgba(139, 92, 246, 0.2);
+  --bp-coral-light: rgba(244, 63, 94, 0.2);
+
+  /* Shadows in Dark Mode */
+  --bp-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --bp-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px -1px rgba(0, 0, 0, 0.5);
+  --bp-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --bp-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+  --bp-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar in Dark Mode */
+[data-theme="dark"] .bp-navbar,
+[data-bs-theme="dark"] .bp-navbar {
+  background-color: rgba(15, 23, 42, 0.96);
+  border-bottom-color: var(--bp-border);
+}
+
+[data-theme="dark"] .bp-nav-link,
+[data-bs-theme="dark"] .bp-nav-link {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .bp-nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .bp-nav-link.active,
+[data-bs-theme="dark"] .bp-nav-link.active {
+  color: #60a5fa !important;
+  background-color: rgba(37, 99, 235, 0.2);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+[data-theme="dark"] .btn-bp-outline,
+[data-bs-theme="dark"] .btn-bp-outline {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .btn-bp-outline:hover,
+[data-bs-theme="dark"] .btn-bp-outline:hover {
+  background-color: rgba(37, 99, 235, 0.2);
+  border-color: #3b82f6;
+  color: #93c5fd;
+}
+
+[data-theme="dark"] .bp-icon-btn,
+[data-bs-theme="dark"] .bp-icon-btn {
+  background-color: #1e293b;
+  border-color: #334155;
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .bp-icon-btn:hover,
+[data-bs-theme="dark"] .bp-icon-btn:hover {
+  background-color: #334155;
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+[data-theme="dark"] .rtl-toggle-btn,
+[data-bs-theme="dark"] .rtl-toggle-btn {
+  background-color: #1e293b;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .rtl-toggle-btn:hover,
+[data-bs-theme="dark"] .rtl-toggle-btn:hover {
+  background-color: #273549;
+  border-color: #475569;
+  color: #ffffff;
+}
+
+/* Form Elements in Dark Mode */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+  background-color: #0f172a;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus,
+[data-bs-theme="dark"] .form-control:focus,
+[data-bs-theme="dark"] .form-select:focus {
+  background-color: #0f172a;
+  border-color: var(--bp-primary);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .form-control::placeholder,
+[data-bs-theme="dark"] .form-control::placeholder {
+  color: #64748b;
+}
+
+/* Skeleton Loading State Shimmer for Dark Mode */
+[data-theme="dark"] .skeleton,
+[data-bs-theme="dark"] .skeleton {
+  background: linear-gradient(90deg, #1e293b 25%, #334155 37%, #1e293b 63%);
+  background-size: 400% 100%;
+}
+
+/* Dropdowns & Modals in Dark Mode */
+[data-theme="dark"] .dropdown-menu,
+[data-bs-theme="dark"] .dropdown-menu,
+[data-theme="dark"] .modal-content,
+[data-bs-theme="dark"] .modal-content {
+  background-color: #1e293b;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .dropdown-item,
+[data-bs-theme="dark"] .dropdown-item {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .dropdown-item:hover,
+[data-bs-theme="dark"] .dropdown-item:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+/* Tables in Dark Mode */
+[data-theme="dark"] .table,
+[data-bs-theme="dark"] .table {
+  --bs-table-bg: transparent;
+  --bs-table-color: #cbd5e1;
+  --bs-table-border-color: #334155;
+}
+
+/* Dark mode overrides for cards & stats */
+[data-theme="dark"] .bp-stat-item,
+[data-bs-theme="dark"] .bp-stat-item {
+  border-color: #334155;
+}
+
+[data-theme="dark"] .btn-close,
+[data-bs-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}

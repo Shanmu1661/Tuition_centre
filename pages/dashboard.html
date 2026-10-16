@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Dashboard | BrightPath Academy</title>
+  <meta name="description" content="Manage after-school session bookings, track daily homework completion notes, and monitor student attendance history on BrightPath Parent Portal.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- Main Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="bg-body">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Dashboard Navbar -->
+  <nav class="navbar navbar-expand-lg bp-navbar bp-navbar-dashboard sticky-top border-bottom py-2" aria-label="Dashboard Top Navigation">
+    <div class="bp-navbar-container">
+      <!-- Brand & Home link -->
+      <a class="bp-brand" href="index.html">
+        <div class="bp-brand-icon" style="width: 38px; height: 38px;">
+          <svg class="bp-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="fs-5">BrightPath</span>
+          <span class="d-block text-primary small fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.05em; text-transform: uppercase;">Parent Portal</span>
+        </div>
+      </a>
+
+      <!-- Child Selector Widget in Topbar -->
+      <div class="d-none d-md-flex align-items-center gap-2 ms-4 bg-light-subtle px-3 py-1 rounded-pill border">
+        <svg class="bp-icon-svg text-primary" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <label for="dashChildSelector" class="small fw-bold text-muted mb-0">Student:</label>
+        <select class="form-select form-select-sm border-0 bg-transparent fw-bold text-primary shadow-none py-0" id="dashChildSelector" style="width: auto; cursor: pointer;">
+          <option value="child-1" selected>Leo Miller (4th Grade)</option>
+          <option value="child-2">Maya Miller (7th Grade)</option>
+        </select>
+      </div>
+
+      <!-- Right Action Controls -->
+      <div class="bp-controls-group ms-auto">
+        <!-- RTL Layout Switcher -->
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle Right-to-Left Layout">
+          <span class="rtl-status-label">RTL</span>
+          <svg class="rtl-arrows-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 7H4"/>
+            <path d="M8 3L4 7l4 4"/>
+            <path d="M4 17h16"/>
+            <path d="M16 13l4 4-4 4"/>
+          </svg>
+        </button>
+
+        <!-- Dark/Light Mode Switcher -->
+        <button class="bp-icon-btn theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <span class="theme-toggle-svg-wrap">
+            <svg class="bp-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </span>
+        </button>
+
+        <!-- Notification Dropdown -->
+        <div class="dropdown">
+          <button class="bp-icon-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+            <svg class="bp-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+              <span class="visually-hidden">New notifications</span>
+            </span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-lg p-2 border" style="width: 320px;">
+            <li class="dropdown-header fw-bold text-main d-flex justify-content-between align-items-center">
+              <span>Center Notifications</span>
+              <span class="badge bg-primary-subtle text-primary">2 New</span>
+            </li>
+            <li><hr class="dropdown-divider my-1"></li>
+            <li>
+              <a class="dropdown-item rounded-2 p-2 small" href="#homework-section">
+                <div class="fw-bold text-success"><i class="fa-solid fa-check me-1"></i>Homework Verified</div>
+                <div class="text-muted">Marcus Vance signed off on Leo's math worksheet.</div>
+                <div class="text-light-emphasis" style="font-size: 0.7rem;">Today, 4:45 PM</div>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item rounded-2 p-2 small" href="#attendance-section">
+                <div class="fw-bold text-primary"><i class="fa-solid fa-door-open me-1"></i>Check-in Recorded</div>
+                <div class="text-muted">Leo checked in at center at 3:25 PM.</div>
+                <div class="text-light-emphasis" style="font-size: 0.7rem;">Today, 3:25 PM</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Parent User Profile Dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-sm btn-bp-outline dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" 
+                 class="rounded-circle" width="28" height="28" style="object-fit: cover;" alt="Parent Sarah Miller">
+            <span class="fw-semibold d-none d-sm-inline">Sarah Miller</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-lg border p-2">
+            <li class="dropdown-header small">Parent Account • Family ID: #BP-9204</li>
+            <li><a class="dropdown-item rounded-2 small" href="dashboard.html"><i class="fa-solid fa-gauge-high me-2 text-primary"></i>Dashboard</a></li>
+            <li><a class="dropdown-item rounded-2 small" href="contact.html"><i class="fa-solid fa-headset me-2 text-secondary"></i>Contact Center Director</a></li>
+            <li><a class="dropdown-item rounded-2 small" href="index.html"><i class="fa-solid fa-globe me-2 text-info"></i>Academy Main Site</a></li>
+            <li><hr class="dropdown-divider my-1"></li>
+            <li><a class="dropdown-item rounded-2 small text-danger" href="login.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Dashboard Layout -->
+  <div class="bp-dashboard-layout">
+    
+    <!-- Left Navigation Sidebar -->
+    <aside class="bp-dash-sidebar" aria-label="Parent Dashboard Navigation">
+      <!-- Child Profile Brief -->
+      <div class="d-flex align-items-center gap-3 p-2 mb-3 bg-light-subtle rounded-3 border">
+        <img id="dashChildAvatar" src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=150&q=80" 
+             alt="Student Avatar" class="rounded-circle" width="46" height="46" style="object-fit: cover;">
+        <div>
+          <h6 class="mb-0 font-heading" id="dashChildName">Leo Miller</h6>
+          <span class="badge bg-primary-subtle text-primary" id="dashChildGrade">4th Grade</span>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="d-flex flex-column mb-auto">
+        <a href="#overview-section" class="bp-dash-nav-item active">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="#booking-section" class="bp-dash-nav-item">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Book Session Slots</span>
+        </a>
+        <a href="#homework-section" class="bp-dash-nav-item">
+          <i class="fa-solid fa-clipboard-check"></i>
+          <span>Homework Notes</span>
+        </a>
+        <a href="#attendance-section" class="bp-dash-nav-item">
+          <i class="fa-solid fa-user-clock"></i>
+          <span>Attendance History</span>
+        </a>
+        <a href="programs.html" class="bp-dash-nav-item">
+          <i class="fa-solid fa-book-bookmark"></i>
+          <span>Programs</span>
+        </a>
+        <a href="tutors.html" class="bp-dash-nav-item">
+          <i class="fa-solid fa-chalkboard-user"></i>
+          <span>Tutor</span>
+        </a>
+      </nav>
+
+      <!-- Center Contact Card in Sidebar -->
+      <div class="mt-4 p-3 bg-light-subtle rounded-3 border small">
+        <div class="fw-bold mb-1 text-main"><i class="fa-solid fa-school text-primary me-1"></i> Center Dispatch</div>
+        <div class="text-muted mb-2">Need to report late pickup or excused absence?</div>
+        <a href="tel:+18005550199" class="btn btn-sm btn-bp-outline w-100 py-1">
+          <i class="fa-solid fa-phone me-1"></i> Call Desk
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="bp-dash-main">
+      
+      <!-- Welcome Header -->
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3" id="overview-section">
+        <div>
+          <h1 class="font-heading fs-2 mb-1">Parent Dashboard</h1>
+          <p class="text-muted small mb-0">Track daily homework logs, reserve after-school time slots, and verify attendance records.</p>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="btn btn-bp-primary" data-bs-toggle="modal" data-bs-target="#bookSessionModal">
+            <i class="fa-solid fa-plus me-1"></i> Book After-School Slot
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick KPI Stat Widgets -->
+      <div class="row g-3 mb-4">
+        <!-- Attendance Stat -->
+        <div class="col-sm-6 col-xl-3">
+          <div class="bp-dash-stat-widget">
+            <div class="bp-icon-box bp-icon-box-secondary mb-0">
+              <i class="fa-solid fa-user-check"></i>
+            </div>
+            <div>
+              <div class="text-muted small fw-semibold">Attendance Rate</div>
+              <h3 class="font-heading fs-3 mb-0" id="dashStatAttendance">98%</h3>
+              <span class="text-success small fw-semibold"><i class="fa-solid fa-arrow-trend-up me-1"></i>On track</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Completed Homework Stat -->
+        <div class="col-sm-6 col-xl-3">
+          <div class="bp-dash-stat-widget">
+            <div class="bp-icon-box bp-icon-box-primary mb-0">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div>
+              <div class="text-muted small fw-semibold">Verified Tasks</div>
+              <h3 class="font-heading fs-3 mb-0" id="dashStatCompletedHW">24</h3>
+              <span class="text-muted small">Assignments signed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Total Hours Logged -->
+        <div class="col-sm-6 col-xl-3">
+          <div class="bp-dash-stat-widget">
+            <div class="bp-icon-box bp-icon-box-purple mb-0">
+              <i class="fa-solid fa-hourglass-half"></i>
+            </div>
+            <div>
+              <div class="text-muted small fw-semibold">Enrichment Hours</div>
+              <h3 class="font-heading fs-3 mb-0" id="dashStatHours">36 hrs</h3>
+              <span class="text-primary small fw-semibold">This term</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next Session -->
+        <div class="col-sm-6 col-xl-3">
+          <div class="bp-dash-stat-widget">
+            <div class="bp-icon-box bp-icon-box-accent mb-0">
+              <i class="fa-solid fa-calendar-star"></i>
+            </div>
+            <div>
+              <div class="text-muted small fw-semibold">Next Session</div>
+              <h4 class="font-heading fs-6 mb-0 text-truncate" style="max-width: 140px;">Today 3:30 PM</h4>
+              <span class="text-success small fw-semibold"><i class="fa-solid fa-check"></i> Confirmed slot</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 1: Session Booking & Upcoming Schedule -->
+      <div class="row g-4 mb-4" id="booking-section">
+        
+        <!-- Left: Upcoming Booked Sessions -->
+        <div class="col-lg-7">
+          <div class="bp-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <h4 class="font-heading fs-5 mb-0">Upcoming Booked Sessions</h4>
+                <p class="text-muted small mb-0">Reserved afternoon slots and assigned mentors</p>
+              </div>
+              <button class="btn btn-sm btn-bp-primary" data-bs-toggle="modal" data-bs-target="#bookSessionModal">
+                <i class="fa-solid fa-plus me-1"></i> New Booking
+              </button>
+            </div>
+
+            <!-- Dynamic Session List Container (Managed by dashboard.js) -->
+            <div id="upcomingSessionsContainer">
+              <!-- Skeletons while loading -->
+              <div class="skeleton skeleton-card p-3 mb-2"></div>
+              <div class="skeleton skeleton-card p-3 mb-2"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Quick Slot Reservation Form Widget -->
+        <div class="col-lg-5">
+          <div class="bp-card p-4">
+            <h4 class="font-heading fs-5 mb-1">Quick Slot Reservation</h4>
+            <p class="text-muted small mb-3">Book an after-school homework or STEM slot in 30 seconds.</p>
+            
+            <form id="slotBookingForm" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="bookSubject" class="form-label">Subject Track *</label>
+                <select class="form-select" id="bookSubject" required>
+                  <option value="Homework Help & Math Lab" selected>Homework Help & Math Lab</option>
+                  <option value="STEM & Robotics Enrichment">STEM & Robotics Enrichment</option>
+                  <option value="Reading Comprehension Club">Reading Comprehension Club</option>
+                  <option value="Science Discovery Project">Science Discovery Project</option>
+                  <option value="Study Habits & Executive Prep">Study Habits & Executive Prep</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="bookTutor" class="form-label">Requested Educator *</label>
+                <select class="form-select" id="bookTutor" required>
+                  <option value="Marcus Vance (Math Specialist)" selected>Marcus Vance (Math Specialist)</option>
+                  <option value="Dr. Sarah Jenkins (STEM & Science)">Dr. Sarah Jenkins (STEM & Science)</option>
+                  <option value="Elena Rostova (Literacy & Reading)">Elena Rostova (Literacy & Reading)</option>
+                  <option value="David Chen (Robotics Coach)">David Chen (Robotics Coach)</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="bookDate" class="form-label">Session Date *</label>
+                <input type="date" class="form-control" id="bookDate" required value="2026-10-16">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label d-block">Select Time Slot *</label>
+                <div class="d-grid gap-2" style="grid-template-columns: 1fr 1fr;">
+                  <button type="button" class="bp-slot-btn selected" data-slot="3:30 PM - 4:15 PM">3:30 PM - 4:15 PM</button>
+                  <button type="button" class="bp-slot-btn" data-slot="4:15 PM - 5:00 PM">4:15 PM - 5:00 PM</button>
+                  <button type="button" class="bp-slot-btn" data-slot="5:00 PM - 5:45 PM">5:00 PM - 5:45 PM</button>
+                  <button type="button" class="bp-slot-btn" data-slot="5:45 PM - 6:30 PM">5:45 PM - 6:30 PM</button>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-bp-primary w-100 py-2">
+                <i class="fa-solid fa-calendar-check me-1"></i> Confirm Session Slot
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SECTION 2: Homework Completion Notes Tracker -->
+      <div class="bp-card p-4 mb-4" id="homework-section">
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+          <div>
+            <span class="bp-badge bp-badge-primary mb-1">Daily Accountability</span>
+            <h4 class="font-heading fs-5 mb-0">Homework Completion Notes & Tutor Sign-Offs</h4>
+            <p class="text-muted small mb-0">Review daily assignments, accuracy ratings, and tutor feedback.</p>
+          </div>
+          
+          <!-- Filters & Search -->
+          <div class="d-flex flex-wrap gap-2">
+            <div class="input-group" style="width: 220px;">
+              <span class="input-group-text bg-light-subtle text-muted"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <input type="text" class="form-control form-control-sm" id="hwSearchInput" placeholder="Search topics..." aria-label="Search homework topics">
+            </div>
+            <select class="form-select form-select-sm" id="hwSubjectFilter" style="width: 170px;" aria-label="Filter notes by subject">
+              <option value="all" selected>All Subjects</option>
+              <option value="mathematics">Mathematics</option>
+              <option value="science">Science</option>
+              <option value="english language arts">English Language Arts</option>
+              <option value="pre-algebra">Pre-Algebra</option>
+              <option value="earth science">Earth Science</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Dynamic Notes List Container (Managed by dashboard.js) -->
+        <div id="homeworkNotesContainer">
+          <!-- Skeleton Loading -->
+          <div class="skeleton skeleton-card p-4 mb-3"></div>
+          <div class="skeleton skeleton-card p-4 mb-3"></div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: Attendance History Log -->
+      <div class="bp-card p-4" id="attendance-section">
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+          <div>
+            <span class="bp-badge bp-badge-secondary mb-1">Safety & Arrival</span>
+            <h4 class="font-heading fs-5 mb-0">After-School Attendance History</h4>
+            <p class="text-muted small mb-0">Timestamped check-in and pickup departure logs</p>
+          </div>
+
+          <div class="d-flex gap-2">
+            <select class="form-select form-select-sm" id="attendanceStatusFilter" style="width: 150px;" aria-label="Filter attendance by status">
+              <option value="all" selected>All Records</option>
+              <option value="present">Present Only</option>
+              <option value="late">Late Check-ins</option>
+              <option value="excused">Excused Absence</option>
+            </select>
+            <button class="btn btn-sm btn-bp-outline" id="exportAttendanceBtn">
+              <i class="fa-solid fa-file-csv me-1"></i> Export CSV
+            </button>
+          </div>
+        </div>
+
+        <!-- Attendance Data Table -->
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Program / Activity</th>
+                <th scope="col">Check-In</th>
+                <th scope="col">Check-Out</th>
+                <th scope="col">Status</th>
+                <th scope="col">Staff Notes</th>
+              </tr>
+            </thead>
+            <tbody id="attendanceTableBody">
+              <!-- Rendered via dashboard.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Booking Modal (Full Dialog) -->
+  <div class="modal fade" id="bookSessionModal" tabindex="-1" aria-labelledby="bookSessionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <div class="bp-brand-icon" style="width: 32px; height: 32px; font-size: 1rem;"><i class="fa-solid fa-calendar-plus"></i></div>
+            <h5 class="modal-title font-heading mb-0" id="bookSessionModalLabel">Schedule After-School Session</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="small text-muted mb-3">Reserve an afternoon time slot for Leo Miller. You will receive an SMS reminder 2 hours prior.</p>
+          
+          <form class="needs-validation" novalidate onsubmit="event.preventDefault(); document.getElementById('slotBookingForm').dispatchEvent(new Event('submit'));">
+            <div class="mb-3">
+              <label class="form-label">Subject Focus</label>
+              <select class="form-select" required>
+                <option value="Homework Help & Math Lab">Homework Help & Math Lab</option>
+                <option value="STEM & Robotics Enrichment">STEM & Robotics Enrichment</option>
+                <option value="Reading Comprehension Club">Reading Comprehension Club</option>
+                <option value="Science Discovery Project">Science Discovery Project</option>
+              </select>
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control" required value="2026-10-17">
+              </div>
+              <div class="col-6">
+                <label class="form-label">Time Slot</label>
+                <select class="form-select" required>
+                  <option value="3:30 PM - 4:15 PM">3:30 PM - 4:15 PM</option>
+                  <option value="4:15 PM - 5:00 PM">4:15 PM - 5:00 PM</option>
+                  <option value="5:00 PM - 5:45 PM">5:00 PM - 5:45 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Special Homework Instructions (Optional)</label>
+              <textarea class="form-control" rows="2" placeholder="e.g. Leo needs extra focus on Chapter 4 fractions worksheet"></textarea>
+            </div>
+            <button type="submit" class="btn btn-bp-primary w-100">
+              <i class="fa-solid fa-check me-1"></i> Confirm & Book Slot
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main & Dashboard JS -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

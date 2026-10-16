@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <!-- Character Encoding & Viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO Meta Tags -->
+  <title>BrightPath Academy | After-School Homework Help & Enrichment Center</title>
+  <meta name="description" content="BrightPath Academy provides structured after-school homework help, certified subject tutoring, STEM enrichment, and a real-time parent progress dashboard.">
+  <meta name="keywords" content="after school homework help, tutoring center, STEM enrichment, elementary math tutor, middle school homework lab, parent portal">
+  <meta name="author" content="BrightPath Academy">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BrightPath Academy | After-School Homework Help & Enrichment Center">
+  <meta property="og:description" content="Supportive after-school homework assistance, personalized tutoring, and engaging enrichment programs for K-12 students.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:url" content="https://brightpathacademy.example.com">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'/></svg>">
+
+  <!-- Google Fonts (Outfit for headings, Plus Jakarta Sans for body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- Main Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+
+  <!-- Structured Data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "BrightPath Academy",
+    "description": "After-School Homework Help, STEM Labs, and Academic Enrichment Center.",
+    "url": "https://brightpathacademy.example.com",
+    "telephone": "+1-800-555-0199",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "452 Learning Lane, Suite 100",
+      "addressLocality": "Metro City",
+      "addressRegion": "CA",
+      "postalCode": "94103",
+      "addressCountry": "US"
+    },
+    "openingHours": "Mo-Fr 14:30-18:30",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Main Navigation Header -->
+  <nav class="navbar navbar-expand-lg bp-navbar sticky-top" aria-label="Main Navigation">
+    <div class="bp-navbar-container">
+      <!-- Brand Logo -->
+      <a class="bp-brand" href="index.html">
+        <div class="bp-brand-icon">
+          <svg class="bp-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          </svg>
+        </div>
+        <div>
+          <span>BrightPath</span>
+          <span class="d-block text-primary small fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase;">Learning Academy</span>
+        </div>
+      </a>
+
+      <!-- Navbar Toggler for Mobile -->
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarMainContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link" href="programs.html">Programs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link" href="tutors.html">Tutor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link" href="blog.html">Tips</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+        </ul>
+
+        <!-- Action Controls & Portals -->
+        <div class="bp-controls-group">
+          <!-- RTL Layout Switcher -->
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle Right-to-Left Layout">
+            <span class="rtl-status-label">RTL</span>
+            <svg class="rtl-arrows-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 7H4"/>
+              <path d="M8 3L4 7l4 4"/>
+              <path d="M4 17h16"/>
+              <path d="M16 13l4 4-4 4"/>
+            </svg>
+          </button>
+
+          <!-- Dark/Light Mode Switcher -->
+          <button class="bp-icon-btn theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+            <span class="theme-toggle-svg-wrap">
+              <svg class="bp-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </span>
+          </button>
+
+          <!-- Parent Login Portal Button -->
+          <a href="login.html" class="btn btn-bp-outline btn-sm">
+            <svg class="bp-icon-svg me-1" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span>Sign In</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Page Content -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="bp-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary-subtle text-primary fw-semibold small mb-3 border border-primary-subtle">
+              <i class="fa-solid fa-award"></i>
+              <span>Accredited After-School Academic & Homework Support</span>
+            </div>
+            
+            <h1 class="bp-hero-title">
+              Empowering Students with <span class="bp-hero-highlight">Structured Homework Help</span> & Enrichment.
+            </h1>
+
+            <p class="bp-hero-lead">
+              Transform after-school hours into peaceful evenings. Our certified educators guide students through daily homework completion, foundational math & reading mastery, and hands-on STEM discovery.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 mb-4">
+              <button class="btn btn-bp-primary" data-bs-toggle="modal" data-bs-target="#trialBookingModal">
+                <i class="fa-solid fa-calendar-check"></i> Book Free Trial Slot
+              </button>
+              <a href="programs.html" class="btn btn-bp-outline">
+                <i class="fa-solid fa-book-open"></i> Explore Programs by Subject
+              </a>
+            </div>
+
+            <!-- Trust Highlights -->
+            <div class="d-flex flex-wrap align-items-center gap-4 pt-3 border-top border-light-subtle">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-success fs-5"></i>
+                <span class="small fw-semibold text-muted">100% Background-Checked Tutors</span>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-success fs-5"></i>
+                <span class="small fw-semibold text-muted">Real-Time Parent Portal</span>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-success fs-5"></i>
+                <span class="small fw-semibold text-muted">Flexible Session Booking</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="bp-hero-img-wrap">
+              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1000&q=80" 
+                   alt="Supportive tutor assisting elementary and middle school students with homework" 
+                   class="bp-hero-img shadow-lg" 
+                   loading="eager" width="600" height="450">
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Stats Strip -->
+        <div class="bp-stats-strip">
+          <div class="row g-4 align-items-center">
+            <div class="col-6 col-md-3 bp-stat-item">
+              <div class="bp-stat-number counter-value" data-target="1250">0</div>
+              <p class="bp-stat-label">Students Guided</p>
+            </div>
+            <div class="col-6 col-md-3 bp-stat-item">
+              <div class="bp-stat-number"><span class="counter-value" data-target="98">0</span>%</div>
+              <p class="bp-stat-label">Homework Completion</p>
+            </div>
+            <div class="col-6 col-md-3 bp-stat-item">
+              <div class="bp-stat-number counter-value" data-target="28">0</div>
+              <p class="bp-stat-label">Certified Educators</p>
+            </div>
+            <div class="col-6 col-md-3 bp-stat-item">
+              <div class="bp-stat-number counter-value" data-target="6">0</div>
+              <p class="bp-stat-label">Subject Enrichment Labs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic Pillars & Methodology -->
+    <section class="bp-section">
+      <div class="container">
+        <div class="text-center bp-section-header">
+          <span class="bp-badge bp-badge-primary">Supportive & Structured</span>
+          <h2 class="bp-section-title">A Structured Afternoon Routine That Works</h2>
+          <p class="bp-section-desc">
+            We turn homework anxiety into academic confidence with structured study intervals, personalized attention, and enriching learning activities.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Pillar 1: Homework Help -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-pillar-card bp-pillar-card-homework p-4">
+              <div class="bp-pillar-card-bg" style="background-image: url('../assets/images/homework-help-bg.jpg');"></div>
+              <div class="bp-pillar-card-overlay"></div>
+              <div class="bp-pillar-card-content">
+                <div class="bp-icon-box bp-icon-box-primary">
+                  <i class="fa-solid fa-book-open-reader"></i>
+                </div>
+                <h3 class="font-heading fs-5 mb-2">1-on-1 Homework Help</h3>
+                <p class="small text-muted mb-3">
+                  Students review daily school assignments with certified educators. We check for understanding, not just answers.
+                </p>
+                <ul class="list-unstyled small text-muted mb-0">
+                  <li class="mb-1"><i class="fa-solid fa-circle-check text-primary me-2"></i>Math & Reading problem-solving</li>
+                  <li class="mb-1"><i class="fa-solid fa-circle-check text-primary me-2"></i>Essay outline & grammar review</li>
+                  <li><i class="fa-solid fa-circle-check text-primary me-2"></i>Teacher-aligned syllabus checks</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Math & STEM -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-pillar-card bp-pillar-card-stem p-4">
+              <div class="bp-pillar-card-bg" style="background-image: url('../assets/images/math-stem-bg.jpg');"></div>
+              <div class="bp-pillar-card-overlay"></div>
+              <div class="bp-pillar-card-content">
+                <div class="bp-icon-box bp-icon-box-secondary">
+                  <i class="fa-solid fa-calculator"></i>
+                </div>
+                <h3 class="font-heading fs-5 mb-2">Math & STEM Mastery</h3>
+                <p class="small text-muted mb-3">
+                  Strengthen foundational calculations, algebraic reasoning, and analytical logic through guided practice.
+                </p>
+                <ul class="list-unstyled small text-muted mb-0">
+                  <li class="mb-1"><i class="fa-solid fa-circle-check text-secondary me-2"></i>Mental math & speed drills</li>
+                  <li class="mb-1"><i class="fa-solid fa-circle-check text-secondary me-2"></i>Visual geometry & algebra kits</li>
+                  <li><i class="fa-solid fa-circle-check text-secondary me-2"></i>Step-by-step logic coaching</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Robotics & Coding -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-pillar-card bp-pillar-card-robotics p-4">
+              <div class="bp-pillar-card-bg" style="background-image: url('../assets/images/robotics-coding-bg.jpg');"></div>
+              <div class="bp-pillar-card-overlay"></div>
+              <div class="bp-pillar-card-content">
+                <div class="bp-icon-box bp-icon-box-purple">
+                  <i class="fa-solid fa-robot"></i>
+                </div>
+                <h3 class="font-heading fs-5 mb-2">Robotics & Coding Labs</h3>
+                <p class="small text-muted mb-3">
+                  After finishing homework, students unleash creativity in our hands-on robotics, coding, and maker spaces.
+                </p>
+                <ul class="list-unstyled small text-muted mb-0">
+                  <li class="mb-1"><i class="fa-solid fa-circle-check text-purple me-2"></i>Scratch & Python fundamentals</li>
+                  <li class="mb-1"><i class="fa-solid fa-circle-check text-purple me-2"></i>LEGO education robotics kits</li>
+                  <li><i class="fa-solid fa-circle-check text-purple me-2"></i>Collaborative engineering challenges</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Study & Executive Skills -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-pillar-card bp-pillar-card-study p-4">
+              <div class="bp-pillar-card-bg" style="background-image: url('../assets/images/study-skills-bg.jpg');"></div>
+              <div class="bp-pillar-card-overlay"></div>
+              <div class="bp-pillar-card-content">
+                <div class="bp-icon-box bp-icon-box-accent">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <h3 class="font-heading fs-5 mb-2">Study & Executive Skills</h3>
+                <p class="small text-muted mb-3">
+                  We coach students in time management, binder organization, assignment prioritization, and test readiness.
+                </p>
+                <ul class="list-unstyled small text-muted mb-0">
+                  <li class="mb-1"><i class="fa-solid fa-circle-check text-warning me-2"></i>Pomodoro study cycles</li>
+                  <li class="mb-1"><i class="fa-solid fa-circle-check text-warning me-2"></i>Agenda & planner habit tracking</li>
+                  <li><i class="fa-solid fa-circle-check text-warning me-2"></i>Test anxiety coping techniques</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Organized by Subject (Preview) -->
+    <section class="bp-section bg-light-subtle border-top border-bottom border-light-subtle">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+          <div>
+            <span class="bp-badge bp-badge-secondary">Curriculum Tracks</span>
+            <h2 class="bp-section-title mb-1">Enrichment Programs by Subject</h2>
+            <p class="text-muted mb-0">Designed for Grades K-12 with age-appropriate small groups.</p>
+          </div>
+          <div class="mt-3 mt-md-0">
+            <a href="programs.html" class="btn btn-bp-outline">
+              View All Subjects & Schedules <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Program 1: Daily Homework Lab -->
+          <div class="col-md-6 col-lg-4">
+            <div class="bp-card bp-card-hover">
+              <div class="bp-program-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" 
+                     alt="Student focusing on daily school assignments with supportive tutor" 
+                     class="bp-program-img" loading="lazy">
+                <span class="bp-badge bp-badge-primary bp-program-overlay-badge">All Grades K-12</span>
+              </div>
+              <div class="bp-card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-primary fw-bold small"><i class="fa-solid fa-pencil me-1"></i> Academic Core</span>
+                  <span class="text-muted small"><i class="fa-regular fa-clock me-1"></i> Mon-Fri 3:00-5:00 PM</span>
+                </div>
+                <h4 class="font-heading fs-5 mb-2">Structured Homework Help Lab</h4>
+                <p class="small text-muted mb-3">
+                  Comprehensive assistance across all school subjects. Tutors ensure assignments are 100% completed and concepts understood before pickup.
+                </p>
+                <div class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle">
+                  <span class="fw-bold text-main fs-6">$280 <small class="text-muted fw-normal">/ month</small></span>
+                  <a href="programs.html" class="btn btn-sm btn-bp-outline">Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program 2: STEM & Robotics -->
+          <div class="col-md-6 col-lg-4">
+            <div class="bp-card bp-card-hover">
+              <div class="bp-program-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80" 
+                     alt="Kids building robotics circuits and programming sensors" 
+                     class="bp-program-img" loading="lazy">
+                <span class="bp-badge bp-badge-purple bp-program-overlay-badge">Grades 3 - 8</span>
+              </div>
+              <div class="bp-card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-purple fw-bold small"><i class="fa-solid fa-microchip me-1"></i> Technology & STEM</span>
+                  <span class="text-muted small"><i class="fa-regular fa-clock me-1"></i> Tue & Thu 4:30-5:45 PM</span>
+                </div>
+                <h4 class="font-heading fs-5 mb-2">Robotics & Creative Coding</h4>
+                <p class="small text-muted mb-3">
+                  Hands-on engineering where young minds assemble motor sensors, code basic algorithms, and collaborate on mini hackathons.
+                </p>
+                <div class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle">
+                  <span class="fw-bold text-main fs-6">$310 <small class="text-muted fw-normal">/ month</small></span>
+                  <a href="programs.html" class="btn btn-sm btn-bp-outline">Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program 3: Language Arts & Reading -->
+          <div class="col-md-6 col-lg-4">
+            <div class="bp-card bp-card-hover">
+              <div class="bp-program-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80" 
+                     alt="Reading corner with colorful books and focused learners" 
+                     class="bp-program-img" loading="lazy">
+                <span class="bp-badge bp-badge-accent bp-program-overlay-badge">Grades 1 - 6</span>
+              </div>
+              <div class="bp-card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-warning fw-bold small"><i class="fa-solid fa-feather me-1"></i> Language Arts</span>
+                  <span class="text-muted small"><i class="fa-regular fa-clock me-1"></i> Mon & Wed 4:00-5:15 PM</span>
+                </div>
+                <h4 class="font-heading fs-5 mb-2">Reading Fluency & Creative Writing</h4>
+                <p class="small text-muted mb-3">
+                  Cultivating a lifelong passion for reading through interactive book circles, vocabulary expansion, and structured storytelling.
+                </p>
+                <div class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle">
+                  <span class="fw-bold text-main fs-6">$260 <small class="text-muted fw-normal">/ month</small></span>
+                  <a href="programs.html" class="btn btn-sm btn-bp-outline">Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parent Dashboard Highlight / Feature Spotlight -->
+    <section class="bp-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 order-lg-2">
+            <span class="bp-badge bp-badge-primary">Peace of Mind for Parents</span>
+            <h2 class="bp-section-title">Stay Fully Informed with the Parent Portal</h2>
+            <p class="bp-hero-lead">
+              No more guessing what was accomplished during after-school hours. Our dedicated parent dashboard keeps you updated with daily tutor verification notes, attendance timestamps, and easy session scheduling.
+            </p>
+
+            <div class="d-flex flex-column gap-3 mb-4">
+              <div class="d-flex align-items-start gap-3">
+                <div class="bp-icon-box bp-icon-box-secondary flex-shrink-0" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                  <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div>
+                  <h6 class="font-heading mb-1">Instant Session Slot Booking</h6>
+                  <p class="small text-muted mb-0">Select days, time slots (3:30, 4:15, 5:00 PM), and favorite tutors right from your phone or desktop.</p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3">
+                <div class="bp-icon-box bp-icon-box-primary flex-shrink-0" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                  <i class="fa-solid fa-clipboard-list"></i>
+                </div>
+                <div>
+                  <h6 class="font-heading mb-1">Daily Homework Completion Notes</h6>
+                  <p class="small text-muted mb-0">Read detailed tutor feedback for each subject, check verified worksheets, and mark notes as acknowledged.</p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3">
+                <div class="bp-icon-box bp-icon-box-accent flex-shrink-0" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                  <i class="fa-solid fa-user-clock"></i>
+                </div>
+                <div>
+                  <h6 class="font-heading mb-1">Live Check-In & Attendance History</h6>
+                  <p class="small text-muted mb-0">Verify arrival and departure times with automated notifications and downloadable attendance reports.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+              <a href="dashboard.html" class="btn btn-bp-primary">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i> Launch Live Parent Dashboard
+              </a>
+              <a href="login.html" class="btn btn-bp-outline">
+                <i class="fa-solid fa-user-shield"></i> Parent Login Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- Dashboard Mockup Card -->
+          <div class="col-lg-6 order-lg-1">
+            <div class="bp-card p-4 shadow-xl border-primary-subtle position-relative overflow-hidden">
+              <div class="d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="rounded-circle bg-primary text-white p-2" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 font-heading">Leo Miller <span class="badge bg-secondary-subtle text-secondary ms-1">4th Grade</span></h6>
+                    <small class="text-muted">Today's Check-in: 3:25 PM</small>
+                  </div>
+                </div>
+                <span class="badge bg-success-subtle text-success px-3 py-2"><i class="fa-solid fa-check-double me-1"></i>Present & Focused</span>
+              </div>
+
+              <!-- Sample HW Note -->
+              <div class="bg-light-subtle p-3 rounded-3 mb-3 border">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="badge bg-primary text-white">Math Homework Verified</span>
+                  <small class="text-muted">Tutor: Marcus Vance</small>
+                </div>
+                <p class="small text-muted mb-2">"Completed all 12 multi-digit multiplication problems. Mastered regrouping with 92% accuracy."</p>
+                <div class="small text-success fw-semibold"><i class="fa-solid fa-signature me-1"></i>Signed off by Center Lead Educator</div>
+              </div>
+
+              <!-- Sample Next Booking -->
+              <div class="p-3 rounded-3 border border-dashed d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="small text-muted">Next Booked Slot</div>
+                  <strong class="font-heading text-main">Robotics Lab • Tomorrow 4:30 PM</strong>
+                </div>
+                <span class="btn btn-sm btn-bp-outline py-1 px-2">Confirmed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certified Tutors Spotlight -->
+    <section class="bp-section bg-light-subtle border-top border-bottom border-light-subtle">
+      <div class="container">
+        <div class="text-center bp-section-header">
+          <span class="bp-badge bp-badge-primary">Certified Mentors</span>
+          <h2 class="bp-section-title">Meet Our Dedicated Educators</h2>
+          <p class="bp-section-desc">
+            All BrightPath instructors undergo rigorous background checks, hold specialized degrees, and are trained in positive behavioral reinforcement.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Tutor 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card bp-card-hover text-center p-4">
+              <div class="bp-tutor-avatar-wrap">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" 
+                     alt="Dr. Sarah Jenkins - Lead STEM & Science Educator" 
+                     class="bp-tutor-avatar" loading="lazy">
+                <div class="bp-verified-badge" title="Background Check Verified">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </div>
+              <h4 class="font-heading fs-5 mb-1">Dr. Sarah Jenkins</h4>
+              <p class="text-primary small fw-semibold mb-2">Lead Science & STEM</p>
+              <p class="small text-muted mb-3">Ph.D. in Education • 10+ years tutoring young investigators in biology & robotics.</p>
+              <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <span class="text-muted ms-1">(5.0)</span>
+              </div>
+              <a href="tutors.html" class="btn btn-sm btn-bp-outline w-100">View Bio & Availability</a>
+            </div>
+          </div>
+
+          <!-- Tutor 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card bp-card-hover text-center p-4">
+              <div class="bp-tutor-avatar-wrap">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" 
+                     alt="Marcus Vance - Mathematics & Problem Solving Specialist" 
+                     class="bp-tutor-avatar" loading="lazy">
+                <div class="bp-verified-badge" title="Background Check Verified">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </div>
+              <h4 class="font-heading fs-5 mb-1">Marcus Vance</h4>
+              <p class="text-secondary small fw-semibold mb-2">Math Specialist (K-12)</p>
+              <p class="small text-muted mb-3">M.S. in Applied Math • Specializes in turning math fear into confident problem solving.</p>
+              <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                <span class="text-muted ms-1">(4.9)</span>
+              </div>
+              <a href="tutors.html" class="btn btn-sm btn-bp-outline w-100">View Bio & Availability</a>
+            </div>
+          </div>
+
+          <!-- Tutor 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card bp-card-hover text-center p-4">
+              <div class="bp-tutor-avatar-wrap">
+                <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=400&q=80" 
+                     alt="Elena Rostova - Reading Fluency & Language Arts Mentor" 
+                     class="bp-tutor-avatar" loading="lazy">
+                <div class="bp-verified-badge" title="Background Check Verified">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </div>
+              <h4 class="font-heading fs-5 mb-1">Elena Rostova</h4>
+              <p class="text-purple small fw-semibold mb-2">Language Arts & Reading</p>
+              <p class="small text-muted mb-3">Certified Literacy Specialist • Passionate about creative essay composition and vocabulary.</p>
+              <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <span class="text-muted ms-1">(5.0)</span>
+              </div>
+              <a href="tutors.html" class="btn btn-sm btn-bp-outline w-100">View Bio & Availability</a>
+            </div>
+          </div>
+
+          <!-- Tutor 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card bp-card-hover text-center p-4">
+              <div class="bp-tutor-avatar-wrap">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" 
+                     alt="David Chen - Robotics & Coding Coach" 
+                     class="bp-tutor-avatar" loading="lazy">
+                <div class="bp-verified-badge" title="Background Check Verified">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </div>
+              <h4 class="font-heading fs-5 mb-1">David Chen</h4>
+              <p class="text-accent small fw-semibold mb-2">Coding & Robotics Coach</p>
+              <p class="small text-muted mb-3">B.S. in Computer Engineering • Inspires kids to design games and program real robots.</p>
+              <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <span class="text-muted ms-1">(4.9)</span>
+              </div>
+              <a href="tutors.html" class="btn btn-sm btn-bp-outline w-100">View Bio & Availability</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parent Testimonials -->
+    <section class="bp-section">
+      <div class="container">
+        <div class="text-center bp-section-header">
+          <span class="bp-badge bp-badge-accent">Family Stories</span>
+          <h2 class="bp-section-title">Loved by Parents, Enjoyed by Kids</h2>
+          <p class="bp-section-desc">See how BrightPath transforms after-school routines for working families.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Testimonial 1 -->
+          <div class="col-md-4">
+            <div class="bp-card p-4">
+              <div class="d-flex gap-1 text-warning mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-muted small fst-italic mb-4">
+                "Evenings used to be filled with homework battles over 4th-grade math worksheets. Since joining BrightPath, Leo finishes everything before I pick him up, and I can check Marcus’s tutor notes directly on my phone."
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" 
+                     alt="Laura M. - Parent of 4th Grader" 
+                     class="rounded-circle" width="48" height="48" style="object-fit: cover;">
+                <div>
+                  <h6 class="font-heading mb-0 fs-6">Laura M.</h6>
+                  <small class="text-muted">Parent of 4th Grader (Leo)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="col-md-4">
+            <div class="bp-card p-4">
+              <div class="d-flex gap-1 text-warning mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-muted small fst-italic mb-4">
+                "The combination of structured study hall and hands-on STEM robotics is unbeatable. Both my middle schoolers love going after school, and their grades improved from B- to solid A's."
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80" 
+                     alt="Michael T. - Father of 6th & 8th Graders" 
+                     class="rounded-circle" width="48" height="48" style="object-fit: cover;">
+                <div>
+                  <h6 class="font-heading mb-0 fs-6">Michael T.</h6>
+                  <small class="text-muted">Parent of 6th & 8th Graders</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="col-md-4">
+            <div class="bp-card p-4">
+              <div class="d-flex gap-1 text-warning mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-muted small fst-italic mb-4">
+                "The attendance check-in alerts and easy slot booking give me absolute peace of mind while working late. The tutors are genuinely kind and patient with early readers."
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=150&q=80" 
+                     alt="Priya K. - Parent of 2nd Grader" 
+                     class="rounded-circle" width="48" height="48" style="object-fit: cover;">
+                <div>
+                  <h6 class="font-heading mb-0 fs-6">Priya K.</h6>
+                  <small class="text-muted">Parent of 2nd Grader</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions Accordion -->
+    <section class="bp-section bg-light-subtle border-top border-bottom border-light-subtle">
+      <div class="container" style="max-width: 860px;">
+        <div class="text-center bp-section-header">
+          <span class="bp-badge bp-badge-primary">Got Questions?</span>
+          <h2 class="bp-section-title">Frequently Asked Questions</h2>
+          <p class="bp-section-desc">Everything you need to know about our daily routines, tutoring credentials, and enrollment.</p>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+          <!-- Item 1 -->
+          <div class="accordion-item bp-card mb-3 border">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                What does a typical afternoon schedule look like?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-muted small">
+                Students check in between 2:30 PM and 3:15 PM and enjoy a healthy snack in our lounge. From 3:15 PM to 4:45 PM, students participate in structured homework guidance pods with subject tutors. The remaining hour (4:45 PM to 5:45 PM) is dedicated to STEM robotics, reading circles, or guided math logic games.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion-item bp-card mb-3 border">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                How do parents receive updates on completed homework?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-muted small">
+                Each day our lead tutor logs homework progress directly into your dedicated Parent Dashboard. You can review which assignments were completed, see tutor comments, and sign off on tasks right from your smartphone.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="accordion-item bp-card mb-3 border">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Are tutors background checked and credentialed?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-muted small">
+                Yes, 100%. Every single instructor holds a relevant university degree, undergoes fingerprint background checks, and receives training in child safety and positive reinforcement pedagogy.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="accordion-item bp-card mb-3 border">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Can I book individual session slots or change days?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-muted small">
+                Absolutely. Parents can reserve 2, 3, or 5-day recurring plans, or book individual flex slots via the Parent Dashboard up to 24 hours in advance.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trial Session CTA Banner -->
+    <section class="bp-section">
+      <div class="container">
+        <div class="p-5 rounded-4 text-white text-center position-relative overflow-hidden" 
+             style="background: linear-gradient(135deg, #1e3a8a 0%, var(--bp-primary) 50%, #059669 100%);">
+          <div class="position-relative z-2" style="max-width: 700px; margin: 0 auto;">
+            <span class="badge bg-white text-primary fw-bold text-uppercase px-3 py-2 mb-3">Complimentary Trial Day</span>
+            <h2 class="font-heading text-white mb-3 fs-1">Experience Peaceful Evenings Starting This Week</h2>
+            <p class="text-white opacity-75 mb-4 fs-6">
+              Book a free after-school trial session. Your child will receive 1-on-1 homework guidance and participate in an engaging STEM or reading workshop.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <button class="btn btn-light text-primary fw-bold px-4 py-2" data-bs-toggle="modal" data-bs-target="#trialBookingModal">
+                <i class="fa-solid fa-calendar-plus me-1"></i> Reserve Free Trial Slot
+              </button>
+              <a href="contact.html" class="btn btn-outline-light px-4 py-2">
+                <i class="fa-solid fa-building-columns me-1"></i> Schedule Center Tour
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Modal: Free Trial Slot Booking -->
+  <div class="modal fade" id="trialBookingModal" tabindex="-1" aria-labelledby="trialBookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <div class="bp-brand-icon" style="width: 34px; height: 34px; font-size: 1rem;">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <h5 class="modal-title font-heading mb-0" id="trialBookingModalLabel">Book a Free Trial Afternoon</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small mb-4">Complete this quick form to reserve a complimentary 90-minute trial session with 1-on-1 homework help and STEM enrichment.</p>
+          <form class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="trialParentName" class="form-label">Parent / Guardian Name *</label>
+                <input type="text" class="form-control" id="trialParentName" required placeholder="e.g. Sarah Miller">
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="trialStudentName" class="form-label">Student Name *</label>
+                <input type="text" class="form-control" id="trialStudentName" required placeholder="e.g. Leo Miller">
+                <div class="invalid-feedback">Please enter student name.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="trialGrade" class="form-label">Student Grade Level *</label>
+                <select class="form-select" id="trialGrade" required>
+                  <option value="" selected disabled>Select Grade Level</option>
+                  <option value="k-2">Kindergarten – 2nd Grade</option>
+                  <option value="3-5">Elementary (3rd – 5th Grade)</option>
+                  <option value="6-8">Middle School (6th – 8th Grade)</option>
+                  <option value="9-12">High School (9th – 12th Grade)</option>
+                </select>
+                <div class="invalid-feedback">Please select a grade level.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="trialSubject" class="form-label">Primary Academic Focus *</label>
+                <select class="form-select" id="trialSubject" required>
+                  <option value="" selected disabled>Select Primary Focus</option>
+                  <option value="homework">Daily Homework Completion</option>
+                  <option value="math">Mathematics Mastery</option>
+                  <option value="reading">Reading & Language Arts</option>
+                  <option value="stem">STEM & Coding Enrichment</option>
+                </select>
+                <div class="invalid-feedback">Please choose a focus area.</div>
+              </div>
+              <div class="col-12">
+                <label for="trialPhone" class="form-label">Mobile Phone Number *</label>
+                <input type="tel" class="form-control" id="trialPhone" required placeholder="(555) 000-0000">
+                <div class="invalid-feedback">Please provide a valid phone number.</div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-bp-primary w-100 py-2">
+                  <i class="fa-solid fa-paper-plane me-1"></i> Confirm Trial Slot Reservation
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bp-footer" data-bs-theme="dark">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="bp-brand text-white mb-3" href="index.html">
+            <div class="bp-brand-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <span>BrightPath Academy</span>
+          </a>
+          <p class="small text-muted mb-4">
+            A safe, structured, and nurturing after-school homework help & enrichment learning center. Helping K-12 students master school curricula and build lifelong confidence.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/i/flow/login" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="bp-footer-title">Programs</h5>
+          <ul class="bp-footer-links">
+            <li><a href="programs.html">Homework Support Lab</a></li>
+            <li><a href="programs.html">Math & Logic Mastery</a></li>
+            <li><a href="programs.html">Reading & Writing Club</a></li>
+            <li><a href="programs.html">STEM & Robotics Lab</a></li>
+            <li><a href="programs.html">Science Discovery</a></li>
+            <li><a href="programs.html">Study Habits Coaching</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="bp-footer-title">Quick Portals</h5>
+          <ul class="bp-footer-links">
+            <li><a href="login.html">Parent Sign In</a></li>
+            <li><a href="register.html">Student Enrollment</a></li>
+            <li><a href="dashboard.html">Parent Dashboard</a></li>
+            <li><a href="tutors.html">Certified Tutors</a></li>
+            <li><a href="about.html">Safety & Policies</a></li>
+            <li><a href="blog.html">Homework Tips & Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h5 class="bp-footer-title">Center Hours & Location</h5>
+          <p class="small text-muted mb-2"><i class="fa-solid fa-location-dot me-2 text-primary"></i>452 Learning Lane, Suite 100, Metro City, CA 94103</p>
+          <p class="small text-muted mb-2"><i class="fa-solid fa-phone me-2 text-primary"></i>Direct: (800) 555-0199</p>
+          <p class="small text-muted mb-3"><i class="fa-solid fa-clock me-2 text-primary"></i>After-School: Mon-Fri 2:30 PM – 6:30 PM</p>
+          
+          <!-- Newsletter Integration Placeholder (Mailchimp/ConvertKit Ready) -->
+          <div class="mt-3">
+            <h6 class="text-white small fw-bold mb-2">Subscribe to Study Guides & Tips</h6>
+            <form class="needs-validation d-flex gap-2" novalidate>
+              <input type="email" class="form-control form-control-sm" placeholder="parent@email.com" required aria-label="Email address for newsletter">
+              <button class="btn btn-bp-primary btn-sm px-3" type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="bp-footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 text-muted small">© 2026 BrightPath Learning Academy. All rights reserved. Meets WCAG 2.1 AA accessibility guidelines.</p>
+        <div class="d-flex gap-4 small text-muted">
+          <a href="../documentation/index.html" class="text-muted">Template Documentation</a>
+          <a href="contact.html" class="text-muted">Privacy Policy</a>
+          <a href="contact.html" class="text-muted">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main Application JS -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
