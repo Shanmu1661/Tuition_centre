@@ -364,6 +364,68 @@ const BrightPath = (() => {
   };
 
   /**
+   * 10. Interactive Program Details Modal Handler
+   */
+  const initProgramDetailsModal = () => {
+    const modalEl = document.getElementById('programDetailsModal');
+    if (!modalEl) return;
+
+    modalEl.addEventListener('show.bs.modal', (event) => {
+      const btn = event.relatedTarget;
+      if (!btn) return;
+
+      const title = btn.getAttribute('data-title') || 'Program Details';
+      const category = btn.getAttribute('data-category') || '';
+      const categoryIcon = btn.getAttribute('data-category-icon') || 'fa-bookmark';
+      const badge = btn.getAttribute('data-badge') || '';
+      const ratio = btn.getAttribute('data-ratio') || '';
+      const days = btn.getAttribute('data-days') || '';
+      const duration = btn.getAttribute('data-duration') || '';
+      const price = btn.getAttribute('data-price') || '';
+      const period = btn.getAttribute('data-period') || '/ month';
+      const img = btn.getAttribute('data-img') || '';
+      const desc = btn.getAttribute('data-desc') || '';
+      const highlightsRaw = btn.getAttribute('data-highlights') || '';
+
+      const modalTitleEl = document.getElementById('programDetailsModalLabel');
+      const modalBadgeEl = document.getElementById('modalBadge');
+      const modalRatioEl = document.getElementById('modalRatio');
+      const modalCategoryEl = document.getElementById('modalCategory');
+      const modalDescEl = document.getElementById('modalDesc');
+      const modalDaysEl = document.getElementById('modalDays');
+      const modalDurationEl = document.getElementById('modalDuration');
+      const modalPriceEl = document.getElementById('modalPrice');
+      const modalImgEl = document.getElementById('modalImg');
+      const modalHighlightsEl = document.getElementById('modalHighlights');
+
+      if (modalTitleEl) modalTitleEl.textContent = title;
+      if (modalBadgeEl) modalBadgeEl.textContent = badge;
+      if (modalRatioEl) modalRatioEl.innerHTML = `<i class="fa-solid fa-users me-1 text-primary"></i>${ratio}`;
+      if (modalCategoryEl) modalCategoryEl.innerHTML = `<i class="fa-solid ${categoryIcon} me-1"></i> ${category}`;
+      if (modalDescEl) modalDescEl.textContent = desc;
+      if (modalDaysEl) modalDaysEl.textContent = days;
+      if (modalDurationEl) modalDurationEl.textContent = duration;
+      if (modalPriceEl) modalPriceEl.innerHTML = `${price} <small class="text-muted fw-normal">${period}</small>`;
+      if (modalImgEl) {
+        modalImgEl.src = img;
+        modalImgEl.alt = title;
+      }
+
+      if (modalHighlightsEl) {
+        const items = highlightsRaw ? highlightsRaw.split('|') : [];
+        modalHighlightsEl.innerHTML = items.map(item => `
+          <div class="col-sm-6">
+            <div class="d-flex align-items-start gap-2 small text-muted">
+              <i class="fa-solid fa-check text-success mt-1"></i>
+              <span>${item.trim()}</span>
+            </div>
+          </div>
+        `).join('');
+      }
+    });
+  };
+
+  /**
    * Public API
    */
   const init = () => {
@@ -375,6 +437,7 @@ const BrightPath = (() => {
     initTutorFilter();
     initFormValidation();
     initSkeletonSimulation();
+    initProgramDetailsModal();
   };
 
   // Expose to window

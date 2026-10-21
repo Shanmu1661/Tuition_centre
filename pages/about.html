@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Our Learning Center | BrightPath Academy</title>
-  <meta name="description" content="Discover our mission, safety standards, and structured educational philosophy at BrightPath Academy After-School Homework & Enrichment Center.">
-  <meta name="keywords" content="about tuition center, after school philosophy, child safety standards, learning facility tour">
+  <meta name="description" content="Discover our mission, educational philosophy, campus spaces, safety protocols, and certified faculty at BrightPath Academy After-School Learning Center.">
+  <meta name="keywords" content="about tuition center, after school philosophy, child safety standards, learning facility tour, academic mentorship, certified tutors metro city">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'/></svg>">
@@ -51,7 +51,27 @@
 
       <div class="collapse navbar-collapse" id="navbarMainContent">
         <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link bp-nav-link" href="index.html">Home</a></li>
+          <!-- Home Dropdown -->
+          <li class="nav-item dropdown bp-nav-dropdown">
+            <a class="nav-link bp-nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+            </a>
+            <ul class="dropdown-menu bp-dropdown-menu" aria-labelledby="homeDropdown">
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="index.html">
+                  <span class="bp-dropdown-title">Home 1 - Academic & Homework</span>
+                  <span class="bp-dropdown-desc">Daily homework lab, 1:4 pod ratios & certified mentors</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="home-2.html">
+                  <span class="bp-dropdown-title">Home 2 - STEM & Innovation Academy</span>
+                  <span class="bp-dropdown-desc">Robotics, coding, competition math & exam clinics</span>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link bp-nav-link" href="programs.html">Programs</a></li>
           <li class="nav-item"><a class="nav-link bp-nav-link" href="tutors.html">Tutor</a></li>
           <li class="nav-item"><a class="nav-link bp-nav-link active" aria-current="page" href="about.html">About</a></li>
@@ -92,36 +112,92 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <header class="py-5 bg-light-subtle border-bottom border-light-subtle">
+  <!-- Page Header Banner Fully Covered with Image -->
+  <header class="bp-page-banner">
+    <div class="bp-page-banner-bg">
+      <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1920&q=80" 
+           alt="Warm, sunlit learning classroom at BrightPath Academy" 
+           class="bp-page-banner-bg-img" loading="eager">
+      <div class="bp-page-banner-overlay"></div>
+    </div>
     <div class="container text-center">
-      <span class="bp-badge bp-badge-primary mb-2">Our Mission & Facility</span>
-      <h1 class="font-heading fs-1 mb-3">Creating Calm Evenings & Confident Learners</h1>
-      <p class="text-muted mx-auto" style="max-width: 680px;">
-        Founded by educators and parents, BrightPath Academy bridges the gap between the school dismissal bell and dinner time with structured homework guidance, STEM discovery, and transparent parent communication.
-      </p>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10 col-xl-8 mx-auto text-center">
+          <div class="d-inline-flex justify-content-center align-items-center gap-2 mb-3 flex-wrap">
+            <span class="bp-banner-glass-badge accent"><i class="fa-solid fa-heart"></i> Our Story & Educational Philosophy</span>
+          </div>
+          <h1 class="font-heading fs-1 mb-3 text-white">Creating Calm Evenings & Confident Learners</h1>
+          <p class="bp-page-banner-lead mb-4 mx-auto text-center">
+            Founded in 2016 by passionate educators and parents, BrightPath Academy bridges the gap between the school dismissal bell and family dinner time with structured homework mentorship, hands-on STEM discovery, and radical parent transparency.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#ourStory" class="btn btn-bp-primary px-3 py-2">
+              <i class="fa-solid fa-book-open-reader me-1"></i> Our Story
+            </a>
+            <a href="#pillarsSection" class="btn btn-outline-light px-3 py-2">
+              <i class="fa-solid fa-shapes me-1"></i> 4 Core Pillars
+            </a>
+            <a href="#facilityTour" class="btn btn-outline-light px-3 py-2">
+              <i class="fa-solid fa-door-open me-1"></i> Campus Spaces
+            </a>
+          </div>
+        </div>
+        
+      </div>
     </div>
   </header>
 
   <main id="main-content" class="py-5">
     <div class="container">
       
-      <!-- Mission & Story -->
-      <div class="row align-items-center g-5 mb-5">
+      <!-- Key Statistics Strip -->
+      <div class="bp-stats-strip mb-5">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3">
+            <div class="bp-stat-item">
+              <div class="bp-stat-number text-primary">10+ Years</div>
+              <p class="bp-stat-label">Serving Metro City Families</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="bp-stat-item">
+              <div class="bp-stat-number text-secondary">2,400+</div>
+              <p class="bp-stat-label">Students Mentored to Success</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="bp-stat-item">
+              <div class="bp-stat-number text-accent">1 : 4 Max</div>
+              <p class="bp-stat-label">Small Group Pod Ratios</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="bp-stat-item">
+              <div class="bp-stat-number text-purple">98.4%</div>
+              <p class="bp-stat-label">Parent Satisfaction Rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 1: Our Story & Founding Mission -->
+      <div class="row align-items-center g-5 mb-5 pb-4" id="ourStory">
         <div class="col-lg-6">
-          <span class="bp-badge bp-badge-secondary mb-2">Our Philosophy</span>
-          <h2 class="font-heading fs-2 mb-3">Homework Shouldn't End in Tears or Stress</h2>
+          <div class="text-center mb-3">
+            <span class="bp-badge bp-badge-secondary mb-2">Our Origins</span>
+            <h2 class="font-heading fs-2 mb-3">Homework Shouldn't End in Tears or Stress</h2>
+          </div>
           <p class="text-muted">
-            For many families, 5:30 PM arrives with exhausted parents and frustrated children struggling through math equations or unwritten essays. We created BrightPath to bring peace back to family evenings.
+            In 2016, our founders—Dr. Sarah Jenkins and Marcus Vance—noticed a disturbing pattern in their own households and communities: 5:30 PM was consistently the most stressful hour of the day. Exhausted parents returning from demanding jobs were greeting equally depleted children over confusing worksheets, missing project binders, and mounting anxiety.
           </p>
           <p class="text-muted">
-            In our structured learning pods, students receive immediate clarification on school assignments from compassionate educators who break down roadblocks before they turn into anxieties.
+            Traditional after-school daycare centers provided safe babysitting but zero academic guidance. Private tutors charged upwards of $90 an hour without synchronizing with classroom teachers. We created BrightPath Academy to provide the holistic third solution: a warm, structured sanctuary where homework gets completed, checked, and celebrated before dinner time.
           </p>
           <div class="row g-3 pt-2">
             <div class="col-sm-6">
               <div class="d-flex align-items-center gap-2">
                 <i class="fa-solid fa-circle-check text-primary fs-5"></i>
-                <span class="small fw-bold">Small Group Pods (1:4 Ratio)</span>
+                <span class="small fw-bold">Small Pod Clusters (1:4 Ratio)</span>
               </div>
             </div>
             <div class="col-sm-6">
@@ -133,7 +209,7 @@
             <div class="col-sm-6">
               <div class="d-flex align-items-center gap-2">
                 <i class="fa-solid fa-circle-check text-primary fs-5"></i>
-                <span class="small fw-bold">Full Curriculum Alignment</span>
+                <span class="small fw-bold">School Syllabus Synchronization</span>
               </div>
             </div>
             <div class="col-sm-6">
@@ -146,120 +222,569 @@
         </div>
 
         <div class="col-lg-6">
-          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" 
-               alt="Bright, welcoming learning classroom at BrightPath Academy" 
-               class="rounded-4 shadow-lg w-100" loading="lazy">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" 
+                 alt="Warm, sunlit learning classroom at BrightPath Academy" 
+                 class="rounded-4 shadow-lg w-100" loading="lazy">
+            <div class="p-3 bg-white text-dark rounded-3 shadow position-absolute bottom-0 start-0 m-3 d-none d-sm-block border">
+              <div class="d-flex align-items-center gap-3">
+                <div class="bp-icon-box bp-icon-box-primary mb-0" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <div>
+                  <h6 class="font-heading mb-0 fs-6">Excellence in After-School Education</h6>
+                  <small class="text-muted">Metro City Community Choice Award 2024–2026</small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Facility Virtual Tour Gallery -->
-      <div class="my-5 pt-4">
+      <!-- Section 2: Our 4 Core Educational Pillars -->
+      <div class="my-5 py-4" id="pillarsSection">
         <div class="text-center mb-5">
-          <span class="bp-badge bp-badge-accent mb-2">Safe & Inspiring Spaces</span>
-          <h2 class="font-heading fs-2">Explore Our Learning Facility</h2>
-          <p class="text-muted small">Designed specifically for focus, collaborative inquiry, and comfortable reading.</p>
+          <span class="bp-badge bp-badge-accent mb-2">Our Foundation</span>
+          <h2 class="font-heading fs-2">The 4 Educational Pillars of BrightPath</h2>
+          <p class="text-muted mx-auto" style="max-width: 680px;">
+            Every policy, classroom routine, and tutor interaction is rooted in four non-negotiable pedagogical values.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Pillar 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 border-top border-4 border-primary">
+              <div class="bp-icon-box bp-icon-box-primary">
+                <i class="fa-solid fa-heart-pulse"></i>
+              </div>
+              <h4 class="font-heading fs-5 mb-2">Dignity in the Struggle</h4>
+              <p class="small text-muted mb-0">
+                We remove shame from academic friction. Mistakes are celebrated as neurological evidence of brain growth, transforming fearful avoidance into resilient curiosity.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 border-top border-4 border-secondary">
+              <div class="bp-icon-box bp-icon-box-secondary">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <h4 class="font-heading fs-5 mb-2">Mastery Over Memorization</h4>
+              <p class="small text-muted mb-0">
+                We don't teach shortcuts or robotic formulas. Students master the underlying logic through spatial manipulatives, concept maps, and visual reasoning.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 border-top border-4 border-accent">
+              <div class="bp-icon-box bp-icon-box-accent">
+                <i class="fa-solid fa-spa"></i>
+              </div>
+              <h4 class="font-heading fs-5 mb-2">Whole-Child Wellness</h4>
+              <p class="small text-muted mb-0">
+                A fatigued child cannot learn. We prioritize a mandatory 30-minute decompression buffer, balanced organic snacks, natural daylight, and ergonomic study seating.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 border-top border-4 border-purple">
+              <div class="bp-icon-box bp-icon-box-purple">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <h4 class="font-heading fs-5 mb-2">Radical Transparency</h4>
+              <p class="small text-muted mb-0">
+                No guessing what happened at tutoring. Parents receive logged daily notes, completed assignment checks, and upcoming test reminders through their portal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: A Typical Afternoon at BrightPath (Daily Routine Timeline) -->
+      <div class="my-5 py-4 bg-light-subtle rounded-4 p-4 p-md-5 border" id="dailySchedule">
+        <div class="text-center mb-5">
+          <span class="bp-badge bp-badge-primary mb-2">Structure & Rhythm</span>
+          <h2 class="font-heading fs-2">A Typical Afternoon at BrightPath Academy</h2>
+          <p class="text-muted mx-auto" style="max-width: 680px;">
+            Predictable routines alleviate childhood anxiety. Here is how we balance focus, sensory decompression, and creative play from 2:30 PM to 6:30 PM.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Time Block 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 bg-body">
+              <span class="badge bg-primary-subtle text-primary mb-3 align-self-start fw-bold">2:30 – 3:15 PM</span>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <div class="bp-step-badge bg-primary text-white">1</div>
+                <h5 class="font-heading fs-6 mb-0">Arrival & Decompress</h5>
+              </div>
+              <p class="small text-muted mb-0">
+                School bus arrival, keycard sign-in, personal cubby storage, healthy allergen-free brain snack, and a 20-minute outdoor/sensory transition break.
+              </p>
+            </div>
+          </div>
+
+          <!-- Time Block 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 bg-body">
+              <span class="badge bg-secondary-subtle text-secondary mb-3 align-self-start fw-bold">3:15 – 4:30 PM</span>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <div class="bp-step-badge bg-secondary text-white">2</div>
+                <h5 class="font-heading fs-6 mb-0">Core Homework Lab</h5>
+              </div>
+              <p class="small text-muted mb-0">
+                Focused study pods (1:4 ratio). Certified tutors review agendas, clarify friction points, verify completed work, and stamp official homework sign-offs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Time Block 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 bg-body">
+              <span class="badge bg-accent-subtle text-accent mb-3 align-self-start fw-bold">4:30 – 5:30 PM</span>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <div class="bp-step-badge text-white" style="background-color: var(--bp-accent);">3</div>
+                <h5 class="font-heading fs-6 mb-0">STEM & Enrichment</h5>
+              </div>
+              <p class="small text-muted mb-0">
+                Hands-on innovation time! Students rotate between LEGO Spike robotics, Python coding, kitchen science experiments, or quiet library reading.
+              </p>
+            </div>
+          </div>
+
+          <!-- Time Block 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 bg-body">
+              <span class="badge bg-purple-subtle text-purple mb-3 align-self-start fw-bold">5:30 – 6:30 PM</span>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <div class="bp-step-badge text-white" style="background-color: var(--bp-purple);">4</div>
+                <h5 class="font-heading fs-6 mb-0">Review & Pickup</h5>
+              </div>
+              <p class="small text-muted mb-0">
+                1:1 deep-dive review quizzes, tomorrow's binder prep, logging portal notes for parents, and secure photo-verified guardian pickup.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 4: Virtual Campus Tour (6 Learning Spaces) -->
+      <div class="my-5 py-4" id="facilityTour">
+        <div class="text-center mb-5">
+          <span class="bp-badge bp-badge-secondary mb-2">Safe & Inspiring Spaces</span>
+          <h2 class="font-heading fs-2">Explore Our 6,000 Sq. Ft. Learning Campus</h2>
+          <p class="text-muted small mx-auto" style="max-width: 650px;">
+            Carefully architected with natural light, acoustic dampening, and flexible ergonomics to maximize attention, collaborative inquiry, and peace of mind.
+          </p>
         </div>
 
         <div class="row g-4">
           <!-- Room 1 -->
-          <div class="col-md-4">
-            <div class="bp-card bp-card-hover">
-              <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80" 
-                   alt="Ergonomic study pods and desk space" 
-                   class="bp-program-img" style="aspect-ratio: 16/11;" loading="lazy">
-              <div class="p-3">
-                <h5 class="font-heading fs-6 mb-1">Ergonomic Study Pods</h5>
-                <p class="small text-muted mb-0">Quiet individual desks and small pod clusters equipped with task lighting and reference materials.</p>
+          <div class="col-md-6 col-lg-4">
+            <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+              <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80" 
+                     alt="Ergonomic study pods and quiet desk clusters" 
+                     class="bp-program-img" loading="lazy">
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <span class="badge bg-primary-subtle text-primary mb-2 align-self-start">Study Hall</span>
+                <h5 class="font-heading fs-5 mb-2">Ergonomic Focus Pods</h5>
+                <p class="small text-muted mb-0">
+                  Individual height-adjustable desks with task lighting, noise-softening acoustic dividers, and reference libraries designed for distraction-free concentration.
+                </p>
               </div>
             </div>
           </div>
 
           <!-- Room 2 -->
-          <div class="col-md-4">
-            <div class="bp-card bp-card-hover">
-              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" 
-                   alt="Robotics and technology lab space" 
-                   class="bp-program-img" style="aspect-ratio: 16/11;" loading="lazy">
-              <div class="p-3">
-                <h5 class="font-heading fs-6 mb-1">Innovation & Robotics Lab</h5>
-                <p class="small text-muted mb-0">Equipped with 3D printers, coding laptops, Lego Spike robotics kits, and electronics breadboards.</p>
+          <div class="col-md-6 col-lg-4">
+            <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+              <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" 
+                     alt="STEM maker lab equipped with computers and robotics kits" 
+                     class="bp-program-img" loading="lazy">
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <span class="badge bg-purple-subtle text-purple mb-2 align-self-start">STEM Maker Lab</span>
+                <h5 class="font-heading fs-5 mb-2">Innovation & Robotics Studio</h5>
+                <p class="small text-muted mb-0">
+                  Equipped with LEGO Spike Prime robotics kits, coding workstations, electronics breadboards, and safe 3D printing equipment for young inventors.
+                </p>
               </div>
             </div>
           </div>
 
           <!-- Room 3 -->
-          <div class="col-md-4">
-            <div class="bp-card bp-card-hover">
-              <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80" 
-                   alt="Cozy library and reading nook with comfortable beanbags" 
-                   class="bp-program-img" style="aspect-ratio: 16/11;" loading="lazy">
-              <div class="p-3">
-                <h5 class="font-heading fs-6 mb-1">Cozy Reading Lounge</h5>
-                <p class="small text-muted mb-0">A calm, carpeted library nook with over 1,500 curated books for early readers and young adults.</p>
+          <div class="col-md-6 col-lg-4">
+            <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+              <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80" 
+                     alt="Cozy reading nook with plush beanbags and full bookshelves" 
+                     class="bp-program-img" loading="lazy">
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <span class="badge bg-accent-subtle text-accent mb-2 align-self-start">Literacy Sanctuary</span>
+                <h5 class="font-heading fs-5 mb-2">Cozy Reading Lounge</h5>
+                <p class="small text-muted mb-0">
+                  A tranquil, carpeted library nook containing over 1,500 curated books, graphic novels, and decodable phonics readers with comfortable seating.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Room 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+              <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=800&q=80" 
+                     alt="Collaborative math problem solving whiteboard table" 
+                     class="bp-program-img" loading="lazy">
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <span class="badge bg-secondary-subtle text-secondary mb-2 align-self-start">Math & Logic</span>
+                <h5 class="font-heading fs-5 mb-2">Collaborative Math Circle</h5>
+                <p class="small text-muted mb-0">
+                  Features erasable whiteboard tables, tactile geometric manipulatives, and logic games that make collaborative math problem-solving intuitive and lively.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Room 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+              <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" 
+                     alt="Clean, welcoming nutrition and snack cafe area" 
+                     class="bp-program-img" loading="lazy">
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <span class="badge bg-primary-subtle text-primary mb-2 align-self-start">Wellness</span>
+                <h5 class="font-heading fs-5 mb-2">Sensory & Nutrition Cafe</h5>
+                <p class="small text-muted mb-0">
+                  A 100% nut-free, sanitized kitchen and cafe where students refuel with filtered water, fresh fruit, whole-grain snacks, and connect with friends.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Room 6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+              <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" 
+                     alt="Secure reception desk with digital visitor badge check-in" 
+                     class="bp-program-img" loading="lazy">
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <span class="badge bg-secondary-subtle text-secondary mb-2 align-self-start">Security</span>
+                <h5 class="font-heading fs-5 mb-2">Guardian Welcome Hub</h5>
+                <p class="small text-muted mb-0">
+                  Double-door security vestibule with digital keycard logging, photo-verification guardian matching, and private parent consultation suites.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Child Safety Standards & Protocols -->
+      <!-- Section 5: Child Safety Standards & Protocols -->
       <div class="my-5 p-4 p-md-5 rounded-4 bg-light-subtle border">
-        <div class="text-center mb-4">
+        <div class="text-center mb-5">
           <span class="bp-badge bp-badge-primary mb-2">Uncompromising Safety</span>
           <h2 class="font-heading fs-2">Child Protection & Security Protocols</h2>
-          <p class="text-muted small">Your child's physical and emotional wellbeing is our highest priority.</p>
+          <p class="text-muted small mx-auto" style="max-width: 600px;">
+            Your child's physical, emotional, and psychological safety is our highest sacred priority.
+          </p>
         </div>
 
         <div class="row g-4">
           <div class="col-md-3">
-            <div class="text-center p-3">
+            <div class="text-center p-3 h-100 bp-card">
               <div class="bp-icon-box bp-icon-box-primary mx-auto">
                 <i class="fa-solid fa-fingerprint"></i>
               </div>
               <h5 class="font-heading fs-6">DOJ & FBI Vetting</h5>
-              <p class="small text-muted">Mandatory background checks & fingerprint clearances for all employees.</p>
+              <p class="small text-muted mb-0">
+                100% of staff pass multi-agency fingerprint background checks and 50-state registries before stepping onto campus.
+              </p>
             </div>
           </div>
 
           <div class="col-md-3">
-            <div class="text-center p-3">
+            <div class="text-center p-3 h-100 bp-card">
               <div class="bp-icon-box bp-icon-box-secondary mx-auto">
                 <i class="fa-solid fa-id-card-clip"></i>
               </div>
-              <h5 class="font-heading fs-6">Secure Keycard Check-in</h5>
-              <p class="small text-muted">Digital timestamped check-in and authorized guardian photo-match at pickup.</p>
+              <h5 class="font-heading fs-6">Digital Keycard Check-in</h5>
+              <p class="small text-muted mb-0">
+                Timestamped entry notifications and mandatory photo-matching for all authorized pickup guardians.
+              </p>
             </div>
           </div>
 
           <div class="col-md-3">
-            <div class="text-center p-3">
+            <div class="text-center p-3 h-100 bp-card">
               <div class="bp-icon-box bp-icon-box-accent mx-auto">
                 <i class="fa-solid fa-kit-medical"></i>
               </div>
-              <h5 class="font-heading fs-6">CPR & First Aid</h5>
-              <p class="small text-muted">All educators maintain active Red Cross Pediatric CPR & First Aid credentials.</p>
+              <h5 class="font-heading fs-6">Pediatric CPR / First Aid</h5>
+              <p class="small text-muted mb-0">
+                All educators maintain active American Red Cross Pediatric CPR, AED, and severe allergy EpiPen certifications.
+              </p>
             </div>
           </div>
 
           <div class="col-md-3">
-            <div class="text-center p-3">
+            <div class="text-center p-3 h-100 bp-card">
               <div class="bp-icon-box bp-icon-box-purple mx-auto">
                 <i class="fa-solid fa-video"></i>
               </div>
-              <h5 class="font-heading fs-6">24/7 Security CCTV</h5>
-              <p class="small text-muted">Monitored common areas, classrooms, and outdoor pickup points.</p>
+              <h5 class="font-heading fs-6">CCTV & Open Classrooms</h5>
+              <p class="small text-muted mb-0">
+                Full visual transparency with continuous common-area monitoring and clear-glass classroom viewing panels.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Tour CTA -->
-      <div class="text-center py-4">
-        <h3 class="font-heading fs-3 mb-2">Want to see BrightPath Academy in person?</h3>
-        <p class="text-muted mb-4">We host guided center walkthroughs every Tuesday and Thursday at 1:30 PM.</p>
-        <a href="contact.html" class="btn btn-bp-primary">
-          <i class="fa-solid fa-calendar-check me-1"></i> Schedule an In-Person Tour
-        </a>
+      <!-- Section 6: Academic Leadership Team -->
+      <div class="my-5 py-4" id="leadershipTeam">
+        <div class="text-center mb-5">
+          <span class="bp-badge bp-badge-secondary mb-2">Our Leadership</span>
+          <h2 class="font-heading fs-2">Meet Our Educational Directors</h2>
+          <p class="text-muted small mx-auto" style="max-width: 680px;">
+            Guided by veteran educators with advanced degrees from Stanford, UCLA, Columbia, and Michigan.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Leader 1: Dr. Sarah Jenkins -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card bp-card-hover p-4 text-center h-100 d-flex flex-column">
+              <div class="bp-tutor-avatar-wrap mb-3">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" 
+                     alt="Dr. Sarah Jenkins - Academic Director" class="bp-tutor-avatar" loading="lazy">
+                <div class="bp-verified-badge"><i class="fa-solid fa-check"></i></div>
+              </div>
+              <span class="badge bg-primary-subtle text-primary mb-2">Co-Founder & Director</span>
+              <h4 class="font-heading fs-6 mb-1">Dr. Sarah Jenkins</h4>
+              <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-primary"></i>Ph.D. Stanford University</p>
+              <p class="small text-muted mb-3 fst-italic">
+                "We built BrightPath so that no child ever has to cry over a textbook at 6 PM again."
+              </p>
+              <div class="mt-auto">
+                <a href="tutors.html" class="btn btn-sm btn-bp-outline w-100">View Bio & Credentials</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leader 2: Marcus Vance -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card bp-card-hover p-4 text-center h-100 d-flex flex-column">
+              <div class="bp-tutor-avatar-wrap mb-3">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" 
+                     alt="Marcus Vance - Head of Mathematics" class="bp-tutor-avatar" loading="lazy">
+                <div class="bp-verified-badge"><i class="fa-solid fa-check"></i></div>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary mb-2">Head of Mathematics</span>
+              <h4 class="font-heading fs-6 mb-1">Marcus Vance</h4>
+              <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-secondary"></i>M.S. Applied Math (UCLA)</p>
+              <p class="small text-muted mb-3 fst-italic">
+                "Math is an art of patience. Every child can excel when given visual problem-solving tools."
+              </p>
+              <div class="mt-auto">
+                <a href="tutors.html" class="btn btn-sm btn-bp-outline w-100">View Bio & Credentials</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leader 3: Elena Rostova -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card bp-card-hover p-4 text-center h-100 d-flex flex-column">
+              <div class="bp-tutor-avatar-wrap mb-3">
+                <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=400&q=80" 
+                     alt="Elena Rostova - Director of Literacy" class="bp-tutor-avatar" loading="lazy">
+                <div class="bp-verified-badge"><i class="fa-solid fa-check"></i></div>
+              </div>
+              <span class="badge bg-purple-subtle text-purple mb-2">Director of Literacy</span>
+              <h4 class="font-heading fs-6 mb-1">Elena Rostova</h4>
+              <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-purple"></i>M.Ed. Columbia University</p>
+              <p class="small text-muted mb-3 fst-italic">
+                "Reading opens internal doors. We nurture readers through multisensory phonics and genuine joy."
+              </p>
+              <div class="mt-auto">
+                <a href="tutors.html" class="btn btn-sm btn-bp-outline w-100">View Bio & Credentials</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leader 4: James Wilson -->
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card bp-card-hover p-4 text-center h-100 d-flex flex-column">
+              <div class="bp-tutor-avatar-wrap mb-3">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" 
+                     alt="James Wilson - Director of Study Skills" class="bp-tutor-avatar" loading="lazy">
+                <div class="bp-verified-badge"><i class="fa-solid fa-check"></i></div>
+              </div>
+              <span class="badge bg-accent-subtle text-accent mb-2">Director of Study Skills</span>
+              <h4 class="font-heading fs-6 mb-1">James Wilson</h4>
+              <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-accent"></i>M.A. Cognitive Psych (Michigan)</p>
+              <p class="small text-muted mb-3 fst-italic">
+                "We teach the science of memory and executive planning so students succeed for life."
+              </p>
+              <div class="mt-auto">
+                <a href="tutors.html" class="btn btn-sm btn-bp-outline w-100">View Bio & Credentials</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 7: Community Impact & Scholarships -->
+      <div class="my-5 p-4 p-md-5 rounded-4 bg-primary text-white shadow-sm">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <span class="badge bg-white text-primary mb-2 fw-bold">Giving Back to Metro City</span>
+            <h3 class="font-heading text-white mb-2">The BrightPath Need-Based Scholarship Fund</h3>
+            <p class="text-white opacity-75 mb-3">
+              We believe every child deserves world-class academic mentorship regardless of family income. Through our Community Partner Endowment, we provide over 30 full and partial annual scholarships to local Title 1 elementary and middle school students.
+            </p>
+            <div class="d-flex flex-wrap gap-3 small">
+              <span><i class="fa-solid fa-circle-check text-warning me-1"></i>30+ Annual Scholarships</span>
+              <span><i class="fa-solid fa-circle-check text-warning me-1"></i>Free Weekend STEM Workshops</span>
+              <span><i class="fa-solid fa-circle-check text-warning me-1"></i>Title 1 District Alignment</span>
+            </div>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="contact.html?inquiry=scholarship" class="btn btn-light text-primary fw-bold">
+              Learn About Scholarships
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 8: Frequently Asked Questions About Our Center -->
+      <div class="my-5 py-4" id="centerFAQ">
+        <div class="text-center mb-5">
+          <span class="bp-badge bp-badge-secondary mb-2">Center Operations</span>
+          <h2 class="font-heading fs-2">Frequently Asked Questions About BrightPath</h2>
+          <p class="text-muted small mx-auto" style="max-width: 650px;">
+            Everything you need to know about attendance, transportation, dietary needs, and observing sessions.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion" id="aboutAccordion">
+
+              <!-- FAQ 1 -->
+              <div class="accordion-item bp-card mb-3">
+                <h2 class="accordion-header" id="aboutHeadingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aboutCollapseOne" aria-expanded="false" aria-controls="aboutCollapseOne">
+                    <i class="fa-solid fa-van-shuttle text-primary me-2"></i>
+                    Do you provide after-school transportation from local schools?
+                  </button>
+                </h2>
+                <div id="aboutCollapseOne" class="accordion-collapse collapse" aria-labelledby="aboutHeadingOne" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body text-muted small">
+                    Yes! We coordinate directly with Metro City Unified bus routes and operate dedicated, insured BrightPath student passenger vans servicing five local elementary schools and three middle schools. Students are picked up right at school dismissal and safely escorted into our center by 3:00 PM.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 2 -->
+              <div class="accordion-item bp-card mb-3">
+                <h2 class="accordion-header" id="aboutHeadingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aboutCollapseTwo" aria-expanded="false" aria-controls="aboutCollapseTwo">
+                    <i class="fa-solid fa-brain text-secondary me-2"></i>
+                    How do you support neurodivergent students (ADHD, mild dyslexia, sensory)?
+                  </button>
+                </h2>
+                <div id="aboutCollapseTwo" class="accordion-collapse collapse" aria-labelledby="aboutHeadingTwo" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body text-muted small">
+                    All BrightPath educators receive specialized continuing professional training in neurodiversity. We provide wobble chairs, noise-softening headphones, visual timers, and sensory transition buffers. Our 1:4 maximum pod ratio ensures students who struggle with working memory or attention receive patient, individualized pacing without stigma.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 3 -->
+              <div class="accordion-item bp-card mb-3">
+                <h2 class="accordion-header" id="aboutHeadingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aboutCollapseThree" aria-expanded="false" aria-controls="aboutCollapseThree">
+                    <i class="fa-solid fa-shield-virus text-accent me-2"></i>
+                    What is your snack policy and how do you handle severe food allergies?
+                  </button>
+                </h2>
+                <div id="aboutCollapseThree" class="accordion-collapse collapse" aria-labelledby="aboutHeadingThree" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body text-muted small">
+                    BrightPath Academy is a strictly <strong>100% nut-free and peanut-free campus</strong>. All daily afternoon snacks (fresh fruits, whole-grain crackers, string cheese, applesauce) are prepared in our sanitized, allergen-controlled kitchen. All staff maintain active EpiPen administration training.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 4 -->
+              <div class="accordion-item bp-card mb-3">
+                <h2 class="accordion-header" id="aboutHeadingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aboutCollapseFour" aria-expanded="false" aria-controls="aboutCollapseFour">
+                    <i class="fa-solid fa-eye text-primary me-2"></i>
+                    Can parents drop by to observe during study hall or tutoring?
+                  </button>
+                </h2>
+                <div id="aboutCollapseFour" class="accordion-collapse collapse" aria-labelledby="aboutHeadingFour" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body text-muted small">
+                    We maintain an open-door transparency philosophy. Parents are welcome to observe through our acoustic-isolated observation windows at any time. To maintain quiet focus for studying children, in-classroom visits can be arranged with the Academic Director.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 5 -->
+              <div class="accordion-item bp-card mb-3">
+                <h2 class="accordion-header" id="aboutHeadingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aboutCollapseFive" aria-expanded="false" aria-controls="aboutCollapseFive">
+                    <i class="fa-solid fa-calendar-days text-purple me-2"></i>
+                    What if our family needs flexible attendance days?
+                  </button>
+                </h2>
+                <div id="aboutCollapseFive" class="accordion-collapse collapse" aria-labelledby="aboutHeadingFive" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body text-muted small">
+                    We understand that modern families have changing schedules. We offer flexible 2-day, 3-day, and full 5-day weekly enrollments, as well as drop-in session passes for exam prep weeks. You can adjust your plan directly through your online Parent Portal with 7 days' advance notice.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 9: Guided Campus Tour CTA -->
+      <div class="text-center py-5 bg-light-subtle rounded-4 border p-4 p-md-5">
+        <span class="bp-badge bp-badge-primary mb-2">Visit BrightPath</span>
+        <h3 class="font-heading fs-2 mb-2">Experience BrightPath Academy in Person</h3>
+        <p class="text-muted mb-4 mx-auto" style="max-width: 600px;">
+          Guided walkthroughs are hosted every Tuesday and Thursday at 1:30 PM, or by appointment. Come see our study pods, meet our educators, and explore our STEM maker studio.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="contact.html" class="btn btn-bp-primary px-4 py-2">
+            <i class="fa-solid fa-calendar-check me-1"></i> Schedule Center Walkthrough
+          </a>
+          <a href="programs.html" class="btn btn-bp-outline px-4 py-2">
+            <i class="fa-solid fa-book-open me-1"></i> Browse Academic Programs
+          </a>
+          <a href="tutors.html" class="btn btn-bp-outline px-4 py-2">
+            <i class="fa-solid fa-users me-1"></i> Meet Our Certified Tutors
+          </a>
+        </div>
       </div>
 
     </div>
@@ -287,7 +812,8 @@
         <div class="col-6 col-lg-2">
           <h5 class="bp-footer-title">Navigation</h5>
           <ul class="bp-footer-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home 1 - Academic</a></li>
+            <li><a href="home-2.html">Home 2 - STEM Hub</a></li>
             <li><a href="programs.html">Programs by Subject</a></li>
             <li><a href="tutors.html">Certified Tutors</a></li>
             <li><a href="about.html">About Center</a></li>

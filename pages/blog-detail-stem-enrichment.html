@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Power of After-School STEM for Working Families | BrightPath Academy</title>
+  <meta name="description" content="Discover how after-school robotics tinkering and beginner coding turn passive screen time into active computational problem-solving and resilience.">
+  <meta name="keywords" content="after school stem, kids robotics, coding for kids, stem enrichment, hands-on science">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- Main Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Main Navigation Header -->
+  <nav class="navbar navbar-expand-lg bp-navbar sticky-top" aria-label="Main Navigation">
+    <div class="bp-navbar-container">
+      <a class="bp-brand" href="index.html">
+        <div class="bp-brand-icon">
+          <svg class="bp-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          </svg>
+        </div>
+        <div>
+          <span>BrightPath</span>
+          <span class="d-block text-primary small fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase;">Learning Academy</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMainContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <!-- Home Dropdown -->
+          <li class="nav-item dropdown bp-nav-dropdown">
+            <a class="nav-link bp-nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+            </a>
+            <ul class="dropdown-menu bp-dropdown-menu" aria-labelledby="homeDropdown">
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="index.html">
+                  <span class="bp-dropdown-title">Home 1 - Academic & Homework</span>
+                  <span class="bp-dropdown-desc">Daily homework lab, 1:4 pod ratios & certified mentors</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="home-2.html">
+                  <span class="bp-dropdown-title">Home 2 - STEM & Innovation Academy</span>
+                  <span class="bp-dropdown-desc">Robotics, coding, competition math & exam clinics</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link bp-nav-link" href="programs.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link bp-nav-link" href="tutors.html">Tutor</a></li>
+          <li class="nav-item"><a class="nav-link bp-nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link bp-nav-link active" aria-current="page" href="blog.html">Tips</a></li>
+          <li class="nav-item"><a class="nav-link bp-nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link bp-nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+
+        <div class="bp-controls-group">
+          <!-- RTL Layout Switcher -->
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle Right-to-Left Layout">
+            <span class="rtl-status-label">RTL</span>
+            <svg class="rtl-arrows-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 7H4"/>
+              <path d="M8 3L4 7l4 4"/>
+              <path d="M4 17h16"/>
+              <path d="M16 13l4 4-4 4"/>
+            </svg>
+          </button>
+
+          <!-- Dark/Light Mode Switcher -->
+          <button class="bp-icon-btn theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+            <span class="theme-toggle-svg-wrap">
+              <svg class="bp-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </span>
+          </button>
+          <a href="login.html" class="btn btn-bp-outline btn-sm">
+            <svg class="bp-icon-svg me-1" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span>Sign In</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumbs Bar -->
+  <nav class="py-3 bg-light-subtle border-bottom border-light-subtle" aria-label="breadcrumb">
+    <div class="container text-center">
+      <ol class="breadcrumb mb-0 small justify-content-center">
+        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+        <li class="breadcrumb-item"><a href="blog.html" class="text-decoration-none">Study Tips</a></li>
+        <li class="breadcrumb-item active" aria-current="page">After-School STEM</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main Article Body -->
+  <main id="main-content" class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Left: Main Article Content -->
+        <div class="col-lg-8">
+          
+          <!-- Article Header -->
+          <div class="mb-4 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2 flex-wrap">
+              <span class="badge bg-purple text-white">STEM & Enrichment</span>
+              <span class="small text-muted">• 5 min read • Published Sep 29, 2026</span>
+            </div>
+            <h1 class="font-heading fs-1 mb-3">
+              The Power of After-School STEM for Working Families
+            </h1>
+            <p class="text-muted lead fs-6 mx-auto" style="max-width: 720px;">
+              How hands-on robotics kits and beginner coding turn the afternoon "screen-time struggle" into active algorithmic problem-solving and deep collaborative joy.
+            </p>
+          </div>
+
+          <!-- Author Info Card -->
+          <div class="d-flex align-items-center justify-content-between p-3 rounded-3 bg-light-subtle border mb-4">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" 
+                   class="rounded-circle" width="50" height="50" style="object-fit: cover;" alt="David Chen">
+              <div>
+                <h6 class="font-heading mb-0">David Chen</h6>
+                <small class="text-muted">Coding & Robotics Coach • B.S. UC Berkeley</small>
+              </div>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-outline-secondary" title="Share Article" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');">
+                <i class="fa-solid fa-share-nodes"></i> Share
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="mb-4">
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Students collaborating on robotics project with gear assemblies" 
+                 class="w-100 rounded-4 shadow-sm" style="max-height: 440px; object-fit: cover;" loading="lazy">
+          </div>
+
+          <!-- Key Takeaways Callout -->
+          <div class="p-4 rounded-3 bg-purple-subtle border border-purple-subtle mb-4">
+            <h5 class="font-heading text-purple fs-6 mb-2">
+              <i class="fa-solid fa-lightbulb me-2"></i>Key Takeaways:
+            </h5>
+            <ul class="mb-0 small text-muted">
+              <li class="mb-1"><strong>Active vs. Passive Screen Time:</strong> Watching videos numbs the brain; programming animations and robotic servos sparks engineering creativity.</li>
+              <li class="mb-1"><strong>Debugging Builds Resilience:</strong> When code fails, students don't get punished; they analyze hypotheses and test solutions.</li>
+              <li class="mb-1"><strong>Connecting Theory to Physics:</strong> Abstract angles, gear ratios, and velocity become intuitive when seeing a robot navigate a maze.</li>
+              <li><strong>Safe Haven for Working Parents:</strong> Parents get peace of mind knowing the 3:30–6:00 PM window is spent building future-ready competencies.</li>
+            </ul>
+          </div>
+
+          <!-- Article Text -->
+          <div class="article-body text-secondary lh-lg mb-5" style="font-size: 1.05rem;">
+            <h3 class="font-heading fs-4 text-dark mt-4 mb-3">1. The 3:00 PM Dilemma for Working Families</h3>
+            <p class="text-muted">
+              For millions of working parents, the school dismissal bell sounds hours before the workday concludes. Unstructured afternoons frequently default to hours of video games, social media feeds, and evening exhaustion.
+            </p>
+            <p class="text-muted">
+              Quality after-school STEM enrichment flips this script. Rather than viewing technology as a babysitter, our hands-on maker labs channel children's natural digital curiosity into genuine engineering agency.
+            </p>
+
+            <h3 class="font-heading fs-4 text-dark mt-4 mb-3">2. Coding Teaches the Psychology of Resilience</h3>
+            <p class="text-muted">
+              In traditional academics, students are often conditioned to fear getting things wrong. But in computer science, errors are an expected, celebrated part of the creative process. When a 5th grader’s Scratch character gets stuck on a loop, they don't break down—they inspect the script blocks, pinpoint the missing variable, and hit Run again.
+            </p>
+            <blockquote class="p-3 my-3 border-start border-4 border-purple bg-light-subtle fst-italic text-muted">
+              "A child who spends an hour debugging a sensor on their robot is practicing the exact same grit and iterative thinking needed to excel in high school physics and adult life."
+            </blockquote>
+
+            <h3 class="font-heading fs-4 text-dark mt-4 mb-3">3. How Robotics Bridges Math to the Real World</h3>
+            <p class="text-muted">
+              Concepts like diameter, circumference, ratios, and algebraic logic often feel dry in a workbook. But when students must calculate how many motor rotations turn their robot exactly 90 degrees around an obstacle, the math comes alive. They aren't just solving for X; they are guiding their invention across the floor.
+            </p>
+          </div>
+
+          <!-- Author Bio Block -->
+          <div class="p-4 rounded-4 bg-light-subtle border mb-5">
+            <div class="d-flex flex-column flex-sm-row align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" 
+                   class="rounded-circle" width="80" height="80" style="object-fit: cover;" alt="David Chen">
+              <div>
+                <h5 class="font-heading mb-1">About David Chen</h5>
+                <p class="small text-muted mb-2">
+                  David Chen is a software engineer and youth robotics coach. A UC Berkeley alumnus, David has coached regional FIRST LEGO League teams and mentors K-8 students in Python and computational logic.
+                </p>
+                <a href="tutors.html" class="btn btn-sm btn-bp-outline">
+                  <i class="fa-solid fa-user me-1"></i> View David's Profile
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Sidebar -->
+        <div class="col-lg-4">
+          <div class="position-sticky" style="top: 90px;">
+            
+            <div class="bp-card p-4 mb-4 border-purple">
+              <span class="bp-badge bp-badge-purple mb-2">STEM & Coding</span>
+              <h4 class="font-heading fs-5 mb-2">Join Our Robotics Lab</h4>
+              <p class="small text-muted mb-3">
+                Hands-on LEGO robotics, Python coding, and AI foundations for grades 1 through 10.
+              </p>
+              <a href="program-robotics-coding.html" class="btn btn-sm btn-bp-primary w-100 mb-2">
+                Explore Robotics Program
+              </a>
+              <a href="contact.html" class="btn btn-sm btn-bp-outline w-100">
+                Schedule a Free Trial Lab
+              </a>
+            </div>
+
+            <div class="bp-card p-4 mb-4">
+              <h5 class="font-heading fs-6 mb-3 border-bottom pb-2">Related STEM Guides</h5>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-3">
+                  <a href="blog-detail-python-coding.html" class="text-decoration-none text-reset hover-primary small fw-semibold d-block">
+                    Why Kids Love Python: Moving Past Block Coding
+                  </a>
+                  <small class="text-muted"><i class="fa-regular fa-clock me-1"></i>5 min read • David Chen</small>
+                </li>
+                <li class="mb-3">
+                  <a href="blog-detail-kitchen-science.html" class="text-decoration-none text-reset hover-primary small fw-semibold d-block">
+                    Kitchen Science: 5 Hands-On Experiments
+                  </a>
+                  <small class="text-muted"><i class="fa-regular fa-clock me-1"></i>5 min read • Dr. Sarah Jenkins</small>
+                </li>
+                <li>
+                  <a href="blog-detail-math-mindset.html" class="text-decoration-none text-reset hover-primary small fw-semibold d-block">
+                    Fostering a Growth Mindset in Elementary Math
+                  </a>
+                  <small class="text-muted"><i class="fa-regular fa-clock me-1"></i>4 min read • Marcus Vance</small>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Related Guides Section -->
+  <section class="py-5 bg-light-subtle border-top border-light-subtle">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="bp-badge bp-badge-primary mb-2">More Insights</span>
+        <h2 class="font-heading fs-3 mb-2">Related Educational Guides</h2>
+        <div>
+          <a href="blog.html" class="btn btn-sm btn-bp-outline">All Guides <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="bp-card bp-card-hover p-4 h-100 d-flex flex-column">
+            <span class="badge bg-accent text-white mb-2 align-self-start">Coding</span>
+            <h5 class="font-heading fs-6 mb-2">
+              <a href="blog-detail-python-coding.html" class="text-decoration-none text-reset hover-primary">
+                Why Kids Love Python
+              </a>
+            </h5>
+            <p class="small text-muted mb-3">When and how to transition young coders from Scratch blocks to syntax.</p>
+            <div class="mt-auto pt-2 border-top small text-muted d-flex justify-content-between">
+              <span>David Chen</span>
+              <span>5 min read</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bp-card bp-card-hover p-4 h-100 d-flex flex-column">
+            <span class="badge bg-primary text-white mb-2 align-self-start">Science</span>
+            <h5 class="font-heading fs-6 mb-2">
+              <a href="blog-detail-kitchen-science.html" class="text-decoration-none text-reset hover-primary">
+                Kitchen Science: 5 Easy Experiments
+              </a>
+            </h5>
+            <p class="small text-muted mb-3">Turn household pantry ingredients into physics and chemistry wonders.</p>
+            <div class="mt-auto pt-2 border-top small text-muted d-flex justify-content-between">
+              <span>Dr. Sarah Jenkins</span>
+              <span>5 min read</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bp-card bp-card-hover p-4 h-100 d-flex flex-column">
+            <span class="badge bg-secondary text-white mb-2 align-self-start">Mathematics</span>
+            <h5 class="font-heading fs-6 mb-2">
+              <a href="blog-detail-math-mindset.html" class="text-decoration-none text-reset hover-primary">
+                Growth Mindset in Elementary Math
+              </a>
+            </h5>
+            <p class="small text-muted mb-3">How replacing "I can't" with "I haven't mastered this yet" builds grit.</p>
+            <div class="mt-auto pt-2 border-top small text-muted d-flex justify-content-between">
+              <span>Marcus Vance</span>
+              <span>4 min read</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bp-footer" data-bs-theme="dark">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="bp-brand text-white mb-3" href="index.html">
+            <div class="bp-brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <span>BrightPath Academy</span>
+          </a>
+          <p class="small text-muted mb-4">
+            Structured after-school homework help, certified subject tutoring, and engaging STEM enrichment for K-12 students.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="bp-footer-title">Navigation</h5>
+          <ul class="bp-footer-links">
+            <li><a href="index.html">Home 1 - Academic</a></li>
+            <li><a href="home-2.html">Home 2 - STEM Hub</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="tutors.html">Certified Tutors</a></li>
+            <li><a href="about.html">About Center</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="bp-footer-title">Parent Portals</h5>
+          <ul class="bp-footer-links">
+            <li><a href="login.html">Parent Sign In</a></li>
+            <li><a href="register.html">Student Registration</a></li>
+            <li><a href="dashboard.html">Parent Dashboard</a></li>
+            <li><a href="contact.html">Support & Tours</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="bp-footer-title">Visit Us</h5>
+          <p class="small text-muted mb-2"><i class="fa-solid fa-location-dot me-2 text-primary"></i>452 Learning Lane, Suite 100, Metro City, CA 94103</p>
+          <p class="small text-muted"><i class="fa-solid fa-phone me-2 text-primary"></i>(800) 555-0199</p>
+        </div>
+      </div>
+      <div class="bp-footer-bottom text-center">
+        <p class="mb-0 text-muted small">© 2026 BrightPath Learning Academy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

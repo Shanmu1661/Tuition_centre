@@ -51,7 +51,27 @@
 
       <div class="collapse navbar-collapse" id="navbarMainContent">
         <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link bp-nav-link" href="index.html">Home</a></li>
+          <!-- Home Dropdown -->
+          <li class="nav-item dropdown bp-nav-dropdown">
+            <a class="nav-link bp-nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+            </a>
+            <ul class="dropdown-menu bp-dropdown-menu" aria-labelledby="homeDropdown">
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="index.html">
+                  <span class="bp-dropdown-title">Home 1 - Academic & Homework</span>
+                  <span class="bp-dropdown-desc">Daily homework lab, 1:4 pod ratios & certified mentors</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="home-2.html">
+                  <span class="bp-dropdown-title">Home 2 - STEM & Innovation Academy</span>
+                  <span class="bp-dropdown-desc">Robotics, coding, competition math & exam clinics</span>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link bp-nav-link active" aria-current="page" href="programs.html">Programs</a></li>
           <li class="nav-item"><a class="nav-link bp-nav-link" href="tutors.html">Tutor</a></li>
           <li class="nav-item"><a class="nav-link bp-nav-link" href="about.html">About</a></li>
@@ -92,14 +112,35 @@
     </div>
   </nav>
 
-  <!-- Page Header Banner -->
-  <header class="py-5 bg-light-subtle border-bottom border-light-subtle">
+  <!-- Page Header Banner Fully Covered with Image -->
+  <header class="bp-page-banner">
+    <div class="bp-page-banner-bg">
+      <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=80" 
+           alt="Students learning with certified educator at BrightPath Academy" 
+           class="bp-page-banner-bg-img" loading="eager">
+      <div class="bp-page-banner-overlay"></div>
+    </div>
     <div class="container text-center">
-      <span class="bp-badge bp-badge-primary mb-2">Academic Curriculum</span>
-      <h1 class="font-heading fs-1 mb-3">After-School Programs Organized by Subject</h1>
-      <p class="text-muted mx-auto" style="max-width: 680px;">
-        Every child learns differently. We offer small-group and 1-on-1 programs structured around key school subjects to ensure concept mastery, grade improvement, and creative enrichment.
-      </p>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10 col-xl-8 mx-auto text-center">
+          <div class="d-inline-flex justify-content-center align-items-center gap-2 mb-3 flex-wrap">
+            <span class="bp-banner-glass-badge primary"><i class="fa-solid fa-book-open"></i> Academic Curriculum</span>
+          </div>
+          <h1 class="font-heading fs-1 mb-3 text-white">After-School Programs Organized by Subject</h1>
+          <p class="bp-page-banner-lead mb-4 mx-auto text-center">
+            Every child learns differently. We offer small-group and 1-on-1 programs structured around key school subjects to ensure concept mastery, grade improvement, and creative enrichment.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#programsGrid" class="btn btn-bp-primary px-3 py-2">
+              <i class="fa-solid fa-layer-group me-1"></i> Browse 9 Core Programs
+            </a>
+            <a href="contact.html" class="btn btn-outline-light px-3 py-2">
+              <i class="fa-solid fa-calendar-check me-1"></i> Book Diagnostic Assessment
+            </a>
+          </div>
+        </div>
+        
+      </div>
     </div>
   </header>
 
@@ -121,29 +162,29 @@
         
         <!-- 1. Daily Homework Help Core Lab -->
         <div class="col-md-6 col-lg-4 program-card-item" data-category="homework">
-          <div class="bp-card bp-card-hover">
+          <div class="bp-card bp-card-hover h-100">
             <div class="bp-program-img-wrapper">
               <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" 
                    alt="Students working on homework assignments with educator support" 
                    class="bp-program-img" loading="lazy">
               <span class="bp-badge bp-badge-primary bp-program-overlay-badge">Grades K - 12</span>
             </div>
-            <div class="bp-card-body">
+            <div class="bp-card-body d-flex flex-column">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <span class="text-primary fw-bold small"><i class="fa-solid fa-pencil me-1"></i> Homework Core</span>
                 <span class="badge bg-light text-dark border">Ratio 1:4 max</span>
               </div>
               <h3 class="font-heading fs-5 mb-2">Daily Homework Completion Lab</h3>
-              <p class="small text-muted mb-3">
+              <p class="small text-muted mb-3 flex-grow-1">
                 Students bring their school backpacks, agendas, and digital assignments. Tutors ensure complete accuracy, check comprehension, and log daily verification notes for parents.
               </p>
               <div class="mb-3 small">
                 <div class="text-muted"><i class="fa-solid fa-calendar me-2 text-primary"></i><strong>Days:</strong> Mon – Fri (2:30 PM - 5:30 PM)</div>
                 <div class="text-muted"><i class="fa-solid fa-clock me-2 text-primary"></i><strong>Duration:</strong> 60 - 90 mins daily</div>
               </div>
-              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle">
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle mt-auto">
                 <span class="fw-bold fs-6">$280 <small class="text-muted fw-normal">/ month</small></span>
-                <a href="dashboard.html" class="btn btn-sm btn-bp-primary">Book Slot in Portal</a>
+                <a href="program-homework-lab.html" class="btn btn-sm btn-bp-primary">Know More</a>
               </div>
             </div>
           </div>
@@ -151,29 +192,29 @@
 
         <!-- 2. Mathematics Mastery -->
         <div class="col-md-6 col-lg-4 program-card-item" data-category="math">
-          <div class="bp-card bp-card-hover">
+          <div class="bp-card bp-card-hover h-100">
             <div class="bp-program-img-wrapper">
               <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=800&q=80" 
                    alt="Math geometric blocks and problem solving worksheets" 
                    class="bp-program-img" loading="lazy">
               <span class="bp-badge bp-badge-secondary bp-program-overlay-badge">Grades 2 - 9</span>
             </div>
-            <div class="bp-card-body">
+            <div class="bp-card-body d-flex flex-column">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <span class="text-secondary fw-bold small"><i class="fa-solid fa-calculator me-1"></i> Mathematics</span>
                 <span class="badge bg-light text-dark border">Ratio 1:3</span>
               </div>
               <h3 class="font-heading fs-5 mb-2">Math Mastery & Logic Lab</h3>
-              <p class="small text-muted mb-3">
+              <p class="small text-muted mb-3 flex-grow-1">
                 From foundational arithmetic and fractions to pre-algebra and geometry. We demystify abstract math concepts using visual manipulatives and confidence-building problem solving.
               </p>
               <div class="mb-3 small">
                 <div class="text-muted"><i class="fa-solid fa-calendar me-2 text-secondary"></i><strong>Days:</strong> Mon, Wed, Fri (3:30 PM - 4:45 PM)</div>
                 <div class="text-muted"><i class="fa-solid fa-clock me-2 text-secondary"></i><strong>Duration:</strong> 75 mins / session</div>
               </div>
-              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle">
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle mt-auto">
                 <span class="fw-bold fs-6">$260 <small class="text-muted fw-normal">/ month</small></span>
-                <a href="dashboard.html" class="btn btn-sm btn-bp-primary">Book Slot in Portal</a>
+                <a href="program-math-mastery.html" class="btn btn-sm btn-bp-primary">Know More</a>
               </div>
             </div>
           </div>
@@ -181,29 +222,29 @@
 
         <!-- 3. STEM & Robotics -->
         <div class="col-md-6 col-lg-4 program-card-item" data-category="stem">
-          <div class="bp-card bp-card-hover">
+          <div class="bp-card bp-card-hover h-100">
             <div class="bp-program-img-wrapper">
               <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80" 
                    alt="Robotics engineering kit and student programming tablet" 
                    class="bp-program-img" loading="lazy">
               <span class="bp-badge bp-badge-purple bp-program-overlay-badge">Grades 3 - 8</span>
             </div>
-            <div class="bp-card-body">
+            <div class="bp-card-body d-flex flex-column">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <span class="text-purple fw-bold small"><i class="fa-solid fa-robot me-1"></i> Technology & STEM</span>
                 <span class="badge bg-light text-dark border">Hands-on Lab</span>
               </div>
               <h3 class="font-heading fs-5 mb-2">Robotics & Creative Coding</h3>
-              <p class="small text-muted mb-3">
+              <p class="small text-muted mb-3 flex-grow-1">
                 Students construct programmable LEGO Spike & Arduino robots, develop interactive 2D games with Scratch, and learn foundational Python algorithmic thinking.
               </p>
               <div class="mb-3 small">
                 <div class="text-muted"><i class="fa-solid fa-calendar me-2 text-purple"></i><strong>Days:</strong> Tue & Thu (4:30 PM - 5:45 PM)</div>
                 <div class="text-muted"><i class="fa-solid fa-clock me-2 text-purple"></i><strong>Duration:</strong> 75 mins / session</div>
               </div>
-              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle">
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle mt-auto">
                 <span class="fw-bold fs-6">$310 <small class="text-muted fw-normal">/ month</small></span>
-                <a href="dashboard.html" class="btn btn-sm btn-bp-primary">Book Slot in Portal</a>
+                <a href="program-robotics-coding.html" class="btn btn-sm btn-bp-primary">Know More</a>
               </div>
             </div>
           </div>
@@ -211,29 +252,29 @@
 
         <!-- 4. Reading & Language Arts -->
         <div class="col-md-6 col-lg-4 program-card-item" data-category="reading">
-          <div class="bp-card bp-card-hover">
+          <div class="bp-card bp-card-hover h-100">
             <div class="bp-program-img-wrapper">
               <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80" 
                    alt="Student engrossed in reading books in a comfortable library corner" 
                    class="bp-program-img" loading="lazy">
               <span class="bp-badge bp-badge-accent bp-program-overlay-badge">Grades 1 - 7</span>
             </div>
-            <div class="bp-card-body">
+            <div class="bp-card-body d-flex flex-column">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <span class="text-warning fw-bold small"><i class="fa-solid fa-book-bookmark me-1"></i> Language Arts</span>
                 <span class="badge bg-light text-dark border">Literacy Circles</span>
               </div>
               <h3 class="font-heading fs-5 mb-2">Reading Fluency & Creative Writing</h3>
-              <p class="small text-muted mb-3">
+              <p class="small text-muted mb-3 flex-grow-1">
                 Strengthen phonics, reading comprehension, critical analysis, and paragraph construction. Our literacy coaches guide students in writing expressive essays and narrative stories.
               </p>
               <div class="mb-3 small">
                 <div class="text-muted"><i class="fa-solid fa-calendar me-2 text-warning"></i><strong>Days:</strong> Mon & Wed (4:00 PM - 5:15 PM)</div>
                 <div class="text-muted"><i class="fa-solid fa-clock me-2 text-warning"></i><strong>Duration:</strong> 75 mins / session</div>
               </div>
-              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle">
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle mt-auto">
                 <span class="fw-bold fs-6">$260 <small class="text-muted fw-normal">/ month</small></span>
-                <a href="dashboard.html" class="btn btn-sm btn-bp-primary">Book Slot in Portal</a>
+                <a href="program-reading-writing.html" class="btn btn-sm btn-bp-primary">Know More</a>
               </div>
             </div>
           </div>
@@ -241,29 +282,29 @@
 
         <!-- 5. Science & Discovery -->
         <div class="col-md-6 col-lg-4 program-card-item" data-category="science">
-          <div class="bp-card bp-card-hover">
+          <div class="bp-card bp-card-hover h-100">
             <div class="bp-program-img-wrapper">
               <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80" 
                    alt="Colorful science lab test tubes and student chemistry experiment" 
                    class="bp-program-img" loading="lazy">
               <span class="bp-badge bp-badge-primary bp-program-overlay-badge">Grades 3 - 8</span>
             </div>
-            <div class="bp-card-body">
+            <div class="bp-card-body d-flex flex-column">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <span class="text-primary fw-bold small"><i class="fa-solid fa-flask-vial me-1"></i> Science Lab</span>
                 <span class="badge bg-light text-dark border">Lab Experiments</span>
               </div>
               <h3 class="font-heading fs-5 mb-2">Young Investigators Science Lab</h3>
-              <p class="small text-muted mb-3">
+              <p class="small text-muted mb-3 flex-grow-1">
                 Safe, exhilarating hands-on experiments in geology, biology, physics fundamentals, and ecosystem biology. Connects classroom theory with physical experimentation.
               </p>
               <div class="mb-3 small">
                 <div class="text-muted"><i class="fa-solid fa-calendar me-2 text-primary"></i><strong>Days:</strong> Fridays (3:30 PM - 5:30 PM)</div>
                 <div class="text-muted"><i class="fa-solid fa-clock me-2 text-primary"></i><strong>Duration:</strong> 120 mins / workshop</div>
               </div>
-              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle">
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle mt-auto">
                 <span class="fw-bold fs-6">$240 <small class="text-muted fw-normal">/ month</small></span>
-                <a href="dashboard.html" class="btn btn-sm btn-bp-primary">Book Slot in Portal</a>
+                <a href="program-science-lab.html" class="btn btn-sm btn-bp-primary">Know More</a>
               </div>
             </div>
           </div>
@@ -271,29 +312,29 @@
 
         <!-- 6. Study Skills & Executive Functioning -->
         <div class="col-md-6 col-lg-4 program-card-item" data-category="homework">
-          <div class="bp-card bp-card-hover">
+          <div class="bp-card bp-card-hover h-100">
             <div class="bp-program-img-wrapper">
               <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" 
                    alt="Student organizing study desk, planner, and notes" 
                    class="bp-program-img" loading="lazy">
               <span class="bp-badge bp-badge-coral bp-program-overlay-badge">Grades 6 - 12</span>
             </div>
-            <div class="bp-card-body">
+            <div class="bp-card-body d-flex flex-column">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <span class="text-danger fw-bold small"><i class="fa-solid fa-brain me-1"></i> Study Habits</span>
                 <span class="badge bg-light text-dark border">Middle & High School</span>
               </div>
               <h3 class="font-heading fs-5 mb-2">Executive Functioning & Study Skills</h3>
-              <p class="small text-muted mb-3">
+              <p class="small text-muted mb-3 flex-grow-1">
                 Designed for students struggling with procrastination, cluttered backpacks, or test anxiety. We teach lifelong organizational habits, flashcard mastery, and active recall.
               </p>
               <div class="mb-3 small">
                 <div class="text-muted"><i class="fa-solid fa-calendar me-2 text-danger"></i><strong>Days:</strong> Tue & Thu (5:00 PM - 6:15 PM)</div>
                 <div class="text-muted"><i class="fa-solid fa-clock me-2 text-danger"></i><strong>Duration:</strong> 75 mins / session</div>
               </div>
-              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle">
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle mt-auto">
                 <span class="fw-bold fs-6">$290 <small class="text-muted fw-normal">/ month</small></span>
-                <a href="dashboard.html" class="btn btn-sm btn-bp-primary">Book Slot in Portal</a>
+                <a href="program-study-skills.html" class="btn btn-sm btn-bp-primary">Know More</a>
               </div>
             </div>
           </div>
@@ -336,7 +377,7 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle mt-auto">
                   <span class="fw-bold fs-6">$320 <small class="text-muted fw-normal">/ month</small></span>
-                  <a href="dashboard.html" class="btn btn-sm btn-bp-primary">Book Slot in Portal</a>
+                  <a href="program-math-olympiad.html" class="btn btn-sm btn-bp-primary">Know More</a>
                 </div>
               </div>
             </div>
@@ -367,7 +408,7 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle mt-auto">
                   <span class="fw-bold fs-6">$350 <small class="text-muted fw-normal">/ month</small></span>
-                  <a href="dashboard.html" class="btn btn-sm btn-bp-primary">Book Slot in Portal</a>
+                  <a href="program-coding-ai.html" class="btn btn-sm btn-bp-primary">Know More</a>
                 </div>
               </div>
             </div>
@@ -398,7 +439,7 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light-subtle mt-auto">
                   <span class="fw-bold fs-6">$360 <small class="text-muted fw-normal">/ month</small></span>
-                  <a href="dashboard.html" class="btn btn-sm btn-bp-primary">Book Slot in Portal</a>
+                  <a href="program-exam-prep.html" class="btn btn-sm btn-bp-primary">Know More</a>
                 </div>
               </div>
             </div>
@@ -414,8 +455,9 @@
           <p class="text-muted small">Choose the right frequency and depth for your child's schedule.</p>
         </div>
 
-        <div class="table-responsive bp-card p-3 shadow-sm">
-          <table class="table table-hover align-middle mb-0">
+        <div class="bp-card p-3 shadow-sm">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
             <thead class="table-light">
               <tr>
                 <th scope="col" style="min-width: 200px;">Plan Feature</th>
@@ -471,6 +513,7 @@
           </table>
         </div>
       </div>
+    </div>
 
     </div>
   </main>
@@ -497,7 +540,8 @@
         <div class="col-6 col-lg-2">
           <h5 class="bp-footer-title">Navigation</h5>
           <ul class="bp-footer-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home 1 - Academic</a></li>
+            <li><a href="home-2.html">Home 2 - STEM Hub</a></li>
             <li><a href="programs.html">Programs by Subject</a></li>
             <li><a href="tutors.html">Certified Tutors</a></li>
             <li><a href="about.html">About Center</a></li>

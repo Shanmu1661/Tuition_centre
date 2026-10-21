@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Young Investigators Science Lab | BrightPath Academy</title>
+  <meta name="description" content="Hands-on laboratory experiments in chemistry, earth systems, physics, and living organisms.">
+  <meta name="keywords" content="science lab, tuition center, after school program, brightpath academy">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- Main Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Main Navigation Header -->
+  <nav class="navbar navbar-expand-lg bp-navbar sticky-top" aria-label="Main Navigation">
+    <div class="bp-navbar-container">
+      <a class="bp-brand" href="index.html">
+        <div class="bp-brand-icon">
+          <svg class="bp-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          </svg>
+        </div>
+        <div>
+          <span>BrightPath</span>
+          <span class="d-block text-primary small fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase;">Learning Academy</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMainContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <!-- Home Dropdown -->
+          <li class="nav-item dropdown bp-nav-dropdown">
+            <a class="nav-link bp-nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+            </a>
+            <ul class="dropdown-menu bp-dropdown-menu" aria-labelledby="homeDropdown">
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="index.html">
+                  <span class="bp-dropdown-title">Home 1 - Academic & Homework</span>
+                  <span class="bp-dropdown-desc">Daily homework lab, 1:4 pod ratios & certified mentors</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="home-2.html">
+                  <span class="bp-dropdown-title">Home 2 - STEM & Innovation Academy</span>
+                  <span class="bp-dropdown-desc">Robotics, coding, competition math & exam clinics</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link bp-nav-link active" aria-current="page" href="programs.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link bp-nav-link" href="tutors.html">Tutor</a></li>
+          <li class="nav-item"><a class="nav-link bp-nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link bp-nav-link" href="blog.html">Tips</a></li>
+          <li class="nav-item"><a class="nav-link bp-nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link bp-nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+
+        <div class="bp-controls-group">
+          <!-- RTL Layout Switcher -->
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle Right-to-Left Layout">
+            <span class="rtl-status-label">RTL</span>
+            <svg class="rtl-arrows-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 7H4"/>
+              <path d="M8 3L4 7l4 4"/>
+              <path d="M4 17h16"/>
+              <path d="M16 13l4 4-4 4"/>
+            </svg>
+          </button>
+
+          <!-- Dark/Light Mode Switcher -->
+          <button class="bp-icon-btn theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+            <span class="theme-toggle-svg-wrap">
+              <svg class="bp-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </span>
+          </button>
+          <a href="login.html" class="btn btn-bp-outline btn-sm">
+            <svg class="bp-icon-svg me-1" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span>Sign In</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Banner Fully Covered with Image -->
+  <header class="bp-page-banner">
+    <div class="bp-page-banner-bg">
+      <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1920&q=80" 
+           alt="Young Investigators Science Lab with laboratory glassware and experiments" 
+           class="bp-page-banner-bg-img" loading="eager">
+      <div class="bp-page-banner-overlay"></div>
+    </div>
+    <div class="container text-center">
+      <nav aria-label="breadcrumb" class="mb-3 d-flex justify-content-center">
+        <ol class="breadcrumb mb-0 small justify-content-center">
+          <li class="breadcrumb-item"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item"><a href="programs.html" class="text-white-50 text-decoration-none">Programs</a></li>
+          <li class="breadcrumb-item active text-white fw-semibold" aria-current="page">Young Investigators Science Lab</li>
+        </ol>
+      </nav>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10 col-xl-8 mx-auto text-center">
+          <div class="d-inline-flex justify-content-center align-items-center gap-2 mb-3 flex-wrap">
+            <span class="bp-banner-glass-badge primary"><i class="fa-solid fa-flask"></i> Grades 3 - 8</span>
+            <span class="bp-banner-glass-badge secondary"><i class="fa-solid fa-flask-vial"></i> Science Lab</span>
+            <span class="bp-banner-glass-badge"><i class="fa-solid fa-users"></i> Lab Experiments</span>
+          </div>
+          <h1 class="font-heading fs-1 mb-3 text-white">Young Investigators Science Lab</h1>
+          <p class="bp-page-banner-lead mb-4 mx-auto text-center">
+            Hands-on laboratory experiments in chemistry, earth systems, physics, and living organisms. Don safety goggles and explore real physical discovery.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="register.html" class="btn btn-bp-primary px-3 py-2">
+              <i class="fa-solid fa-user-plus me-1"></i> Enroll in Program
+            </a>
+            <a href="contact.html" class="btn btn-outline-light px-3 py-2">
+              <i class="fa-solid fa-calendar-check me-1"></i> Book Free Trial Session
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Details Content -->
+  <main id="main-content" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        
+        <!-- Left Column: Comprehensive Program Details -->
+        <div class="col-lg-8">
+          
+          <!-- About Program Card -->
+          <div class="bp-card p-4 mb-4 border">
+            <h2 class="font-heading fs-4 mb-3">About The Program</h2>
+            <p class="text-muted lead fs-6 mb-4" style="line-height: 1.8;">
+              The Young Investigators Science Lab transforms classroom science theory into exhilarating physical discovery. In our fully equipped safe laboratory setting, students don lab coats and safety goggles to conduct real chemistry reactions, microscope cell examinations, and physical physics trials.
+            </p>
+            
+            <div class="p-3 bg-light-subtle rounded-3 border">
+              <div class="row g-3">
+                <div class="col-6 col-md-3">
+                  <div class="small text-muted mb-1"><i class="fa-solid fa-calendar text-primary me-1"></i>Schedule</div>
+                  <div class="fw-semibold small">Fridays</div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="small text-muted mb-1"><i class="fa-solid fa-clock text-primary me-1"></i>Duration</div>
+                  <div class="fw-semibold small">120 mins / workshop</div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="small text-muted mb-1"><i class="fa-solid fa-users text-primary me-1"></i>Ratio</div>
+                  <div class="fw-semibold small">Lab Experiments</div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="small text-muted mb-1"><i class="fa-solid fa-location-dot text-primary me-1"></i>Location</div>
+                  <div class="fw-semibold small">Suite 100</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Curriculum Modules -->
+          <div class="mb-4">
+            <h3 class="font-heading fs-4 mb-3">Curriculum & Learning Modules</h3>
+            <div class="row g-3">
+              
+    <div class="col-md-6">
+      <div class="bp-card p-3 h-100 border d-flex flex-column">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="rounded-circle bg-primary-subtle text-primary d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; font-size: 0.95rem;">
+            <i class="fa-solid fa-vial"></i>
+          </div>
+          <span class="badge bg-light text-muted border">Module 1</span>
+        </div>
+        <h4 class="font-heading fs-6 mb-1">Chemistry & Molecular Reactions</h4>
+        <p class="small text-muted mb-0 flex-grow-1">Acid-base indicators, exothermic reactions, crystal crystallization, density towers, and polymer cross-linking.</p>
+      </div>
+    </div>
+  
+
+    <div class="col-md-6">
+      <div class="bp-card p-3 h-100 border d-flex flex-column">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="rounded-circle bg-primary-subtle text-primary d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; font-size: 0.95rem;">
+            <i class="fa-solid fa-magnet"></i>
+          </div>
+          <span class="badge bg-light text-muted border">Module 2</span>
+        </div>
+        <h4 class="font-heading fs-6 mb-1">Physics & Applied Mechanics</h4>
+        <p class="small text-muted mb-0 flex-grow-1">Electromagnetic fields, simple machines, kinetic energy transfers, light refraction, and sound waves.</p>
+      </div>
+    </div>
+  
+
+    <div class="col-md-6">
+      <div class="bp-card p-3 h-100 border d-flex flex-column">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="rounded-circle bg-primary-subtle text-primary d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; font-size: 0.95rem;">
+            <i class="fa-solid fa-dna"></i>
+          </div>
+          <span class="badge bg-light text-muted border">Module 3</span>
+        </div>
+        <h4 class="font-heading fs-6 mb-1">Biology & Microscopic Worlds</h4>
+        <p class="small text-muted mb-0 flex-grow-1">Preparing slide specimens, plant cell osmosis, leaf chromatography, and ecosystem food web dynamics.</p>
+      </div>
+    </div>
+  
+
+    <div class="col-md-6">
+      <div class="bp-card p-3 h-100 border d-flex flex-column">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="rounded-circle bg-primary-subtle text-primary d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; font-size: 0.95rem;">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <span class="badge bg-light text-muted border">Module 4</span>
+        </div>
+        <h4 class="font-heading fs-6 mb-1">Science Fair Mentorship</h4>
+        <p class="small text-muted mb-0 flex-grow-1">Step-by-step guidance formulating original inquiry questions, graphing data trends, and creating winning posters.</p>
+      </div>
+    </div>
+  
+            </div>
+          </div>
+
+          <!-- Key Outcomes Checklist -->
+          <div class="bp-card p-4 mb-4 border">
+            <h3 class="font-heading fs-5 mb-3"><i class="fa-solid fa-graduation-cap text-primary me-2"></i>Key Learning Outcomes</h3>
+            <p class="text-muted small mb-3">
+              Our structured teaching methodology ensures concrete progress, confidence, and measurable results.
+            </p>
+            <div class="row g-3">
+              
+    <div class="col-sm-6">
+      <div class="d-flex align-items-start gap-2">
+        <i class="fa-solid fa-circle-check text-success mt-1 flex-shrink-0"></i>
+        <span class="small text-muted">Practical fluency with scientific inquiry, hypotheses, and variables</span>
+      </div>
+    </div>
+  
+
+    <div class="col-sm-6">
+      <div class="d-flex align-items-start gap-2">
+        <i class="fa-solid fa-circle-check text-success mt-1 flex-shrink-0"></i>
+        <span class="small text-muted">Hands-on experience with laboratory apparatus: microscopes, beakers, and scales</span>
+      </div>
+    </div>
+  
+
+    <div class="col-sm-6">
+      <div class="d-flex align-items-start gap-2">
+        <i class="fa-solid fa-circle-check text-success mt-1 flex-shrink-0"></i>
+        <span class="small text-muted">Clear grasp of textbook physics, biology, and chemistry curricula</span>
+      </div>
+    </div>
+  
+
+    <div class="col-sm-6">
+      <div class="d-flex align-items-start gap-2">
+        <i class="fa-solid fa-circle-check text-success mt-1 flex-shrink-0"></i>
+        <span class="small text-muted">Confidence to conceive and execute competitive school science fair projects</span>
+      </div>
+    </div>
+  
+            </div>
+          </div>
+
+          <!-- Frequently Asked Questions -->
+          <div class="mb-4">
+            <h3 class="font-heading fs-5 mb-3"><i class="fa-solid fa-circle-question text-primary me-2"></i>Frequently Asked Questions</h3>
+            <div class="accordion border rounded-3 overflow-hidden shadow-sm" id="programFaqAccordion">
+              
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header" id="faqHeading0">
+        <button class="accordion-button  font-heading fs-6 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse0" aria-expanded="true" aria-controls="faqCollapse0">
+          Is the laboratory safe for younger elementary students?
+        </button>
+      </h2>
+      <div id="faqCollapse0" class="accordion-collapse collapse show" aria-labelledby="faqHeading0" data-bs-parent="#programFaqAccordion">
+        <div class="accordion-body small text-muted py-3">
+          Safety is our #1 priority. We use non-toxic, child-safe laboratory reagents, and all students wear safety goggles and lab coats.
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header" id="faqHeading1">
+        <button class="accordion-button collapsed font-heading fs-6 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+          Are materials included in the monthly tuition?
+        </button>
+      </h2>
+      <div id="faqCollapse1" class="accordion-collapse collapse " aria-labelledby="faqHeading1" data-bs-parent="#programFaqAccordion">
+        <div class="accordion-body small text-muted py-3">
+          Yes, all experiment consumables, safety equipment, lab manuals, and take-home project kits are fully included.
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header" id="faqHeading2">
+        <button class="accordion-button collapsed font-heading fs-6 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+          Can students get guidance on school science assignments?
+        </button>
+      </h2>
+      <div id="faqCollapse2" class="accordion-collapse collapse " aria-labelledby="faqHeading2" data-bs-parent="#programFaqAccordion">
+        <div class="accordion-body small text-muted py-3">
+          Yes, our lab educators regularly assist students in refining school lab write-ups and preparing science fair presentations.
+        </div>
+      </div>
+    </div>
+  
+            </div>
+          </div>
+
+          <!-- Back Link -->
+          <div class="pt-2">
+            <a href="programs.html" class="btn btn-sm btn-bp-outline">
+              <i class="fa-solid fa-arrow-left me-2"></i>Back to All Programs
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Sticky Enrollment & Summary Card -->
+        <div class="col-lg-4">
+          <div class="position-sticky" style="top: 90px;">
+            <div class="bp-card p-4 shadow-sm border">
+              
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-primary-subtle text-primary fw-semibold">Monthly Tuition</span>
+                <span class="badge bg-success-subtle text-success fw-semibold"><i class="fa-solid fa-circle-check me-1"></i>Enrolling Now</span>
+              </div>
+              
+              <div class="mb-3">
+                <span class="fs-1 font-heading fw-bold text-primary">$240</span>
+                <span class="text-muted small">/ month</span>
+                <div class="small text-muted mt-1">All learning materials, software, and snack bar included.</div>
+              </div>
+
+              <div class="d-grid gap-2 mb-4">
+                <a href="register.html" class="btn btn-bp-primary py-2 fs-6">
+                  <i class="fa-solid fa-user-plus me-2"></i> Enroll Student Online
+                </a>
+                <a href="contact.html" class="btn btn-bp-outline py-2">
+                  <i class="fa-solid fa-calendar-check me-2"></i> Schedule Campus Tour
+                </a>
+              </div>
+
+              <div class="border-top pt-3">
+                <h4 class="font-heading fs-6 mb-3">Program Details at a Glance</h4>
+                <div class="d-flex justify-content-between py-2 border-bottom small">
+                  <span class="text-muted">Ages / Grade</span>
+                  <span class="fw-semibold text-end">Grades 3 - 8</span>
+                </div>
+                <div class="d-flex justify-content-between py-2 border-bottom small">
+                  <span class="text-muted">Student Ratio</span>
+                  <span class="fw-semibold text-end">Lab Experiments</span>
+                </div>
+                <div class="d-flex justify-content-between py-2 border-bottom small">
+                  <span class="text-muted">Schedule</span>
+                  <span class="fw-semibold text-end">Fridays</span>
+                </div>
+                <div class="d-flex justify-content-between py-2 border-bottom small">
+                  <span class="text-muted">Duration</span>
+                  <span class="fw-semibold text-end">120 mins / workshop</span>
+                </div>
+                <div class="d-flex justify-content-between py-2 border-bottom small">
+                  <span class="text-muted">Parent Portal</span>
+                  <span class="fw-semibold text-end text-success"><i class="fa-solid fa-check me-1"></i>Daily Notes</span>
+                </div>
+                <div class="d-flex justify-content-between py-2 small">
+                  <span class="text-muted">Refreshments</span>
+                  <span class="fw-semibold text-end text-success"><i class="fa-solid fa-check me-1"></i>Included</span>
+                </div>
+              </div>
+
+              <div class="p-3 bg-light-subtle rounded-3 border small text-muted text-center mt-3">
+                <i class="fa-solid fa-phone text-primary me-1"></i> Questions? Call <strong class="text-dark">(800) 555-0199</strong>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bp-footer" data-bs-theme="dark">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="bp-brand text-white mb-3" href="index.html">
+            <div class="bp-brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <span>BrightPath Academy</span>
+          </a>
+          <p class="small text-muted mb-4">
+            Structured after-school homework help, certified subject tutoring, and engaging STEM enrichment for K-12 students.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/i/flow/login" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="bp-footer-title">Navigation</h5>
+          <ul class="bp-footer-links">
+            <li><a href="index.html">Home 1 - Academic</a></li>
+            <li><a href="home-2.html">Home 2 - STEM Hub</a></li>
+            <li><a href="programs.html">Programs by Subject</a></li>
+            <li><a href="tutors.html">Certified Tutors</a></li>
+            <li><a href="about.html">About Center</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="bp-footer-title">Parent Portals</h5>
+          <ul class="bp-footer-links">
+            <li><a href="login.html">Parent Sign In</a></li>
+            <li><a href="register.html">Student Registration</a></li>
+            <li><a href="dashboard.html">Parent Dashboard</a></li>
+            <li><a href="contact.html">Support & Tours</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="bp-footer-title">Visit Us</h5>
+          <p class="small text-muted mb-2"><i class="fa-solid fa-location-dot me-2 text-primary"></i>452 Learning Lane, Suite 100, Metro City, CA 94103</p>
+          <p class="small text-muted mb-2"><i class="fa-solid fa-phone me-2 text-primary"></i>(800) 555-0199</p>
+          <p class="small text-muted"><i class="fa-solid fa-clock me-2 text-primary"></i>Mon–Fri 2:30 PM – 6:30 PM</p>
+        </div>
+      </div>
+      <div class="bp-footer-bottom text-center">
+        <p class="mb-0 text-muted small">© 2026 BrightPath Learning Academy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -87,10 +87,10 @@
               <div class="col-lg-5 d-none d-lg-block position-relative text-white p-5 d-flex flex-column justify-content-between" 
                    style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.95), rgba(37, 99, 235, 0.9)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80') center/cover;">
                 
-                <div>
+                <div class="text-center">
                   <span class="badge bg-white text-primary fw-bold text-uppercase px-3 py-2 mb-3">Family Access</span>
                   <h2 class="font-heading text-white fs-3 mb-3">Your Window into After-School Progress</h2>
-                  <p class="text-white opacity-75 small">
+                  <p class="text-white opacity-75 small mx-auto">
                     Check daily tutor notes, manage session bookings, and track homework completion in real time.
                   </p>
                 </div>
@@ -124,28 +124,12 @@
               <!-- Right Column: Sign In Form -->
               <div class="col-lg-7 p-4 p-md-5 bg-surface">
                 
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                  <div>
-                    <h1 class="font-heading fs-3 mb-1">Parent Portal Sign In</h1>
-                    <p class="text-muted small mb-0">Enter your family account credentials to access your dashboard.</p>
-                  </div>
-                  <span class="bp-icon-box bp-icon-box-primary mb-0" style="width: 44px; height: 44px;">
+                <div class="text-center mb-4">
+                  <span class="bp-icon-box bp-icon-box-primary mx-auto mb-3" style="width: 48px; height: 48px; font-size: 1.25rem;">
                     <i class="fa-solid fa-user-lock"></i>
                   </span>
-                </div>
-
-                <!-- One-Click Demo Login Box (For Reviewers/Graders) -->
-                <div class="alert alert-primary d-flex align-items-center justify-content-between p-3 mb-4 rounded-3 border-primary-subtle" role="alert">
-                  <div class="d-flex align-items-center gap-2 small">
-                    <i class="fa-solid fa-wand-magic-sparkles text-primary fs-5"></i>
-                    <div>
-                      <strong>Demo Parent Account Ready:</strong>
-                      <div class="text-muted">parent.demo@brightpath.edu</div>
-                    </div>
-                  </div>
-                  <button type="button" class="btn btn-sm btn-bp-primary" id="demoAutoFillBtn">
-                    <i class="fa-solid fa-bolt me-1"></i> 1-Click Auto Fill
-                  </button>
+                  <h1 class="font-heading fs-3 mb-1">Parent Portal Sign In</h1>
+                  <p class="text-muted small mb-0">Enter your family account credentials to access your dashboard.</p>
                 </div>
 
                 <!-- Tabbed User Switch (Parent / Student) -->
@@ -297,19 +281,6 @@
   <!-- Login Page Specific Script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 1-Click Demo Login Auto-fill
-      const demoBtn = document.getElementById('demoAutoFillBtn');
-      const emailInput = document.getElementById('parentEmail');
-      const passwordInput = document.getElementById('parentPassword');
-
-      if (demoBtn && emailInput && passwordInput) {
-        demoBtn.addEventListener('click', () => {
-          emailInput.value = 'parent.demo@brightpath.edu';
-          passwordInput.value = 'BrightPath2026!';
-          BrightPath.showToast('Demo parent credentials filled! Click "Sign In" to enter.', 'success');
-        });
-      }
-
       // Toggle Password Visibility
       const togglePasswordBtn = document.getElementById('togglePasswordBtn');
       const passwordEyeIcon = document.getElementById('passwordEyeIcon');

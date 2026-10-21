@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Study Tips & Parenting Resources | BrightPath Academy</title>
   <meta name="description" content="Helpful homework strategies, math tips, and parenting advice from the certified educators at BrightPath Academy.">
-  <meta name="keywords" content="homework tips, study habits for kids, elementary math help, reading encouragement, after school routine">
+  <meta name="keywords" content="homework tips, study habits for kids, elementary math help, reading encouragement, after school routine, executive function, stem learning">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'/></svg>">
@@ -51,7 +51,27 @@
 
       <div class="collapse navbar-collapse" id="navbarMainContent">
         <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link bp-nav-link" href="index.html">Home</a></li>
+          <!-- Home Dropdown -->
+          <li class="nav-item dropdown bp-nav-dropdown">
+            <a class="nav-link bp-nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+            </a>
+            <ul class="dropdown-menu bp-dropdown-menu" aria-labelledby="homeDropdown">
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="index.html">
+                  <span class="bp-dropdown-title">Home 1 - Academic & Homework</span>
+                  <span class="bp-dropdown-desc">Daily homework lab, 1:4 pod ratios & certified mentors</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="home-2.html">
+                  <span class="bp-dropdown-title">Home 2 - STEM & Innovation Academy</span>
+                  <span class="bp-dropdown-desc">Robotics, coding, competition math & exam clinics</span>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link bp-nav-link" href="programs.html">Programs</a></li>
           <li class="nav-item"><a class="nav-link bp-nav-link" href="tutors.html">Tutor</a></li>
           <li class="nav-item"><a class="nav-link bp-nav-link" href="about.html">About</a></li>
@@ -92,14 +112,35 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <header class="py-5 bg-light-subtle border-bottom border-light-subtle">
+  <!-- Page Header Banner Fully Covered with Image -->
+  <header class="bp-page-banner">
+    <div class="bp-page-banner-bg">
+      <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1920&q=80" 
+           alt="Student organizing study desk with notebooks, planner, and pencils" 
+           class="bp-page-banner-bg-img" loading="eager">
+      <div class="bp-page-banner-overlay"></div>
+    </div>
     <div class="container text-center">
-      <span class="bp-badge bp-badge-primary mb-2">Learning Insights</span>
-      <h1 class="font-heading fs-1 mb-3">Study Tips, Guides & Parenting Resources</h1>
-      <p class="text-muted mx-auto" style="max-width: 680px;">
-        Practical advice from our certified educators to help you support your student's learning, conquer homework resistance, and foster confidence.
-      </p>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10 col-xl-8 mx-auto text-center">
+          <div class="d-inline-flex justify-content-center align-items-center gap-2 mb-3 flex-wrap">
+            <span class="bp-banner-glass-badge primary"><i class="fa-solid fa-lightbulb"></i> Learning Insights</span>
+          </div>
+          <h1 class="font-heading fs-1 mb-3 text-white">Study Tips, Guides & Parenting Resources</h1>
+          <p class="bp-page-banner-lead mb-4 mx-auto text-center">
+            Practical, research-backed advice from our certified educators to help you support your student's learning, conquer homework resistance, and foster lifelong curiosity.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#blogGrid" class="btn btn-bp-primary px-3 py-2">
+              <i class="fa-solid fa-book-bookmark me-1"></i> Browse All 9 Study Guides
+            </a>
+            <a href="blog-detail.html" class="btn btn-outline-light px-3 py-2">
+              <i class="fa-solid fa-star me-1"></i> Read Featured Article
+            </a>
+          </div>
+        </div>
+        
+      </div>
     </div>
   </header>
 
@@ -119,81 +160,366 @@
               <span class="badge bg-primary text-white">Featured Guide</span>
               <span class="small text-muted">• 5 min read • Oct 14, 2026</span>
             </div>
-            <h2 class="font-heading fs-3 mb-3">How to Beat After-School Homework Battles Without Tears</h2>
+            <h2 class="font-heading fs-3 mb-3">
+              <a href="blog-detail.html" class="text-decoration-none text-reset hover-primary">
+                How to Beat After-School Homework Battles Without Tears
+              </a>
+            </h2>
             <p class="text-muted mb-4">
-              Why do kids resist schoolwork right after coming home? Learn how a 30-minute decompression routine and structured chunking techniques can restore peace to your evenings.
+              Why do kids resist schoolwork right after coming home? Learn how a 30-minute decompression routine, physiological snack breaks, and structured chunking techniques can restore peace to your evenings.
             </p>
-            <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
               <div class="d-flex align-items-center gap-2">
                 <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=80&q=80" 
                      class="rounded-circle" width="36" height="36" style="object-fit: cover;" alt="Dr. Sarah Jenkins">
                 <span class="small fw-bold">By Dr. Sarah Jenkins</span>
               </div>
-              <a href="#" class="btn btn-sm btn-bp-primary">Read Article <i class="fa-solid fa-arrow-right ms-1"></i></a>
+              <a href="blog-detail.html" class="btn btn-sm btn-bp-primary">
+                Read Full Guide <i class="fa-solid fa-arrow-right ms-1"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Articles Grid -->
-      <div class="row g-4">
-        <!-- Article 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="bp-card bp-card-hover">
-            <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=800&q=80" 
-                 alt="Child calculating math with cheerful mindset" 
-                 class="bp-program-img" style="aspect-ratio: 16/10;" loading="lazy">
-            <div class="bp-card-body">
-              <span class="badge bg-secondary-subtle text-secondary mb-2">Mathematics</span>
-              <h3 class="font-heading fs-5 mb-2">Fostering a Growth Mindset in Elementary Math</h3>
+      <!-- Topic Filter Toolbar -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" role="toolbar" aria-label="Filter blog posts by category">
+        <button class="btn btn-bp-primary blog-filter-btn active" data-filter="all">All Guides (9)</button>
+        <button class="btn btn-bp-outline blog-filter-btn" data-filter="math">Math & Logic (2)</button>
+        <button class="btn btn-bp-outline blog-filter-btn" data-filter="stem">Science & STEM (2)</button>
+        <button class="btn btn-bp-outline blog-filter-btn" data-filter="reading">Reading & Literacy (2)</button>
+        <button class="btn btn-bp-outline blog-filter-btn" data-filter="parenting">Study Habits & Parenting (3)</button>
+      </div>
+
+      <!-- Articles Grid (9 Dedicated Detail Pages) -->
+      <div class="row g-4" id="blogGrid">
+        
+        <!-- Article 1: Growth Mindset in Math -->
+        <div class="col-md-6 col-lg-4 blog-card-item" data-category="math">
+          <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+            <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+              <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=800&q=80" 
+                   alt="Child calculating math with cheerful mindset" 
+                   class="bp-program-img" loading="lazy">
+            </div>
+            <div class="bp-card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-secondary-subtle text-secondary">Mathematics</span>
+                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i>4 min read</span>
+              </div>
+              <h3 class="font-heading fs-5 mb-2">
+                <a href="blog-detail-math-mindset.html" class="text-decoration-none text-reset hover-primary">
+                  Fostering a Growth Mindset in Elementary Math
+                </a>
+              </h3>
               <p class="small text-muted mb-3">
                 How replacing "I'm not good at math" with "I haven't mastered this step yet" changes neural problem-solving pathways in young learners.
               </p>
-              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle small text-muted">
-                <span>By Marcus Vance</span>
-                <span>Oct 08, 2026</span>
+              <div class="mt-auto pt-3 border-top border-light-subtle">
+                <div class="d-flex justify-content-between align-items-center small text-muted mb-3">
+                  <span class="fw-semibold"><i class="fa-solid fa-user-pen me-1 text-secondary"></i>Marcus Vance</span>
+                  <span>Oct 08, 2026</span>
+                </div>
+                <a href="blog-detail-math-mindset.html" class="btn btn-sm btn-bp-outline w-100">
+                  Read Article <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Article 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="bp-card bp-card-hover">
-            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80" 
-                 alt="Children participating in group educational enrichment" 
-                 class="bp-program-img" style="aspect-ratio: 16/10;" loading="lazy">
-            <div class="bp-card-body">
-              <span class="badge bg-purple-subtle text-purple mb-2">STEM & Enrichment</span>
-              <h3 class="font-heading fs-5 mb-2">The Power of After-School STEM for Working Families</h3>
+        <!-- Article 2: After-School STEM -->
+        <div class="col-md-6 col-lg-4 blog-card-item" data-category="stem">
+          <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+            <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+              <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80" 
+                   alt="Children participating in group educational enrichment" 
+                   class="bp-program-img" loading="lazy">
+            </div>
+            <div class="bp-card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-purple-subtle text-purple">STEM & Enrichment</span>
+                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i>5 min read</span>
+              </div>
+              <h3 class="font-heading fs-5 mb-2">
+                <a href="blog-detail-stem-enrichment.html" class="text-decoration-none text-reset hover-primary">
+                  The Power of After-School STEM for Working Families
+                </a>
+              </h3>
               <p class="small text-muted mb-3">
                 Discover how robotic tinkering and early game design foster resilience, spatial analysis, and peer collaboration after school hours.
               </p>
-              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle small text-muted">
-                <span>By David Chen</span>
-                <span>Sep 29, 2026</span>
+              <div class="mt-auto pt-3 border-top border-light-subtle">
+                <div class="d-flex justify-content-between align-items-center small text-muted mb-3">
+                  <span class="fw-semibold"><i class="fa-solid fa-user-pen me-1 text-purple"></i>David Chen</span>
+                  <span>Sep 29, 2026</span>
+                </div>
+                <a href="blog-detail-stem-enrichment.html" class="btn btn-sm btn-bp-outline w-100">
+                  Read Article <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Article 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="bp-card bp-card-hover">
-            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80" 
-                 alt="Child reading book in cozy study corner" 
-                 class="bp-program-img" style="aspect-ratio: 16/10;" loading="lazy">
-            <div class="bp-card-body">
-              <span class="badge bg-accent-subtle text-accent mb-2">Reading & Phonics</span>
-              <h3 class="font-heading fs-5 mb-2">Inspiring Reluctant Readers into Avid Bookworms</h3>
+        <!-- Article 3: Reluctant Readers -->
+        <div class="col-md-6 col-lg-4 blog-card-item" data-category="reading">
+          <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+            <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+              <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80" 
+                   alt="Child reading book in cozy study corner" 
+                   class="bp-program-img" loading="lazy">
+            </div>
+            <div class="bp-card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-accent-subtle text-accent">Reading & Phonics</span>
+                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i>6 min read</span>
+              </div>
+              <h3 class="font-heading fs-5 mb-2">
+                <a href="blog-detail-reluctant-readers.html" class="text-decoration-none text-reset hover-primary">
+                  Inspiring Reluctant Readers into Avid Bookworms
+                </a>
+              </h3>
               <p class="small text-muted mb-3">
                 Proven tips from our literacy specialists on choosing high-interest graphic novels, paired reading routines, and vocabulary games.
               </p>
-              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle small text-muted">
-                <span>By Elena Rostova</span>
-                <span>Sep 18, 2026</span>
+              <div class="mt-auto pt-3 border-top border-light-subtle">
+                <div class="d-flex justify-content-between align-items-center small text-muted mb-3">
+                  <span class="fw-semibold"><i class="fa-solid fa-user-pen me-1 text-accent"></i>Elena Rostova</span>
+                  <span>Sep 18, 2026</span>
+                </div>
+                <a href="blog-detail-reluctant-readers.html" class="btn btn-sm btn-bp-outline w-100">
+                  Read Article <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Article 4: Executive Function & Middle School Organization -->
+        <div class="col-md-6 col-lg-4 blog-card-item" data-category="parenting">
+          <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+            <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+              <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80" 
+                   alt="Organized study desk with calendar and color-coded notebooks" 
+                   class="bp-program-img" loading="lazy">
+            </div>
+            <div class="bp-card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-primary-subtle text-primary">Executive Function</span>
+                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i>6 min read</span>
+              </div>
+              <h3 class="font-heading fs-5 mb-2">
+                <a href="blog-detail-middle-school-organization.html" class="text-decoration-none text-reset hover-primary">
+                  Helping Your Middle Schooler Stay Organized
+                </a>
+              </h3>
+              <p class="small text-muted mb-3">
+                Why backpack explosions and forgotten homework happen, and how 3-tier color coding and 5-minute binder audits turn chaos into calm consistency.
+              </p>
+              <div class="mt-auto pt-3 border-top border-light-subtle">
+                <div class="d-flex justify-content-between align-items-center small text-muted mb-3">
+                  <span class="fw-semibold"><i class="fa-solid fa-user-pen me-1 text-primary"></i>James Wilson</span>
+                  <span>Sep 12, 2026</span>
+                </div>
+                <a href="blog-detail-middle-school-organization.html" class="btn btn-sm btn-bp-outline w-100">
+                  Read Article <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 5: Phonics to Fluency -->
+        <div class="col-md-6 col-lg-4 blog-card-item" data-category="reading">
+          <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+            <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+              <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" 
+                   alt="Young child smiling while sounding out early reading flashcards" 
+                   class="bp-program-img" loading="lazy">
+            </div>
+            <div class="bp-card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-secondary-subtle text-secondary">Early Childhood (K-3)</span>
+                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i>4 min read</span>
+              </div>
+              <h3 class="font-heading fs-5 mb-2">
+                <a href="blog-detail-phonics-fluency.html" class="text-decoration-none text-reset hover-primary">
+                  Phonics to Fluency: The Science of Reading for K-3
+                </a>
+              </h3>
+              <p class="small text-muted mb-3">
+                Demystifying orthographic mapping and multisensory phonics. How 10 minutes of daily paired decoding games dramatically accelerates sight word recall.
+              </p>
+              <div class="mt-auto pt-3 border-top border-light-subtle">
+                <div class="d-flex justify-content-between align-items-center small text-muted mb-3">
+                  <span class="fw-semibold"><i class="fa-solid fa-user-pen me-1 text-secondary"></i>Amara Okafor</span>
+                  <span>Sep 05, 2026</span>
+                </div>
+                <a href="blog-detail-phonics-fluency.html" class="btn btn-sm btn-bp-outline w-100">
+                  Read Article <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 6: Why Kids Love Python -->
+        <div class="col-md-6 col-lg-4 blog-card-item" data-category="stem">
+          <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+            <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" 
+                   alt="Student writing beginner Python code in code editor" 
+                   class="bp-program-img" loading="lazy">
+            </div>
+            <div class="bp-card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-accent-subtle text-accent">Coding & Robotics</span>
+                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i>5 min read</span>
+              </div>
+              <h3 class="font-heading fs-5 mb-2">
+                <a href="blog-detail-python-coding.html" class="text-decoration-none text-reset hover-primary">
+                  Why Kids Love Python: Moving Past Block Coding
+                </a>
+              </h3>
+              <p class="small text-muted mb-3">
+                When should your child transition from Scratch to typed syntax? Discover beginner-friendly game projects that teach loops, variables, and logic without tears.
+              </p>
+              <div class="mt-auto pt-3 border-top border-light-subtle">
+                <div class="d-flex justify-content-between align-items-center small text-muted mb-3">
+                  <span class="fw-semibold"><i class="fa-solid fa-user-pen me-1 text-accent"></i>David Chen</span>
+                  <span>Aug 28, 2026</span>
+                </div>
+                <a href="blog-detail-python-coding.html" class="btn btn-sm btn-bp-outline w-100">
+                  Read Article <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 7: Conquering Test Anxiety -->
+        <div class="col-md-6 col-lg-4 blog-card-item" data-category="parenting">
+          <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+            <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+              <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" 
+                   alt="Student focusing peacefully during classroom exam" 
+                   class="bp-program-img" loading="lazy">
+            </div>
+            <div class="bp-card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-purple-subtle text-purple">Test Prep & Wellness</span>
+                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i>7 min read</span>
+              </div>
+              <h3 class="font-heading fs-5 mb-2">
+                <a href="blog-detail-test-anxiety.html" class="text-decoration-none text-reset hover-primary">
+                  Conquering Test Anxiety: Cognitive Techniques
+                </a>
+              </h3>
+              <p class="small text-muted mb-3">
+                State exams and unit tests can trigger fight-or-flight freeze responses. Explore diaphragmatic breathing, positive reframing, and spaced repetition study schedules.
+              </p>
+              <div class="mt-auto pt-3 border-top border-light-subtle">
+                <div class="d-flex justify-content-between align-items-center small text-muted mb-3">
+                  <span class="fw-semibold"><i class="fa-solid fa-user-pen me-1 text-purple"></i>James Wilson</span>
+                  <span>Aug 20, 2026</span>
+                </div>
+                <a href="blog-detail-test-anxiety.html" class="btn btn-sm btn-bp-outline w-100">
+                  Read Article <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 8: Kitchen Science Experiments -->
+        <div class="col-md-6 col-lg-4 blog-card-item" data-category="stem">
+          <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+            <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+              <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80" 
+                   alt="Science lab glassware with vibrant colorful educational solutions" 
+                   class="bp-program-img" loading="lazy">
+            </div>
+            <div class="bp-card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-primary-subtle text-primary">Science & Inquiry</span>
+                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i>5 min read</span>
+              </div>
+              <h3 class="font-heading fs-5 mb-2">
+                <a href="blog-detail-kitchen-science.html" class="text-decoration-none text-reset hover-primary">
+                  Kitchen Science: 5 Hands-On Experiments
+                </a>
+              </h3>
+              <p class="small text-muted mb-3">
+                Turn pantry staples into memorable science lessons! Explore fluid density towers, milk surface tension art, and exothermic reactions that ignite curiosity.
+              </p>
+              <div class="mt-auto pt-3 border-top border-light-subtle">
+                <div class="d-flex justify-content-between align-items-center small text-muted mb-3">
+                  <span class="fw-semibold"><i class="fa-solid fa-user-pen me-1 text-primary"></i>Dr. Sarah Jenkins</span>
+                  <span>Aug 12, 2026</span>
+                </div>
+                <a href="blog-detail-kitchen-science.html" class="btn btn-sm btn-bp-outline w-100">
+                  Read Article <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 9: Partnering with Teachers -->
+        <div class="col-md-6 col-lg-4 blog-card-item" data-category="parenting">
+          <div class="bp-card bp-card-hover h-100 d-flex flex-column">
+            <div class="bp-program-img-wrapper" style="aspect-ratio: 16/10;">
+              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" 
+                   alt="Teacher smiling during constructive conference with student's parents" 
+                   class="bp-program-img" loading="lazy">
+            </div>
+            <div class="bp-card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-secondary-subtle text-secondary">School Partnership</span>
+                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i>6 min read</span>
+              </div>
+              <h3 class="font-heading fs-5 mb-2">
+                <a href="blog-detail-teacher-partnership.html" class="text-decoration-none text-reset hover-primary">
+                  How to Effectively Partner with Your Child's Teacher
+                </a>
+              </h3>
+              <p class="small text-muted mb-3">
+                Essential questions for parent-teacher conferences, email check-in templates, and proven strategies to sync school standards with after-school tutoring.
+              </p>
+              <div class="mt-auto pt-3 border-top border-light-subtle">
+                <div class="d-flex justify-content-between align-items-center small text-muted mb-3">
+                  <span class="fw-semibold"><i class="fa-solid fa-user-pen me-1 text-secondary"></i>Marcus Vance</span>
+                  <span>Aug 03, 2026</span>
+                </div>
+                <a href="blog-detail-teacher-partnership.html" class="btn btn-sm btn-bp-outline w-100">
+                  Read Article <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Free Resource & Newsletter Box -->
+      <div class="mt-5 pt-4">
+        <div class="p-4 p-md-5 rounded-4 bg-light-subtle border text-center">
+          <span class="bp-badge bp-badge-accent mb-2">Parent Newsletter</span>
+          <h3 class="font-heading fs-2 mb-2">Get Weekly Homework Tips & Printables</h3>
+          <p class="text-muted mx-auto mb-4" style="max-width: 580px;">
+            Join over 1,200 local parents who receive our bi-weekly educational digest featuring printable study templates, STEM challenge ideas, and tutor insights.
+          </p>
+          <form class="row g-2 justify-content-center" style="max-width: 520px; margin: 0 auto;" onsubmit="event.preventDefault(); alert('Thank you for subscribing to BrightPath Learning Insights!');">
+            <div class="col-sm-8">
+              <input type="email" class="form-control" placeholder="Enter your email address" required aria-label="Email address for educational newsletter">
+            </div>
+            <div class="col-sm-4">
+              <button type="submit" class="btn btn-bp-primary w-100">Subscribe Free</button>
+            </div>
+          </form>
+          <div class="small text-muted mt-3">
+            <i class="fa-solid fa-lock text-success me-1"></i>Zero spam. Unsubscribe at any time with one click.
           </div>
         </div>
       </div>
@@ -223,7 +549,8 @@
         <div class="col-6 col-lg-2">
           <h5 class="bp-footer-title">Navigation</h5>
           <ul class="bp-footer-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home 1 - Academic</a></li>
+            <li><a href="home-2.html">Home 2 - STEM Hub</a></li>
             <li><a href="programs.html">Programs by Subject</a></li>
             <li><a href="tutors.html">Certified Tutors</a></li>
             <li><a href="about.html">About Center</a></li>
@@ -253,5 +580,40 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/main.js"></script>
+
+  <!-- Client-side Category Filter for Blog Posts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.blog-filter-btn');
+      const cards = document.querySelectorAll('.blog-card-item');
+
+      if (!filterBtns.length || !cards.length) return;
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('active', 'btn-bp-primary');
+            b.classList.add('btn-bp-outline');
+          });
+
+          btn.classList.add('active', 'btn-bp-primary');
+          btn.classList.remove('btn-bp-outline');
+
+          const filter = btn.getAttribute('data-filter');
+
+          cards.forEach(card => {
+            const category = card.getAttribute('data-category') || '';
+            if (filter === 'all' || category.includes(filter)) {
+              card.style.display = '';
+              setTimeout(() => { card.style.opacity = '1'; }, 20);
+            } else {
+              card.style.opacity = '0';
+              setTimeout(() => { card.style.display = 'none'; }, 200);
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>

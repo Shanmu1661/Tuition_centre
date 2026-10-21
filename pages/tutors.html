@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certified Tutors & Mentors | BrightPath Academy</title>
+  <title>Certified Tutors & Academic Mentors | BrightPath Academy</title>
   <meta name="description" content="Meet our certified, background-checked after-school tutors specializing in Math, Science, Reading, and STEM at BrightPath Academy.">
-  <meta name="keywords" content="certified tutors, math tutor, reading specialist, stem mentor, after school homework teachers">
+  <meta name="keywords" content="certified tutors, math tutor, reading specialist, stem mentor, after school homework teachers, science educator, private tutoring">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'/></svg>">
@@ -51,7 +51,27 @@
 
       <div class="collapse navbar-collapse" id="navbarMainContent">
         <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link bp-nav-link" href="index.html">Home</a></li>
+          <!-- Home Dropdown -->
+          <li class="nav-item dropdown bp-nav-dropdown">
+            <a class="nav-link bp-nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+            </a>
+            <ul class="dropdown-menu bp-dropdown-menu" aria-labelledby="homeDropdown">
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="index.html">
+                  <span class="bp-dropdown-title">Home 1 - Academic & Homework</span>
+                  <span class="bp-dropdown-desc">Daily homework lab, 1:4 pod ratios & certified mentors</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="home-2.html">
+                  <span class="bp-dropdown-title">Home 2 - STEM & Innovation Academy</span>
+                  <span class="bp-dropdown-desc">Robotics, coding, competition math & exam clinics</span>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link bp-nav-link" href="programs.html">Programs</a></li>
           <li class="nav-item"><a class="nav-link bp-nav-link active" aria-current="page" href="tutors.html">Tutor</a></li>
           <li class="nav-item"><a class="nav-link bp-nav-link" href="about.html">About</a></li>
@@ -92,26 +112,90 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <header class="py-5 bg-light-subtle border-bottom border-light-subtle">
+  <!-- Page Header Banner Fully Covered with Image -->
+  <header class="bp-page-banner">
+    <div class="bp-page-banner-bg">
+      <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1920&q=80" 
+           alt="Certified tutor and academic mentor teaching young student with patience" 
+           class="bp-page-banner-bg-img" loading="eager">
+      <div class="bp-page-banner-overlay"></div>
+    </div>
     <div class="container text-center">
-      <span class="bp-badge bp-badge-primary mb-2">Subject Mentors</span>
-      <h1 class="font-heading fs-1 mb-3">Our Certified Tutors & Academic Mentors</h1>
-      <p class="text-muted mx-auto" style="max-width: 680px;">
-        Every child deserves a tutor who inspires curiosity, patience, and confidence. Meet our passionate educators, each vetted with background checks, credential verifications, and child safety training.
-      </p>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10 col-xl-8 mx-auto text-center">
+          <div class="d-inline-flex justify-content-center align-items-center gap-2 mb-3 flex-wrap">
+            <span class="bp-banner-glass-badge secondary"><i class="fa-solid fa-chalkboard-user"></i> Certified Faculty</span>
+          </div>
+          <h1 class="font-heading fs-1 mb-3 text-white">Our Certified Tutors & Academic Mentors</h1>
+          <p class="bp-page-banner-lead mb-4 mx-auto text-center">
+            Every student thrives when paired with a patient, passionate mentor who makes complex subjects simple. Each BrightPath educator undergoes multi-level background checks, academic credential screening, and pediatric pedagogy training.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#tutorsGrid" class="btn btn-bp-primary px-3 py-2">
+              <i class="fa-solid fa-users me-1"></i> Browse Mentors
+            </a>
+            <a href="#vettingProcess" class="btn btn-outline-light px-3 py-2">
+              <i class="fa-solid fa-shield-halved me-1"></i> 4-Step Vetting
+            </a>
+            <a href="contact.html" class="btn btn-outline-light px-3 py-2">
+              <i class="fa-solid fa-comments me-1"></i> Free Consultation
+            </a>
+          </div>
+        </div>
+        
+      </div>
     </div>
   </header>
 
   <main id="main-content" class="py-5">
     <div class="container">
       
+      <!-- Quick Trust & Stats Strip -->
+      <div class="bp-stats-strip mb-5">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3">
+            <div class="bp-stat-item">
+              <div class="bp-stat-number text-primary">Top 3%</div>
+              <p class="bp-stat-label">Educator Acceptance Rate</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="bp-stat-item">
+              <div class="bp-stat-number text-secondary">100%</div>
+              <p class="bp-stat-label">DOJ & FBI Cleared Staff</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="bp-stat-item">
+              <div class="bp-stat-number text-accent">1:4 Max</div>
+              <p class="bp-stat-label">Small Pod or 1:1 Ratios</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="bp-stat-item">
+              <div class="bp-stat-number text-purple">98.4%</div>
+              <p class="bp-stat-label">Grade Lift & Confidence</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Title for Grid -->
+      <div class="text-center mb-4">
+        <span class="bp-badge bp-badge-secondary mb-2">Subject Specialists</span>
+        <h2 class="font-heading fs-2">Meet Our Dedicated Educators</h2>
+        <p class="text-muted small mx-auto" style="max-width: 600px;">
+          Filter by subject area to discover the right tutor for your child's grade level and learning needs.
+        </p>
+      </div>
+
       <!-- Tutor Subject Filter -->
       <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" role="toolbar" aria-label="Filter tutors by subject expertise">
         <button class="btn btn-bp-primary tutor-filter-btn active" data-filter="all">All Tutors (6)</button>
-        <button class="btn btn-bp-outline tutor-filter-btn" data-filter="math">Mathematics (2)</button>
+        <button class="btn btn-bp-outline tutor-filter-btn" data-filter="math">Mathematics & Logic (2)</button>
         <button class="btn btn-bp-outline tutor-filter-btn" data-filter="stem">Science & STEM (2)</button>
         <button class="btn btn-bp-outline tutor-filter-btn" data-filter="english">Reading & Literacy (2)</button>
+        <button class="btn btn-bp-outline tutor-filter-btn" data-filter="homework">Homework & Study Skills (4)</button>
       </div>
 
       <!-- Tutors Grid -->
@@ -119,7 +203,7 @@
         
         <!-- Tutor 1: Dr. Sarah Jenkins -->
         <div class="col-md-6 col-lg-4 tutor-card-item" data-subjects="stem science">
-          <div class="bp-card bp-card-hover p-4 text-center">
+          <div class="bp-card bp-card-hover p-4 text-center h-100 d-flex flex-column">
             <div class="bp-tutor-avatar-wrap">
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" 
                    alt="Dr. Sarah Jenkins - Lead Science & STEM Educator" 
@@ -128,17 +212,25 @@
                 <i class="fa-solid fa-check"></i>
               </div>
             </div>
-            <span class="badge bg-primary-subtle text-primary mb-2">Lead Science & STEM</span>
-            <h3 class="font-heading fs-5 mb-1">Dr. Sarah Jenkins</h3>
-            <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-primary"></i>Ph.D. in Science Education (Stanford)</p>
-            <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <span class="text-muted ms-1 fw-semibold">5.0 (140 reviews)</span>
+            <div>
+              <span class="badge bg-primary-subtle text-primary mb-2">Lead Science & STEM</span>
+              <h3 class="font-heading fs-5 mb-1">Dr. Sarah Jenkins</h3>
+              <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-primary"></i>Ph.D. in Science Education (Stanford)</p>
+              <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <span class="text-muted ms-1 fw-semibold">5.0 (140 reviews)</span>
+              </div>
+              <div class="d-flex flex-wrap justify-content-center gap-1 mb-3">
+                <span class="badge bg-light text-dark border">Biology</span>
+                <span class="badge bg-light text-dark border">Earth Science</span>
+                <span class="badge bg-light text-dark border">Physics</span>
+                <span class="badge bg-light text-dark border">Science Fair</span>
+              </div>
+              <p class="small text-muted mb-4 fst-italic">
+                "I believe every student has an inner scientist. We use hands-on labs to connect science homework directly to real-world curiosity."
+              </p>
             </div>
-            <p class="small text-muted mb-4">
-              "I believe every student has an inner scientist. We use hands-on labs to connect science homework directly to real-world curiosity."
-            </p>
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 mt-auto">
               <button class="btn btn-sm btn-bp-outline w-50" data-bs-toggle="modal" data-bs-target="#tutorModal1">View Bio</button>
               <a href="dashboard.html" class="btn btn-sm btn-bp-primary w-50">Book Slot</a>
             </div>
@@ -147,7 +239,7 @@
 
         <!-- Tutor 2: Marcus Vance -->
         <div class="col-md-6 col-lg-4 tutor-card-item" data-subjects="math homework">
-          <div class="bp-card bp-card-hover p-4 text-center">
+          <div class="bp-card bp-card-hover p-4 text-center h-100 d-flex flex-column">
             <div class="bp-tutor-avatar-wrap">
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" 
                    alt="Marcus Vance - Mathematics & Logic Specialist" 
@@ -156,17 +248,25 @@
                 <i class="fa-solid fa-check"></i>
               </div>
             </div>
-            <span class="badge bg-secondary-subtle text-secondary mb-2">Mathematics Specialist</span>
-            <h3 class="font-heading fs-5 mb-1">Marcus Vance</h3>
-            <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-secondary"></i>M.S. in Applied Mathematics (UCLA)</p>
-            <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-              <span class="text-muted ms-1 fw-semibold">4.9 (115 reviews)</span>
+            <div>
+              <span class="badge bg-secondary-subtle text-secondary mb-2">Mathematics Specialist</span>
+              <h3 class="font-heading fs-5 mb-1">Marcus Vance</h3>
+              <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-secondary"></i>M.S. in Applied Mathematics (UCLA)</p>
+              <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                <span class="text-muted ms-1 fw-semibold">4.9 (115 reviews)</span>
+              </div>
+              <div class="d-flex flex-wrap justify-content-center gap-1 mb-3">
+                <span class="badge bg-light text-dark border">Pre-Algebra</span>
+                <span class="badge bg-light text-dark border">Geometry</span>
+                <span class="badge bg-light text-dark border">Algebra I & II</span>
+                <span class="badge bg-light text-dark border">Logic Puzzles</span>
+              </div>
+              <p class="small text-muted mb-4 fst-italic">
+                "Math is like learning a musical instrument—it takes supportive rhythm, patience, and celebrating each milestone without pressure."
+              </p>
             </div>
-            <p class="small text-muted mb-4">
-              "Math is like learning a musical instrument—it takes supportive rhythm, patience, and celebrating each milestone without pressure."
-            </p>
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 mt-auto">
               <button class="btn btn-sm btn-bp-outline w-50" data-bs-toggle="modal" data-bs-target="#tutorModal2">View Bio</button>
               <a href="dashboard.html" class="btn btn-sm btn-bp-primary w-50">Book Slot</a>
             </div>
@@ -175,7 +275,7 @@
 
         <!-- Tutor 3: Elena Rostova -->
         <div class="col-md-6 col-lg-4 tutor-card-item" data-subjects="english homework">
-          <div class="bp-card bp-card-hover p-4 text-center">
+          <div class="bp-card bp-card-hover p-4 text-center h-100 d-flex flex-column">
             <div class="bp-tutor-avatar-wrap">
               <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=400&q=80" 
                    alt="Elena Rostova - Reading Fluency & Language Arts Mentor" 
@@ -184,17 +284,25 @@
                 <i class="fa-solid fa-check"></i>
               </div>
             </div>
-            <span class="badge bg-purple-subtle text-purple mb-2">Literacy & Reading</span>
-            <h3 class="font-heading fs-5 mb-1">Elena Rostova</h3>
-            <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-purple"></i>M.Ed. in Reading Curriculum (Columbia)</p>
-            <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <span class="text-muted ms-1 fw-semibold">5.0 (98 reviews)</span>
+            <div>
+              <span class="badge bg-purple-subtle text-purple mb-2">Literacy & Reading</span>
+              <h3 class="font-heading fs-5 mb-1">Elena Rostova</h3>
+              <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-purple"></i>M.Ed. in Reading Curriculum (Columbia)</p>
+              <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <span class="text-muted ms-1 fw-semibold">5.0 (98 reviews)</span>
+              </div>
+              <div class="d-flex flex-wrap justify-content-center gap-1 mb-3">
+                <span class="badge bg-light text-dark border">Phonics</span>
+                <span class="badge bg-light text-dark border">Comprehension</span>
+                <span class="badge bg-light text-dark border">Essay Writing</span>
+                <span class="badge bg-light text-dark border">Dyslexia Support</span>
+              </div>
+              <p class="small text-muted mb-4 fst-italic">
+                "Reading opens imaginary doorways. I help reluctant readers discover books that light up their excitement and vocabulary."
+              </p>
             </div>
-            <p class="small text-muted mb-4">
-              "Reading opens imaginary doorways. I help reluctant readers discover books that light up their excitement and vocabulary."
-            </p>
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 mt-auto">
               <button class="btn btn-sm btn-bp-outline w-50" data-bs-toggle="modal" data-bs-target="#tutorModal3">View Bio</button>
               <a href="dashboard.html" class="btn btn-sm btn-bp-primary w-50">Book Slot</a>
             </div>
@@ -202,8 +310,8 @@
         </div>
 
         <!-- Tutor 4: David Chen -->
-        <div class="col-md-6 col-lg-4 tutor-card-item" data-subjects="stem">
-          <div class="bp-card bp-card-hover p-4 text-center">
+        <div class="col-md-6 col-lg-4 tutor-card-item" data-subjects="stem robotics">
+          <div class="bp-card bp-card-hover p-4 text-center h-100 d-flex flex-column">
             <div class="bp-tutor-avatar-wrap">
               <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" 
                    alt="David Chen - Robotics & Coding Coach" 
@@ -212,17 +320,25 @@
                 <i class="fa-solid fa-check"></i>
               </div>
             </div>
-            <span class="badge bg-accent-subtle text-accent mb-2">Coding & Robotics</span>
-            <h3 class="font-heading fs-5 mb-1">David Chen</h3>
-            <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-accent"></i>B.S. in Computer Engineering (UC Berkeley)</p>
-            <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <span class="text-muted ms-1 fw-semibold">4.9 (82 reviews)</span>
+            <div>
+              <span class="badge bg-accent-subtle text-accent mb-2">Coding & Robotics</span>
+              <h3 class="font-heading fs-5 mb-1">David Chen</h3>
+              <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-accent"></i>B.S. in Computer Engineering (UC Berkeley)</p>
+              <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <span class="text-muted ms-1 fw-semibold">4.9 (82 reviews)</span>
+              </div>
+              <div class="d-flex flex-wrap justify-content-center gap-1 mb-3">
+                <span class="badge bg-light text-dark border">Python Kids</span>
+                <span class="badge bg-light text-dark border">Scratch</span>
+                <span class="badge bg-light text-dark border">LEGO Robotics</span>
+                <span class="badge bg-light text-dark border">Game Logic</span>
+              </div>
+              <p class="small text-muted mb-4 fst-italic">
+                "Watching a student's eyes light up when their first code executes and their robot moves forward is the greatest reward of teaching."
+              </p>
             </div>
-            <p class="small text-muted mb-4">
-              "Watching a student's eyes light up when their first code executes and their robot moves forward is the greatest reward of teaching."
-            </p>
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 mt-auto">
               <button class="btn btn-sm btn-bp-outline w-50" data-bs-toggle="modal" data-bs-target="#tutorModal4">View Bio</button>
               <a href="dashboard.html" class="btn btn-sm btn-bp-primary w-50">Book Slot</a>
             </div>
@@ -230,8 +346,8 @@
         </div>
 
         <!-- Tutor 5: Amara Okafor -->
-        <div class="col-md-6 col-lg-4 tutor-card-item" data-subjects="english homework">
-          <div class="bp-card bp-card-hover p-4 text-center">
+        <div class="col-md-6 col-lg-4 tutor-card-item" data-subjects="english homework early-ed">
+          <div class="bp-card bp-card-hover p-4 text-center h-100 d-flex flex-column">
             <div class="bp-tutor-avatar-wrap">
               <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80" 
                    alt="Amara Okafor - Elementary & Early Learning Lead" 
@@ -240,17 +356,25 @@
                 <i class="fa-solid fa-check"></i>
               </div>
             </div>
-            <span class="badge bg-secondary-subtle text-secondary mb-2">Elementary Grades Lead (K-3)</span>
-            <h3 class="font-heading fs-5 mb-1">Amara Okafor</h3>
-            <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-secondary"></i>B.A. in Early Childhood Education</p>
-            <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <span class="text-muted ms-1 fw-semibold">5.0 (90 reviews)</span>
+            <div>
+              <span class="badge bg-secondary-subtle text-secondary mb-2">Elementary Grades Lead (K-3)</span>
+              <h3 class="font-heading fs-5 mb-1">Amara Okafor</h3>
+              <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-secondary"></i>B.A. in Early Childhood Education (Howard)</p>
+              <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <span class="text-muted ms-1 fw-semibold">5.0 (90 reviews)</span>
+              </div>
+              <div class="d-flex flex-wrap justify-content-center gap-1 mb-3">
+                <span class="badge bg-light text-dark border">Phonics Basics</span>
+                <span class="badge bg-light text-dark border">Number Sense</span>
+                <span class="badge bg-light text-dark border">Handwriting</span>
+                <span class="badge bg-light text-dark border">Study Habits</span>
+              </div>
+              <p class="small text-muted mb-4 fst-italic">
+                "Early learning should be filled with laughter and positive reinforcement. We build strong phonics and number foundations."
+              </p>
             </div>
-            <p class="small text-muted mb-4">
-              "Early learning should be filled with laughter and positive reinforcement. We build strong phonics and number foundations."
-            </p>
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 mt-auto">
               <button class="btn btn-sm btn-bp-outline w-50" data-bs-toggle="modal" data-bs-target="#tutorModal5">View Bio</button>
               <a href="dashboard.html" class="btn btn-sm btn-bp-primary w-50">Book Slot</a>
             </div>
@@ -258,8 +382,8 @@
         </div>
 
         <!-- Tutor 6: James Wilson -->
-        <div class="col-md-6 col-lg-4 tutor-card-item" data-subjects="math homework">
-          <div class="bp-card bp-card-hover p-4 text-center">
+        <div class="col-md-6 col-lg-4 tutor-card-item" data-subjects="math homework study-skills">
+          <div class="bp-card bp-card-hover p-4 text-center h-100 d-flex flex-column">
             <div class="bp-tutor-avatar-wrap">
               <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" 
                    alt="James Wilson - Study Skills & Test Prep Specialist" 
@@ -268,17 +392,25 @@
                 <i class="fa-solid fa-check"></i>
               </div>
             </div>
-            <span class="badge bg-primary-subtle text-primary mb-2">Executive Study Skills</span>
-            <h3 class="font-heading fs-5 mb-1">James Wilson</h3>
-            <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-primary"></i>M.A. in Cognitive Psychology (Michigan)</p>
-            <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-              <span class="text-muted ms-1 fw-semibold">4.8 (76 reviews)</span>
+            <div>
+              <span class="badge bg-primary-subtle text-primary mb-2">Executive Study Skills</span>
+              <h3 class="font-heading fs-5 mb-1">James Wilson</h3>
+              <p class="small text-muted mb-2"><i class="fa-solid fa-graduation-cap me-1 text-primary"></i>M.A. in Cognitive Psychology (Michigan)</p>
+              <div class="d-flex justify-content-center gap-1 text-warning small mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                <span class="text-muted ms-1 fw-semibold">4.8 (76 reviews)</span>
+              </div>
+              <div class="d-flex flex-wrap justify-content-center gap-1 mb-3">
+                <span class="badge bg-light text-dark border">Time Management</span>
+                <span class="badge bg-light text-dark border">Cornell Notes</span>
+                <span class="badge bg-light text-dark border">SSAT / ISEE</span>
+                <span class="badge bg-light text-dark border">Focus Training</span>
+              </div>
+              <p class="small text-muted mb-4 fst-italic">
+                "We teach the science of how memory works. Students leave our study labs with actionable schedules, clean binders, and calm test focus."
+              </p>
             </div>
-            <p class="small text-muted mb-4">
-              "We teach the science of how memory works. Students leave our study labs with actionable schedules, clean binders, and calm test focus."
-            </p>
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 mt-auto">
               <button class="btn btn-sm btn-bp-outline w-50" data-bs-toggle="modal" data-bs-target="#tutorModal6">View Bio</button>
               <a href="dashboard.html" class="btn btn-sm btn-bp-primary w-50">Book Slot</a>
             </div>
@@ -287,57 +419,890 @@
 
       </div>
 
-      <!-- Safety & Credentialing Standards Banner -->
-      <div class="mt-5 pt-4">
-        <div class="p-4 p-md-5 rounded-4 bg-primary text-white">
-          <div class="row align-items-center g-4">
-            <div class="col-lg-8">
-              <h3 class="font-heading text-white mb-2">The BrightPath Tutor Safety Guarantee</h3>
-              <p class="text-white opacity-75 mb-0">
-                Parents trust us with their children every afternoon. That is why 100% of our tutors undergo mandatory background screening (DOJ & FBI), drug testing, CPR/First Aid certification, and annual continuing education in positive youth guidance.
-              </p>
+    </div>
+  </main>
+
+  <!-- Section 1: Educator Vetting & Hiring Rigor -->
+  <section class="py-5 bg-light-subtle border-top border-bottom border-light-subtle" id="vettingProcess">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="bp-badge bp-badge-accent mb-2">Hiring Rigor</span>
+        <h2 class="font-heading fs-2">The BrightPath Standard: Only the Top 3% Teach Here</h2>
+        <p class="text-muted mx-auto" style="max-width: 700px;">
+          Trusting an educator with your child's learning is a serious commitment. We review hundreds of applicants each term through our non-negotiable 4-phase vetting pipeline before anyone steps into a BrightPath classroom.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Vetting Step 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bp-card p-4 h-100 position-relative">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="bp-icon-box bp-icon-box-primary mb-0">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <span class="bp-step-badge bg-primary text-white">01</span>
             </div>
-            <div class="col-lg-4 text-lg-end">
-              <a href="about.html" class="btn btn-light text-primary fw-bold">Read Safety Standards</a>
+            <h4 class="font-heading fs-5 mb-2">Academic Pedigree Screening</h4>
+            <p class="small text-muted mb-0">
+              Direct verification of university diplomas, official transcripts (min. 3.5 GPA), and standardized mastery exams in their subject specialization.
+            </p>
+          </div>
+        </div>
+
+        <!-- Vetting Step 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bp-card p-4 h-100 position-relative">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="bp-icon-box bp-icon-box-secondary mb-0">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <span class="bp-step-badge bg-secondary text-white">02</span>
+            </div>
+            <h4 class="font-heading fs-5 mb-2">Multi-Agency Background Checks</h4>
+            <p class="small text-muted mb-0">
+              Mandatory FBI fingerprinting, California DOJ criminal clearances, 50-state sex offender registries, and comprehensive 5-panel drug testing.
+            </p>
+          </div>
+        </div>
+
+        <!-- Vetting Step 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bp-card p-4 h-100 position-relative">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="bp-icon-box bp-icon-box-accent mb-0">
+                <i class="fa-solid fa-chalkboard-user"></i>
+              </div>
+              <span class="bp-step-badge bg-accent text-white" style="background-color: var(--bp-accent);">03</span>
+            </div>
+            <h4 class="font-heading fs-5 mb-2">Live Teaching Simulation</h4>
+            <p class="small text-muted mb-0">
+              Every candidate teaches a live mock session evaluated by our Academic Director for patience, empathy, adaptive explanation, and positive encouragement.
+            </p>
+          </div>
+        </div>
+
+        <!-- Vetting Step 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bp-card p-4 h-100 position-relative">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="bp-icon-box bp-icon-box-purple mb-0">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <span class="bp-step-badge text-white" style="background-color: var(--bp-purple);">04</span>
+            </div>
+            <h4 class="font-heading fs-5 mb-2">Continuous Safety & Training</h4>
+            <p class="small text-muted mb-0">
+              40+ annual hours of continuing education in neurodiversity (ADHD, dyslexia), state standards, and bi-annual Pediatric First Aid/CPR recertification.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: How Tutor Matching Works -->
+  <section class="py-5" id="matchingRoadmap">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="bp-badge bp-badge-secondary mb-2">Personalized Pairing</span>
+        <h2 class="font-heading fs-2">How We Match Your Child with the Ideal Mentor</h2>
+        <p class="text-muted mx-auto" style="max-width: 680px;">
+          Academic success requires more than just knowing math or reading—it requires rapport, trust, and shared learning chemistry.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bp-card p-4 h-100 border-start border-4 border-primary">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-primary text-white px-2 py-1">Step 1</span>
+              <h5 class="font-heading mb-0 fs-6">Diagnostic Intake</h5>
+            </div>
+            <p class="small text-muted mb-2">
+              We review your student's recent report cards, homework roadblocks, test anxieties, and identify whether they learn best visually, kinesthetically, or auditorily.
+            </p>
+            <span class="badge bg-light text-primary border small">15-Minute Assessment</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bp-card p-4 h-100 border-start border-4 border-secondary">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-secondary text-white px-2 py-1">Step 2</span>
+              <h5 class="font-heading mb-0 fs-6">Personality & Pace Match</h5>
+            </div>
+            <p class="small text-muted mb-2">
+              Our Academic Director hand-pairs your child with an educator whose teaching tempo complements their disposition—whether they need gentle reassurance or energetic momentum.
+            </p>
+            <span class="badge bg-light text-secondary border small">Director Curated</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bp-card p-4 h-100 border-start border-4 border-warning">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-warning text-dark px-2 py-1">Step 3</span>
+              <h5 class="font-heading mb-0 fs-6">Chemistry Guarantee</h5>
+            </div>
+            <p class="small text-muted mb-2">
+              If at any point during the first two sessions you or your child feel the dynamic isn't 100% ideal, we rematch you with another certified tutor at zero cost or friction.
+            </p>
+            <span class="badge bg-light text-dark border small">Zero-Risk Guarantee</span>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bp-card p-4 h-100 border-start border-4 border-success">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-success text-white px-2 py-1">Step 4</span>
+              <h5 class="font-heading mb-0 fs-6">Syllabus Sync & Reports</h5>
+            </div>
+            <p class="small text-muted mb-2">
+              Your tutor syncs directly with your student's school assignments (Google Classroom & Canvas) and publishes bi-weekly progress notes to your Parent Dashboard.
+            </p>
+            <span class="badge bg-light text-success border small">Transparent Portal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Specialized Pedagogical Methodologies -->
+  <section class="py-5 bg-light-subtle border-top border-bottom border-light-subtle">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="bp-badge bp-badge-purple mb-2">Adaptive Learning</span>
+        <h2 class="font-heading fs-2">Every Child Learns Differently — We Adapt to Them</h2>
+        <p class="text-muted mx-auto" style="max-width: 680px;">
+          Rather than forcing students into rigid one-size-fits-all lecture modes, our mentors personalize their instructional strategies for each learner's unique cognitive profile.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Pillar 1: Visual Learners -->
+        <div class="col-md-4">
+          <div class="bp-card p-4 h-100">
+            <div class="bp-icon-box bp-icon-box-primary">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <h4 class="font-heading fs-5 mb-2">Visual & Conceptual Thinkers</h4>
+            <p class="small text-muted mb-3">
+              We deconstruct abstract equations and reading comprehension into color-coded concept maps, step-by-step visual logic trees, and interactive geometry diagrams.
+            </p>
+            <ul class="list-unstyled small text-muted mb-0">
+              <li class="mb-1"><i class="fa-solid fa-check text-primary me-2"></i>Color-coded problem solving</li>
+              <li class="mb-1"><i class="fa-solid fa-check text-primary me-2"></i>Mind maps & vocabulary charts</li>
+              <li><i class="fa-solid fa-check text-primary me-2"></i>Interactive digital whiteboard notes</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Kinesthetic Learners -->
+        <div class="col-md-4">
+          <div class="bp-card p-4 h-100">
+            <div class="bp-icon-box bp-icon-box-secondary">
+              <i class="fa-solid fa-hands"></i>
+            </div>
+            <h4 class="font-heading fs-5 mb-2">Hands-On Kinesthetic Explorers</h4>
+            <p class="small text-muted mb-3">
+              For children who learn by doing, our tutors use physical math manipulatives, robotics breadboards, and tactile experiments that make academic formulas touchable.
+            </p>
+            <ul class="list-unstyled small text-muted mb-0">
+              <li class="mb-1"><i class="fa-solid fa-check text-secondary me-2"></i>Math fractions with tactile blocks</li>
+              <li class="mb-1"><i class="fa-solid fa-check text-secondary me-2"></i>Scratch & LEGO robotics coding</li>
+              <li><i class="fa-solid fa-check text-secondary me-2"></i>Tangible science experiment kits</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Executive Function -->
+        <div class="col-md-4">
+          <div class="bp-card p-4 h-100">
+            <div class="bp-icon-box bp-icon-box-accent">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h4 class="font-heading fs-5 mb-2">Executive Function & Study Habits</h4>
+            <p class="small text-muted mb-3">
+              We teach children how to learn. Tutors coach students in Cornell note-taking, timeboxed Pomodoro intervals, planner organization, and proactive test anxiety mitigation.
+            </p>
+            <ul class="list-unstyled small text-muted mb-0">
+              <li class="mb-1"><i class="fa-solid fa-check text-warning me-2"></i>Structured homework checklists</li>
+              <li class="mb-1"><i class="fa-solid fa-check text-warning me-2"></i>Pomodoro 25-minute study intervals</li>
+              <li><i class="fa-solid fa-check text-warning me-2"></i>Backpack & binder organization systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Parent Mentorship Testimonials -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="bp-badge bp-badge-primary mb-2">Mentorship Stories</span>
+        <h2 class="font-heading fs-2">Loved by Students, Trusted by Parents</h2>
+        <p class="text-muted mx-auto" style="max-width: 650px;">
+          Real feedback from families whose students transformed their relationship with academics at BrightPath.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Review 1 -->
+        <div class="col-md-4">
+          <div class="bp-card p-4 h-100 d-flex flex-column">
+            <div class="d-flex align-items-center gap-1 text-warning small mb-3">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="badge bg-primary-subtle text-primary ms-auto small">Dr. Jenkins</span>
+            </div>
+            <p class="small text-muted mb-4 fst-italic">
+              "Maya was failing 10th-grade Chemistry and terrified of tests. Dr. Jenkins broke down stoichiometry with everyday kitchen analogies. Maya earned an A- on her final exam and now wants to join the Robotics club!"
+            </p>
+            <div class="d-flex align-items-center gap-3 mt-auto pt-3 border-top">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" 
+                   alt="Rachel K." class="rounded-circle" width="46" height="46" style="object-fit: cover;">
+              <div>
+                <h6 class="font-heading mb-0 fs-6">Rachel K.</h6>
+                <small class="text-muted">Parent of Maya (10th Grade)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="col-md-4">
+          <div class="bp-card p-4 h-100 d-flex flex-column">
+            <div class="d-flex align-items-center gap-1 text-warning small mb-3">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="badge bg-secondary-subtle text-secondary ms-auto small">Marcus Vance</span>
+            </div>
+            <p class="small text-muted mb-4 fst-italic">
+              "Math tears used to be our daily 6 PM dinner routine. Marcus gave Ethan patient, step-by-step strategies that built real pride. Ethan recently volunteered to solve a problem on the board at school for the first time!"
+            </p>
+            <div class="d-flex align-items-center gap-3 mt-auto pt-3 border-top">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" 
+                   alt="David S." class="rounded-circle" width="46" height="46" style="object-fit: cover;">
+              <div>
+                <h6 class="font-heading mb-0 fs-6">David S.</h6>
+                <small class="text-muted">Parent of Ethan (5th Grade)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="col-md-4">
+          <div class="bp-card p-4 h-100 d-flex flex-column">
+            <div class="d-flex align-items-center gap-1 text-warning small mb-3">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="badge bg-purple-subtle text-purple ms-auto small">Elena Rostova</span>
+            </div>
+            <p class="small text-muted mb-4 fst-italic">
+              "Rohan has mild dyslexia and was falling behind his reading milestones. Elena's multisensory phonics games and endless encouragement turned reading from a chore into his favorite afternoon activity."
+            </p>
+            <div class="d-flex align-items-center gap-3 mt-auto pt-3 border-top">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=120&q=80" 
+                   alt="Priya N." class="rounded-circle" width="46" height="46" style="object-fit: cover;">
+              <div>
+                <h6 class="font-heading mb-0 fs-6">Priya N.</h6>
+                <small class="text-muted">Parent of Rohan (3rd Grade)</small>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-  </main>
+  </section>
 
-  <!-- Sample Tutor Bio Modal (Dr. Sarah Jenkins) -->
+  <!-- Section 5: Safety Guarantee Banner -->
+  <section class="py-4">
+    <div class="container">
+      <div class="p-4 p-md-5 rounded-4 bg-primary text-white shadow-sm">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="fa-solid fa-shield-halved fs-3 text-warning"></i>
+              <h3 class="font-heading text-white mb-0">The BrightPath Tutor Safety Guarantee</h3>
+            </div>
+            <p class="text-white opacity-75 mb-3">
+              Parents trust us with their children every single afternoon. That is why 100% of our tutors undergo mandatory background screening (DOJ & FBI), drug testing, CPR/First Aid certification, and annual continuing education in positive youth guidance.
+            </p>
+            <div class="d-flex flex-wrap gap-3 small">
+              <span><i class="fa-solid fa-circle-check text-warning me-1"></i>DOJ & FBI Fingerprinted</span>
+              <span><i class="fa-solid fa-circle-check text-warning me-1"></i>CPR / AED Pediatric Certified</span>
+              <span><i class="fa-solid fa-circle-check text-warning me-1"></i>Transparent Open Classrooms</span>
+            </div>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="about.html" class="btn btn-light text-primary fw-bold me-2">Read Safety Standards</a>
+            <a href="contact.html" class="btn btn-outline-light">Ask Director</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Frequently Asked Questions Accordion -->
+  <section class="py-5 bg-light-subtle border-top border-bottom border-light-subtle" id="tutorFAQ">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="bp-badge bp-badge-secondary mb-2">Got Questions?</span>
+        <h2 class="font-heading fs-2">Frequently Asked Questions About Our Tutors</h2>
+        <p class="text-muted mx-auto" style="max-width: 650px;">
+          Clear answers about tutor qualifications, session scheduling, matching guarantees, and teacher collaboration.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="accordion" id="tutorAccordion">
+
+            <!-- FAQ 1 -->
+            <div class="accordion-item bp-card mb-3">
+              <h2 class="accordion-header" id="faqHeadingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="false" aria-controls="faqCollapseOne">
+                  <i class="fa-solid fa-circle-question text-primary me-2"></i>
+                  What qualifications and background checks do BrightPath tutors possess?
+                </button>
+              </h2>
+              <div id="faqCollapseOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#tutorAccordion">
+                <div class="accordion-body text-muted small">
+                  Every BrightPath tutor holds at least a Bachelor’s degree in their subject or education, with over 60% holding Master’s degrees or Ph.D.s. Prior to hiring, 100% of candidates must pass mandatory California Department of Justice (DOJ) and FBI fingerprint background clearances, drug screening, national sex offender checks, and possess current CPR/Pediatric First Aid certification.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item bp-card mb-3">
+              <h2 class="accordion-header" id="faqHeadingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                  <i class="fa-solid fa-arrows-split-up-and-left text-secondary me-2"></i>
+                  What happens if my child doesn't click with their assigned tutor?
+                </button>
+              </h2>
+              <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#tutorAccordion">
+                <div class="accordion-body text-muted small">
+                  We stand by our <strong>100% Chemistry Guarantee</strong>. If after the first two sessions you or your child feel the teaching cadence isn't the right fit, you can switch to another certified tutor immediately with no hassle, penalty, or administrative fees. We prioritize your student’s comfort above all else.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item bp-card mb-3">
+              <h2 class="accordion-header" id="faqHeadingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                  <i class="fa-solid fa-users text-accent me-2"></i>
+                  What is the difference between 1-on-1 tutoring and small group homework pods?
+                </button>
+              </h2>
+              <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#tutorAccordion">
+                <div class="accordion-body text-muted small">
+                  <strong>Small Group Pods (Max 1:4)</strong> are ideal for daily homework completion, structured study habits, and peer socialization. <strong>1-on-1 Dedicated Tutoring</strong> is best for targeted remediation, preparing for AP/honors courses, addressing learning differences, or intensive test preparation (SSAT, SAT, ISEE). Many families combine both options.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item bp-card mb-3">
+              <h2 class="accordion-header" id="faqHeadingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                  <i class="fa-solid fa-school text-primary me-2"></i>
+                  Can our tutor coordinate directly with my child's classroom teacher?
+                </button>
+              </h2>
+              <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#tutorAccordion">
+                <div class="accordion-body text-muted small">
+                  Yes! With your written consent, our tutors can review your child’s weekly school syllabus on Google Classroom or Canvas and even send email check-ins to school teachers to ensure our after-school coaching directly targets upcoming class quizzes, projects, and state testing requirements.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item bp-card mb-3">
+              <h2 class="accordion-header" id="faqHeadingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                  <i class="fa-solid fa-clipboard-check text-purple me-2"></i>
+                  How do I track my child's progress and see tutor feedback?
+                </button>
+              </h2>
+              <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#tutorAccordion">
+                <div class="accordion-body text-muted small">
+                  Every session includes logged tutor notes accessible instantly in your online <strong>Parent Dashboard</strong>. You'll see which assignments were completed, concepts mastered, homework signed off, and recommendations for at-home reinforcement. We also conduct comprehensive bi-monthly progress reviews.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="accordion-item bp-card mb-3">
+              <h2 class="accordion-header" id="faqHeadingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseSix" aria-expanded="false" aria-controls="faqCollapseSix">
+                  <i class="fa-solid fa-calendar-check text-secondary me-2"></i>
+                  Can we book the same tutor consistently week-to-week?
+                </button>
+              </h2>
+              <div id="faqCollapseSix" class="accordion-collapse collapse" aria-labelledby="faqHeadingSix" data-bs-parent="#tutorAccordion">
+                <div class="accordion-body text-muted small">
+                  Absolutely. Consistency is vital for academic progress. Once you establish a recurring schedule through the Parent Portal, your student retains their dedicated time slot with their mentor for the entire academic quarter or semester.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Free Consultation & Diagnostic CTA -->
+  <section class="py-5">
+    <div class="container">
+      <div class="p-4 p-md-5 rounded-4 bg-light-subtle border border-light-subtle text-center">
+        <span class="bp-badge bp-badge-primary mb-2">Free Consultation</span>
+        <h2 class="font-heading fs-2 mb-3">Not Sure Which Mentor Is Right for Your Child?</h2>
+        <p class="text-muted mx-auto mb-4" style="max-width: 660px;">
+          Schedule a complimentary 20-minute diagnostic session with our Academic Director. We'll assess your child’s learning style, review recent homework roadblocks, and pair them with the ideal certified tutor.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+          <a href="contact.html" class="btn btn-bp-primary px-4 py-2">
+            <i class="fa-solid fa-calendar-plus me-1"></i> Request Free Consultation
+          </a>
+          <a href="programs.html" class="btn btn-bp-outline px-4 py-2">
+            <i class="fa-solid fa-book-open me-1"></i> View All Programs
+          </a>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center gap-4 text-muted small">
+          <span><i class="fa-solid fa-check text-success me-1"></i>No Obligation Consultation</span>
+          <span><i class="fa-solid fa-check text-success me-1"></i>100% Free Chemistry Guarantee</span>
+          <span><i class="fa-solid fa-check text-success me-1"></i>Tailored Academic Roadmap</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       TUTOR MODALS (All 6 Modals Fully Functional)
+       ========================================================================= -->
+
+  <!-- Tutor Modal 1: Dr. Sarah Jenkins -->
   <div class="modal fade" id="tutorModal1" tabindex="-1" aria-labelledby="tutorModal1Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title font-heading" id="tutorModal1Label">Dr. Sarah Jenkins - Bio & Credentials</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body p-4">
-          <div class="d-flex align-items-center gap-3 mb-3">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" 
-                 class="rounded-circle" width="64" height="64" style="object-fit: cover;" alt="Dr. Jenkins">
-            <div>
-              <h6 class="mb-0 font-heading">Dr. Sarah Jenkins</h6>
-              <div class="small text-primary fw-semibold">Lead STEM & Science Educator</div>
-              <div class="small text-muted"><i class="fa-solid fa-certificate text-success me-1"></i>DOJ Background Cleared • CPR Certified</div>
+          <div class="d-flex flex-column flex-sm-row align-items-center gap-3 mb-4">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" 
+                 class="rounded-circle" width="80" height="80" style="object-fit: cover;" alt="Dr. Sarah Jenkins">
+            <div class="text-center text-sm-start">
+              <h5 class="mb-1 font-heading">Dr. Sarah Jenkins</h5>
+              <div class="small text-primary fw-semibold mb-1">Lead Science & STEM Educator</div>
+              <div class="small text-muted">
+                <i class="fa-solid fa-certificate text-success me-1"></i>DOJ Background Cleared • CPR/AED Certified • 12+ Years Experience
+              </div>
             </div>
           </div>
-          <p class="small text-muted">
+          
+          <h6 class="font-heading mb-2">Teaching Philosophy & Background</h6>
+          <p class="small text-muted mb-3">
             Dr. Jenkins has taught inquiry-based science in both elementary classrooms and university outreach laboratories. Her interactive method breaks complex physical and biological concepts into tangible, fun experiments that children remember for life.
           </p>
-          <div class="bg-light-subtle p-3 rounded-3 mb-3 border">
-            <strong class="small d-block mb-1">Specialties & Subjects:</strong>
-            <span class="badge bg-primary me-1">Biology</span>
-            <span class="badge bg-primary me-1">Earth Science</span>
-            <span class="badge bg-primary me-1">Middle School Physics</span>
-            <span class="badge bg-primary">Science Fair Mentoring</span>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="bg-light-subtle p-3 rounded-3 border h-100">
+                <strong class="small d-block mb-2 text-dark">Degrees & Certifications:</strong>
+                <ul class="list-unstyled small text-muted mb-0">
+                  <li class="mb-1"><i class="fa-solid fa-graduation-cap text-primary me-2"></i>Ph.D. in Science Education (Stanford)</li>
+                  <li class="mb-1"><i class="fa-solid fa-graduation-cap text-primary me-2"></i>B.S. in Molecular Biology (UC Davis)</li>
+                  <li><i class="fa-solid fa-shield-check text-success me-2"></i>California Single-Subject Science Credential</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="bg-light-subtle p-3 rounded-3 border h-100">
+                <strong class="small d-block mb-2 text-dark">Subject Focus & Grades:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-primary">General Science (K-8)</span>
+                  <span class="badge bg-primary">Biology & Life Science</span>
+                  <span class="badge bg-primary">Middle School Physics</span>
+                  <span class="badge bg-primary">AP Chemistry Prep</span>
+                  <span class="badge bg-primary">Science Fair Mentorship</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <a href="dashboard.html" class="btn btn-bp-primary w-100">
-            <i class="fa-solid fa-calendar-plus me-1"></i> Book Slot with Dr. Jenkins
-          </a>
+
+          <div class="bg-light p-3 rounded-3 mb-4 border">
+            <p class="small fst-italic text-muted mb-0">
+              "Dr. Jenkins helped my daughter Maya turn an anxious C in Chemistry into a confident A-. Her hands-on demonstrations make all the difference!" — Rachel K. (Parent)
+            </p>
+          </div>
+
+          <div class="d-flex gap-2">
+            <a href="dashboard.html" class="btn btn-bp-primary w-50">
+              <i class="fa-solid fa-calendar-plus me-1"></i> Book with Dr. Jenkins
+            </a>
+            <a href="contact.html?tutor=jenkins" class="btn btn-bp-outline w-50">
+              <i class="fa-solid fa-envelope me-1"></i> Ask a Question
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tutor Modal 2: Marcus Vance -->
+  <div class="modal fade" id="tutorModal2" tabindex="-1" aria-labelledby="tutorModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-heading" id="tutorModal2Label">Marcus Vance - Bio & Credentials</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="d-flex flex-column flex-sm-row align-items-center gap-3 mb-4">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" 
+                 class="rounded-circle" width="80" height="80" style="object-fit: cover;" alt="Marcus Vance">
+            <div class="text-center text-sm-start">
+              <h5 class="mb-1 font-heading">Marcus Vance</h5>
+              <div class="small text-secondary fw-semibold mb-1">Mathematics & Logic Specialist</div>
+              <div class="small text-muted">
+                <i class="fa-solid fa-certificate text-success me-1"></i>DOJ Background Cleared • NCTM Member • 8+ Years Experience
+              </div>
+            </div>
+          </div>
+          
+          <h6 class="font-heading mb-2">Teaching Philosophy & Background</h6>
+          <p class="small text-muted mb-3">
+            Marcus specializes in transforming math anxiety into analytical confidence. With over 8 years of tutoring middle and high school students, Marcus uses relatable real-world analogies, step-by-step problem deconstruction, and patient error-analysis to help students master even the toughest math concepts.
+          </p>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="bg-light-subtle p-3 rounded-3 border h-100">
+                <strong class="small d-block mb-2 text-dark">Degrees & Certifications:</strong>
+                <ul class="list-unstyled small text-muted mb-0">
+                  <li class="mb-1"><i class="fa-solid fa-graduation-cap text-secondary me-2"></i>M.S. in Applied Mathematics (UCLA)</li>
+                  <li class="mb-1"><i class="fa-solid fa-graduation-cap text-secondary me-2"></i>B.S. in Pure Mathematics (UCSD)</li>
+                  <li><i class="fa-solid fa-shield-check text-success me-2"></i>Secondary Math Credential (CA)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="bg-light-subtle p-3 rounded-3 border h-100">
+                <strong class="small d-block mb-2 text-dark">Subject Focus & Grades:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-secondary">Pre-Algebra</span>
+                  <span class="badge bg-secondary">Algebra I & II</span>
+                  <span class="badge bg-secondary">Euclidean Geometry</span>
+                  <span class="badge bg-secondary">Trigonometry & Precalc</span>
+                  <span class="badge bg-secondary">Math Competition Prep</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-light p-3 rounded-3 mb-4 border">
+            <p class="small fst-italic text-muted mb-0">
+              "Marcus turned our daily math tears into genuine smiles. Ethan solved a multi-step geometry proof yesterday with complete confidence!" — David S. (Parent)
+            </p>
+          </div>
+
+          <div class="d-flex gap-2">
+            <a href="dashboard.html" class="btn btn-bp-primary w-50">
+              <i class="fa-solid fa-calendar-plus me-1"></i> Book with Marcus
+            </a>
+            <a href="contact.html?tutor=vance" class="btn btn-bp-outline w-50">
+              <i class="fa-solid fa-envelope me-1"></i> Ask a Question
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tutor Modal 3: Elena Rostova -->
+  <div class="modal fade" id="tutorModal3" tabindex="-1" aria-labelledby="tutorModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-heading" id="tutorModal3Label">Elena Rostova - Bio & Credentials</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="d-flex flex-column flex-sm-row align-items-center gap-3 mb-4">
+            <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=200&q=80" 
+                 class="rounded-circle" width="80" height="80" style="object-fit: cover;" alt="Elena Rostova">
+            <div class="text-center text-sm-start">
+              <h5 class="mb-1 font-heading">Elena Rostova</h5>
+              <div class="small text-purple fw-semibold mb-1">Literacy & Reading Specialist</div>
+              <div class="small text-muted">
+                <i class="fa-solid fa-certificate text-success me-1"></i>DOJ Background Cleared • Certified Reading Specialist • 10+ Years Experience
+              </div>
+            </div>
+          </div>
+          
+          <h6 class="font-heading mb-2">Teaching Philosophy & Background</h6>
+          <p class="small text-muted mb-3">
+            Elena brings 10 years of clinical and classroom reading experience. Trained in Orton-Gillingham multisensory principles, she tailors engaging phonetic, vocabulary, and writing techniques for both reluctant readers and students with mild dyslexia.
+          </p>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="bg-light-subtle p-3 rounded-3 border h-100">
+                <strong class="small d-block mb-2 text-dark">Degrees & Certifications:</strong>
+                <ul class="list-unstyled small text-muted mb-0">
+                  <li class="mb-1"><i class="fa-solid fa-graduation-cap text-purple me-2"></i>M.Ed. in Reading Curriculum (Columbia)</li>
+                  <li class="mb-1"><i class="fa-solid fa-graduation-cap text-purple me-2"></i>B.A. in English Literature (NYU)</li>
+                  <li><i class="fa-solid fa-shield-check text-success me-2"></i>Certified Reading Specialist (CRS)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="bg-light-subtle p-3 rounded-3 border h-100">
+                <strong class="small d-block mb-2 text-dark">Subject Focus & Grades:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-purple">Orton-Gillingham Phonics</span>
+                  <span class="badge bg-purple">Reading Comprehension</span>
+                  <span class="badge bg-purple">Essay Structure & Grammar</span>
+                  <span class="badge bg-purple">Dyslexia Support</span>
+                  <span class="badge bg-purple">Creative Writing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-light p-3 rounded-3 mb-4 border">
+            <p class="small fst-italic text-muted mb-0">
+              "Elena's patience with our son's mild dyslexia has been life-changing. He finished his first full chapter book this month!" — Priya N. (Parent)
+            </p>
+          </div>
+
+          <div class="d-flex gap-2">
+            <a href="dashboard.html" class="btn btn-bp-primary w-50">
+              <i class="fa-solid fa-calendar-plus me-1"></i> Book with Elena
+            </a>
+            <a href="contact.html?tutor=rostova" class="btn btn-bp-outline w-50">
+              <i class="fa-solid fa-envelope me-1"></i> Ask a Question
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tutor Modal 4: David Chen -->
+  <div class="modal fade" id="tutorModal4" tabindex="-1" aria-labelledby="tutorModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-heading" id="tutorModal4Label">David Chen - Bio & Credentials</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="d-flex flex-column flex-sm-row align-items-center gap-3 mb-4">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" 
+                 class="rounded-circle" width="80" height="80" style="object-fit: cover;" alt="David Chen">
+            <div class="text-center text-sm-start">
+              <h5 class="mb-1 font-heading">David Chen</h5>
+              <div class="small text-accent fw-semibold mb-1">Coding & Robotics Coach</div>
+              <div class="small text-muted">
+                <i class="fa-solid fa-certificate text-success me-1"></i>DOJ Background Cleared • FIRST LEGO League Coach • 6+ Years Experience
+              </div>
+            </div>
+          </div>
+          
+          <h6 class="font-heading mb-2">Teaching Philosophy & Background</h6>
+          <p class="small text-muted mb-3">
+            A software engineer turned passionate STEM educator, David guides students through coding fundamentals and hands-on robotics engineering. He specializes in teaching resilience, computational thinking, and debugging with calm encouragement.
+          </p>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="bg-light-subtle p-3 rounded-3 border h-100">
+                <strong class="small d-block mb-2 text-dark">Degrees & Certifications:</strong>
+                <ul class="list-unstyled small text-muted mb-0">
+                  <li class="mb-1"><i class="fa-solid fa-graduation-cap text-accent me-2"></i>B.S. in Computer Engineering (UC Berkeley)</li>
+                  <li class="mb-1"><i class="fa-solid fa-code text-accent me-2"></i>Certified Python Institute Instructor</li>
+                  <li><i class="fa-solid fa-shield-check text-success me-2"></i>FIRST Robotics Regional Mentor</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="bg-light-subtle p-3 rounded-3 border h-100">
+                <strong class="small d-block mb-2 text-dark">Subject Focus & Grades:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-warning text-dark">Scratch Block Coding (Grades 1-5)</span>
+                  <span class="badge bg-warning text-dark">Python for Beginners (Grades 5-10)</span>
+                  <span class="badge bg-warning text-dark">LEGO SPIKE / EV3 Robotics</span>
+                  <span class="badge bg-warning text-dark">HTML & Web Development</span>
+                  <span class="badge bg-warning text-dark">Computational Logic</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-light p-3 rounded-3 mb-4 border">
+            <p class="small fst-italic text-muted mb-0">
+              "David taught our 6th grader how to write a Python game from scratch. He has inspired a real passion for engineering!" — Carlos M. (Parent)
+            </p>
+          </div>
+
+          <div class="d-flex gap-2">
+            <a href="dashboard.html" class="btn btn-bp-primary w-50">
+              <i class="fa-solid fa-calendar-plus me-1"></i> Book with David
+            </a>
+            <a href="contact.html?tutor=chen" class="btn btn-bp-outline w-50">
+              <i class="fa-solid fa-envelope me-1"></i> Ask a Question
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tutor Modal 5: Amara Okafor -->
+  <div class="modal fade" id="tutorModal5" tabindex="-1" aria-labelledby="tutorModal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-heading" id="tutorModal5Label">Amara Okafor - Bio & Credentials</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="d-flex flex-column flex-sm-row align-items-center gap-3 mb-4">
+            <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=200&q=80" 
+                 class="rounded-circle" width="80" height="80" style="object-fit: cover;" alt="Amara Okafor">
+            <div class="text-center text-sm-start">
+              <h5 class="mb-1 font-heading">Amara Okafor</h5>
+              <div class="small text-secondary fw-semibold mb-1">Elementary & Early Learning Lead (K-3)</div>
+              <div class="small text-muted">
+                <i class="fa-solid fa-certificate text-success me-1"></i>DOJ Background Cleared • State Certified Early Ed • 9+ Years Experience
+              </div>
+            </div>
+          </div>
+          
+          <h6 class="font-heading mb-2">Teaching Philosophy & Background</h6>
+          <p class="small text-muted mb-3">
+            Amara specializes in the critical transition years from kindergarten through 3rd grade. Her warm, cheerful demeanor creates a nurturing atmosphere where early learners build phonics mastery, foundational number sense, and healthy study habits.
+          </p>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="bg-light-subtle p-3 rounded-3 border h-100">
+                <strong class="small d-block mb-2 text-dark">Degrees & Certifications:</strong>
+                <ul class="list-unstyled small text-muted mb-0">
+                  <li class="mb-1"><i class="fa-solid fa-graduation-cap text-secondary me-2"></i>B.A. in Early Childhood Education (Howard)</li>
+                  <li class="mb-1"><i class="fa-solid fa-certificate text-secondary me-2"></i>California Multiple-Subject Credential (K-5)</li>
+                  <li><i class="fa-solid fa-shield-check text-success me-2"></i>Pediatric First Aid / CPR Certified</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="bg-light-subtle p-3 rounded-3 border h-100">
+                <strong class="small d-block mb-2 text-dark">Subject Focus & Grades:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-secondary">Early Phonics & Sight Words</span>
+                  <span class="badge bg-secondary">Foundational Math & Counting</span>
+                  <span class="badge bg-secondary">Handwriting & Fine Motor</span>
+                  <span class="badge bg-secondary">Early Reading Fluency</span>
+                  <span class="badge bg-secondary">Attention & Focus Routines</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-light p-3 rounded-3 mb-4 border">
+            <p class="small fst-italic text-muted mb-0">
+              "Amara's warmth and structure gave our 1st grader the confidence she needed to read aloud in class without hesitating!" — Jessica W. (Parent)
+            </p>
+          </div>
+
+          <div class="d-flex gap-2">
+            <a href="dashboard.html" class="btn btn-bp-primary w-50">
+              <i class="fa-solid fa-calendar-plus me-1"></i> Book with Amara
+            </a>
+            <a href="contact.html?tutor=okafor" class="btn btn-bp-outline w-50">
+              <i class="fa-solid fa-envelope me-1"></i> Ask a Question
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tutor Modal 6: James Wilson -->
+  <div class="modal fade" id="tutorModal6" tabindex="-1" aria-labelledby="tutorModal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-heading" id="tutorModal6Label">James Wilson - Bio & Credentials</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="d-flex flex-column flex-sm-row align-items-center gap-3 mb-4">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80" 
+                 class="rounded-circle" width="80" height="80" style="object-fit: cover;" alt="James Wilson">
+            <div class="text-center text-sm-start">
+              <h5 class="mb-1 font-heading">James Wilson</h5>
+              <div class="small text-primary fw-semibold mb-1">Executive Study Skills & Test Prep Specialist</div>
+              <div class="small text-muted">
+                <i class="fa-solid fa-certificate text-success me-1"></i>DOJ Background Cleared • Certified Academic Coach • 7+ Years Experience
+              </div>
+            </div>
+          </div>
+          
+          <h6 class="font-heading mb-2">Teaching Philosophy & Background</h6>
+          <p class="small text-muted mb-3">
+            James applies cognitive psychology techniques to help middle and high school students conquer procrastination, disorganized binders, and test anxiety. He equips students with long-term study systems, active recall habits, and structured timeboxing that prepare them for college success.
+          </p>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="bg-light-subtle p-3 rounded-3 border h-100">
+                <strong class="small d-block mb-2 text-dark">Degrees & Certifications:</strong>
+                <ul class="list-unstyled small text-muted mb-0">
+                  <li class="mb-1"><i class="fa-solid fa-graduation-cap text-primary me-2"></i>M.A. in Cognitive Psychology (Michigan)</li>
+                  <li class="mb-1"><i class="fa-solid fa-graduation-cap text-primary me-2"></i>B.A. in Psychology & Education (Penn)</li>
+                  <li><i class="fa-solid fa-shield-check text-success me-2"></i>Certified Academic Life Coach (CALC)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="bg-light-subtle p-3 rounded-3 border h-100">
+                <strong class="small d-block mb-2 text-dark">Subject Focus & Grades:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-primary">Executive Function Coaching</span>
+                  <span class="badge bg-primary">Cornell Note-Taking Systems</span>
+                  <span class="badge bg-primary">Time Management & Planners</span>
+                  <span class="badge bg-primary">SSAT, ISEE & State Exam Prep</span>
+                  <span class="badge bg-primary">Test Anxiety & Mindfulness</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-light p-3 rounded-3 mb-4 border">
+            <p class="small fst-italic text-muted mb-0">
+              "James taught our 8th grader how to organize his binder, use a real planner, and study without frantic last-minute cramming. The transformation has been incredible!" — Mark & Karen D. (Parents)
+            </p>
+          </div>
+
+          <div class="d-flex gap-2">
+            <a href="dashboard.html" class="btn btn-bp-primary w-50">
+              <i class="fa-solid fa-calendar-plus me-1"></i> Book with James
+            </a>
+            <a href="contact.html?tutor=wilson" class="btn btn-bp-outline w-50">
+              <i class="fa-solid fa-envelope me-1"></i> Ask a Question
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -365,7 +1330,8 @@
         <div class="col-6 col-lg-2">
           <h5 class="bp-footer-title">Navigation</h5>
           <ul class="bp-footer-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home 1 - Academic</a></li>
+            <li><a href="home-2.html">Home 2 - STEM Hub</a></li>
             <li><a href="programs.html">Programs by Subject</a></li>
             <li><a href="tutors.html">Certified Tutors</a></li>
             <li><a href="about.html">About Center</a></li>
