@@ -170,78 +170,180 @@
   <main id="main-content">
     
     <!-- Hero Section -->
-    <section class="bp-hero">
-      <div class="container">
-        <div class="row align-items-center g-5">
+    <section class="bp-hero position-relative">
+      <div class="container position-relative" style="z-index: 1;">
+        <div class="row align-items-center g-4 g-lg-5">
+          <!-- Hero Left Column: Proposition, Quick Pod Finder & Actions -->
           <div class="col-lg-6 text-center text-lg-start">
             <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary-subtle text-primary fw-semibold small mb-3 border border-primary-subtle">
               <i class="fa-solid fa-award"></i>
               <span>Accredited After-School Academic & Homework Support</span>
             </div>
             
-            <h1 class="bp-hero-title">
+            <h1 class="bp-hero-title mb-3">
               Empowering Students with <span class="bp-hero-highlight">Structured Homework Help</span> & Enrichment.
             </h1>
 
-            <p class="bp-hero-lead text-center">
+            <p class="bp-hero-lead mx-auto mx-lg-0 mb-4">
               Transform after-school hours into peaceful evenings. Our certified educators guide students through daily homework completion, foundational math & reading mastery, and hands-on STEM discovery.
             </p>
 
+            <!-- Quick Pod Slot Finder Card -->
+            <div class="p-3 rounded-4 bg-light-subtle border shadow-sm mb-4 mx-auto mx-lg-0" style="max-width: 580px;">
+              <form class="row g-2 align-items-center" onsubmit="event.preventDefault(); const modalEl = document.getElementById('trialBookingModal'); if(modalEl){ const m = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl); m.show(); }">
+                <div class="col-sm-5">
+                  <label class="visually-hidden" for="heroGradeSelect">Select Student Grade</label>
+                  <select class="form-select form-select-sm py-2" id="heroGradeSelect" aria-label="Select Student Grade">
+                    <option value="elementary" selected>Grades 1 – 5 (Elementary)</option>
+                    <option value="middle">Grades 6 – 8 (Middle School)</option>
+                    <option value="high">Grades 9 – 12 (High School)</option>
+                  </select>
+                </div>
+                <div class="col-sm-4">
+                  <label class="visually-hidden" for="heroSubjectSelect">Focus Subject</label>
+                  <select class="form-select form-select-sm py-2" id="heroSubjectSelect" aria-label="Select Focus Subject">
+                    <option value="homework" selected>Daily Homework Lab</option>
+                    <option value="math">Math & Problem Solving</option>
+                    <option value="reading">Reading & Language Arts</option>
+                    <option value="stem">STEM & Science Discovery</option>
+                  </select>
+                </div>
+                <div class="col-sm-3">
+                  <button type="submit" class="btn btn-bp-primary btn-sm w-100 py-2">
+                    <i class="fa-solid fa-magnifying-glass me-1"></i> Check Pod
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Action CTAs -->
             <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mb-4">
-              <button class="btn btn-bp-primary" data-bs-toggle="modal" data-bs-target="#trialBookingModal">
-                <i class="fa-solid fa-calendar-check"></i> Book Free Trial Slot
+              <button class="btn btn-bp-primary shadow-sm" data-bs-toggle="modal" data-bs-target="#trialBookingModal">
+                <i class="fa-solid fa-calendar-check me-1"></i> Book Free Trial Slot
               </button>
               <a href="programs.html" class="btn btn-bp-outline">
-                <i class="fa-solid fa-book-open"></i> Explore Programs by Subject
+                <i class="fa-solid fa-book-open me-1"></i> Explore Programs by Subject
               </a>
             </div>
 
-            <!-- Trust Highlights -->
-            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start align-items-center gap-4 pt-3 border-top border-light-subtle">
+            <!-- Social Proof & Parent Ratings Strip -->
+            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start align-items-center gap-3 pt-3 border-top border-light-subtle">
+              <!-- Avatar Stack & Stars -->
+              <div class="d-flex align-items-center">
+                <div class="d-flex me-2">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80" alt="Parent" class="rounded-circle border border-2 border-white" width="34" height="34" style="margin-right: -10px; object-fit: cover;">
+                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=80&q=80" alt="Parent" class="rounded-circle border border-2 border-white" width="34" height="34" style="margin-right: -10px; object-fit: cover;">
+                  <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=80&q=80" alt="Parent" class="rounded-circle border border-2 border-white" width="34" height="34" style="margin-right: -10px; object-fit: cover;">
+                  <div class="rounded-circle bg-primary text-white small fw-bold d-flex align-items-center justify-content-center border border-2 border-white" style="width: 34px; height: 34px; font-size: 0.68rem;">+1.2k</div>
+                </div>
+                <div>
+                  <div class="d-flex align-items-center gap-1 text-warning" style="font-size: 0.78rem;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="text-main fw-bold ms-1" style="font-size: 0.82rem;">4.9/5</span>
+                  </div>
+                  <span class="text-muted" style="font-size: 0.72rem;">From 380+ local family reviews</span>
+                </div>
+              </div>
+
+              <div class="vr d-none d-sm-block text-muted opacity-25" style="height: 28px;"></div>
+
               <div class="d-flex align-items-center gap-2">
                 <i class="fa-solid fa-circle-check text-success fs-5"></i>
                 <span class="small fw-semibold text-muted">100% Background-Checked Tutors</span>
               </div>
-              <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-circle-check text-success fs-5"></i>
-                <span class="small fw-semibold text-muted">Real-Time Parent Portal</span>
-              </div>
-              <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-circle-check text-success fs-5"></i>
-                <span class="small fw-semibold text-muted">Flexible Session Booking</span>
-              </div>
             </div>
           </div>
 
+          <!-- Hero Right Column: Enhanced Classroom Photo Frame with Live Status -->
           <div class="col-lg-6">
-            <div class="bp-hero-img-wrap">
-              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1000&q=80" 
-                   alt="Supportive tutor assisting elementary and middle school students with homework" 
-                   class="bp-hero-img shadow-lg" 
-                   loading="eager" width="600" height="450">
+            <div class="bp-hero-img-wrap position-relative mx-auto ms-lg-auto" style="max-width: 720px; width: 100%;">
+              
+              <!-- Main Hero Image Card with Overlay -->
+              <div class="rounded-4 overflow-hidden shadow-lg border position-relative w-100 bp-hero-img-card">
+                <img src="../assets/images/classroom-hero.jpg" 
+                     alt="Certified educator conducting interactive classroom session with engaged students" 
+                     class="w-100 h-100 bp-hero-img" 
+                     style="object-fit: cover; display: block;" 
+                     loading="eager" width="800" height="600">
+                
+                <!-- Live Pod Status Bar Overlay at Bottom -->
+                <div class="position-absolute bottom-0 start-0 w-100 p-2 p-sm-3 p-md-4" style="background: linear-gradient(to top, rgba(15,23,42,0.92) 0%, rgba(15,23,42,0.65) 60%, transparent 100%);">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                      <div class="text-white fw-bold small d-flex align-items-center gap-2">
+                        <span class="badge bg-success text-white px-2 py-1"><i class="fa-solid fa-circle-check me-1"></i>Active Pod</span>
+                        <span class="fs-6 d-none d-sm-inline">Interactive Classroom & Homework Lab</span>
+                        <span class="small fw-bold d-sm-none">Homework Lab</span>
+                      </div>
+                      <div class="text-white-50 mt-1 d-none d-sm-block" style="font-size: 0.82rem;">
+                        <i class="fa-solid fa-chalkboard-user text-warning me-1"></i> Teacher-led review • Daily syllabus check • Hands-on support
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             </div>
           </div>
         </div>
 
         <!-- Quick Stats Strip -->
-        <div class="bp-stats-strip">
+        <div class="bp-stats-strip mt-5">
           <div class="row g-4 align-items-center">
+            <!-- Stat 1 -->
             <div class="col-6 col-md-3 bp-stat-item">
-              <div class="bp-stat-number counter-value" data-target="1250">0</div>
-              <p class="bp-stat-label">Students Guided</p>
+              <div class="d-flex align-items-center justify-content-center gap-3">
+                <div class="rounded-circle bg-primary-subtle text-primary p-2 d-none d-sm-flex align-items-center justify-content-center" style="width: 46px; height: 46px; flex-shrink: 0;">
+                  <i class="fa-solid fa-user-graduate fs-5"></i>
+                </div>
+                <div class="text-sm-start text-center">
+                  <div class="bp-stat-number counter-value" data-target="1250">0</div>
+                  <p class="bp-stat-label">Students Guided</p>
+                </div>
+              </div>
             </div>
+
+            <!-- Stat 2 -->
             <div class="col-6 col-md-3 bp-stat-item">
-              <div class="bp-stat-number"><span class="counter-value" data-target="98">0</span>%</div>
-              <p class="bp-stat-label">Homework Completion</p>
+              <div class="d-flex align-items-center justify-content-center gap-3">
+                <div class="rounded-circle bg-success-subtle text-success p-2 d-none d-sm-flex align-items-center justify-content-center" style="width: 46px; height: 46px; flex-shrink: 0;">
+                  <i class="fa-solid fa-circle-check fs-5"></i>
+                </div>
+                <div class="text-sm-start text-center">
+                  <div class="bp-stat-number"><span class="counter-value" data-target="98">0</span>%</div>
+                  <p class="bp-stat-label">Homework Completion</p>
+                </div>
+              </div>
             </div>
+
+            <!-- Stat 3 -->
             <div class="col-6 col-md-3 bp-stat-item">
-              <div class="bp-stat-number counter-value" data-target="28">0</div>
-              <p class="bp-stat-label">Certified Educators</p>
+              <div class="d-flex align-items-center justify-content-center gap-3">
+                <div class="rounded-circle bg-warning-subtle text-warning p-2 d-none d-sm-flex align-items-center justify-content-center" style="width: 46px; height: 46px; flex-shrink: 0;">
+                  <i class="fa-solid fa-chalkboard-user fs-5"></i>
+                </div>
+                <div class="text-sm-start text-center">
+                  <div class="bp-stat-number counter-value" data-target="28">0</div>
+                  <p class="bp-stat-label">Certified Educators</p>
+                </div>
+              </div>
             </div>
+
+            <!-- Stat 4 -->
             <div class="col-6 col-md-3 bp-stat-item">
-              <div class="bp-stat-number counter-value" data-target="6">0</div>
-              <p class="bp-stat-label">Subject Enrichment Labs</p>
+              <div class="d-flex align-items-center justify-content-center gap-3">
+                <div class="rounded-circle bg-info-subtle text-info p-2 d-none d-sm-flex align-items-center justify-content-center" style="width: 46px; height: 46px; flex-shrink: 0;">
+                  <i class="fa-solid fa-shapes fs-5"></i>
+                </div>
+                <div class="text-sm-start text-center">
+                  <div class="bp-stat-number counter-value" data-target="6">0</div>
+                  <p class="bp-stat-label">Subject Enrichment Labs</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -262,21 +364,26 @@
         <div class="row g-4">
           <!-- Pillar 1: Homework Help -->
           <div class="col-md-6 col-lg-3">
-            <div class="bp-pillar-card bp-pillar-card-homework p-4">
-              <div class="bp-pillar-card-bg" style="background-image: url('../assets/images/homework-help-bg.jpg');"></div>
-              <div class="bp-pillar-card-overlay"></div>
-              <div class="bp-pillar-card-content">
-                <div class="bp-icon-box bp-icon-box-primary">
-                  <i class="fa-solid fa-book-open-reader"></i>
+            <div class="bp-pillar-card h-100">
+              <div class="bp-pillar-img-wrapper">
+                <img src="../assets/images/homework-help-bg.jpg" 
+                     alt="Certified tutor assisting student with daily homework" 
+                     class="bp-pillar-img" loading="lazy" width="600" height="375">
+                <div class="position-absolute top-0 start-0 m-3">
+                  <div class="bp-icon-box bp-icon-box-primary mb-0 shadow-sm">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                  </div>
                 </div>
+              </div>
+              <div class="bp-pillar-card-body">
                 <h3 class="font-heading fs-5 mb-2">1-on-1 Homework Help</h3>
                 <p class="small text-muted mb-3">
                   Students review daily school assignments with certified educators. We check for understanding, not just answers.
                 </p>
-                <ul class="list-unstyled small text-muted mb-0">
-                  <li class="mb-1"><i class="fa-solid fa-circle-check text-primary me-2"></i>Math & Reading problem-solving</li>
-                  <li class="mb-1"><i class="fa-solid fa-circle-check text-primary me-2"></i>Essay outline & grammar review</li>
-                  <li><i class="fa-solid fa-circle-check text-primary me-2"></i>Teacher-aligned syllabus checks</li>
+                <ul class="list-unstyled small text-muted mb-0 mt-auto">
+                  <li class="mb-2 d-flex align-items-center"><i class="fa-solid fa-circle-check text-primary me-2"></i>Math & Reading problem-solving</li>
+                  <li class="mb-2 d-flex align-items-center"><i class="fa-solid fa-circle-check text-primary me-2"></i>Essay outline & grammar review</li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-primary me-2"></i>Teacher-aligned syllabus checks</li>
                 </ul>
               </div>
             </div>
@@ -284,21 +391,26 @@
 
           <!-- Pillar 2: Math & STEM -->
           <div class="col-md-6 col-lg-3">
-            <div class="bp-pillar-card bp-pillar-card-stem p-4">
-              <div class="bp-pillar-card-bg" style="background-image: url('../assets/images/math-stem-bg.jpg');"></div>
-              <div class="bp-pillar-card-overlay"></div>
-              <div class="bp-pillar-card-content">
-                <div class="bp-icon-box bp-icon-box-secondary">
-                  <i class="fa-solid fa-calculator"></i>
+            <div class="bp-pillar-card h-100">
+              <div class="bp-pillar-img-wrapper">
+                <img src="../assets/images/math-stem-bg.jpg" 
+                     alt="Math equations and geometric models for STEM reasoning" 
+                     class="bp-pillar-img" loading="lazy" width="600" height="375">
+                <div class="position-absolute top-0 start-0 m-3">
+                  <div class="bp-icon-box bp-icon-box-secondary mb-0 shadow-sm">
+                    <i class="fa-solid fa-calculator"></i>
+                  </div>
                 </div>
+              </div>
+              <div class="bp-pillar-card-body">
                 <h3 class="font-heading fs-5 mb-2">Math & STEM Mastery</h3>
                 <p class="small text-muted mb-3">
                   Strengthen foundational calculations, algebraic reasoning, and analytical logic through guided practice.
                 </p>
-                <ul class="list-unstyled small text-muted mb-0">
-                  <li class="mb-1"><i class="fa-solid fa-circle-check text-secondary me-2"></i>Mental math & speed drills</li>
-                  <li class="mb-1"><i class="fa-solid fa-circle-check text-secondary me-2"></i>Visual geometry & algebra kits</li>
-                  <li><i class="fa-solid fa-circle-check text-secondary me-2"></i>Step-by-step logic coaching</li>
+                <ul class="list-unstyled small text-muted mb-0 mt-auto">
+                  <li class="mb-2 d-flex align-items-center"><i class="fa-solid fa-circle-check text-secondary me-2"></i>Mental math & speed drills</li>
+                  <li class="mb-2 d-flex align-items-center"><i class="fa-solid fa-circle-check text-secondary me-2"></i>Visual geometry & algebra kits</li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-secondary me-2"></i>Step-by-step logic coaching</li>
                 </ul>
               </div>
             </div>
@@ -306,21 +418,26 @@
 
           <!-- Pillar 3: Robotics & Coding -->
           <div class="col-md-6 col-lg-3">
-            <div class="bp-pillar-card bp-pillar-card-robotics p-4">
-              <div class="bp-pillar-card-bg" style="background-image: url('../assets/images/robotics-coding-bg.jpg');"></div>
-              <div class="bp-pillar-card-overlay"></div>
-              <div class="bp-pillar-card-content">
-                <div class="bp-icon-box bp-icon-box-purple">
-                  <i class="fa-solid fa-robot"></i>
+            <div class="bp-pillar-card h-100">
+              <div class="bp-pillar-img-wrapper">
+                <img src="../assets/images/robotics-coding-bg.jpg" 
+                     alt="Students assembling robotics kits and learning programming" 
+                     class="bp-pillar-img" loading="lazy" width="600" height="375">
+                <div class="position-absolute top-0 start-0 m-3">
+                  <div class="bp-icon-box bp-icon-box-purple mb-0 shadow-sm">
+                    <i class="fa-solid fa-robot"></i>
+                  </div>
                 </div>
+              </div>
+              <div class="bp-pillar-card-body">
                 <h3 class="font-heading fs-5 mb-2">Robotics & Coding Labs</h3>
                 <p class="small text-muted mb-3">
                   After finishing homework, students unleash creativity in our hands-on robotics, coding, and maker spaces.
                 </p>
-                <ul class="list-unstyled small text-muted mb-0">
-                  <li class="mb-1"><i class="fa-solid fa-circle-check text-purple me-2"></i>Scratch & Python fundamentals</li>
-                  <li class="mb-1"><i class="fa-solid fa-circle-check text-purple me-2"></i>LEGO education robotics kits</li>
-                  <li><i class="fa-solid fa-circle-check text-purple me-2"></i>Collaborative engineering challenges</li>
+                <ul class="list-unstyled small text-muted mb-0 mt-auto">
+                  <li class="mb-2 d-flex align-items-center"><i class="fa-solid fa-circle-check text-purple me-2"></i>Scratch & Python fundamentals</li>
+                  <li class="mb-2 d-flex align-items-center"><i class="fa-solid fa-circle-check text-purple me-2"></i>LEGO education robotics kits</li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-purple me-2"></i>Collaborative engineering challenges</li>
                 </ul>
               </div>
             </div>
@@ -328,21 +445,26 @@
 
           <!-- Pillar 4: Study & Executive Skills -->
           <div class="col-md-6 col-lg-3">
-            <div class="bp-pillar-card bp-pillar-card-study p-4">
-              <div class="bp-pillar-card-bg" style="background-image: url('../assets/images/study-skills-bg.jpg');"></div>
-              <div class="bp-pillar-card-overlay"></div>
-              <div class="bp-pillar-card-content">
-                <div class="bp-icon-box bp-icon-box-accent">
-                  <i class="fa-solid fa-brain"></i>
+            <div class="bp-pillar-card h-100">
+              <div class="bp-pillar-img-wrapper">
+                <img src="../assets/images/study-skills-bg.jpg" 
+                     alt="Focused study workspace with laptop and organization planners" 
+                     class="bp-pillar-img" loading="lazy" width="600" height="375">
+                <div class="position-absolute top-0 start-0 m-3">
+                  <div class="bp-icon-box bp-icon-box-accent mb-0 shadow-sm">
+                    <i class="fa-solid fa-brain"></i>
+                  </div>
                 </div>
+              </div>
+              <div class="bp-pillar-card-body">
                 <h3 class="font-heading fs-5 mb-2">Study & Executive Skills</h3>
                 <p class="small text-muted mb-3">
                   We coach students in time management, binder organization, assignment prioritization, and test readiness.
                 </p>
-                <ul class="list-unstyled small text-muted mb-0">
-                  <li class="mb-1"><i class="fa-solid fa-circle-check text-warning me-2"></i>Pomodoro study cycles</li>
-                  <li class="mb-1"><i class="fa-solid fa-circle-check text-warning me-2"></i>Agenda & planner habit tracking</li>
-                  <li><i class="fa-solid fa-circle-check text-warning me-2"></i>Test anxiety coping techniques</li>
+                <ul class="list-unstyled small text-muted mb-0 mt-auto">
+                  <li class="mb-2 d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning me-2"></i>Pomodoro study cycles</li>
+                  <li class="mb-2 d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning me-2"></i>Agenda & planner habit tracking</li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning me-2"></i>Test anxiety coping techniques</li>
                 </ul>
               </div>
             </div>
@@ -365,26 +487,26 @@
           </div>
         </div>
 
-        <div class="row g-4">
+        <div class="row g-4 align-items-stretch">
           <!-- Program 1: Daily Homework Lab -->
-          <div class="col-md-6 col-lg-4">
-            <div class="bp-card bp-card-hover">
+          <div class="col-md-6 col-lg-4 d-flex">
+            <div class="bp-card bp-card-hover bp-program-card w-100 h-100 d-flex flex-column">
               <div class="bp-program-img-wrapper">
                 <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" 
                      alt="Student focusing on daily school assignments with supportive tutor" 
                      class="bp-program-img" loading="lazy">
                 <span class="bp-badge bp-badge-primary bp-program-overlay-badge">All Grades K-12</span>
               </div>
-              <div class="bp-card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="bp-card-body d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2 bp-program-meta" style="min-height: 24px;">
                   <span class="text-primary fw-bold small"><i class="fa-solid fa-pencil me-1"></i> Academic Core</span>
-                  <span class="text-muted small"><i class="fa-regular fa-clock me-1"></i> Mon-Fri 3:00-5:00 PM</span>
+                  <span class="text-muted small text-nowrap"><i class="fa-regular fa-clock me-1"></i> Mon-Fri 3:00-5:00 PM</span>
                 </div>
-                <h4 class="font-heading fs-5 mb-2">Structured Homework Help Lab</h4>
-                <p class="small text-muted mb-3">
+                <h4 class="font-heading fs-5 mb-2 bp-program-title">Structured Homework Help Lab</h4>
+                <p class="small text-muted mb-3 flex-grow-1 bp-program-desc">
                   Comprehensive assistance across all school subjects. Tutors ensure assignments are 100% completed and concepts understood before pickup.
                 </p>
-                <div class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle">
+                <div class="d-flex justify-content-between align-items-center pt-2 mt-auto border-top border-light-subtle">
                   <span class="fw-bold text-main fs-6">$280 <small class="text-muted fw-normal">/ month</small></span>
                   <a href="programs.html" class="btn btn-sm btn-bp-outline">Details</a>
                 </div>
@@ -393,24 +515,24 @@
           </div>
 
           <!-- Program 2: STEM & Robotics -->
-          <div class="col-md-6 col-lg-4">
-            <div class="bp-card bp-card-hover">
+          <div class="col-md-6 col-lg-4 d-flex">
+            <div class="bp-card bp-card-hover bp-program-card w-100 h-100 d-flex flex-column">
               <div class="bp-program-img-wrapper">
                 <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80" 
                      alt="Kids building robotics circuits and programming sensors" 
                      class="bp-program-img" loading="lazy">
                 <span class="bp-badge bp-badge-purple bp-program-overlay-badge">Grades 3 - 8</span>
               </div>
-              <div class="bp-card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="bp-card-body d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2 bp-program-meta" style="min-height: 24px;">
                   <span class="text-purple fw-bold small"><i class="fa-solid fa-microchip me-1"></i> Technology & STEM</span>
-                  <span class="text-muted small"><i class="fa-regular fa-clock me-1"></i> Tue & Thu 4:30-5:45 PM</span>
+                  <span class="text-muted small text-nowrap"><i class="fa-regular fa-clock me-1"></i> Tue & Thu 4:30-5:45 PM</span>
                 </div>
-                <h4 class="font-heading fs-5 mb-2">Robotics & Creative Coding</h4>
-                <p class="small text-muted mb-3">
+                <h4 class="font-heading fs-5 mb-2 bp-program-title">Robotics & Creative Coding</h4>
+                <p class="small text-muted mb-3 flex-grow-1 bp-program-desc">
                   Hands-on engineering where young minds assemble motor sensors, code basic algorithms, and collaborate on mini hackathons.
                 </p>
-                <div class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle">
+                <div class="d-flex justify-content-between align-items-center pt-2 mt-auto border-top border-light-subtle">
                   <span class="fw-bold text-main fs-6">$310 <small class="text-muted fw-normal">/ month</small></span>
                   <a href="programs.html" class="btn btn-sm btn-bp-outline">Details</a>
                 </div>
@@ -419,24 +541,24 @@
           </div>
 
           <!-- Program 3: Language Arts & Reading -->
-          <div class="col-md-6 col-lg-4">
-            <div class="bp-card bp-card-hover">
+          <div class="col-md-6 col-lg-4 d-flex">
+            <div class="bp-card bp-card-hover bp-program-card w-100 h-100 d-flex flex-column">
               <div class="bp-program-img-wrapper">
                 <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80" 
                      alt="Reading corner with colorful books and focused learners" 
                      class="bp-program-img" loading="lazy">
                 <span class="bp-badge bp-badge-accent bp-program-overlay-badge">Grades 1 - 6</span>
               </div>
-              <div class="bp-card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="bp-card-body d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2 bp-program-meta" style="min-height: 24px;">
                   <span class="text-warning fw-bold small"><i class="fa-solid fa-feather me-1"></i> Language Arts</span>
-                  <span class="text-muted small"><i class="fa-regular fa-clock me-1"></i> Mon & Wed 4:00-5:15 PM</span>
+                  <span class="text-muted small text-nowrap"><i class="fa-regular fa-clock me-1"></i> Mon & Wed 4:00-5:15 PM</span>
                 </div>
-                <h4 class="font-heading fs-5 mb-2">Reading Fluency & Creative Writing</h4>
-                <p class="small text-muted mb-3">
+                <h4 class="font-heading fs-5 mb-2 bp-program-title">Reading Fluency & Creative Writing</h4>
+                <p class="small text-muted mb-3 flex-grow-1 bp-program-desc">
                   Cultivating a lifelong passion for reading through interactive book circles, vocabulary expansion, and structured storytelling.
                 </p>
-                <div class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle">
+                <div class="d-flex justify-content-between align-items-center pt-2 mt-auto border-top border-light-subtle">
                   <span class="fw-bold text-main fs-6">$260 <small class="text-muted fw-normal">/ month</small></span>
                   <a href="programs.html" class="btn btn-sm btn-bp-outline">Details</a>
                 </div>
@@ -448,9 +570,11 @@
     </section>
 
     <!-- Parent Dashboard Highlight / Feature Spotlight -->
-    <section class="bp-section">
-      <div class="container">
-        <div class="row align-items-center g-5">
+    <section class="bp-section bp-parent-portal-section">
+      <div class="bp-parent-portal-bg"></div>
+      <div class="bp-parent-portal-overlay"></div>
+      <div class="container position-relative" style="z-index: 3;">
+        <div class="row align-items-center g-4 g-lg-5">
           <div class="col-lg-6 order-lg-2">
             <div class="text-center mb-3">
               <span class="bp-badge bp-badge-primary mb-2">Peace of Mind for Parents</span>
@@ -492,7 +616,7 @@
               </div>
             </div>
 
-            <div class="d-flex gap-3">
+            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
               <a href="dashboard.html" class="btn btn-bp-primary">
                 <i class="fa-solid fa-arrow-right-to-bracket"></i> Launch Live Parent Dashboard
               </a>
@@ -504,7 +628,7 @@
 
           <!-- Dashboard Mockup Card -->
           <div class="col-lg-6 order-lg-1">
-            <div class="bp-card p-4 shadow-xl border-primary-subtle position-relative overflow-hidden">
+            <div class="bp-card p-4 shadow-xl border-primary-subtle position-relative overflow-hidden" style="background: var(--bp-bg-surface); backdrop-filter: blur(8px);">
               <div class="d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
                 <div class="d-flex align-items-center gap-2">
                   <div class="rounded-circle bg-primary text-white p-2" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;">
@@ -646,12 +770,14 @@
     </section>
 
     <!-- Parent Testimonials -->
-    <section class="bp-section">
-      <div class="container">
+    <section class="bp-section bp-testimonials-section">
+      <div class="bp-testimonials-bg"></div>
+      <div class="bp-testimonials-overlay"></div>
+      <div class="container position-relative" style="z-index: 3;">
         <div class="text-center bp-section-header">
-          <span class="bp-badge bp-badge-accent">Family Stories</span>
+          <span class="bp-badge bp-badge-accent mb-2">Family Stories</span>
           <h2 class="bp-section-title">Loved by Parents, Enjoyed by Kids</h2>
-          <p class="bp-section-desc">See how BrightPath transforms after-school routines for working families.</p>
+          <p class="bp-section-desc fw-semibold">See how BrightPath transforms after-school routines for working families.</p>
         </div>
 
         <div class="row g-4">
@@ -830,17 +956,17 @@
         </div>
         <div class="modal-body p-4">
           <p class="text-muted small mb-4">Complete this quick form to reserve a complimentary 90-minute trial session with 1-on-1 homework help and STEM enrichment.</p>
-          <form class="needs-validation" novalidate>
+          <form class="needs-validation" novalidate id="trialBookingForm">
             <div class="row g-3">
               <div class="col-md-6">
                 <label for="trialParentName" class="form-label">Parent / Guardian Name *</label>
-                <input type="text" class="form-control" id="trialParentName" required placeholder="e.g. Sarah Miller">
-                <div class="invalid-feedback">Please enter your name.</div>
+                <input type="text" class="form-control" id="trialParentName" data-type="name" pattern="^[A-Za-zÀ-ÿ\s'\-]+$" minlength="2" required placeholder="e.g. Sarah Miller" title="Please enter your name using letters only (no numbers or symbols).">
+                <div class="invalid-feedback">Please enter your name (letters only, no numbers).</div>
               </div>
               <div class="col-md-6">
                 <label for="trialStudentName" class="form-label">Student Name *</label>
-                <input type="text" class="form-control" id="trialStudentName" required placeholder="e.g. Leo Miller">
-                <div class="invalid-feedback">Please enter student name.</div>
+                <input type="text" class="form-control" id="trialStudentName" data-type="name" pattern="^[A-Za-zÀ-ÿ\s'\-]+$" minlength="2" required placeholder="e.g. Leo Miller" title="Please enter student name using letters only (no numbers or symbols).">
+                <div class="invalid-feedback">Please enter student name (letters only, no numbers).</div>
               </div>
               <div class="col-md-6">
                 <label for="trialGrade" class="form-label">Student Grade Level *</label>
@@ -866,8 +992,8 @@
               </div>
               <div class="col-12">
                 <label for="trialPhone" class="form-label">Mobile Phone Number *</label>
-                <input type="tel" class="form-control" id="trialPhone" required placeholder="(555) 000-0000">
-                <div class="invalid-feedback">Please provide a valid phone number.</div>
+                <input type="tel" class="form-control" id="trialPhone" data-type="phone" pattern="^(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$" required placeholder="(555) 000-0000" title="Please enter a valid 10-digit phone number.">
+                <div class="invalid-feedback">Please provide a valid 10-digit phone number.</div>
               </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-bp-primary w-100 py-2">
@@ -884,13 +1010,18 @@
   <!-- Footer -->
   <footer class="bp-footer" data-bs-theme="dark">
     <div class="container">
-      <div class="row g-5">
+      <div class="row g-4 g-lg-5">
         <div class="col-lg-4">
           <a class="bp-brand text-white mb-3" href="index.html">
             <div class="bp-brand-icon">
-              <i class="fa-solid fa-graduation-cap"></i>
+              <svg class="bp-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+              </svg>
             </div>
-            <span>BrightPath Academy</span>
+            <div>
+              <span>BrightPath</span>
+              <span class="d-block text-primary small fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase;">Learning Academy</span>
+            </div>
           </a>
           <p class="small text-muted mb-4">
             A safe, structured, and nurturing after-school homework help & enrichment learning center. Helping K-12 students master school curricula and build lifelong confidence.
@@ -918,7 +1049,7 @@
         <div class="col-6 col-lg-2">
           <h5 class="bp-footer-title">Quick Portals</h5>
           <ul class="bp-footer-links">
-            <li><a href="home-2.html" class="text-primary fw-semibold"><i class="fa-solid fa-rocket me-1"></i>Home 2 - STEM Hub</a></li>
+            <li><a href="home-2.html">Home 2 - STEM Hub</a></li>
             <li><a href="login.html">Parent Sign In</a></li>
             <li><a href="register.html">Student Enrollment</a></li>
             <li><a href="dashboard.html">Parent Dashboard</a></li>
@@ -937,9 +1068,12 @@
           <!-- Newsletter Integration Placeholder (Mailchimp/ConvertKit Ready) -->
           <div class="mt-3">
             <h6 class="text-white small fw-bold mb-2">Subscribe to Study Guides & Tips</h6>
-            <form class="needs-validation d-flex gap-2" novalidate>
-              <input type="email" class="form-control form-control-sm" placeholder="parent@email.com" required aria-label="Email address for newsletter">
-              <button class="btn btn-bp-primary btn-sm px-3" type="submit">Join</button>
+            <form class="needs-validation" novalidate>
+              <div class="input-group input-group-sm">
+                <input type="email" class="form-control form-control-sm" placeholder="parent@email.com" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" required aria-label="Email address for newsletter" title="Please enter a valid email address.">
+                <button class="btn btn-bp-primary btn-sm px-3" type="submit">Join</button>
+                <div class="invalid-feedback text-start">Please enter a valid email.</div>
+              </div>
             </form>
           </div>
         </div>

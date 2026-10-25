@@ -245,44 +245,265 @@ const BrightPath = (() => {
   };
 
   /**
-   * 7. Accessible Form Validation
+   * 7. Accessible Form Validation & Strict Input Sanitization
    */
   const initFormValidation = () => {
+    const nameRegex = /^[A-Za-zÀ-ÿ\s'\-]+$/;
+
+    // 1. Strict Name Validation & Key Interception (Blocks numbers completely)
+    const nameInputs = document.querySelectorAll(
+      'input[data-type="name"], ' +
+      '#regParentFirstName, #regParentLastName, #regStudentName, ' +
+      '#contactParentName, #trialParentName, #trialStudentName'
+    );
+
+    nameInputs.forEach(input => {
+      // Prevent numeric keys from being typed
+      input.addEventListener('keydown', e => {
+        // Allow navigation, deletion, shortcuts (Ctrl+A, Ctrl+C, Ctrl+V, etc.)
+        if (e.ctrlKey || e.metaKey || e.altKey) return;
+        if (['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab', 'Home', 'End'].includes(e.key)) return;
+
+        // Block numeric digits 0-9
+        if (/^[0-9]$/.test(e.key)) {
+          e.preventDefault();
+          showToast('Name fields cannot accept numbers.', 'warning');
+        }
+      });
+
+      // Strip numbers if pasted or autocompleted and validate
+      input.addEventListener('input', () => {
+        if (/[0-9]/.test(input.value)) {
+          input.value = input.value.replace(/[0-9]/g, '');
+          showToast('Numbers are not permitted in name fields.', 'warning');
+        }
+
+        const val = input.value.trim();
+        if (val.length > 0 && !nameRegex.test(val)) {
+          input.setCustomValidity('Please use letters only (no numbers or special symbols).');
+        } else if (val.length > 0 && val.length < 2) {
+          input.setCustomValidity('Name must be at least 2 characters long.');
+        } else {
+          input.setCustomValidity('');
+        }
+
+        if (input.form && input.form.classList.contains('was-validated')) {
+          if (input.checkValidity()) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+          } else {
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
+          }
+        }
+      });
+
+      input.addEventListener('blur', () => {
+        const val = input.value.trim();
+        if (input.required && val.length === 0) {
+          input.setCustomValidity('This field is required.');
+        } else if (val.length > 0 && !nameRegex.test(val)) {
+          input.setCustomValidity('Please use letters only (no numbers or special symbols).');
+        } else if (val.length > 0 && val.length < 2) {
+          input.setCustomValidity('Name must be at least 2 characters long.');
+        } else {
+          input.setCustomValidity('');
+        }
+      });
+    });
+
+    // 2. Phone Formatting & Validation
+    const phoneInputs = document.querySelectorAll(
+      'input[type="tel"], input[data-type="phone"], #regParentPhone, #contactPhone, #trialPhone'
+    );
+    phoneInputs.forEach(input => {
+      input.addEventListener('input', () => {
+        // Keep digits only for formatting
+        const digits = input.value.replace(/\D/g, '');
+        if (digits.length > 10) {
+          input.value = digits.replace(/^1?(\d{3})(\d{3})(\d{4}).*$/, '($1) $2-$3');
+        } else if (digits.length >= 7) {
+          input.value = digits.replace(/^(\d{3})(\d{3})(\d{0,4})$/, '($1) $2-$3');
+        } else if (digits.length >= 4) {
+          input.value = digits.replace(/^(\d{3})(\d{0,3})$/, '($1) $2');
+        }
+
+        const cleanDigits = input.value.replace(/\D/g, '');
+        if (cleanDigits.length > 0 && (cleanDigits.length < 10 || cleanDigits.length > 11)) {
+          input.setCustomValidity('Please enter a valid 10-digit phone number.');
+        } else {
+          input.setCustomValidity('');
+        }
+
+        if (input.form && input.form.classList.contains('was-validated')) {
+          if (input.checkValidity()) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+          } else {
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
+          }
+        }
+      });
+    });
+
+    // 3. Email Validation
+    const emailRegex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+    const emailInputs = document.querySelectorAll('input[type="email"]');
+    emailInputs.forEach(input => {
+      input.addEventListener('input', () => {
+        const val = input.value.trim();
+        if (val.length > 0 && !emailRegex.test(val)) {
+          input.setCustomValidity('Please enter a valid email address (e.g. parent@example.com).');
+        } else {
+          input.setCustomValidity('');
+        }
+
+        if (input.form && input.form.classList.contains('was-validated')) {
+          if (input.checkValidity()) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+          } else {
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
+          }
+        }
+      });
+    });
+
+    // 4. Live form field change monitoring for forms with .was-validated
+    const allFormControls = document.querySelectorAll('.needs-validation input, .needs-validation select, .needs-validation textarea');
+    allFormControls.forEach(ctrl => {
+      ctrl.addEventListener('change', () => {
+        if (ctrl.form && ctrl.form.classList.contains('was-validated')) {
+          if (ctrl.checkValidity()) {
+            ctrl.classList.remove('is-invalid');
+            ctrl.classList.add('is-valid');
+          } else {
+            ctrl.classList.remove('is-valid');
+            ctrl.classList.add('is-invalid');
+          }
+        }
+      });
+    });
+
+    // 5. Accessible Form Submission
     const forms = document.querySelectorAll('.needs-validation');
 
     Array.from(forms).forEach(form => {
       form.addEventListener('submit', event => {
+        // Run any custom validations before checkValidity
+        const nameFields = form.querySelectorAll(
+          'input[data-type="name"], #regParentFirstName, #regParentLastName, #regStudentName, #contactParentName, #trialParentName, #trialStudentName'
+        );
+        nameFields.forEach(nf => {
+          const val = nf.value.trim();
+          if (/[0-9]/.test(val)) {
+            nf.setCustomValidity('Names cannot contain numbers.');
+          } else if (nf.required && val.length < 2) {
+            nf.setCustomValidity('Please enter at least 2 letters.');
+          } else if (!nameRegex.test(val) && val.length > 0) {
+            nf.setCustomValidity('Please use letters only.');
+          } else {
+            nf.setCustomValidity('');
+          }
+        });
+
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
-          showToast('Please check the required fields before submitting.', 'warning');
-        } else {
-          event.preventDefault();
-          
-          // Show simulated loading button state
-          const submitBtn = form.querySelector('button[type="submit"]');
-          const originalText = submitBtn ? submitBtn.innerHTML : '';
-          if (submitBtn) {
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Processing...';
+          form.classList.add('was-validated');
+
+          // Highlight invalid controls
+          const invalidControls = form.querySelectorAll(':invalid');
+          invalidControls.forEach(c => {
+            c.classList.add('is-invalid');
+            c.classList.remove('is-valid');
+          });
+
+          // Focus first invalid element smoothly
+          const firstInvalid = form.querySelector(':invalid, .is-invalid');
+          if (firstInvalid) {
+            firstInvalid.focus();
+            if (firstInvalid.scrollIntoView) {
+              firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
           }
 
-          setTimeout(() => {
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              submitBtn.innerHTML = originalText;
+          showToast('Please correct the highlighted fields before submitting.', 'warning');
+          return;
+        }
+
+        event.preventDefault();
+        form.classList.add('was-validated');
+
+        // Show simulated loading button state
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn ? submitBtn.innerHTML : '';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Processing...';
+        }
+
+        setTimeout(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+          }
+
+          // Handle registration form redirection to dashboard
+          if (form.id === 'enrollmentForm' || form.getAttribute('action') === 'dashboard.html') {
+            showToast('Enrollment complete! Welcome to BrightPath Academy. Opening Parent Dashboard...', 'success');
+            setTimeout(() => {
+              window.location.href = 'dashboard.html';
+            }, 800);
+            return;
+          }
+
+          // Handle trial booking modal
+          if (form.id === 'trialBookingForm' || form.closest('#trialBookingModal')) {
+            showToast('Trial session reserved! A coordinator will text you confirmation within 1 hour.', 'success');
+            const openModal = bootstrap.Modal.getInstance(document.getElementById('trialBookingModal'));
+            if (openModal) openModal.hide();
+            form.reset();
+            form.classList.remove('was-validated');
+            form.querySelectorAll('.is-valid, .is-invalid').forEach(el => el.classList.remove('is-valid', 'is-invalid'));
+            return;
+          }
+
+          // Handle slot booking on dashboard
+          if (form.id === 'slotBookingForm' || form.closest('#bookSessionModal')) {
+            showToast('After-school study slot successfully booked for Leo!', 'success');
+            const modalEl = document.getElementById('bookSessionModal');
+            if (modalEl) {
+              const modal = bootstrap.Modal.getInstance(modalEl);
+              if (modal) modal.hide();
             }
             form.reset();
             form.classList.remove('was-validated');
-            showToast('Form submitted successfully! Our team will contact you shortly.', 'success');
-            
-            // If contact or modal, close modal if open
-            const openModal = bootstrap.Modal.getInstance(document.querySelector('.modal.show'));
-            if (openModal) openModal.hide();
-          }, 1200);
-        }
+            form.querySelectorAll('.is-valid, .is-invalid').forEach(el => el.classList.remove('is-valid', 'is-invalid'));
+            return;
+          }
 
-        form.classList.add('was-validated');
+          // Handle contact form
+          if (form.id === 'contactForm') {
+            showToast('Inquiry sent! Our admissions team will respond within 24 business hours.', 'success');
+            form.reset();
+            form.classList.remove('was-validated');
+            form.querySelectorAll('.is-valid, .is-invalid').forEach(el => el.classList.remove('is-valid', 'is-invalid'));
+            return;
+          }
+
+          // General form / newsletter
+          form.reset();
+          form.classList.remove('was-validated');
+          form.querySelectorAll('.is-valid, .is-invalid').forEach(el => el.classList.remove('is-valid', 'is-invalid'));
+          showToast('Thank you! Your information has been securely received.', 'success');
+
+          // If inside any open modal, close it
+          const openModal = bootstrap.Modal.getInstance(document.querySelector('.modal.show'));
+          if (openModal) openModal.hide();
+        }, 1200);
       }, false);
     });
   };

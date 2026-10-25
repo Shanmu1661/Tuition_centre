@@ -108,6 +108,18 @@ const ParentDashboard = (() => {
           needsAction: false,
           attachment: 'Earthquake_Report_Draft.pdf',
           parentAcknowledged: true
+        },
+        {
+          id: 'hw-203',
+          date: 'Oct 09, 2026',
+          subject: 'English Language Arts',
+          topic: 'Literary Thesis Statement & Research Outlining',
+          status: 'Completed',
+          tutor: 'Elena Rostova',
+          notes: 'Maya drafted a strong argumentative thesis statement. Ready to draft supporting body paragraphs in next session.',
+          needsAction: false,
+          attachment: 'Essay_Outline_Maya.pdf',
+          parentAcknowledged: true
         }
       ],
       attendance: [
@@ -121,16 +133,56 @@ const ParentDashboard = (() => {
   let activeChildId = 'child-1';
 
   /**
-   * 1. Initialize Child Selector
+   * 1. Initialize Child Selector (Sync Desktop & Mobile)
    */
   const initChildSelector = () => {
-    const childSelectEl = document.getElementById('dashChildSelector');
-    if (!childSelectEl) return;
+    const desktopSelect = document.getElementById('dashChildSelector');
+    const mobileSelect = document.getElementById('dashMobileChildSelector');
 
-    childSelectEl.addEventListener('change', (e) => {
-      activeChildId = e.target.value;
+    const handleChildChange = (newVal) => {
+      activeChildId = newVal;
+      if (desktopSelect) desktopSelect.value = newVal;
+      if (mobileSelect) mobileSelect.value = newVal;
       renderActiveChild();
-      BrightPath.showToast(`Switched view to ${childrenData[activeChildId].name}`, 'info');
+      if (window.BrightPath && typeof BrightPath.showToast === 'function') {
+        BrightPath.showToast(`Switched view to ${childrenData[activeChildId].name}`, 'info');
+      }
+    };
+
+    if (desktopSelect) {
+      desktopSelect.addEventListener('change', (e) => handleChildChange(e.target.value));
+    }
+    if (mobileSelect) {
+      mobileSelect.addEventListener('change', (e) => handleChildChange(e.target.value));
+    }
+  };
+
+  /**
+   * 1b. Mobile Navigation Actions & Auto-collapse on Anchor Click
+   */
+  const initMobileNavActions = () => {
+    const allNavLinks = document.querySelectorAll('.bp-dash-nav-item');
+    const collapseEl = document.getElementById('dashboardNavbarCollapse');
+
+    allNavLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          allNavLinks.forEach(l => {
+            if (l.getAttribute('href') === href) {
+              l.classList.add('active');
+            } else if (l.getAttribute('href').startsWith('#')) {
+              l.classList.remove('active');
+            }
+          });
+
+          // If mobile collapse is open, smoothly close it
+          if (collapseEl && collapseEl.classList.contains('show') && window.bootstrap) {
+            const bsCollapse = bootstrap.Collapse.getInstance(collapseEl) || new bootstrap.Collapse(collapseEl);
+            bsCollapse.hide();
+          }
+        }
+      });
     });
   };
 
@@ -141,7 +193,7 @@ const ParentDashboard = (() => {
     const child = childrenData[activeChildId];
     if (!child) return;
 
-    // Update Header Avatar & Stats
+    // Update Header Avatar & Stats (Desktop Sidebar & Main)
     const avatarEl = document.getElementById('dashChildAvatar');
     const nameEl = document.getElementById('dashChildName');
     const gradeEl = document.getElementById('dashChildGrade');
@@ -149,9 +201,19 @@ const ParentDashboard = (() => {
     const completedHWEl = document.getElementById('dashStatCompletedHW');
     const hoursEl = document.getElementById('dashStatHours');
 
+    // Mobile Hamburger Elements
+    const mobileAvatarEl = document.getElementById('dashMobileChildAvatar');
+    const mobileNameEl = document.getElementById('dashMobileChildName');
+    const mobileGradeEl = document.getElementById('dashMobileChildGrade');
+
     if (avatarEl) avatarEl.src = child.avatar;
     if (nameEl) nameEl.textContent = child.name;
     if (gradeEl) gradeEl.textContent = child.grade;
+
+    if (mobileAvatarEl) mobileAvatarEl.src = child.avatar;
+    if (mobileNameEl) mobileNameEl.textContent = child.name;
+    if (mobileGradeEl) mobileGradeEl.textContent = child.grade;
+
     if (attendanceEl) attendanceEl.textContent = child.attendanceRate;
     if (completedHWEl) completedHWEl.textContent = child.completedHW;
     if (hoursEl) hoursEl.textContent = child.totalHours + ' hrs';
@@ -285,14 +347,26 @@ const ParentDashboard = (() => {
     }
   };
 
+  const MAX_HOMEWORK_NOTES = 3;
+
   /**
    * 4. Homework Completion Notes Tracker & Search/Filter
+   * Enforces strictly maximum 3 details displayed (Daily Accountability).
+   * If a new detail is added, the oldest entry is automatically deleted.
    */
   const renderHomeworkNotes = (filterSubject = 'all', searchQuery = '') => {
     const container = document.getElementById('homeworkNotesContainer');
     if (!container) return;
 
-    let notes = childrenData[activeChildId].homeworkNotes;
+    const child = childrenData[activeChildId];
+    if (!child) return;
+
+    // Strictly enforce maximum 3 details stored (FIFO: keep newest 3, delete oldest)
+    while (child.homeworkNotes.length > MAX_HOMEWORK_NOTES) {
+      child.homeworkNotes.pop();
+    }
+
+    let notes = [...child.homeworkNotes];
 
     // Apply subject filter
     if (filterSubject !== 'all') {
@@ -305,12 +379,15 @@ const ParentDashboard = (() => {
       notes = notes.filter(n => n.topic.toLowerCase().includes(q) || n.notes.toLowerCase().includes(q) || n.tutor.toLowerCase().includes(q));
     }
 
+    // Never render more than 3 details
+    notes = notes.slice(0, MAX_HOMEWORK_NOTES);
+
     if (!notes.length) {
       container.innerHTML = `
-        <div class="text-center py-5 text-muted">
-          <i class="fa-solid fa-clipboard-question fa-2x mb-3 text-secondary opacity-50"></i>
+        <div class="text-center py-4 text-muted">
+          <i class="fa-solid fa-clipboard-question fa-2x mb-2 text-secondary opacity-50"></i>
           <h6>No homework notes found</h6>
-          <p class="small">Try adjusting your filter or search keywords.</p>
+          <p class="small mb-0">Try adjusting your filter or search keywords.</p>
         </div>
       `;
       return;
@@ -337,16 +414,21 @@ const ParentDashboard = (() => {
             </div>
             <div>${statusBadge}</div>
           </div>
-          <h5 class="font-heading fs-6 mb-2">${hw.topic}</h5>
-          <p class="mb-3 text-muted small" style="line-height: 1.5;">${hw.notes}</p>
+          <h5 class="font-heading fs-6 mb-1 text-start">${hw.topic}</h5>
+          <p class="mb-2 text-muted small" style="line-height: 1.45;">${hw.notes}</p>
           
           <div class="d-flex flex-wrap justify-content-between align-items-center pt-2 border-top border-light-subtle gap-2">
             <div class="small text-muted d-flex align-items-center gap-2">
               <i class="fa-solid fa-chalkboard-user text-primary"></i>
               <span>Tutor: <strong>${hw.tutor}</strong></span>
-              ${hw.attachment ? `<span class="badge bg-light text-muted border"><i class="fa-solid fa-paperclip me-1"></i>${hw.attachment}</span>` : ''}
+              ${hw.attachment ? `<span class="badge bg-light-subtle text-body border bp-hw-attachment-badge"><i class="fa-solid fa-paperclip me-1 text-primary"></i>${hw.attachment}</span>` : ''}
             </div>
-            <div class="ack-action-container">${parentStatus}</div>
+            <div class="d-flex align-items-center gap-2">
+              <div class="ack-action-container">${parentStatus}</div>
+              <button class="btn btn-sm btn-outline-danger py-0 px-2 delete-hw-btn" data-hwid="${hw.id}" title="Delete record" aria-label="Delete note ${hw.topic}">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
           </div>
         </div>
       `;
@@ -358,7 +440,7 @@ const ParentDashboard = (() => {
     container.querySelectorAll('.ack-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const hwId = btn.getAttribute('data-hwid');
-        const targetHW = childrenData[activeChildId].homeworkNotes.find(n => n.id === hwId);
+        const targetHW = child.homeworkNotes.find(n => n.id === hwId);
         if (targetHW) {
           targetHW.parentAcknowledged = true;
           renderHomeworkNotes(filterSubject, searchQuery);
@@ -366,6 +448,44 @@ const ParentDashboard = (() => {
         }
       });
     });
+
+    // Attach delete record handlers
+    container.querySelectorAll('.delete-hw-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const hwId = btn.getAttribute('data-hwid');
+        if (confirm('Are you sure you want to delete this homework record?')) {
+          child.homeworkNotes = child.homeworkNotes.filter(n => n.id !== hwId);
+          renderHomeworkNotes(filterSubject, searchQuery);
+          BrightPath.showToast('Homework note removed successfully.', 'info');
+        }
+      });
+    });
+  };
+
+  /**
+   * Add a new daily accountability note
+   * Enforces: When added, delete the oldest (first added) note so only 3 details show.
+   */
+  const addHomeworkNote = (newNote) => {
+    const child = childrenData[activeChildId];
+    if (!child) return;
+
+    // Add new note to beginning (latest first)
+    child.homeworkNotes.unshift(newNote);
+
+    // If more than 3, automatically delete the oldest note (last element in array)
+    while (child.homeworkNotes.length > MAX_HOMEWORK_NOTES) {
+      child.homeworkNotes.pop();
+    }
+
+    // Reset filters to show full list
+    const subjectFilter = document.getElementById('hwSubjectFilter');
+    const searchInput = document.getElementById('hwSearchInput');
+    if (subjectFilter) subjectFilter.value = 'all';
+    if (searchInput) searchInput.value = '';
+
+    renderHomeworkNotes();
+    BrightPath.showToast('New daily note added! Showing the latest 3 details (oldest entry deleted).', 'success');
   };
 
   /**
@@ -388,6 +508,53 @@ const ParentDashboard = (() => {
         renderHomeworkNotes(filter, searchInput.value);
       });
     }
+  };
+
+  /**
+   * Add Daily Accountability Note Form Submission
+   */
+  const initAddHomeworkNote = () => {
+    const form = document.getElementById('addHomeworkNoteForm');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const subject = document.getElementById('newNoteSubject').value;
+      const topic = document.getElementById('newNoteTopic').value.trim();
+      const tutor = document.getElementById('newNoteTutor').value;
+      const status = document.getElementById('newNoteStatus').value;
+      const notes = document.getElementById('newNoteFeedback').value.trim();
+      const attachment = document.getElementById('newNoteAttachment').value.trim();
+
+      if (!topic || !notes) {
+        BrightPath.showToast('Please fill in both the assignment topic and educator feedback.', 'warning');
+        return;
+      }
+
+      const newNote = {
+        id: 'hw-' + Date.now(),
+        date: 'Today, ' + new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+        subject: subject,
+        topic: topic,
+        status: status,
+        tutor: tutor,
+        notes: notes,
+        needsAction: status === 'Needs Follow-Up',
+        attachment: attachment || null,
+        parentAcknowledged: false
+      };
+
+      addHomeworkNote(newNote);
+
+      const modalEl = document.getElementById('addHomeworkNoteModal');
+      if (modalEl && window.bootstrap) {
+        const modalInstance = bootstrap.Modal.getInstance(modalEl);
+        if (modalInstance) modalInstance.hide();
+      }
+
+      form.reset();
+    });
   };
 
   /**
@@ -483,8 +650,10 @@ const ParentDashboard = (() => {
    */
   const init = () => {
     initChildSelector();
+    initMobileNavActions();
     initBookingForm();
     initHomeworkFilters();
+    initAddHomeworkNote();
     initAttendanceActions();
     renderActiveChild();
   };

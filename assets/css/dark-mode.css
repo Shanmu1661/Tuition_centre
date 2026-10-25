@@ -159,9 +159,108 @@
   --bs-table-bg: transparent;
   --bs-table-color: #cbd5e1;
   --bs-table-border-color: #334155;
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .table > :not(caption) > * > *,
+[data-bs-theme="dark"] .table > :not(caption) > * > * {
+  background-color: transparent;
+  border-bottom-color: #334155;
+  color: inherit;
+}
+
+/* Table Header in Dark Mode (Eliminates stark white thead) */
+[data-theme="dark"] .table thead,
+[data-theme="dark"] .table-light,
+[data-theme="dark"] .table-light > *,
+[data-theme="dark"] thead.table-light,
+[data-theme="dark"] thead.table-light th,
+[data-bs-theme="dark"] .table thead,
+[data-bs-theme="dark"] .table-light,
+[data-bs-theme="dark"] .table-light > *,
+[data-bs-theme="dark"] thead.table-light,
+[data-bs-theme="dark"] thead.table-light th {
+  --bs-table-bg: #1e293b !important;
+  --bs-table-color: #f8fafc !important;
+  --bs-table-border-color: #334155 !important;
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-bottom-color: #334155 !important;
+}
+
+/* Featured / Highlighted Column in Dark Mode (e.g. Complete After-School 5-Day Plan) */
+[data-theme="dark"] .table .table-primary,
+[data-theme="dark"] .table-primary,
+[data-theme="dark"] th.table-primary,
+[data-theme="dark"] td.table-primary,
+[data-bs-theme="dark"] .table .table-primary,
+[data-bs-theme="dark"] .table-primary,
+[data-bs-theme="dark"] th.table-primary,
+[data-bs-theme="dark"] td.table-primary {
+  --bs-table-bg: rgba(37, 99, 235, 0.16) !important;
+  --bs-table-color: #f8fafc !important;
+  --bs-table-border-color: rgba(59, 130, 246, 0.25) !important;
+  background-color: rgba(37, 99, 235, 0.16) !important;
+  color: #f8fafc !important;
+  border-color: rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Featured column header cell in Dark Mode */
+[data-theme="dark"] thead .table-primary,
+[data-theme="dark"] thead.table-light th.table-primary,
+[data-bs-theme="dark"] thead .table-primary,
+[data-bs-theme="dark"] thead.table-light th.table-primary {
+  --bs-table-bg: rgba(37, 99, 235, 0.28) !important;
+  background-color: rgba(37, 99, 235, 0.28) !important;
+  color: #93c5fd !important;
+  font-weight: 700 !important;
+}
+
+/* Text primary inside dark mode table */
+[data-theme="dark"] .table .text-primary,
+[data-bs-theme="dark"] .table .text-primary {
+  color: #60a5fa !important;
+}
+
+/* Text success checkmarks inside dark mode table */
+[data-theme="dark"] .table .text-success,
+[data-bs-theme="dark"] .table .text-success {
+  color: #34d399 !important;
+}
+
+/* Text muted inside dark mode table */
+[data-theme="dark"] .table .text-muted,
+[data-bs-theme="dark"] .table .text-muted {
+  color: #94a3b8 !important;
+}
+
+/* Strong labels inside dark mode table */
+[data-theme="dark"] .table strong,
+[data-bs-theme="dark"] .table strong {
+  color: #f8fafc !important;
+}
+
+/* Table Hover Row in Dark Mode */
+[data-theme="dark"] .table-hover > tbody > tr:hover > *,
+[data-bs-theme="dark"] .table-hover > tbody > tr:hover > * {
+  --bs-table-hover-bg: rgba(255, 255, 255, 0.04) !important;
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .table-hover > tbody > tr:hover > .table-primary,
+[data-bs-theme="dark"] .table-hover > tbody > tr:hover > .table-primary {
+  --bs-table-hover-bg: rgba(37, 99, 235, 0.24) !important;
+  background-color: rgba(37, 99, 235, 0.24) !important;
 }
 
 /* Dark mode overrides for cards & stats */
+[data-theme="dark"] .bg-light-subtle,
+[data-bs-theme="dark"] .bg-light-subtle {
+  background-color: var(--bp-bg-surface) !important;
+  border-color: var(--bp-border) !important;
+}
+
 [data-theme="dark"] .bp-stat-item,
 [data-bs-theme="dark"] .bp-stat-item {
   border-color: #334155;
@@ -170,4 +269,12 @@
 [data-theme="dark"] .btn-close,
 [data-bs-theme="dark"] .btn-close {
   filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Homework Notes Attachment Badge in Dark Mode */
+[data-theme="dark"] .bp-hw-attachment-badge,
+[data-bs-theme="dark"] .bp-hw-attachment-badge {
+  background-color: var(--bp-bg-surface-secondary) !important;
+  color: #cbd5e1 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
 }

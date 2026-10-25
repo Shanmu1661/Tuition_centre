@@ -115,8 +115,8 @@
   <!-- Page Header Banner Fully Covered with Image -->
   <header class="bp-page-banner">
     <div class="bp-page-banner-bg">
-      <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1920&q=80" 
-           alt="BrightPath Academy campus entrance and reception area" 
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=85" 
+           alt="BrightPath Academy welcoming reception lobby and consultation suites" 
            class="bp-page-banner-bg-img" loading="eager">
       <div class="bp-page-banner-overlay"></div>
     </div>
@@ -162,20 +162,20 @@
               <div class="row g-3">
                 <div class="col-md-6">
                   <label for="contactParentName" class="form-label">Parent / Guardian Name *</label>
-                  <input type="text" class="form-control" id="contactParentName" required placeholder="e.g. Sarah Miller">
-                  <div class="invalid-feedback">Please enter your name.</div>
+                  <input type="text" class="form-control" id="contactParentName" data-type="name" pattern="^[A-Za-zÀ-ÿ\s'\-]+$" minlength="2" required placeholder="e.g. Sarah Miller" title="Please enter your name using letters only (no numbers or symbols).">
+                  <div class="invalid-feedback">Please enter your name (letters only, no numbers).</div>
                 </div>
 
                 <div class="col-md-6">
                   <label for="contactEmail" class="form-label">Email Address *</label>
-                  <input type="email" class="form-control" id="contactEmail" required placeholder="parent@example.com">
-                  <div class="invalid-feedback">Please enter a valid email.</div>
+                  <input type="email" class="form-control" id="contactEmail" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" required placeholder="parent@example.com" title="Please enter a valid email address (e.g. parent@example.com).">
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
 
                 <div class="col-md-6">
                   <label for="contactPhone" class="form-label">Phone Number *</label>
-                  <input type="tel" class="form-control" id="contactPhone" required placeholder="(555) 123-4567">
-                  <div class="invalid-feedback">Please provide your phone number.</div>
+                  <input type="tel" class="form-control" id="contactPhone" data-type="phone" pattern="^(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$" required placeholder="(555) 123-4567" title="Please enter a valid 10-digit phone number.">
+                  <div class="invalid-feedback">Please provide a valid 10-digit phone number.</div>
                 </div>
 
                 <div class="col-md-6">
@@ -187,7 +187,7 @@
                     <option value="6-8">Middle School (6th – 8th Grade)</option>
                     <option value="9-12">High School (9th – 12th Grade)</option>
                   </select>
-                  <div class="invalid-feedback">Please select student grade.</div>
+                  <div class="invalid-feedback">Please select the student's grade level.</div>
                 </div>
 
                 <div class="col-12">
@@ -200,7 +200,7 @@
                     <option value="reading-fluency">Reading & Language Arts</option>
                     <option value="private-tutoring">1-on-1 Private Tutoring</option>
                   </select>
-                  <div class="invalid-feedback">Please select a program.</div>
+                  <div class="invalid-feedback">Please select a program track.</div>
                 </div>
 
                 <div class="col-12">
@@ -229,33 +229,33 @@
                 <p class="text-muted small mb-0">Visit our campus or connect with our front desk staff</p>
               </div>
               
-              <div class="d-flex gap-3 mb-3">
+              <div class="d-flex align-items-start gap-3 mb-3">
                 <div class="bp-icon-box bp-icon-box-primary flex-shrink-0" style="width: 42px; height: 42px;">
                   <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <div>
-                  <h6 class="mb-0 font-heading">Academy Address</h6>
-                  <p class="small text-muted mb-0">452 Learning Lane, Suite 100<br>Metro City, CA 94103</p>
+                <div class="flex-grow-1 text-start">
+                  <h6 class="mb-1 font-heading text-start" style="text-align: start !important;">Academy Address</h6>
+                  <p class="small text-muted mb-0" style="text-align: start !important;">452 Learning Lane, Suite 100<br>Metro City, CA 94103</p>
                 </div>
               </div>
 
-              <div class="d-flex gap-3 mb-3">
+              <div class="d-flex align-items-start gap-3 mb-3">
                 <div class="bp-icon-box bp-icon-box-secondary flex-shrink-0" style="width: 42px; height: 42px;">
                   <i class="fa-solid fa-phone"></i>
                 </div>
-                <div>
-                  <h6 class="mb-0 font-heading">Direct Telephones</h6>
-                  <p class="small text-muted mb-0">Front Desk: (800) 555-0199<br>Attendance SMS: (800) 555-0198</p>
+                <div class="flex-grow-1 text-start">
+                  <h6 class="mb-1 font-heading text-start" style="text-align: start !important;">Direct Telephones</h6>
+                  <p class="small text-muted mb-0" style="text-align: start !important;">Front Desk: (800) 555-0199<br>Attendance SMS: (800) 555-0198</p>
                 </div>
               </div>
 
-              <div class="d-flex gap-3 mb-3">
+              <div class="d-flex align-items-start gap-3 mb-3">
                 <div class="bp-icon-box bp-icon-box-accent flex-shrink-0" style="width: 42px; height: 42px;">
                   <i class="fa-solid fa-clock"></i>
                 </div>
-                <div>
-                  <h6 class="mb-0 font-heading">After-School Hours</h6>
-                  <p class="small text-muted mb-0">
+                <div class="flex-grow-1 text-start">
+                  <h6 class="mb-1 font-heading text-start" style="text-align: start !important;">After-School Hours</h6>
+                  <p class="small text-muted mb-0" style="text-align: start !important;">
                     <strong>Mon – Fri:</strong> 2:30 PM – 6:30 PM<br>
                     <strong>Saturday:</strong> 9:00 AM – 1:00 PM (STEM Labs)<br>
                     <strong>Sunday:</strong> Closed for Family Time
@@ -263,13 +263,13 @@
                 </div>
               </div>
 
-              <div class="d-flex gap-3">
+              <div class="d-flex align-items-start gap-3">
                 <div class="bp-icon-box bp-icon-box-purple flex-shrink-0" style="width: 42px; height: 42px;">
                   <i class="fa-solid fa-square-parking"></i>
                 </div>
-                <div>
-                  <h6 class="mb-0 font-heading">Parent Pickup & Parking</h6>
-                  <p class="small text-muted mb-0">Dedicated 15-minute pickup drive-through lane with security escort.</p>
+                <div class="flex-grow-1 text-start">
+                  <h6 class="mb-1 font-heading text-start" style="text-align: start !important;">Parent Pickup & Parking</h6>
+                  <p class="small text-muted mb-0" style="text-align: start !important;">Dedicated 15-minute pickup drive-through lane with security escort.</p>
                 </div>
               </div>
             </div>
@@ -307,8 +307,15 @@
       <div class="row g-5">
         <div class="col-lg-4">
           <a class="bp-brand text-white mb-3" href="index.html">
-            <div class="bp-brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-            <span>BrightPath Academy</span>
+            <div class="bp-brand-icon">
+              <svg class="bp-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+              </svg>
+            </div>
+            <div>
+              <span>BrightPath</span>
+              <span class="d-block text-primary small fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase;">Learning Academy</span>
+            </div>
           </a>
           <p class="small text-muted mb-4">
             Structured after-school homework help, certified subject tutoring, and engaging STEM enrichment for K-12 students.

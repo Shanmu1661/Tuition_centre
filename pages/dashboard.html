@@ -46,93 +46,148 @@
         </div>
       </a>
 
-      <!-- Child Selector Widget in Topbar -->
-      <div class="d-none d-md-flex align-items-center gap-2 ms-4 bg-light-subtle px-3 py-1 rounded-pill border">
-        <svg class="bp-icon-svg text-primary" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-          <circle cx="9" cy="7" r="4"></circle>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-        </svg>
-        <label for="dashChildSelector" class="small fw-bold text-muted mb-0">Student:</label>
-        <select class="form-select form-select-sm border-0 bg-transparent fw-bold text-primary shadow-none py-0" id="dashChildSelector" style="width: auto; cursor: pointer;">
-          <option value="child-1" selected>Leo Miller (4th Grade)</option>
-          <option value="child-2">Maya Miller (7th Grade)</option>
-        </select>
-      </div>
+      <!-- Hamburger Button (Mobile / Tablet < 992px) -->
+      <button class="navbar-toggler border-0 shadow-none ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardNavbarCollapse" aria-controls="dashboardNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <!-- Right Action Controls -->
-      <div class="bp-controls-group ms-auto">
-        <!-- RTL Layout Switcher -->
-        <button class="rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle Right-to-Left Layout">
-          <span class="rtl-status-label">RTL</span>
-          <svg class="rtl-arrows-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20 7H4"/>
-            <path d="M8 3L4 7l4 4"/>
-            <path d="M4 17h16"/>
-            <path d="M16 13l4 4-4 4"/>
+      <!-- Collapsible Container -->
+      <div class="collapse navbar-collapse" id="dashboardNavbarCollapse">
+        <!-- Child Selector Widget in Topbar (Desktop >= 992px) -->
+        <div class="dash-student-selector d-none d-lg-flex align-items-center gap-2 ms-lg-4 bg-light-subtle px-3 py-1 rounded-pill border">
+          <svg class="bp-icon-svg text-primary" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
           </svg>
-        </button>
-
-        <!-- Dark/Light Mode Switcher -->
-        <button class="bp-icon-btn theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
-          <span class="theme-toggle-svg-wrap">
-            <svg class="bp-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-          </span>
-        </button>
-
-        <!-- Notification Dropdown -->
-        <div class="dropdown">
-          <button class="bp-icon-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
-            <svg class="bp-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-            </svg>
-            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
-              <span class="visually-hidden">New notifications</span>
-            </span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end shadow-lg p-2 border" style="width: 320px; max-width: calc(100vw - 2rem);">
-            <li class="dropdown-header fw-bold text-main d-flex justify-content-between align-items-center">
-              <span>Center Notifications</span>
-              <span class="badge bg-primary-subtle text-primary">2 New</span>
-            </li>
-            <li><hr class="dropdown-divider my-1"></li>
-            <li>
-              <a class="dropdown-item rounded-2 p-2 small" href="#homework-section">
-                <div class="fw-bold text-success"><i class="fa-solid fa-check me-1"></i>Homework Verified</div>
-                <div class="text-muted">Marcus Vance signed off on Leo's math worksheet.</div>
-                <div class="text-light-emphasis" style="font-size: 0.7rem;">Today, 4:45 PM</div>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item rounded-2 p-2 small" href="#attendance-section">
-                <div class="fw-bold text-primary"><i class="fa-solid fa-door-open me-1"></i>Check-in Recorded</div>
-                <div class="text-muted">Leo checked in at center at 3:25 PM.</div>
-                <div class="text-light-emphasis" style="font-size: 0.7rem;">Today, 3:25 PM</div>
-              </a>
-            </li>
-          </ul>
+          <label for="dashChildSelector" class="small fw-bold text-muted mb-0 text-nowrap">Student:</label>
+          <select class="form-select form-select-sm border-0 bg-transparent fw-bold text-primary shadow-none py-0" id="dashChildSelector" style="width: auto; cursor: pointer;">
+            <option value="child-1" selected>Leo Miller (4th Grade)</option>
+            <option value="child-2">Maya Miller (7th Grade)</option>
+          </select>
         </div>
 
-        <!-- Parent User Profile Dropdown -->
-        <div class="dropdown">
-          <button class="btn btn-sm btn-bp-outline dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" 
-                 class="rounded-circle" width="28" height="28" style="object-fit: cover;" alt="Parent Sarah Miller">
-            <span class="fw-semibold d-none d-sm-inline">Sarah Miller</span>
+        <!-- Mobile Navigation Menu: Child Card & Sidebar Links (d-lg-none) -->
+        <div class="bp-dash-mobile-drawer d-lg-none w-100 mb-2">
+          <!-- Child Profile Brief & Switcher -->
+          <div class="d-flex align-items-center justify-content-between p-2 mb-2 bg-light-subtle rounded-3 border">
+            <div class="d-flex align-items-center gap-2">
+              <img id="dashMobileChildAvatar" src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=150&q=80" 
+                   alt="Student Avatar" class="rounded-circle" width="42" height="42" style="object-fit: cover;">
+              <div>
+                <h6 class="mb-0 font-heading" id="dashMobileChildName">Leo Miller</h6>
+                <span class="badge bg-primary-subtle text-primary" id="dashMobileChildGrade">4th Grade</span>
+              </div>
+            </div>
+            <select class="form-select form-select-sm border bg-surface fw-bold text-primary shadow-none py-1 px-2" id="dashMobileChildSelector" style="width: auto; cursor: pointer; font-size: 0.8rem;">
+              <option value="child-1" selected>Leo Miller</option>
+              <option value="child-2">Maya Miller</option>
+            </select>
+          </div>
+
+          <!-- Navigation Links -->
+          <nav class="bp-dash-mobile-nav d-flex flex-column gap-1" aria-label="Mobile Dashboard Navigation">
+            <a href="#overview-section" class="bp-dash-nav-item active">
+              <i class="fa-solid fa-chart-pie"></i>
+              <span>Overview</span>
+            </a>
+            <a href="#booking-section" class="bp-dash-nav-item">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>Book Session Slots</span>
+            </a>
+            <a href="#homework-section" class="bp-dash-nav-item">
+              <i class="fa-solid fa-clipboard-check"></i>
+              <span>Homework Notes</span>
+            </a>
+            <a href="#attendance-section" class="bp-dash-nav-item">
+              <i class="fa-solid fa-user-clock"></i>
+              <span>Attendance History</span>
+            </a>
+            <a href="programs.html" class="bp-dash-nav-item">
+              <i class="fa-solid fa-book-bookmark"></i>
+              <span>Programs</span>
+            </a>
+            <a href="tutors.html" class="bp-dash-nav-item">
+              <i class="fa-solid fa-chalkboard-user"></i>
+              <span>Tutor</span>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Right Action Controls -->
+        <div class="bp-controls-group ms-lg-auto">
+          <!-- RTL Layout Switcher -->
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle Right-to-Left Layout">
+            <span class="rtl-status-label">RTL</span>
+            <svg class="rtl-arrows-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 7H4"/>
+              <path d="M8 3L4 7l4 4"/>
+              <path d="M4 17h16"/>
+              <path d="M16 13l4 4-4 4"/>
+            </svg>
           </button>
-          <ul class="dropdown-menu dropdown-menu-end shadow-lg border p-2">
-            <li class="dropdown-header small">Parent Account • Family ID: #BP-9204</li>
-            <li><a class="dropdown-item rounded-2 small" href="dashboard.html"><i class="fa-solid fa-gauge-high me-2 text-primary"></i>Dashboard</a></li>
-            <li><a class="dropdown-item rounded-2 small" href="contact.html"><i class="fa-solid fa-headset me-2 text-secondary"></i>Contact Center Director</a></li>
-            <li><a class="dropdown-item rounded-2 small" href="index.html"><i class="fa-solid fa-globe me-2 text-info"></i>Home 1 - Academic & Homework</a></li>
-            <li><a class="dropdown-item rounded-2 small" href="home-2.html"><i class="fa-solid fa-rocket me-2 text-primary"></i>Home 2 - STEM & Innovation Academy</a></li>
-            <li><hr class="dropdown-divider my-1"></li>
-            <li><a class="dropdown-item rounded-2 small text-danger" href="login.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sign Out</a></li>
-          </ul>
+
+          <!-- Dark/Light Mode Switcher -->
+          <button class="bp-icon-btn theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+            <span class="theme-toggle-svg-wrap">
+              <svg class="bp-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </span>
+          </button>
+
+          <!-- Notification Dropdown -->
+          <div class="dropdown">
+            <button class="bp-icon-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+              <svg class="bp-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+              <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                <span class="visually-hidden">New notifications</span>
+              </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg p-2 border" style="width: 320px; max-width: calc(100vw - 2rem);">
+              <li class="dropdown-header fw-bold text-main d-flex justify-content-between align-items-center">
+                <span>Center Notifications</span>
+                <span class="badge bg-primary-subtle text-primary">2 New</span>
+              </li>
+              <li><hr class="dropdown-divider my-1"></li>
+              <li>
+                <a class="dropdown-item rounded-2 p-2 small" href="#homework-section">
+                  <div class="fw-bold text-success"><i class="fa-solid fa-check me-1"></i>Homework Verified</div>
+                  <div class="text-muted">Marcus Vance signed off on Leo's math worksheet.</div>
+                  <div class="text-light-emphasis" style="font-size: 0.7rem;">Today, 4:45 PM</div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item rounded-2 p-2 small" href="#attendance-section">
+                  <div class="fw-bold text-primary"><i class="fa-solid fa-door-open me-1"></i>Check-in Recorded</div>
+                  <div class="text-muted">Leo checked in at center at 3:25 PM.</div>
+                  <div class="text-light-emphasis" style="font-size: 0.7rem;">Today, 3:25 PM</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Parent User Profile Dropdown -->
+          <div class="dropdown bp-dash-user-dropdown">
+            <button class="btn btn-sm btn-bp-outline dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" 
+                   class="rounded-circle" width="28" height="28" style="object-fit: cover;" alt="Parent Sarah Miller">
+              <span class="fw-semibold">Sarah Miller</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg border p-2">
+              <li class="dropdown-header small">Parent Account • Family ID: #BP-9204</li>
+              <li><a class="dropdown-item rounded-2 small" href="dashboard.html"><i class="fa-solid fa-gauge-high me-2 text-primary"></i>Dashboard</a></li>
+              <li><a class="dropdown-item rounded-2 small" href="contact.html"><i class="fa-solid fa-headset me-2 text-secondary"></i>Contact Center Director</a></li>
+              <li><a class="dropdown-item rounded-2 small" href="index.html"><i class="fa-solid fa-globe me-2 text-info"></i>Home 1 - Academic & Homework</a></li>
+              <li><a class="dropdown-item rounded-2 small" href="home-2.html"><i class="fa-solid fa-rocket me-2 text-primary"></i>Home 2 - STEM & Innovation Academy</a></li>
+              <li><hr class="dropdown-divider my-1"></li>
+              <li><a class="dropdown-item rounded-2 small text-danger" href="login.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sign Out</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -211,56 +266,56 @@
       <div class="row g-3 mb-4">
         <!-- Attendance Stat -->
         <div class="col-sm-6 col-xl-3">
-          <div class="bp-dash-stat-widget">
-            <div class="bp-icon-box bp-icon-box-secondary mb-0">
+          <div class="bp-dash-stat-widget h-100">
+            <div class="bp-icon-box bp-icon-box-secondary mb-0 flex-shrink-0">
               <i class="fa-solid fa-user-check"></i>
             </div>
-            <div>
-              <div class="text-muted small fw-semibold">Attendance Rate</div>
+            <div class="flex-grow-1 min-w-0">
+              <div class="text-muted small fw-semibold text-nowrap">Attendance Rate</div>
               <h3 class="font-heading fs-3 mb-0" id="dashStatAttendance">98%</h3>
-              <span class="text-success small fw-semibold"><i class="fa-solid fa-arrow-trend-up me-1"></i>On track</span>
+              <span class="text-success small fw-semibold text-nowrap"><i class="fa-solid fa-arrow-trend-up me-1"></i>On track</span>
             </div>
           </div>
         </div>
 
         <!-- Completed Homework Stat -->
         <div class="col-sm-6 col-xl-3">
-          <div class="bp-dash-stat-widget">
-            <div class="bp-icon-box bp-icon-box-primary mb-0">
+          <div class="bp-dash-stat-widget h-100">
+            <div class="bp-icon-box bp-icon-box-primary mb-0 flex-shrink-0">
               <i class="fa-solid fa-circle-check"></i>
             </div>
-            <div>
-              <div class="text-muted small fw-semibold">Verified Tasks</div>
+            <div class="flex-grow-1 min-w-0">
+              <div class="text-muted small fw-semibold text-nowrap">Verified Tasks</div>
               <h3 class="font-heading fs-3 mb-0" id="dashStatCompletedHW">24</h3>
-              <span class="text-muted small">Assignments signed</span>
+              <span class="text-muted small text-nowrap">Assignments signed</span>
             </div>
           </div>
         </div>
 
         <!-- Total Hours Logged -->
         <div class="col-sm-6 col-xl-3">
-          <div class="bp-dash-stat-widget">
-            <div class="bp-icon-box bp-icon-box-purple mb-0">
+          <div class="bp-dash-stat-widget h-100">
+            <div class="bp-icon-box bp-icon-box-purple mb-0 flex-shrink-0">
               <i class="fa-solid fa-hourglass-half"></i>
             </div>
-            <div>
-              <div class="text-muted small fw-semibold">Enrichment Hours</div>
+            <div class="flex-grow-1 min-w-0">
+              <div class="text-muted small fw-semibold text-nowrap">Enrichment Hours</div>
               <h3 class="font-heading fs-3 mb-0" id="dashStatHours">36 hrs</h3>
-              <span class="text-primary small fw-semibold">This term</span>
+              <span class="text-primary small fw-semibold text-nowrap">This term</span>
             </div>
           </div>
         </div>
 
         <!-- Next Session -->
         <div class="col-sm-6 col-xl-3">
-          <div class="bp-dash-stat-widget">
-            <div class="bp-icon-box bp-icon-box-accent mb-0">
-              <i class="fa-solid fa-calendar-star"></i>
+          <div class="bp-dash-stat-widget h-100">
+            <div class="bp-icon-box bp-icon-box-accent mb-0 flex-shrink-0">
+              <i class="fa-solid fa-calendar-check"></i>
             </div>
-            <div>
-              <div class="text-muted small fw-semibold">Next Session</div>
-              <h4 class="font-heading fs-6 mb-0 text-truncate" style="max-width: 140px;">Today 3:30 PM</h4>
-              <span class="text-success small fw-semibold"><i class="fa-solid fa-check"></i> Confirmed slot</span>
+            <div class="flex-grow-1 min-w-0">
+              <div class="text-muted small fw-semibold text-nowrap">Next Session</div>
+              <h4 class="font-heading fs-5 mb-0 text-nowrap fw-bold">Today 3:30 PM</h4>
+              <span class="text-success small fw-semibold text-nowrap"><i class="fa-solid fa-check me-1"></i>Confirmed slot</span>
             </div>
           </div>
         </div>
@@ -345,20 +400,23 @@
 
       <!-- SECTION 2: Homework Completion Notes Tracker -->
       <div class="bp-card p-4 mb-4" id="homework-section">
-        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-3">
           <div>
-            <span class="bp-badge bp-badge-primary mb-1">Daily Accountability</span>
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <span class="bp-badge bp-badge-primary">Daily Accountability</span>
+              <span class="badge bg-primary-subtle text-primary border border-primary-subtle small fw-semibold">Latest 3 Details</span>
+            </div>
             <h4 class="font-heading fs-5 mb-0">Homework Completion Notes & Tutor Sign-Offs</h4>
             <p class="text-muted small mb-0">Review daily assignments, accuracy ratings, and tutor feedback.</p>
           </div>
           
-          <!-- Filters & Search -->
-          <div class="d-flex flex-wrap gap-2">
-            <div class="input-group" style="width: 220px;">
+          <!-- Filters, Search & Add Note -->
+          <div class="d-flex flex-wrap align-items-center gap-2">
+            <div class="input-group" style="width: 200px;">
               <span class="input-group-text bg-light-subtle text-muted"><i class="fa-solid fa-magnifying-glass"></i></span>
               <input type="text" class="form-control form-control-sm" id="hwSearchInput" placeholder="Search topics..." aria-label="Search homework topics">
             </div>
-            <select class="form-select form-select-sm" id="hwSubjectFilter" style="width: 170px;" aria-label="Filter notes by subject">
+            <select class="form-select form-select-sm" id="hwSubjectFilter" style="width: 155px;" aria-label="Filter notes by subject">
               <option value="all" selected>All Subjects</option>
               <option value="mathematics">Mathematics</option>
               <option value="science">Science</option>
@@ -366,14 +424,17 @@
               <option value="pre-algebra">Pre-Algebra</option>
               <option value="earth science">Earth Science</option>
             </select>
+            <button class="btn btn-sm btn-bp-primary text-nowrap" data-bs-toggle="modal" data-bs-target="#addHomeworkNoteModal" id="addHwNoteBtn">
+              <i class="fa-solid fa-plus me-1"></i> Add Daily Note
+            </button>
           </div>
         </div>
 
         <!-- Dynamic Notes List Container (Managed by dashboard.js) -->
         <div id="homeworkNotesContainer">
-          <!-- Skeleton Loading -->
-          <div class="skeleton skeleton-card p-4 mb-3"></div>
-          <div class="skeleton skeleton-card p-4 mb-3"></div>
+          <!-- Skeleton Loading (Compact) -->
+          <div class="skeleton p-3 mb-2" style="min-height: 95px; border-radius: var(--bp-radius-md);"></div>
+          <div class="skeleton p-3 mb-2" style="min-height: 95px; border-radius: var(--bp-radius-md);"></div>
         </div>
       </div>
 
@@ -466,6 +527,73 @@
             </div>
             <button type="submit" class="btn btn-bp-primary w-100">
               <i class="fa-solid fa-check me-1"></i> Confirm & Book Slot
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Daily Accountability Homework Note Modal -->
+  <div class="modal fade" id="addHomeworkNoteModal" tabindex="-1" aria-labelledby="addHomeworkNoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <div class="bp-brand-icon" style="width: 32px; height: 32px; font-size: 1rem;"><i class="fa-solid fa-clipboard-check"></i></div>
+            <h5 class="modal-title font-heading mb-0" id="addHomeworkNoteModalLabel">Add Daily Accountability Note</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="alert alert-info py-2 px-3 small mb-3 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-circle-info text-primary flex-shrink-0"></i>
+            <span>Daily accountability maintains the latest <strong>3 details</strong>. When a new detail is added, the oldest entry is automatically removed.</span>
+          </div>
+          
+          <form id="addHomeworkNoteForm" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="newNoteSubject" class="form-label">Subject *</label>
+              <select class="form-select" id="newNoteSubject" required>
+                <option value="Mathematics" selected>Mathematics</option>
+                <option value="Science">Science</option>
+                <option value="English Language Arts">English Language Arts</option>
+                <option value="Pre-Algebra">Pre-Algebra</option>
+                <option value="Earth Science">Earth Science</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="newNoteTopic" class="form-label">Assignment Topic / Objective *</label>
+              <input type="text" class="form-control" id="newNoteTopic" placeholder="e.g. Fractions & Decimal Conversion" required>
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label for="newNoteTutor" class="form-label">Educator / Tutor *</label>
+                <select class="form-select" id="newNoteTutor" required>
+                  <option value="Marcus Vance" selected>Marcus Vance</option>
+                  <option value="Dr. Sarah Jenkins">Dr. Sarah Jenkins</option>
+                  <option value="Elena Rostova">Elena Rostova</option>
+                  <option value="David Chen">David Chen</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label for="newNoteStatus" class="form-label">Verification Status *</label>
+                <select class="form-select" id="newNoteStatus" required>
+                  <option value="Completed" selected>Completed & Verified</option>
+                  <option value="Needs Follow-Up">Needs Follow-Up</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="newNoteFeedback" class="form-label">Educator Feedback & Notes *</label>
+              <textarea class="form-control" id="newNoteFeedback" rows="3" placeholder="Provide daily observations, accuracy percentage, or evening recommendations..." required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="newNoteAttachment" class="form-label">Attachment Name (Optional)</label>
+              <input type="text" class="form-control" id="newNoteAttachment" placeholder="e.g. Daily_Worksheet_Oct16.pdf">
+            </div>
+            <button type="submit" class="btn btn-bp-primary w-100 py-2">
+              <i class="fa-solid fa-plus me-1"></i> Add Note & Maintain Top 3
             </button>
           </form>
         </div>

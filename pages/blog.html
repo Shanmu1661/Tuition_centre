@@ -510,9 +510,10 @@
           <p class="text-muted mx-auto mb-4" style="max-width: 580px;">
             Join over 1,200 local parents who receive our bi-weekly educational digest featuring printable study templates, STEM challenge ideas, and tutor insights.
           </p>
-          <form class="row g-2 justify-content-center" style="max-width: 520px; margin: 0 auto;" onsubmit="event.preventDefault(); alert('Thank you for subscribing to BrightPath Learning Insights!');">
-            <div class="col-sm-8">
-              <input type="email" class="form-control" placeholder="Enter your email address" required aria-label="Email address for educational newsletter">
+          <form class="row g-2 justify-content-center needs-validation" style="max-width: 520px; margin: 0 auto;" novalidate>
+            <div class="col-sm-8 text-start">
+              <input type="email" class="form-control" placeholder="Enter your email address" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" required aria-label="Email address for educational newsletter" title="Please enter a valid email address.">
+              <div class="invalid-feedback">Please enter a valid email address.</div>
             </div>
             <div class="col-sm-4">
               <button type="submit" class="btn btn-bp-primary w-100">Subscribe Free</button>
@@ -533,8 +534,15 @@
       <div class="row g-5">
         <div class="col-lg-4">
           <a class="bp-brand text-white mb-3" href="index.html">
-            <div class="bp-brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-            <span>BrightPath Academy</span>
+            <div class="bp-brand-icon">
+              <svg class="bp-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+              </svg>
+            </div>
+            <div>
+              <span>BrightPath</span>
+              <span class="d-block text-primary small fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase;">Learning Academy</span>
+            </div>
           </a>
           <p class="small text-muted mb-4">
             Structured after-school homework help, certified subject tutoring, and engaging STEM enrichment for K-12 students.
