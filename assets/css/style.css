@@ -1904,29 +1904,45 @@ section.bg-light-subtle.border-top.border-light-subtle .col-md-4 > .bp-card .bor
   display: flex !important;
   flex-direction: column !important;
   flex: 1 1 auto !important;
+  padding: 1.35rem !important;
 }
 
 .bp-program-card .bp-program-meta {
-  min-height: 24px;
+  min-height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.825rem;
+}
+
+.bp-program-card .bp-program-meta span {
+  white-space: nowrap;
 }
 
 .bp-program-card .bp-program-title {
-  min-height: 2.75rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  min-height: 3.375rem;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.75rem !important;
 }
 
 .bp-program-card .bp-program-desc {
   flex: 1 1 auto;
+  min-height: 4.75rem;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  margin-bottom: 1rem !important;
 }
 
 .bp-program-card .border-top {
   margin-top: auto !important;
-  min-height: 48px;
+  min-height: 50px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 /* Tutor Card */
