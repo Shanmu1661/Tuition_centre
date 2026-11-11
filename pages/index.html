@@ -99,32 +99,73 @@
             <ul class="dropdown-menu bp-dropdown-menu" aria-labelledby="homeDropdown">
               <li>
                 <a class="dropdown-item bp-dropdown-item active" href="index.html">
-                  <span class="bp-dropdown-title">Home 1 - Academic & Homework</span>
-                  <span class="bp-dropdown-desc">Daily homework lab, 1:4 pod ratios & certified mentors</span>
+                  <span class="bp-dropdown-title">Home 1 - Academic Core</span>
+                  <span class="bp-dropdown-desc">Interactive classroom, subject tracks &amp; certified mentors</span>
                 </a>
               </li>
               <li>
                 <a class="dropdown-item bp-dropdown-item" href="home-2.html">
-                  <span class="bp-dropdown-title">Home 2 - STEM & Innovation Academy</span>
-                  <span class="bp-dropdown-desc">Robotics, coding, competition math & exam clinics</span>
+                  <span class="bp-dropdown-title">Home 2 - Homework &amp; Enrichment Center</span>
+                  <span class="bp-dropdown-desc">Learning support pods, school pickup, clubs &amp; camps</span>
                 </a>
               </li>
             </ul>
           </li>
+
+          <!-- Programs & Tutoring Dropdown -->
+          <li class="nav-item dropdown bp-nav-dropdown">
+            <a class="nav-link bp-nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Programs</span>
+              <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+            </a>
+            <ul class="dropdown-menu bp-dropdown-menu" aria-labelledby="programsDropdown">
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="homework-tutoring.html">
+                  <span class="bp-dropdown-title"><i class="fa-solid fa-pencil text-primary me-2"></i>Homework Help &amp; Tutoring</span>
+                  <span class="bp-dropdown-desc">Daily assignment completion &amp; 1:4 learning pods</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="academic-enrichment.html">
+                  <span class="bp-dropdown-title"><i class="fa-solid fa-brain text-secondary me-2"></i>Academic Enrichment</span>
+                  <span class="bp-dropdown-desc">Foundational math, reading fluency &amp; logic</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="enrichment-clubs.html">
+                  <span class="bp-dropdown-title"><i class="fa-solid fa-shapes text-purple me-2"></i>Enrichment Clubs</span>
+                  <span class="bp-dropdown-desc">Robotics, coding, chess &amp; creative studio</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="seasonal-camps.html">
+                  <span class="bp-dropdown-title"><i class="fa-solid fa-campground text-warning me-2"></i>Seasonal Camps</span>
+                  <span class="bp-dropdown-desc">Full-day summer, spring &amp; holiday discovery</span>
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item bp-dropdown-item py-1" href="programs.html">
+                  <span class="small fw-semibold text-primary"><i class="fa-solid fa-layer-group me-1"></i> View All Subject Curriculum Tracks</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
           <li class="nav-item">
-            <a class="nav-link bp-nav-link" href="programs.html">Programs</a>
+            <a class="nav-link bp-nav-link" href="schedule-transportation.html">Schedule &amp; Pickup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link" href="safety-staff.html">Safety &amp; Staff</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link" href="pricing-enrollment.html">Pricing</a>
           </li>
           <li class="nav-item">
             <a class="nav-link bp-nav-link" href="tutors.html">Tutors</a>
           </li>
           <li class="nav-item">
             <a class="nav-link bp-nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link" href="blog.html">Study Tips</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link bp-nav-link" href="dashboard.html">Parent Portal</a>
@@ -191,17 +232,17 @@
                   <label class="visually-hidden" for="heroGradeSelect">Select Student Grade</label>
                   <select class="form-select form-select-sm bp-hero-finder-select py-2" id="heroGradeSelect" aria-label="Select Student Grade">
                     <option value="elementary" selected>Grades 1–5 (Elementary)</option>
-                    <option value="middle">Grades 6–8 (Middle School)</option>
-                    <option value="high">Grades 9–12 (High School)</option>
+                    <option value="middle">Grades 6–8 (Middle)</option>
+                    <option value="high">Grades 9–12 (High)</option>
                   </select>
                 </div>
                 <div class="col-sm-4">
                   <label class="visually-hidden" for="heroSubjectSelect">Focus Subject</label>
                   <select class="form-select form-select-sm bp-hero-finder-select py-2" id="heroSubjectSelect" aria-label="Select Focus Subject">
-                    <option value="homework" selected>Daily Homework Lab</option>
-                    <option value="math">Math & Problem Solving</option>
-                    <option value="reading">Reading & Language</option>
-                    <option value="stem">STEM Discovery</option>
+                    <option value="homework" selected>Daily Homework</option>
+                    <option value="math">Math &amp; Logic</option>
+                    <option value="reading">Reading Fluency</option>
+                    <option value="stem">STEM &amp; Robotics</option>
                   </select>
                 </div>
                 <div class="col-sm-3">
@@ -1040,25 +1081,23 @@
         <div class="col-6 col-lg-2">
           <h5 class="bp-footer-title">Programs</h5>
           <ul class="bp-footer-links">
-            <li><a href="programs.html">Homework Support Lab</a></li>
-            <li><a href="programs.html">Math & Logic Mastery</a></li>
-            <li><a href="programs.html">Reading & Writing Club</a></li>
-            <li><a href="programs.html">STEM & Robotics Lab</a></li>
-            <li><a href="programs.html">Science Discovery</a></li>
-            <li><a href="programs.html">Study Habits Coaching</a></li>
+            <li><a href="homework-tutoring.html">Homework Help &amp; Tutoring</a></li>
+            <li><a href="academic-enrichment.html">Academic Enrichment</a></li>
+            <li><a href="enrichment-clubs.html">Enrichment Clubs</a></li>
+            <li><a href="seasonal-camps.html">Seasonal Camps</a></li>
+            <li><a href="programs.html">Curriculum Tracks</a></li>
           </ul>
         </div>
 
         <div class="col-6 col-lg-2">
-          <h5 class="bp-footer-title">Quick Portals</h5>
+          <h5 class="bp-footer-title">Center Info</h5>
           <ul class="bp-footer-links">
-            <li><a href="home-2.html">Home 2 - STEM Hub</a></li>
-            <li><a href="login.html">Parent Sign In</a></li>
-            <li><a href="register.html">Student Enrollment</a></li>
-            <li><a href="dashboard.html">Parent Dashboard</a></li>
+            <li><a href="schedule-transportation.html">Schedule &amp; Pickup</a></li>
+            <li><a href="safety-staff.html">Safety &amp; Staff</a></li>
+            <li><a href="pricing-enrollment.html">Tuition &amp; Pricing</a></li>
             <li><a href="tutors.html">Certified Tutors</a></li>
-            <li><a href="about.html">Safety & Policies</a></li>
-            <li><a href="blog.html">Homework Tips & Blog</a></li>
+            <li><a href="dashboard.html">Parent Dashboard</a></li>
+            <li><a href="about.html">About BrightPath</a></li>
           </ul>
         </div>
 
