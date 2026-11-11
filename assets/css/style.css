@@ -395,36 +395,48 @@ textarea:focus-visible {
   list-style: none;
 }
 
-/* Centered Navigation for Desktop (Brand left, Nav center, Controls right) */
+/* Desktop Navigation Layout: Balanced Spacing & Generous Separation Between Links & Controls */
 @media (min-width: 992px) {
   .bp-navbar:not(.bp-navbar-dashboard) .bp-navbar-container {
-    display: grid !important;
-    grid-template-columns: 1fr auto 1fr !important;
-    align-items: center;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: clamp(1rem, 2vw, 2.5rem);
   }
 
   .bp-navbar:not(.bp-navbar-dashboard) .bp-brand {
-    grid-column: 1;
-    justify-self: start;
+    flex-shrink: 0;
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
 
   .bp-navbar:not(.bp-navbar-dashboard) .navbar-collapse {
-    display: contents !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-grow: 1;
+    gap: clamp(1.5rem, 2.5vw, 3rem);
   }
 
   .bp-navbar:not(.bp-navbar-dashboard) .navbar-nav {
-    grid-column: 2;
-    justify-self: center;
-    margin: 0 !important;
+    margin: 0 auto !important;
+    padding: 0;
+    gap: clamp(0.35rem, 0.75vw, 0.75rem);
+    flex-shrink: 0;
   }
 
   .bp-navbar:not(.bp-navbar-dashboard) .bp-controls-group {
-    grid-column: 3;
-    justify-self: end;
-    margin-left: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: clamp(0.6rem, 0.85vw, 0.95rem) !important;
+    flex-shrink: 0;
+    margin-left: clamp(2rem, 3.5vw, 4rem) !important;
     margin-right: 0 !important;
+  }
+
+  [dir="rtl"] .bp-navbar:not(.bp-navbar-dashboard) .bp-controls-group {
+    margin-right: clamp(2rem, 3.5vw, 4rem) !important;
+    margin-left: 0 !important;
   }
 }
 
@@ -561,7 +573,7 @@ textarea:focus-visible {
 .bp-controls-group {
   display: inline-flex;
   align-items: center;
-  gap: clamp(0.5rem, 0.75vw, 0.75rem);
+  gap: clamp(0.6rem, 0.85vw, 0.95rem);
   flex-shrink: 0;
   margin-left: auto;
   white-space: nowrap;
