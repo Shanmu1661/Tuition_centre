@@ -252,30 +252,54 @@
             </div>
           </div>
 
-          <!-- Hero Right Column: Enhanced Classroom Photo Frame with Live Status -->
+          <!-- Hero Right Column: Enhanced Classroom Video Frame with Live Status -->
           <div class="col-lg-6">
             <div class="bp-hero-img-wrap position-relative mx-auto ms-lg-auto" style="max-width: 720px; width: 100%;">
               
-              <!-- Main Hero Image Card with Overlay -->
+              <!-- Main Hero Video Card with Overlay -->
               <div class="rounded-4 overflow-hidden shadow-lg border position-relative w-100 bp-hero-img-card">
-                <img src="../assets/images/classroom-hero.jpg" 
-                     alt="Certified educator conducting interactive classroom session with engaged students" 
-                     class="w-100 h-100 bp-hero-img" 
-                     style="object-fit: cover; display: block;" 
-                     loading="eager" width="800" height="600">
+                <video id="heroClassroomVideo"
+                       class="w-100 h-100 bp-hero-img" 
+                       autoplay loop muted playsinline 
+                       poster="../assets/images/classroom-video-poster.jpg" 
+                       style="object-fit: cover; display: block;" 
+                       width="800" height="600"
+                       aria-label="Tuition teacher conducting an interactive session with students of different grades">
+                  <source src="../assets/videos/tuition-classroom.mp4" type="video/mp4">
+                  <source src="https://videos.pexels.com/video-files/5198159/5198159-hd_1920_1080_25fps.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
                 
                 <!-- Live Pod Status Bar Overlay at Bottom -->
                 <div class="position-absolute bottom-0 start-0 w-100 p-2 p-sm-3 p-md-4" style="background: linear-gradient(to top, rgba(15,23,42,0.92) 0%, rgba(15,23,42,0.65) 60%, transparent 100%);">
                   <div class="d-flex align-items-center justify-content-between">
                     <div>
                       <div class="text-white fw-bold small d-flex align-items-center gap-2">
-                        <span class="badge bg-success text-white px-2 py-1"><i class="fa-solid fa-circle-check me-1"></i>Active Pod</span>
+                        <span class="badge bg-success text-white px-2 py-1"><i class="fa-solid fa-circle-play me-1"></i>Active Pod</span>
                         <span class="fs-6 d-none d-sm-inline">Interactive Classroom & Homework Lab</span>
                         <span class="small fw-bold d-sm-none">Homework Lab</span>
                       </div>
                       <div class="text-white-50 mt-1 d-none d-sm-block" style="font-size: 0.82rem;">
-                        <i class="fa-solid fa-chalkboard-user text-warning me-1"></i> Teacher-led review • Daily syllabus check • Hands-on support
+                        <i class="fa-solid fa-chalkboard-user text-warning me-1"></i> Teacher-led review • Multi-grade pods • Hands-on support
                       </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <button type="button" 
+                              id="heroVideoPlayPauseBtn" 
+                              class="btn btn-sm btn-outline-light rounded-pill px-2 py-1 d-flex align-items-center justify-content-center shadow-sm" 
+                              style="font-size: 0.75rem; width: 30px; height: 30px; background: rgba(15,23,42,0.6);" 
+                              title="Pause video" 
+                              aria-label="Pause video">
+                        <i class="fa-solid fa-pause"></i>
+                      </button>
+                      <button type="button" 
+                              id="heroVideoMuteBtn" 
+                              class="btn btn-sm btn-outline-light rounded-pill px-2 py-1 d-flex align-items-center justify-content-center shadow-sm" 
+                              style="font-size: 0.75rem; width: 30px; height: 30px; background: rgba(15,23,42,0.6);" 
+                              title="Unmute audio" 
+                              aria-label="Unmute audio">
+                        <i class="fa-solid fa-volume-xmark"></i>
+                      </button>
                     </div>
                   </div>
                 </div>

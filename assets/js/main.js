@@ -647,6 +647,62 @@ const BrightPath = (() => {
   };
 
   /**
+   * 10. Hero Classroom Video Controls
+   * Autoplay fallback, play/pause toggle, and mute/unmute control
+   */
+  const initHeroVideo = () => {
+    const video = document.getElementById('heroClassroomVideo');
+    if (!video) return;
+
+    // Guarantee muted autoplay
+    video.muted = true;
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Will start on first user interaction if blocked by policy
+      });
+    }
+
+    const playPauseBtn = document.getElementById('heroVideoPlayPauseBtn');
+    const muteBtn = document.getElementById('heroVideoMuteBtn');
+
+    if (playPauseBtn) {
+      playPauseBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (video.paused) {
+          video.play();
+          playPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+          playPauseBtn.setAttribute('title', 'Pause video');
+          playPauseBtn.setAttribute('aria-label', 'Pause video');
+        } else {
+          video.pause();
+          playPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+          playPauseBtn.setAttribute('title', 'Play video');
+          playPauseBtn.setAttribute('aria-label', 'Play video');
+        }
+      });
+    }
+
+    if (muteBtn) {
+      muteBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        video.muted = !video.muted;
+        if (video.muted) {
+          muteBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+          muteBtn.setAttribute('title', 'Unmute audio');
+          muteBtn.setAttribute('aria-label', 'Unmute audio');
+        } else {
+          muteBtn.innerHTML = '<i class="fa-solid fa-volume-high text-warning"></i>';
+          muteBtn.setAttribute('title', 'Mute audio');
+          muteBtn.setAttribute('aria-label', 'Mute audio');
+        }
+      });
+    }
+  };
+
+  /**
    * Public API
    */
   const init = () => {
@@ -659,6 +715,7 @@ const BrightPath = (() => {
     initFormValidation();
     initSkeletonSimulation();
     initProgramDetailsModal();
+    initHeroVideo();
   };
 
   // Expose to window
