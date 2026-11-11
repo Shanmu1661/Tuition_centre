@@ -1478,6 +1478,20 @@ section.bg-light-subtle.border-top.border-light-subtle .col-md-4 > .bp-card .bor
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 
+.bp-pillar-card ul li {
+  line-height: 1.45;
+}
+
+.bp-pillar-card ul li i {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.bp-pillar-card ul li span {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
 /* Parent Portal Section with Atmospheric Background */
 .bp-parent-portal-section {
   position: relative;
