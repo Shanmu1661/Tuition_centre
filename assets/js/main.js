@@ -648,7 +648,7 @@ const BrightPath = (() => {
 
   /**
    * 10. Hero Classroom Video Controls
-   * Autoplay fallback, play/pause toggle, and mute/unmute control
+   * Autoplay fallback and click-to-pause/play toggle
    */
   const initHeroVideo = () => {
     const video = document.getElementById('heroClassroomVideo');
@@ -662,6 +662,15 @@ const BrightPath = (() => {
         // Will start on first user interaction if blocked by policy
       });
     }
+
+    // Toggle play / pause on click
+    video.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
 
     const playPauseBtn = document.getElementById('heroVideoPlayPauseBtn');
     const muteBtn = document.getElementById('heroVideoMuteBtn');
