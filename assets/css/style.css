@@ -2464,8 +2464,7 @@ section.bg-light-subtle.border-top.border-light-subtle .col-md-4 > .bp-card .bor
   margin-bottom: 0.4rem;
 }
 
-.form-control,
-.form-select {
+.form-control {
   border: 1px solid var(--bp-border);
   border-radius: var(--bp-radius-md);
   padding: 0.65rem 1rem;
@@ -2474,6 +2473,49 @@ section.bg-light-subtle.border-top.border-light-subtle .col-md-4 > .bp-card .bor
   background-color: var(--bp-bg-surface);
   color: var(--bp-text-main);
   transition: var(--bp-transition);
+}
+
+.form-select {
+  border: 1px solid var(--bp-border);
+  border-radius: var(--bp-radius-md);
+  padding: 0.65rem 2.25rem 0.65rem 1rem;
+  font-size: 0.95rem;
+  min-height: 46px;
+  background-color: var(--bp-bg-surface);
+  color: var(--bp-text-main);
+  transition: var(--bp-transition);
+}
+
+.form-select.form-select-sm {
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+  padding-left: 0.75rem;
+  padding-right: 2rem;
+  font-size: 0.85rem;
+  min-height: 38px;
+}
+
+[dir="rtl"] .form-select {
+  padding: 0.65rem 1rem 0.65rem 2.25rem;
+}
+
+[dir="rtl"] .form-select.form-select-sm {
+  padding-right: 0.75rem;
+  padding-left: 2rem;
+}
+
+/* Quick Pod Slot Finder Select Optimization (Prevents text collision with dropdown arrow) */
+.bp-hero-finder-select {
+  font-size: 0.83rem !important;
+  padding-left: 0.65rem !important;
+  padding-right: 1.85rem !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+[dir="rtl"] .bp-hero-finder-select {
+  padding-right: 0.65rem !important;
+  padding-left: 1.85rem !important;
 }
 
 .form-control:focus,
