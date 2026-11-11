@@ -1492,6 +1492,27 @@ section.bg-light-subtle.border-top.border-light-subtle .col-md-4 > .bp-card .bor
   min-width: 0;
 }
 
+/* How It Works / Learning Method Section */
+.bp-method-section {
+  position: relative;
+  background-color: var(--bp-bg-surface);
+  border-top: 1px solid var(--bp-border);
+  border-bottom: 1px solid var(--bp-border);
+  padding: 4.5rem 0;
+}
+
+.bp-step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--bp-radius-full);
+}
+
 /* Parent Portal Section with Atmospheric Background */
 .bp-parent-portal-section {
   position: relative;
