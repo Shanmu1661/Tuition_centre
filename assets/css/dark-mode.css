@@ -256,9 +256,29 @@
 
 /* Dark mode overrides for cards & stats */
 [data-theme="dark"] .bg-light-subtle,
-[data-bs-theme="dark"] .bg-light-subtle {
+[data-bs-theme="dark"] .bg-light-subtle,
+[data-theme="dark"] .bg-white.text-dark,
+[data-bs-theme="dark"] .bg-white.text-dark {
   background-color: var(--bp-bg-surface) !important;
+  color: var(--bp-text-main) !important;
   border-color: var(--bp-border) !important;
+}
+
+[data-theme="dark"] .bg-white.text-dark h1,
+[data-theme="dark"] .bg-white.text-dark h2,
+[data-theme="dark"] .bg-white.text-dark h3,
+[data-theme="dark"] .bg-white.text-dark h4,
+[data-theme="dark"] .bg-white.text-dark h5,
+[data-theme="dark"] .bg-white.text-dark h6,
+[data-theme="dark"] .bg-white.text-dark .font-heading,
+[data-bs-theme="dark"] .bg-white.text-dark h1,
+[data-bs-theme="dark"] .bg-white.text-dark h2,
+[data-bs-theme="dark"] .bg-white.text-dark h3,
+[data-bs-theme="dark"] .bg-white.text-dark h4,
+[data-bs-theme="dark"] .bg-white.text-dark h5,
+[data-bs-theme="dark"] .bg-white.text-dark h6,
+[data-bs-theme="dark"] .bg-white.text-dark .font-heading {
+  color: var(--bp-text-main) !important;
 }
 
 [data-theme="dark"] .bp-stat-item,

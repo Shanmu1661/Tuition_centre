@@ -259,6 +259,16 @@ p {
   margin-bottom: 1rem;
 }
 
+.text-white p,
+.bg-primary p,
+.bg-dark p {
+  color: inherit;
+}
+
+.opacity-90 {
+  opacity: 0.9 !important;
+}
+
 a {
   color: var(--bp-primary);
   text-decoration: none;
