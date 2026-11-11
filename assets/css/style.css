@@ -1575,10 +1575,45 @@ section.bg-light-subtle.border-top.border-light-subtle .col-md-4 > .bp-card .bor
    -------------------------------------------------------------------------- */
 .bp-hero {
   position: relative;
-  padding: 2.75rem 0 2rem;
-  background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.05) 0%, rgba(248, 250, 252, 0) 50%),
-              radial-gradient(circle at 90% 80%, rgba(5, 150, 105, 0.05) 0%, rgba(248, 250, 252, 0) 50%);
+  padding: 3.25rem 0 2.25rem;
   overflow: hidden;
+}
+
+.bp-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/hero-classroom-bg.jpg');
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  z-index: 0;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  transform: scale(1.02);
+}
+
+.bp-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.88) 0%,
+    rgba(248, 250, 252, 0.82) 48%,
+    rgba(241, 245, 249, 0.90) 100%
+  );
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+}
+
+[data-theme="dark"] .bp-hero-overlay,
+[data-bs-theme="dark"] .bp-hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(11, 17, 32, 0.90) 0%,
+    rgba(15, 23, 42, 0.84) 50%,
+    rgba(20, 28, 48, 0.92) 100%
+  );
 }
 
 .bp-hero-title {
