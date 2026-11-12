@@ -8297,3 +8297,24 @@ img, svg, canvas, video {
   margin: 0 auto;
   padding: 2.75rem 2.25rem;
 }
+
+
+/* Step Matchmaking Cards Image Styles */
+.bp-pairing-img-wrapper {
+  position: relative;
+  height: 165px;
+  overflow: hidden;
+  border-top-left-radius: calc(var(--bp-radius-lg, 16px) - 2px);
+  border-top-right-radius: calc(var(--bp-radius-lg, 16px) - 2px);
+}
+
+.bp-step-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.bp-pairing-card:hover .bp-step-img {
+  transform: scale(1.06);
+}
