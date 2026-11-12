@@ -4000,3 +4000,265 @@ img, svg, canvas, video {
 .bp-card:hover .bp-vetting-img {
   transform: scale(1.06);
 }
+
+/* Adaptive Learning Cards with Images */
+.bp-adaptive-img-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-top-left-radius: calc(var(--bp-radius-lg, 16px) - 1px);
+  border-top-right-radius: calc(var(--bp-radius-lg, 16px) - 1px);
+}
+
+.bp-adaptive-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.bp-card:hover .bp-adaptive-img {
+  transform: scale(1.06);
+}
+
+
+/* ==========================================================================
+   Enhanced Book Slot Button & Callout CTA Card
+   ========================================================================== */
+.btn-slot-enhanced {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--bp-font-heading, 'Outfit', sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 55%, #1e40af 100%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 9999px;
+  text-decoration: none !important;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 10px 26px -4px rgba(37, 99, 235, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.01em;
+  z-index: 1;
+}
+
+.btn-slot-enhanced::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -70%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.32) 50%, 
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  transition: all 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.btn-slot-enhanced:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 55%, #1d4ed8 100%);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 16px 36px -4px rgba(37, 99, 235, 0.52),
+    0 6px 14px -2px rgba(37, 99, 235, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.btn-slot-enhanced:hover::before {
+  left: 140%;
+}
+
+.btn-slot-enhanced:active {
+  transform: translateY(0) scale(0.99);
+  box-shadow: 
+    0 6px 16px -2px rgba(37, 99, 235, 0.4),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Container */
+.btn-slot-enhanced .slot-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.btn-slot-enhanced:hover .slot-btn-icon {
+  transform: rotate(-10deg) scale(1.08);
+  background: rgba(255, 255, 255, 0.32);
+}
+
+/* Content Area */
+.btn-slot-enhanced .btn-slot-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.btn-slot-enhanced .btn-slot-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.btn-slot-enhanced .btn-slot-subtitle {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.02em;
+}
+
+/* Forward Arrow */
+.btn-slot-enhanced .slot-btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0.9;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+.btn-slot-enhanced:hover .slot-btn-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* Live Availability Pulse */
+.slot-live-indicator {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+}
+
+.slot-pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #34d399;
+  opacity: 0.75;
+  animation: slotPing 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.slot-pulse-dot {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 6px #10b981;
+}
+
+@keyframes slotPing {
+  75%, 100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* Enhanced CTA Banner Card */
+.bp-book-slot-cta-card {
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.04) 0%, rgba(37, 99, 235, 0.09) 100%);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bp-book-slot-cta-card:hover {
+  border-color: rgba(37, 99, 235, 0.38);
+  box-shadow: 0 12px 35px -8px rgba(37, 99, 235, 0.14);
+}
+
+.bp-book-slot-cta-card::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+/* ==========================================================================
+   Consultation CTA Banner with Atmospheric Background Image
+   ========================================================================== */
+.bp-consultation-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background-color: #f8fafc;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bp-consultation-banner:hover {
+  box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.18);
+}
+
+.bp-consultation-banner-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/homework-help-bg.jpg');
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: saturate(115%);
+}
+
+.bp-consultation-banner:hover .bp-consultation-banner-bg {
+  transform: scale(1.03);
+}
+
+.bp-consultation-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.93) 0%,
+    rgba(248, 250, 252, 0.88) 50%,
+    rgba(239, 246, 255, 0.94) 100%
+  );
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 1;
+}

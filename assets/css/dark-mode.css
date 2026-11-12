@@ -579,3 +579,73 @@
 [data-bs-theme="dark"] .bp-pairing-card p {
   color: #cbd5e1 !important;
 }
+
+/* Adaptive Learning Cards Dark Mode */
+[data-theme="dark"] .bp-adaptive-card,
+[data-bs-theme="dark"] .bp-adaptive-card {
+  background-color: var(--bp-card-dark, #1e293b) !important;
+}
+
+[data-theme="dark"] .bp-adaptive-card h4,
+[data-bs-theme="dark"] .bp-adaptive-card h4 {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .bp-adaptive-card p,
+[data-bs-theme="dark"] .bp-adaptive-card p {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .bp-adaptive-card ul li,
+[data-bs-theme="dark"] .bp-adaptive-card ul li {
+  color: #e2e8f0 !important;
+}
+
+
+/* Dark Mode: Enhanced Book Slot CTA & Card */
+[data-theme="dark"] .bp-book-slot-cta-card,
+[data-bs-theme="dark"] .bp-book-slot-cta-card {
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.85) 100%) !important;
+  border-color: rgba(59, 130, 246, 0.28) !important;
+}
+
+[data-theme="dark"] .bp-book-slot-cta-card .bg-white,
+[data-bs-theme="dark"] .bp-book-slot-cta-card .bg-white {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+  border-color: rgba(59, 130, 246, 0.35) !important;
+  color: #93c5fd !important;
+}
+
+
+/* Dark Mode: Consultation CTA Banner */
+[data-theme="dark"] .bp-consultation-banner,
+[data-bs-theme="dark"] .bp-consultation-banner {
+  background-color: #0f172a !important;
+  border-color: rgba(59, 130, 246, 0.28) !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .bp-consultation-banner-overlay,
+[data-bs-theme="dark"] .bp-consultation-banner-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.93) 0%,
+    rgba(15, 23, 42, 0.88) 50%,
+    rgba(30, 41, 59, 0.94) 100%
+  ) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+}
+
+[data-theme="dark"] .bp-consultation-banner .btn-bp-outline.bg-white,
+[data-bs-theme="dark"] .bp-consultation-banner .btn-bp-outline.bg-white {
+  background-color: rgba(30, 41, 59, 0.85) !important;
+  color: #e2e8f0 !important;
+  border-color: rgba(148, 163, 184, 0.3) !important;
+}
+
+[data-theme="dark"] .bp-consultation-banner .btn-bp-outline.bg-white:hover,
+[data-bs-theme="dark"] .bp-consultation-banner .btn-bp-outline.bg-white:hover {
+  background-color: var(--bp-primary) !important;
+  color: #ffffff !important;
+}

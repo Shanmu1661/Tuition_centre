@@ -94,3 +94,18 @@
 [dir="rtl"] .modal-header .btn-close {
   margin: -0.5rem auto -0.5rem -0.5rem;
 }
+
+
+/* RTL: Enhanced Book Slot Button */
+[dir="rtl"] .btn-slot-enhanced .btn-slot-content {
+  text-align: right;
+  align-items: flex-end;
+}
+
+[dir="rtl"] .btn-slot-enhanced:hover .slot-btn-arrow {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .btn-slot-enhanced .slot-btn-arrow i {
+  transform: scaleX(-1);
+}
