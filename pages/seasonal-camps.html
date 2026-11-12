@@ -1,641 +1,579 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seasonal Camps & Break Care | BrightPath Academy</title>
-  <meta name="description" content="Full-day Summer, Spring Break, and Winter Holiday camps featuring STEM robotics tournaments, science discovery labs, academic skill sprints, and outdoor recreation.">
-  <meta name="keywords" content="summer camp, spring break camp for kids, winter break camp, stem camps, full day camp, school holiday childcare">
-
-  <!-- Open Graph / Meta -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Seasonal Camps & Break Care | BrightPath Academy">
-  <meta property="og:description" content="Full-day Summer, Spring Break, and Winter Holiday camps featuring STEM robotics tournaments, science discovery labs, academic skill sprints, and outdoor recreation.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=1200&q=80">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'/></svg>">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <!-- Bootstrap 5 CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-
-  <!-- Main Stylesheets -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/dark-mode.css">
-  <link rel="stylesheet" href="../assets/css/rtl.css">
-</head>
-<body class="bg-body text-main">
-
-  <!-- Accessibility Skip Link -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <!-- Top Announcement Bar -->
-  <div class="bp-top-bar bg-primary text-white py-2 small d-none d-md-block">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center gap-3">
-        <span><i class="fa-solid fa-clock me-1 text-warning"></i> <strong>Hours:</strong> Mon–Fri 2:00 PM – 6:30 PM (Extended Care to 7:00 PM)</span>
-        <span class="opacity-50">•</span>
-        <span><i class="fa-solid fa-van-shuttle me-1 text-warning"></i> <strong>School Pickup:</strong> Available from 8+ Partner Schools</span>
-      </div>
-      <div class="d-flex align-items-center gap-3">
-        <a href="tel:8005550199" class="text-white text-decoration-none"><i class="fa-solid fa-phone me-1"></i> (800) 555-0199</a>
-        <span class="opacity-50">|</span>
-        <a href="pricing-enrollment.html" class="text-white text-decoration-none fw-semibold"><i class="fa-solid fa-sparkles me-1"></i> Free Academic Assessment</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Main Navigation Bar -->
-  <nav class="navbar navbar-expand-lg bp-navbar sticky-top bg-surface border-bottom" aria-label="Main Navigation">
-    <div class="bp-navbar-container">
-      
-      <!-- Brand Logo -->
-      <a class="bp-brand" href="index.html">
-        <div class="bp-brand-icon">
-          <svg class="bp-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
-          </svg>
-        </div>
-        <div>
-          <span>BrightPath</span>
-          <span class="d-block text-primary small fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase;">Homework &amp; Enrichment</span>
-        </div>
-      </a>
-
-      <!-- Mobile Navbar Toggle Button -->
-      <button class="navbar-toggler bp-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Navigation Links -->
-      <div class="collapse navbar-collapse" id="navbarMainContent">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          
-          <!-- Home Dropdown -->
-          <li class="nav-item dropdown bp-nav-dropdown">
-            <a class="nav-link bp-nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <span>Home</span>
-              <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
-            </a>
-            <ul class="dropdown-menu bp-dropdown-menu" aria-labelledby="homeDropdown">
-              <li>
-                <a class="dropdown-item bp-dropdown-item" href="index.html">
-                  <span class="bp-dropdown-title">Home 1 - Academic Core</span>
-                  <span class="bp-dropdown-desc">Interactive classroom, subject tracks &amp; certified mentors</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item bp-dropdown-item" href="home-2.html">
-                  <span class="bp-dropdown-title">Home 2 - Homework &amp; Enrichment Center</span>
-                  <span class="bp-dropdown-desc">Learning support pods, school pickup, clubs &amp; camps</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Programs & Tutoring Dropdown -->
-          <li class="nav-item dropdown bp-nav-dropdown">
-            <a class="nav-link bp-nav-link dropdown-toggle active" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <span>Programs</span>
-              <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
-            </a>
-            <ul class="dropdown-menu bp-dropdown-menu" aria-labelledby="programsDropdown">
-              <li>
-                <a class="dropdown-item bp-dropdown-item " href="homework-tutoring.html">
-                  <span class="bp-dropdown-title"><i class="fa-solid fa-pencil text-primary me-2"></i>Homework Help &amp; Tutoring</span>
-                  <span class="bp-dropdown-desc">Daily assignment completion &amp; 1:4 learning pods</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item bp-dropdown-item " href="academic-enrichment.html">
-                  <span class="bp-dropdown-title"><i class="fa-solid fa-brain text-secondary me-2"></i>Academic Enrichment</span>
-                  <span class="bp-dropdown-desc">Foundational math, reading fluency &amp; logic</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item bp-dropdown-item " href="enrichment-clubs.html">
-                  <span class="bp-dropdown-title"><i class="fa-solid fa-shapes text-purple me-2"></i>Enrichment Clubs</span>
-                  <span class="bp-dropdown-desc">Robotics, coding, chess &amp; creative studio</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item bp-dropdown-item active" href="seasonal-camps.html">
-                  <span class="bp-dropdown-title"><i class="fa-solid fa-campground text-warning me-2"></i>Seasonal Camps</span>
-                  <span class="bp-dropdown-desc">Full-day summer, spring &amp; holiday discovery</span>
-                </a>
-              </li>
-              <li><hr class="dropdown-divider"></li>
-              <li>
-                <a class="dropdown-item bp-dropdown-item py-1" href="programs.html">
-                  <span class="small fw-semibold text-primary"><i class="fa-solid fa-layer-group me-1"></i> View All Subject Curriculum Tracks</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link " href="schedule-transportation.html">Schedule &amp; Pickup</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link " href="safety-staff.html">Safety &amp; Staff</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link " href="pricing-enrollment.html">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link " href="tutors.html">Tutors</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link " href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link " href="dashboard.html">Parent Portal</a>
-          </li>
-        </ul>
-
-        <!-- Action Controls & Portals -->
-        <div class="bp-controls-group">
-          <!-- RTL Layout Switcher -->
-          <button class="rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle Right-to-Left Layout">
-            <span class="rtl-status-label">RTL</span>
-          </button>
-
-          <!-- Dark/Light Mode Switcher -->
-          <button class="bp-icon-btn theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
-            <span class="theme-toggle-svg-wrap">
-              <svg class="bp-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-              </svg>
-            </span>
-          </button>
-
-          <!-- Parent Login Portal Button -->
-          <a href="login.html" class="btn btn-bp-outline btn-sm">
-            <span>Sign In</span>
-          </a>
-
-          <!-- Register CTA Button -->
-          <a href="register.html" class="btn btn-bp-primary btn-sm d-none d-sm-inline-flex">
-            <span>Free Trial Pass</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Page Header Banner -->
-  <header class="bp-page-banner">
-    <div class="bp-page-banner-bg">
-      <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=1920&q=80" 
-           alt="Kids laughing and doing science experiment in summer camp" class="bp-page-banner-bg-img" loading="eager">
-      <div class="bp-page-banner-overlay"></div>
-    </div>
-    <div class="container text-center">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-10 col-xl-8 mx-auto text-center">
-          <div class="d-inline-flex justify-content-center align-items-center gap-2 mb-3 flex-wrap">
-            <span class="bp-banner-glass-badge accent"><i class="fa-solid fa-campground"></i> School Breaks Care</span>
-            <span class="bp-banner-glass-badge primary"><i class="fa-solid fa-clock"></i> Full-Day (8:30 AM – 5:30 PM)</span>
-            <span class="bp-banner-glass-badge secondary"><i class="fa-solid fa-sun"></i> Ages 5 – 14</span>
-          </div>
-          <h1 class="font-heading fs-1 mb-3 text-white">Seasonal Academic &amp; STEM Camps</h1>
-          <p class="bp-page-banner-lead mb-4 mx-auto text-center">
-            Keep young minds stimulated, curious, and engaged during school vacations. Our award-winning full-day camps combine morning academic skill maintenance, afternoon robotics competitions, hands-on science trials, and outdoor team sports.
-          </p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="#campRegistration" class="btn btn-bp-primary px-4 py-2">
-              <i class="fa-solid fa-calendar-plus me-2"></i>Register for Upcoming Camp
-            </a>
-            <a href="#campSchedule" class="btn btn-outline-light px-4 py-2">
-              <i class="fa-solid fa-list-check me-2"></i>View Daily Schedule
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Breadcrumb Navigation -->
-  <nav class="bg-surface border-bottom py-2" aria-label="breadcrumb">
-    <div class="container">
-      <ol class="breadcrumb mb-0 small">
-        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
-        <li class="breadcrumb-item"><a href="home-2.html" class="text-decoration-none">After-School Center</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Seasonal Camps</li>
-      </ol>
-    </div>
-  </nav>
-
-  <main id="main-content">
-    
-    <!-- Three Camp Seasons -->
-    <section class="py-5 bg-surface">
-      <div class="container">
-        <div class="text-center mb-5">
-          <span class="bp-badge bp-badge-warning mb-2">Year-Round Coverage</span>
-          <h2 class="font-heading fs-2 mb-2">Camps for Every School Vacation</h2>
-          <p class="text-muted mx-auto" style="max-width: 640px;">
-            Full-day care peace-of-mind for working parents while schools are closed. Flexible weekly enrollment with half-day and full-day options.
-          </p>
-        </div>
-
-        <div class="row g-4">
-          
-          <!-- Camp 1: Summer Camp -->
-          <div class="col-lg-4">
-            <div class="bp-card h-100 border d-flex flex-column">
-              <div class="position-relative overflow-hidden" style="height: 200px;">
-                <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=600&q=80" alt="Summer Camp" class="w-100 h-100" style="object-fit: cover;">
-                <span class="badge bg-warning text-dark fw-bold position-absolute top-0 end-0 m-3 shadow-sm">June – August</span>
-              </div>
-              <div class="p-4 d-flex flex-column flex-grow-1">
-                <span class="text-warning fw-bold small mb-1"><i class="fa-solid fa-sun me-1"></i> 10 Weekly Themed Sessions</span>
-                <h4 class="font-heading fs-5 mb-2">Summer STEM &amp; Academic Camp</h4>
-                <p class="small text-muted mb-3 flex-grow-1">
-                  Prevent the "summer learning slide". Mornings feature Singapore math and creative writing; afternoons feature robotics builds, flight simulations, and splash day recreation.
-                </p>
-                <div class="small text-muted mb-3">
-                  <div><i class="fa-solid fa-clock me-2 text-warning"></i><strong>Full-Day:</strong> 8:30 AM – 5:30 PM</div>
-                  <div><i class="fa-solid fa-tag me-2 text-success"></i><strong>Tuition:</strong> $340 / week (Multi-week savings)</div>
-                </div>
-                <div class="pt-3 border-top mt-auto">
-                  <a href="#campRegistration" class="btn btn-sm btn-bp-primary w-100">Enroll Summer Weeks</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Camp 2: Spring Break -->
-          <div class="col-lg-4">
-            <div class="bp-card h-100 border d-flex flex-column">
-              <div class="position-relative overflow-hidden" style="height: 200px;">
-                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" alt="Spring Break Camp" class="w-100 h-100" style="object-fit: cover;">
-                <span class="badge bg-success text-white position-absolute top-0 end-0 m-3 shadow-sm">April Break</span>
-              </div>
-              <div class="p-4 d-flex flex-column flex-grow-1">
-                <span class="text-success fw-bold small mb-1"><i class="fa-solid fa-seedling me-1"></i> Spring Break Week</span>
-                <h4 class="font-heading fs-5 mb-2">Spring Science &amp; Nature Pods</h4>
-                <p class="small text-muted mb-3 flex-grow-1">
-                  Eco-science challenges, solar oven cooking, plant botany microscopes, and egg drop engineering tournaments paired with spring benchmark prep.
-                </p>
-                <div class="small text-muted mb-3">
-                  <div><i class="fa-solid fa-clock me-2 text-success"></i><strong>Full-Day:</strong> 8:30 AM – 5:30 PM</div>
-                  <div><i class="fa-solid fa-tag me-2 text-success"></i><strong>Tuition:</strong> $340 / week ($75 single-day pass)</div>
-                </div>
-                <div class="pt-3 border-top mt-auto">
-                  <a href="#campRegistration" class="btn btn-sm btn-bp-primary w-100">Enroll Spring Break</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Camp 3: Winter Holiday -->
-          <div class="col-lg-4">
-            <div class="bp-card h-100 border d-flex flex-column">
-              <div class="position-relative overflow-hidden" style="height: 200px;">
-                <img src="https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=600&q=80" alt="Winter Break Camp" class="w-100 h-100" style="object-fit: cover;">
-                <span class="badge bg-primary text-white position-absolute top-0 end-0 m-3 shadow-sm">Dec – Jan</span>
-              </div>
-              <div class="p-4 d-flex flex-column flex-grow-1">
-                <span class="text-primary fw-bold small mb-1"><i class="fa-solid fa-snowflake me-1"></i> 2 Winter Weeks</span>
-                <h4 class="font-heading fs-5 mb-2">Winter Coding &amp; Robotics Quest</h4>
-                <p class="small text-muted mb-3 flex-grow-1">
-                  Cozy indoor robotics missions, Python game development, chess bootcamps, and mid-year school review. Hot cocoa nutrition breaks and holiday maker crafts.
-                </p>
-                <div class="small text-muted mb-3">
-                  <div><i class="fa-solid fa-clock me-2 text-primary"></i><strong>Full-Day:</strong> 8:30 AM – 5:30 PM</div>
-                  <div><i class="fa-solid fa-tag me-2 text-success"></i><strong>Tuition:</strong> $340 / week ($75 single-day pass)</div>
-                </div>
-                <div class="pt-3 border-top mt-auto">
-                  <a href="#campRegistration" class="btn btn-sm btn-bp-primary w-100">Enroll Winter Quest</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Daily Camp Routine Hour-by-Hour -->
-    <section class="py-5 bg-light-subtle border-top border-bottom" id="campSchedule">
-      <div class="container">
-        <div class="text-center mb-5">
-          <span class="bp-badge bp-badge-primary mb-2">Structured Day</span>
-          <h2 class="font-heading fs-2 mb-2">Sample Daily Camp Routine (Full-Day)</h2>
-          <p class="text-muted mx-auto" style="max-width: 620px;">
-            A healthy rhythm of academic challenges, collaborative engineering, healthy snacks, outdoor recreation, and creative downtime.
-          </p>
-        </div>
-
-        <div class="row g-3">
-          <div class="col-md-6 col-lg-3">
-            <div class="bp-card p-4 h-100 border bg-surface">
-              <span class="badge bg-primary text-white mb-2">8:30 – 9:00 AM</span>
-              <h6 class="font-heading mb-1">Morning Drop-off &amp; Spark</h6>
-              <p class="small text-muted mb-0">Arrival, table brainteasers, team assignments, and morning group goal setting.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="bp-card p-4 h-100 border bg-surface">
-              <span class="badge bg-secondary text-white mb-2">9:00 – 10:30 AM</span>
-              <h6 class="font-heading mb-1">Academic Skill Sprint</h6>
-              <p class="small text-muted mb-0">Singapore math drills, reading quest challenges, and creative storytelling pods.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="bp-card p-4 h-100 border bg-surface">
-              <span class="badge bg-success text-white mb-2">10:30 – 11:00 AM</span>
-              <h6 class="font-heading mb-1">Snack &amp; Outdoor Recess</h6>
-              <p class="small text-muted mb-0">Organic fresh fruits, juice, and supervised playground games at adjacent park.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="bp-card p-4 h-100 border bg-surface">
-              <span class="badge bg-purple text-white mb-2">11:00 AM – 12:30 PM</span>
-              <h6 class="font-heading mb-1">STEM Robotics Build</h6>
-              <p class="small text-muted mb-0">LEGO Spike build arena, automated obstacle missions, and sensor coding.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="bp-card p-4 h-100 border bg-surface">
-              <span class="badge bg-warning text-dark mb-2">12:30 – 1:30 PM</span>
-              <h6 class="font-heading mb-1">Lunch &amp; Half-Day Pickup</h6>
-              <p class="small text-muted mb-0">Nutritious lunch, mindful board games. Half-day student pickup window at 1:00 PM.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="bp-card p-4 h-100 border bg-surface">
-              <span class="badge bg-info text-white mb-2">1:30 – 3:00 PM</span>
-              <h6 class="font-heading mb-1">Science Lab &amp; Chemistry</h6>
-              <p class="small text-muted mb-0">Hands-on chemical reactions, microscope biology, and circuit builds.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="bp-card p-4 h-100 border bg-surface">
-              <span class="badge bg-primary text-white mb-2">3:00 – 4:30 PM</span>
-              <h6 class="font-heading mb-1">Coding &amp; Digital Art</h6>
-              <p class="small text-muted mb-0">Scratch/Python arcade game design, clay sculpting, and comic book illustration.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="bp-card p-4 h-100 border bg-surface">
-              <span class="badge bg-dark text-white mb-2">4:30 – 5:30 PM</span>
-              <h6 class="font-heading mb-1">Showcase &amp; Pickup</h6>
-              <p class="small text-muted mb-0">Student team demos, cleanup, daily certificate badges, and parent dismissal.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Online Camp Registration Form -->
-    <section class="py-5 bg-surface" id="campRegistration">
-      <div class="container" style="max-width: 860px;">
-        <div class="bp-card p-4 p-md-5 border shadow-sm">
-          <div class="text-center mb-4">
-            <span class="bp-badge bp-badge-warning mb-2">Online Registration</span>
-            <h3 class="font-heading fs-3 mb-2">Reserve Seasonal Camp Weeks</h3>
-            <p class="text-muted small">Select your weeks and package. Receive instant email confirmation and digital onboarding packet.</p>
-          </div>
-
-          <form class="needs-validation" novalidate onsubmit="event.preventDefault(); alert('Congratulations! Your camp reservation request has been submitted. Our admissions coordinator will email your welcome packet within 2 hours.'); this.reset();">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label for="campParentName" class="form-label">Parent / Guardian Name *</label>
-                <input type="text" class="form-control" id="campParentName" required placeholder="e.g. David Chen">
-              </div>
-              <div class="col-md-6">
-                <label for="campStudentName" class="form-label">Student Name *</label>
-                <input type="text" class="form-control" id="campStudentName" required placeholder="e.g. Maya Chen">
-              </div>
-              <div class="col-md-4">
-                <label for="campGrade" class="form-label">Student Age / Grade *</label>
-                <select class="form-select" id="campGrade" required>
-                  <option value="" selected disabled>Select Grade</option>
-                  <option value="k-1">Kindergarten – 1st Grade (Ages 5-6)</option>
-                  <option value="2-3">2nd – 3rd Grade (Ages 7-8)</option>
-                  <option value="4-5">4th – 5th Grade (Ages 9-10)</option>
-                  <option value="6-8">6th – 8th Grade (Ages 11-14)</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label for="campSeason" class="form-label">Camp Season *</label>
-                <select class="form-select" id="campSeason" required>
-                  <option value="summer" selected>Summer Camp (June – Aug)</option>
-                  <option value="spring">Spring Break Pods (April)</option>
-                  <option value="winter">Winter Holiday Quest (Dec – Jan)</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label for="campFormat" class="form-label">Format *</label>
-                <select class="form-select" id="campFormat" required>
-                  <option value="full" selected>Full-Day ($340/week)</option>
-                  <option value="half">Half-Day ($210/week)</option>
-                  <option value="dropin">Drop-In Single Day ($75/day)</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label for="campEmail" class="form-label">Parent Email Address *</label>
-                <input type="email" class="form-control" id="campEmail" required placeholder="parent@example.com">
-              </div>
-              <div class="col-md-6">
-                <label for="campPhone" class="form-label">Phone Number *</label>
-                <input type="tel" class="form-control" id="campPhone" required placeholder="(555) 000-0000">
-              </div>
-              <div class="col-12">
-                <label for="campDiet" class="form-label">Allergies or Medical Notes</label>
-                <input type="text" class="form-control" id="campDiet" placeholder="Nut-free facility. List any medication or dietary requirements.">
-              </div>
-              <div class="col-12 mt-4">
-                <button type="submit" class="btn btn-bp-primary w-100 py-3 fw-bold">
-                  <i class="fa-solid fa-check-circle me-2"></i>Complete Camp Registration
-                </button>
-                <div class="d-flex justify-content-between text-muted small mt-2">
-                  <span><i class="fa-solid fa-lock me-1"></i> Sibling Discount: 15% off 2nd child</span>
-                  <span><i class="fa-solid fa-rotate-left me-1"></i> Full refund up to 14 days prior</span>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bottom High-Impact CTA -->
-    <section class="py-5 bg-warning text-dark text-center">
-      <div class="container py-3">
-        <h2 class="font-heading display-6 fw-bold mb-3">Make School Holidays Fun, Safe &amp; Enriching</h2>
-        <p class="lead text-dark opacity-90 mx-auto mb-4" style="max-width: 640px;">
-          Spaces fill fast every summer and spring break. Reserve your student's spot early to secure multi-week package savings.
-        </p>
-        <div class="d-flex flex-wrap justify-content-center gap-3">
-          <a href="#campRegistration" class="btn btn-dark fw-bold px-4 py-3 shadow">
-            <i class="fa-solid fa-calendar-check me-2"></i>Book Camp Spot Online
-          </a>
-          <a href="pricing-enrollment.html" class="btn btn-outline-dark px-4 py-3">
-            <i class="fa-solid fa-receipt me-2"></i>View Pricing &amp; Sibling Savings
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-  <!-- Footer -->
-  <footer class="bp-footer" data-bs-theme="dark">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-4">
-          <a class="bp-brand text-white mb-3" href="index.html">
-            <div class="bp-brand-icon">
-              <svg class="bp-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
-              </svg>
-            </div>
-            <div>
-              <span>BrightPath</span>
-              <span class="d-block text-primary small fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase;">Homework &amp; Enrichment</span>
-            </div>
-          </a>
-          <p class="small text-muted mb-4">
-            Structured after-school homework assistance, 1:4 learning pods, safe school pickup, and STEM enrichment for K-12 students. Reclaiming calm evenings for busy families.
-          </p>
-          <div class="d-flex gap-2">
-            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/i/flow/login" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-2">
-          <h5 class="bp-footer-title">Programs</h5>
-          <ul class="bp-footer-links">
-            <li><a href="homework-tutoring.html">Homework Help &amp; Tutoring</a></li>
-            <li><a href="academic-enrichment.html">Academic Enrichment</a></li>
-            <li><a href="enrichment-clubs.html">Enrichment Clubs</a></li>
-            <li><a href="seasonal-camps.html">Seasonal Camps</a></li>
-            <li><a href="programs.html">Curriculum Tracks</a></li>
-          </ul>
-        </div>
-
-        <div class="col-6 col-lg-2">
-          <h5 class="bp-footer-title">Center Info</h5>
-          <ul class="bp-footer-links">
-            <li><a href="schedule-transportation.html">Schedule &amp; Pickup</a></li>
-            <li><a href="safety-staff.html">Safety &amp; Staff</a></li>
-            <li><a href="pricing-enrollment.html">Tuition &amp; Pricing</a></li>
-            <li><a href="tutors.html">Certified Tutors</a></li>
-            <li><a href="about.html">About BrightPath</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4">
-          <h5 class="bp-footer-title">Visit &amp; Contact</h5>
-          <p class="small text-muted mb-2"><i class="fa-solid fa-location-dot me-2 text-primary"></i>452 Learning Lane, Suite 100, Metro City, CA 94103</p>
-          <p class="small text-muted mb-2"><i class="fa-solid fa-phone me-2 text-primary"></i>(800) 555-0199</p>
-          <p class="small text-muted mb-2"><i class="fa-solid fa-envelope me-2 text-primary"></i>support@brightpathacademy.edu</p>
-          <p class="small text-muted"><i class="fa-solid fa-clock me-2 text-primary"></i>Mon–Fri 2:00 PM – 6:30 PM (Ext. to 7:00 PM)</p>
-        </div>
-      </div>
-
-      <div class="bp-footer-bottom text-center">
-        <p class="mb-0 text-muted small">© 2026 BrightPath Learning Academy. All rights reserved. DOJ &amp; FBI Live Scan Background-Checked Facility.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Interactive Modal: Free Assessment Booking -->
-  <div class="modal fade" id="trialBookingModal" tabindex="-1" aria-labelledby="trialBookingModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header border-bottom">
-          <div class="d-flex align-items-center gap-2">
-            <div class="bp-brand-icon" style="width: 34px; height: 34px; font-size: 1rem;">
-              <i class="fa-solid fa-calendar-check"></i>
-            </div>
-            <h5 class="modal-title font-heading mb-0" id="trialBookingModalLabel">Book a Free Academic Assessment</h5>
-          </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4">
-          <p class="text-muted small mb-4">Complete this quick form to reserve a complimentary 60-minute assessment and trial afternoon with 1:4 homework assistance.</p>
-          <form class="needs-validation" novalidate id="assessmentBookingForm" onsubmit="event.preventDefault(); alert('Thank you! Your assessment session has been requested. Our admissions director will call you within 2 business hours.'); const m = bootstrap.Modal.getInstance(document.getElementById('trialBookingModal')); if(m) m.hide();">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label for="assessParentName" class="form-label">Parent / Guardian Name *</label>
-                <input type="text" class="form-control" id="assessParentName" required placeholder="e.g. Sarah Miller">
-                <div class="invalid-feedback">Please enter your name.</div>
-              </div>
-              <div class="col-md-6">
-                <label for="assessStudentName" class="form-label">Student Name *</label>
-                <input type="text" class="form-control" id="assessStudentName" required placeholder="e.g. Leo Miller">
-                <div class="invalid-feedback">Please enter student name.</div>
-              </div>
-              <div class="col-md-6">
-                <label for="assessGrade" class="form-label">Student Grade *</label>
-                <select class="form-select" id="assessGrade" required>
-                  <option value="" selected disabled>Select Grade Level</option>
-                  <option value="k-2">Kindergarten – 2nd Grade</option>
-                  <option value="3-5">3rd – 5th Grade (Elementary)</option>
-                  <option value="6-8">6th – 8th Grade (Middle School)</option>
-                  <option value="9-12">9th – 12th Grade (High School)</option>
-                </select>
-                <div class="invalid-feedback">Please select a grade.</div>
-              </div>
-              <div class="col-md-6">
-                <label for="assessSchool" class="form-label">Current School *</label>
-                <input type="text" class="form-control" id="assessSchool" required placeholder="e.g. Lincoln Elementary">
-                <div class="invalid-feedback">Please enter student school.</div>
-              </div>
-              <div class="col-md-6">
-                <label for="assessPhone" class="form-label">Phone Number *</label>
-                <input type="tel" class="form-control" id="assessPhone" required placeholder="(555) 000-0000">
-                <div class="invalid-feedback">Please enter contact phone.</div>
-              </div>
-              <div class="col-md-6">
-                <label for="assessEmail" class="form-label">Email Address *</label>
-                <input type="email" class="form-control" id="assessEmail" required placeholder="parent@example.com">
-                <div class="invalid-feedback">Please enter valid email.</div>
-              </div>
-              <div class="col-12">
-                <label for="assessGoal" class="form-label">Primary Support Needed</label>
-                <select class="form-select" id="assessGoal">
-                  <option value="homework" selected>Daily Homework Help &amp; Completion</option>
-                  <option value="enrichment">Foundational Math &amp; Reading Skills</option>
-                  <option value="clubs">STEM Robotics &amp; Coding Clubs</option>
-                  <option value="all-inclusive">Complete After-School Care + School Pickup</option>
-                </select>
-              </div>
-              <div class="col-12 mt-4">
-                <button type="submit" class="btn btn-bp-primary w-100 py-2 fw-semibold">
-                  <i class="fa-solid fa-calendar-check me-2"></i>Confirm Free Assessment Request
-                </button>
-                <small class="text-muted d-block text-center mt-2">100% Free • No long-term commitments required</small>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/main.js"></script>
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seasonal Camps & Break Care | BrightPath Academy</title>
+  <meta name="description" content="Full-day Summer, Spring Break, and Winter Holiday camps featuring STEM robotics tournaments, science discovery labs, academic skill sprints, and outdoor recreation.">
+  <meta name="keywords" content="summer camp, spring break camp for kids, winter break camp, stem camps, full day camp, school holiday childcare">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Seasonal Camps & Break Care | BrightPath Academy">
+  <meta property="og:description" content="Full-day Summer, Spring Break, and Winter Holiday camps featuring STEM robotics tournaments, science discovery labs, academic skill sprints, and outdoor recreation.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- Main Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="bg-body text-main">
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <div class="bp-top-bar bg-primary text-white py-2 small d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="fa-solid fa-clock me-1 text-warning"></i> <strong>Hours:</strong> Mon–Fri 2:00 PM – 6:30 PM (Extended Care to 7:00 PM)</span>
+        <span class="opacity-50">•</span>
+        <span><i class="fa-solid fa-van-shuttle me-1 text-warning"></i> <strong>School Pickup:</strong> Available from 8+ Partner Schools</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:8005550199" class="text-white text-decoration-none"><i class="fa-solid fa-phone me-1"></i> (800) 555-0199</a>
+        <span class="opacity-50">|</span>
+        <a href="pricing-enrollment.html" class="text-white text-decoration-none fw-semibold"><i class="fa-solid fa-sparkles me-1"></i> Free Academic Assessment</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+    <!-- Main Navigation Header -->
+  <nav class="navbar navbar-expand-lg bp-navbar sticky-top" aria-label="Main Navigation">
+    <div class="bp-navbar-container">
+      <!-- Brand Logo -->
+      <a class="bp-brand" href="index.html">
+        <div class="bp-brand-icon">
+          <svg class="bp-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          </svg>
+        </div>
+        <div>
+          <span>BrightPath</span>
+          <span class="d-block text-primary small fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase;">Learning Academy</span>
+        </div>
+      </a>
+
+      <!-- Navbar Toggler for Mobile -->
+      <button class="navbar-toggler bp-navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bp-toggler-bar"></span>
+        <span class="bp-toggler-bar"></span>
+        <span class="bp-toggler-bar"></span>
+      </button>
+
+      <!-- Navigation Links (ONLY: Home, Programs, Tutor, Study Tips, Contact, Parent) -->
+      <div class="collapse navbar-collapse" id="navbarMainContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link active" href="programs.html" aria-current="page">Programs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link" href="tutors.html">Tutor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link" href="blog.html">Study Tips</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bp-nav-link" href="dashboard.html">Parent</a>
+          </li>
+        </ul>
+
+        <!-- Action Controls & Portals -->
+        <div class="bp-controls-group">
+          <!-- RTL Layout Switcher -->
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle Right-to-Left Layout">
+            <span class="rtl-status-label">RTL</span>
+          </button>
+
+          <!-- Dark/Light Mode Switcher -->
+          <button class="bp-icon-btn theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+            <span class="theme-toggle-svg-wrap">
+              <svg class="bp-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </span>
+          </button>
+
+          <!-- Parent Login Portal Button -->
+          <a href="login.html" class="btn btn-bp-outline btn-sm">
+            <span>Sign In</span>
+          </a>
+          <!-- Register CTA Button -->
+          <a href="register.html" class="btn btn-bp-primary btn-sm d-none d-sm-inline-flex">
+            <span>Free Trial Pass</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Banner -->
+  <header class="bp-page-banner">
+    <div class="bp-page-banner-bg">
+      <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=1920&q=80" 
+           alt="Kids laughing and doing science experiment in summer camp" class="bp-page-banner-bg-img" loading="eager">
+      <div class="bp-page-banner-overlay"></div>
+    </div>
+    <div class="container text-center">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10 col-xl-8 mx-auto text-center">
+          <div class="d-inline-flex justify-content-center align-items-center gap-2 mb-3 flex-wrap">
+            <span class="bp-banner-glass-badge accent"><i class="fa-solid fa-campground"></i> School Breaks Care</span>
+            <span class="bp-banner-glass-badge primary"><i class="fa-solid fa-clock"></i> Full-Day (8:30 AM – 5:30 PM)</span>
+            <span class="bp-banner-glass-badge secondary"><i class="fa-solid fa-sun"></i> Ages 5 – 14</span>
+          </div>
+          <h1 class="font-heading fs-1 mb-3 text-white">Seasonal Academic &amp; STEM Camps</h1>
+          <p class="bp-page-banner-lead mb-4 mx-auto text-center">
+            Keep young minds stimulated, curious, and engaged during school vacations. Our award-winning full-day camps combine morning academic skill maintenance, afternoon robotics competitions, hands-on science trials, and outdoor team sports.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#campRegistration" class="btn btn-bp-primary px-4 py-2">
+              <i class="fa-solid fa-calendar-plus me-2"></i>Register for Upcoming Camp
+            </a>
+            <a href="#campSchedule" class="btn btn-outline-light px-4 py-2">
+              <i class="fa-solid fa-list-check me-2"></i>View Daily Schedule
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="bg-surface border-bottom py-2" aria-label="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb mb-0 small">
+        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+        <li class="breadcrumb-item"><a href="home-2.html" class="text-decoration-none">After-School Center</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Seasonal Camps</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    
+    <!-- Three Camp Seasons -->
+    <section class="py-5 bg-surface">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="bp-badge bp-badge-warning mb-2">Year-Round Coverage</span>
+          <h2 class="font-heading fs-2 mb-2">Camps for Every School Vacation</h2>
+          <p class="text-muted mx-auto" style="max-width: 640px;">
+            Full-day care peace-of-mind for working parents while schools are closed. Flexible weekly enrollment with half-day and full-day options.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          
+          <!-- Camp 1: Summer Camp -->
+          <div class="col-lg-4">
+            <div class="bp-card h-100 border d-flex flex-column">
+              <div class="position-relative overflow-hidden" style="height: 200px;">
+                <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=600&q=80" alt="Summer Camp" class="w-100 h-100" style="object-fit: cover;">
+                <span class="badge bg-warning text-dark fw-bold position-absolute top-0 end-0 m-3 shadow-sm">June – August</span>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <span class="text-warning fw-bold small mb-1"><i class="fa-solid fa-sun me-1"></i> 10 Weekly Themed Sessions</span>
+                <h4 class="font-heading fs-5 mb-2">Summer STEM &amp; Academic Camp</h4>
+                <p class="small text-muted mb-3 flex-grow-1">
+                  Prevent the "summer learning slide". Mornings feature Singapore math and creative writing; afternoons feature robotics builds, flight simulations, and splash day recreation.
+                </p>
+                <div class="small text-muted mb-3">
+                  <div><i class="fa-solid fa-clock me-2 text-warning"></i><strong>Full-Day:</strong> 8:30 AM – 5:30 PM</div>
+                  <div><i class="fa-solid fa-tag me-2 text-success"></i><strong>Tuition:</strong> $340 / week (Multi-week savings)</div>
+                </div>
+                <div class="pt-3 border-top mt-auto">
+                  <a href="#campRegistration" class="btn btn-sm btn-bp-primary w-100">Enroll Summer Weeks</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Camp 2: Spring Break -->
+          <div class="col-lg-4">
+            <div class="bp-card h-100 border d-flex flex-column">
+              <div class="position-relative overflow-hidden" style="height: 200px;">
+                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" alt="Spring Break Camp" class="w-100 h-100" style="object-fit: cover;">
+                <span class="badge bg-success text-white position-absolute top-0 end-0 m-3 shadow-sm">April Break</span>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <span class="text-success fw-bold small mb-1"><i class="fa-solid fa-seedling me-1"></i> Spring Break Week</span>
+                <h4 class="font-heading fs-5 mb-2">Spring Science &amp; Nature Pods</h4>
+                <p class="small text-muted mb-3 flex-grow-1">
+                  Eco-science challenges, solar oven cooking, plant botany microscopes, and egg drop engineering tournaments paired with spring benchmark prep.
+                </p>
+                <div class="small text-muted mb-3">
+                  <div><i class="fa-solid fa-clock me-2 text-success"></i><strong>Full-Day:</strong> 8:30 AM – 5:30 PM</div>
+                  <div><i class="fa-solid fa-tag me-2 text-success"></i><strong>Tuition:</strong> $340 / week ($75 single-day pass)</div>
+                </div>
+                <div class="pt-3 border-top mt-auto">
+                  <a href="#campRegistration" class="btn btn-sm btn-bp-primary w-100">Enroll Spring Break</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Camp 3: Winter Holiday -->
+          <div class="col-lg-4">
+            <div class="bp-card h-100 border d-flex flex-column">
+              <div class="position-relative overflow-hidden" style="height: 200px;">
+                <img src="https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=600&q=80" alt="Winter Break Camp" class="w-100 h-100" style="object-fit: cover;">
+                <span class="badge bg-primary text-white position-absolute top-0 end-0 m-3 shadow-sm">Dec – Jan</span>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <span class="text-primary fw-bold small mb-1"><i class="fa-solid fa-snowflake me-1"></i> 2 Winter Weeks</span>
+                <h4 class="font-heading fs-5 mb-2">Winter Coding &amp; Robotics Quest</h4>
+                <p class="small text-muted mb-3 flex-grow-1">
+                  Cozy indoor robotics missions, Python game development, chess bootcamps, and mid-year school review. Hot cocoa nutrition breaks and holiday maker crafts.
+                </p>
+                <div class="small text-muted mb-3">
+                  <div><i class="fa-solid fa-clock me-2 text-primary"></i><strong>Full-Day:</strong> 8:30 AM – 5:30 PM</div>
+                  <div><i class="fa-solid fa-tag me-2 text-success"></i><strong>Tuition:</strong> $340 / week ($75 single-day pass)</div>
+                </div>
+                <div class="pt-3 border-top mt-auto">
+                  <a href="#campRegistration" class="btn btn-sm btn-bp-primary w-100">Enroll Winter Quest</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Daily Camp Routine Hour-by-Hour -->
+    <section class="py-5 bg-light-subtle border-top border-bottom" id="campSchedule">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="bp-badge bp-badge-primary mb-2">Structured Day</span>
+          <h2 class="font-heading fs-2 mb-2">Sample Daily Camp Routine (Full-Day)</h2>
+          <p class="text-muted mx-auto" style="max-width: 620px;">
+            A healthy rhythm of academic challenges, collaborative engineering, healthy snacks, outdoor recreation, and creative downtime.
+          </p>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 border bg-surface">
+              <span class="badge bg-primary text-white mb-2">8:30 – 9:00 AM</span>
+              <h6 class="font-heading mb-1">Morning Drop-off &amp; Spark</h6>
+              <p class="small text-muted mb-0">Arrival, table brainteasers, team assignments, and morning group goal setting.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 border bg-surface">
+              <span class="badge bg-secondary text-white mb-2">9:00 – 10:30 AM</span>
+              <h6 class="font-heading mb-1">Academic Skill Sprint</h6>
+              <p class="small text-muted mb-0">Singapore math drills, reading quest challenges, and creative storytelling pods.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 border bg-surface">
+              <span class="badge bg-success text-white mb-2">10:30 – 11:00 AM</span>
+              <h6 class="font-heading mb-1">Snack &amp; Outdoor Recess</h6>
+              <p class="small text-muted mb-0">Organic fresh fruits, juice, and supervised playground games at adjacent park.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 border bg-surface">
+              <span class="badge bg-purple text-white mb-2">11:00 AM – 12:30 PM</span>
+              <h6 class="font-heading mb-1">STEM Robotics Build</h6>
+              <p class="small text-muted mb-0">LEGO Spike build arena, automated obstacle missions, and sensor coding.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 border bg-surface">
+              <span class="badge bg-warning text-dark mb-2">12:30 – 1:30 PM</span>
+              <h6 class="font-heading mb-1">Lunch &amp; Half-Day Pickup</h6>
+              <p class="small text-muted mb-0">Nutritious lunch, mindful board games. Half-day student pickup window at 1:00 PM.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 border bg-surface">
+              <span class="badge bg-info text-white mb-2">1:30 – 3:00 PM</span>
+              <h6 class="font-heading mb-1">Science Lab &amp; Chemistry</h6>
+              <p class="small text-muted mb-0">Hands-on chemical reactions, microscope biology, and circuit builds.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 border bg-surface">
+              <span class="badge bg-primary text-white mb-2">3:00 – 4:30 PM</span>
+              <h6 class="font-heading mb-1">Coding &amp; Digital Art</h6>
+              <p class="small text-muted mb-0">Scratch/Python arcade game design, clay sculpting, and comic book illustration.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="bp-card p-4 h-100 border bg-surface">
+              <span class="badge bg-dark text-white mb-2">4:30 – 5:30 PM</span>
+              <h6 class="font-heading mb-1">Showcase &amp; Pickup</h6>
+              <p class="small text-muted mb-0">Student team demos, cleanup, daily certificate badges, and parent dismissal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Online Camp Registration Form -->
+    <section class="py-5 bg-surface" id="campRegistration">
+      <div class="container" style="max-width: 860px;">
+        <div class="bp-card p-4 p-md-5 border shadow-sm">
+          <div class="text-center mb-4">
+            <span class="bp-badge bp-badge-warning mb-2">Online Registration</span>
+            <h3 class="font-heading fs-3 mb-2">Reserve Seasonal Camp Weeks</h3>
+            <p class="text-muted small">Select your weeks and package. Receive instant email confirmation and digital onboarding packet.</p>
+          </div>
+
+          <form class="needs-validation" novalidate onsubmit="event.preventDefault(); alert('Congratulations! Your camp reservation request has been submitted. Our admissions coordinator will email your welcome packet within 2 hours.'); this.reset();">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="campParentName" class="form-label">Parent / Guardian Name *</label>
+                <input type="text" class="form-control" id="campParentName" required placeholder="e.g. David Chen">
+              </div>
+              <div class="col-md-6">
+                <label for="campStudentName" class="form-label">Student Name *</label>
+                <input type="text" class="form-control" id="campStudentName" required placeholder="e.g. Maya Chen">
+              </div>
+              <div class="col-md-4">
+                <label for="campGrade" class="form-label">Student Age / Grade *</label>
+                <select class="form-select" id="campGrade" required>
+                  <option value="" selected disabled>Select Grade</option>
+                  <option value="k-1">Kindergarten – 1st Grade (Ages 5-6)</option>
+                  <option value="2-3">2nd – 3rd Grade (Ages 7-8)</option>
+                  <option value="4-5">4th – 5th Grade (Ages 9-10)</option>
+                  <option value="6-8">6th – 8th Grade (Ages 11-14)</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="campSeason" class="form-label">Camp Season *</label>
+                <select class="form-select" id="campSeason" required>
+                  <option value="summer" selected>Summer Camp (June – Aug)</option>
+                  <option value="spring">Spring Break Pods (April)</option>
+                  <option value="winter">Winter Holiday Quest (Dec – Jan)</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="campFormat" class="form-label">Format *</label>
+                <select class="form-select" id="campFormat" required>
+                  <option value="full" selected>Full-Day ($340/week)</option>
+                  <option value="half">Half-Day ($210/week)</option>
+                  <option value="dropin">Drop-In Single Day ($75/day)</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="campEmail" class="form-label">Parent Email Address *</label>
+                <input type="email" class="form-control" id="campEmail" required placeholder="parent@example.com">
+              </div>
+              <div class="col-md-6">
+                <label for="campPhone" class="form-label">Phone Number *</label>
+                <input type="tel" class="form-control" id="campPhone" required placeholder="(555) 000-0000">
+              </div>
+              <div class="col-12">
+                <label for="campDiet" class="form-label">Allergies or Medical Notes</label>
+                <input type="text" class="form-control" id="campDiet" placeholder="Nut-free facility. List any medication or dietary requirements.">
+              </div>
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-bp-primary w-100 py-3 fw-bold">
+                  <i class="fa-solid fa-check-circle me-2"></i>Complete Camp Registration
+                </button>
+                <div class="d-flex justify-content-between text-muted small mt-2">
+                  <span><i class="fa-solid fa-lock me-1"></i> Sibling Discount: 15% off 2nd child</span>
+                  <span><i class="fa-solid fa-rotate-left me-1"></i> Full refund up to 14 days prior</span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom High-Impact CTA -->
+    <section class="py-5 bg-warning text-dark text-center">
+      <div class="container py-3">
+        <h2 class="font-heading display-6 fw-bold mb-3">Make School Holidays Fun, Safe &amp; Enriching</h2>
+        <p class="lead text-dark opacity-90 mx-auto mb-4" style="max-width: 640px;">
+          Spaces fill fast every summer and spring break. Reserve your student's spot early to secure multi-week package savings.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="#campRegistration" class="btn btn-dark fw-bold px-4 py-3 shadow">
+            <i class="fa-solid fa-calendar-check me-2"></i>Book Camp Spot Online
+          </a>
+          <a href="pricing-enrollment.html" class="btn btn-outline-dark px-4 py-3">
+            <i class="fa-solid fa-receipt me-2"></i>View Pricing &amp; Sibling Savings
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- Footer -->
+  <footer class="bp-footer" data-bs-theme="dark">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="bp-brand text-white mb-3" href="index.html">
+            <div class="bp-brand-icon">
+              <svg class="bp-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+              </svg>
+            </div>
+            <div>
+              <span>BrightPath</span>
+              <span class="d-block text-primary small fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase;">Homework &amp; Enrichment</span>
+            </div>
+          </a>
+          <p class="small text-muted mb-4">
+            Structured after-school homework assistance, 1:4 learning pods, safe school pickup, and STEM enrichment for K-12 students. Reclaiming calm evenings for busy families.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/i/flow/login" target="_blank" rel="noopener noreferrer" class="bp-icon-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="bp-footer-title">Programs</h5>
+          <ul class="bp-footer-links">
+            <li><a href="homework-tutoring.html">Homework Help &amp; Tutoring</a></li>
+            <li><a href="academic-enrichment.html">Academic Enrichment</a></li>
+            <li><a href="enrichment-clubs.html">Enrichment Clubs</a></li>
+            <li><a href="seasonal-camps.html">Seasonal Camps</a></li>
+            <li><a href="programs.html">Curriculum Tracks</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="bp-footer-title">Center Info</h5>
+          <ul class="bp-footer-links">
+            <li><a href="schedule-transportation.html">Schedule &amp; Pickup</a></li>
+            <li><a href="safety-staff.html">Safety &amp; Staff</a></li>
+            <li><a href="pricing-enrollment.html">Tuition &amp; Pricing</a></li>
+            <li><a href="tutors.html">Certified Tutors</a></li>
+            <li><a href="about.html">About BrightPath</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h5 class="bp-footer-title">Visit &amp; Contact</h5>
+          <p class="small text-muted mb-2"><i class="fa-solid fa-location-dot me-2 text-primary"></i>452 Learning Lane, Suite 100, Metro City, CA 94103</p>
+          <p class="small text-muted mb-2"><i class="fa-solid fa-phone me-2 text-primary"></i>(800) 555-0199</p>
+          <p class="small text-muted mb-2"><i class="fa-solid fa-envelope me-2 text-primary"></i>support@brightpathacademy.edu</p>
+          <p class="small text-muted"><i class="fa-solid fa-clock me-2 text-primary"></i>Mon–Fri 2:00 PM – 6:30 PM (Ext. to 7:00 PM)</p>
+        </div>
+      </div>
+
+      <div class="bp-footer-bottom text-center">
+        <p class="mb-0 text-muted small">© 2026 BrightPath Learning Academy. All rights reserved. DOJ &amp; FBI Live Scan Background-Checked Facility.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Modal: Free Assessment Booking -->
+  <div class="modal fade" id="trialBookingModal" tabindex="-1" aria-labelledby="trialBookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <div class="bp-brand-icon" style="width: 34px; height: 34px; font-size: 1rem;">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <h5 class="modal-title font-heading mb-0" id="trialBookingModalLabel">Book a Free Academic Assessment</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small mb-4">Complete this quick form to reserve a complimentary 60-minute assessment and trial afternoon with 1:4 homework assistance.</p>
+          <form class="needs-validation" novalidate id="assessmentBookingForm" onsubmit="event.preventDefault(); alert('Thank you! Your assessment session has been requested. Our admissions director will call you within 2 business hours.'); const m = bootstrap.Modal.getInstance(document.getElementById('trialBookingModal')); if(m) m.hide();">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="assessParentName" class="form-label">Parent / Guardian Name *</label>
+                <input type="text" class="form-control" id="assessParentName" required placeholder="e.g. Sarah Miller">
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="assessStudentName" class="form-label">Student Name *</label>
+                <input type="text" class="form-control" id="assessStudentName" required placeholder="e.g. Leo Miller">
+                <div class="invalid-feedback">Please enter student name.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="assessGrade" class="form-label">Student Grade *</label>
+                <select class="form-select" id="assessGrade" required>
+                  <option value="" selected disabled>Select Grade Level</option>
+                  <option value="k-2">Kindergarten – 2nd Grade</option>
+                  <option value="3-5">3rd – 5th Grade (Elementary)</option>
+                  <option value="6-8">6th – 8th Grade (Middle School)</option>
+                  <option value="9-12">9th – 12th Grade (High School)</option>
+                </select>
+                <div class="invalid-feedback">Please select a grade.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="assessSchool" class="form-label">Current School *</label>
+                <input type="text" class="form-control" id="assessSchool" required placeholder="e.g. Lincoln Elementary">
+                <div class="invalid-feedback">Please enter student school.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="assessPhone" class="form-label">Phone Number *</label>
+                <input type="tel" class="form-control" id="assessPhone" required placeholder="(555) 000-0000">
+                <div class="invalid-feedback">Please enter contact phone.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="assessEmail" class="form-label">Email Address *</label>
+                <input type="email" class="form-control" id="assessEmail" required placeholder="parent@example.com">
+                <div class="invalid-feedback">Please enter valid email.</div>
+              </div>
+              <div class="col-12">
+                <label for="assessGoal" class="form-label">Primary Support Needed</label>
+                <select class="form-select" id="assessGoal">
+                  <option value="homework" selected>Daily Homework Help &amp; Completion</option>
+                  <option value="enrichment">Foundational Math &amp; Reading Skills</option>
+                  <option value="clubs">STEM Robotics &amp; Coding Clubs</option>
+                  <option value="all-inclusive">Complete After-School Care + School Pickup</option>
+                </select>
+              </div>
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-bp-primary w-100 py-2 fw-semibold">
+                  <i class="fa-solid fa-calendar-check me-2"></i>Confirm Free Assessment Request
+                </button>
+                <small class="text-muted d-block text-center mt-2">100% Free • No long-term commitments required</small>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
