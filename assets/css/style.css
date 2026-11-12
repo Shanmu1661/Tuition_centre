@@ -4076,9 +4076,11 @@ section.bg-light-subtle.border-top.border-light-subtle .col-md-4 > .bp-card .bor
 
     90deg,
 
-    rgba(255, 255, 255, 0.70) 0%,
+    rgba(255, 255, 255, 0.94) 0%,
 
-    rgba(255, 255, 255, 0.48) 52%,
+    rgba(255, 255, 255, 0.86) 45%,
+
+    rgba(248, 250, 252, 0.55) 72%,
 
     rgba(240, 246, 255, 0.22) 100%
 
@@ -4192,11 +4194,21 @@ section.bg-light-subtle.border-top.border-light-subtle .col-md-4 > .bp-card .bor
 
 .bp-hero-highlight {
 
-  background: linear-gradient(135deg, var(--bp-primary) 0%, #3b82f6 50%, var(--bp-secondary) 100%);
+  color: #1d4ed8;
+
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 45%, #047857 100%);
 
   -webkit-background-clip: text;
 
+  background-clip: text;
+
   -webkit-text-fill-color: transparent;
+
+  text-shadow: none !important;
+
+  font-weight: 800;
+
+  display: inline;
 
 }
 
