@@ -3976,3 +3976,27 @@ img, svg, canvas, video {
   transform: translateY(-5px);
   box-shadow: 0 18px 36px rgba(37, 99, 235, 0.15) !important;
 }
+
+/* Educator Vetting Cards with Images */
+.bp-vetting-card {
+  transition: transform var(--bp-transition, 0.3s ease), box-shadow var(--bp-transition, 0.3s ease);
+}
+
+.bp-vetting-img-wrapper {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  border-top-left-radius: calc(var(--bp-radius-lg, 16px) - 1px);
+  border-top-right-radius: calc(var(--bp-radius-lg, 16px) - 1px);
+}
+
+.bp-vetting-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.bp-card:hover .bp-vetting-img {
+  transform: scale(1.06);
+}
