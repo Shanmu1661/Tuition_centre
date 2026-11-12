@@ -1263,3 +1263,21 @@
   background-color: var(--bp-primary) !important;
   color: #ffffff !important;
 }
+
+
+/* Dark Mode: Login Visual Column */
+[data-theme="dark"] .bp-login-visual-overlay,
+[data-bs-theme="dark"] .bp-login-visual-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.68) 0%,
+    rgba(15, 23, 42, 0.48) 45%,
+    rgba(15, 23, 42, 0.82) 100%
+  ) !important;
+}
+
+[data-theme="dark"] .bp-login-glass-item,
+[data-bs-theme="dark"] .bp-login-glass-item {
+  background: rgba(15, 23, 42, 0.60) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}

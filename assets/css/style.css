@@ -8344,3 +8344,59 @@ img, svg, canvas, video {
 .bp-pairing-card:hover .bp-step-img {
   transform: scale(1.06);
 }
+
+
+/* Login Visual Column with High-Visibility Background */
+.bp-login-visual {
+  position: relative;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+.bp-login-visual-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=85');
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  filter: brightness(105%) contrast(108%);
+  z-index: 0;
+  transition: transform 0.6s ease;
+}
+
+.bp-login-visual:hover .bp-login-visual-bg {
+  transform: scale(1.04);
+}
+
+.bp-login-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.58) 0%,
+    rgba(30, 58, 138, 0.38) 45%,
+    rgba(15, 23, 42, 0.72) 100%
+  );
+  z-index: 1;
+}
+
+.bp-login-visual-content {
+  position: relative;
+  z-index: 2;
+}
+
+.bp-login-glass-item {
+  background: rgba(15, 23, 42, 0.42);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 0.65rem 0.85rem;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.bp-login-glass-item:hover {
+  background: rgba(15, 23, 42, 0.58);
+  transform: translateX(4px);
+}

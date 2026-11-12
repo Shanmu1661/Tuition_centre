@@ -113,41 +113,46 @@
             <div class="row g-0">
               
               <!-- Left Column: Visual & Benefits -->
-              <div class="col-lg-5 d-none d-lg-block position-relative text-white p-5 d-flex flex-column justify-content-between" 
-                   style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.95), rgba(37, 99, 235, 0.9)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80') center/cover;">
-                
-                <div class="text-center">
-                  <span class="badge bg-white text-primary fw-bold text-uppercase px-3 py-2 mb-3">Family Access</span>
-                  <h2 class="font-heading text-white fs-3 mb-3">Your Window into After-School Progress</h2>
-                  <p class="text-white opacity-75 small mx-auto">
-                    Check daily tutor notes, manage session bookings, and track homework completion in real time.
-                  </p>
-                </div>
-
-                <div class="d-flex flex-column gap-3 my-4">
-                  <div class="d-flex align-items-center gap-3">
-                    <div class="rounded-circle bg-white bg-opacity-20 p-2 text-center" style="width: 36px; height: 36px;">
-                      <i class="fa-solid fa-check text-warning"></i>
-                    </div>
-                    <span class="small">Daily verified homework logs & tutor feedback</span>
-                  </div>
-                  <div class="d-flex align-items-center gap-3">
-                    <div class="rounded-circle bg-white bg-opacity-20 p-2 text-center" style="width: 36px; height: 36px;">
-                      <i class="fa-solid fa-clock text-warning"></i>
-                    </div>
-                    <span class="small">1-Click booking for after-school session slots</span>
-                  </div>
-                  <div class="d-flex align-items-center gap-3">
-                    <div class="rounded-circle bg-white bg-opacity-20 p-2 text-center" style="width: 36px; height: 36px;">
-                      <i class="fa-solid fa-shield-halved text-warning"></i>
-                    </div>
-                    <span class="small">Live attendance check-in & check-out logs</span>
-                  </div>
-                </div>
-
-                <div class="pt-3 border-top border-white border-opacity-25 small text-white opacity-75">
-                  <i class="fa-solid fa-lock me-1"></i> FERPA & COPPA Compliant Protected Portal
-                </div>
+              <div class="col-lg-5 d-none d-lg-block position-relative text-white p-5 d-flex flex-column justify-content-between bp-login-visual">
+                <!-- High-Visibility Background Image Layer -->
+                <div class="bp-login-visual-bg" aria-hidden="true"></div>
+                <!-- Ambient Gradient Overlay -->
+                <div class="bp-login-visual-overlay" aria-hidden="true"></div>
+
+                <div class="bp-login-visual-content">
+                  <div class="text-center">
+                    <span class="badge bg-white text-primary fw-bold text-uppercase px-3 py-2 mb-3 shadow-sm">Family Access</span>
+                    <h2 class="font-heading text-white fs-3 mb-3" style="text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);">Your Window into After-School Progress</h2>
+                    <p class="text-white small mx-auto mb-0" style="text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85); opacity: 0.95;">
+                      Check daily tutor notes, manage session bookings, and track homework completion in real time.
+                    </p>
+                  </div>
+
+                  <div class="d-flex flex-column gap-3 my-4">
+                    <div class="d-flex align-items-center gap-3 bp-login-glass-item">
+                      <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm" style="width: 36px; height: 36px;">
+                        <i class="fa-solid fa-check fw-bold"></i>
+                      </div>
+                      <span class="small fw-semibold" style="text-shadow: 0 1px 3px rgba(0,0,0,0.85);">Daily verified homework logs & tutor feedback</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 bp-login-glass-item">
+                      <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm" style="width: 36px; height: 36px;">
+                        <i class="fa-solid fa-clock fw-bold"></i>
+                      </div>
+                      <span class="small fw-semibold" style="text-shadow: 0 1px 3px rgba(0,0,0,0.85);">1-Click booking for after-school session slots</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 bp-login-glass-item">
+                      <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm" style="width: 36px; height: 36px;">
+                        <i class="fa-solid fa-shield-halved fw-bold"></i>
+                      </div>
+                      <span class="small fw-semibold" style="text-shadow: 0 1px 3px rgba(0,0,0,0.85);">Live attendance check-in & check-out logs</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-3 border-top border-white border-opacity-25 small text-white bp-login-visual-content" style="text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85); opacity: 0.92;">
+                  <i class="fa-solid fa-lock me-1 text-warning"></i> FERPA & COPPA Compliant Protected Portal
+                </div>
               </div>
 
               <!-- Right Column: Sign In Form -->
