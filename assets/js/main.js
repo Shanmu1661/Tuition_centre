@@ -188,42 +188,73 @@ const BrightPath = (() => {
   };
 
   /**
-   * 4. Animated Counters for Stats
+   * 4. Animated Counters for Stats (Running Numbers)
    */
   const initCounters = () => {
     const counters = document.querySelectorAll('.counter-value');
     if (!counters.length) return;
 
-    let hasAnimated = false;
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !hasAnimated) {
-          hasAnimated = true;
-          counters.forEach(counter => {
-            const target = +counter.getAttribute('data-target');
-            const duration = 1500;
-            const start = 0;
-            const stepTime = 20;
-            const steps = duration / stepTime;
-            const increment = target / steps;
-            let current = start;
+    const animateCounter = (counter) => {
+      if (counter.dataset.counterDone === 'true') return;
+      counter.dataset.counterDone = 'true';
 
-            const timer = setInterval(() => {
-              current += increment;
-              if (current >= target) {
-                counter.textContent = target.toLocaleString();
-                clearInterval(timer);
-              } else {
-                counter.textContent = Math.floor(current).toLocaleString();
-              }
-            }, stepTime);
-          });
+      const targetStr = counter.getAttribute('data-target') || '0';
+      const target = parseFloat(targetStr);
+      const decimals = counter.getAttribute('data-decimals') !== null
+        ? parseInt(counter.getAttribute('data-decimals'), 10)
+        : (targetStr.includes('.') ? targetStr.split('.')[1].length : 0);
+      const start = counter.getAttribute('data-start') !== null
+        ? parseFloat(counter.getAttribute('data-start'))
+        : 0;
+
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        counter.textContent = decimals > 0 ? target.toFixed(decimals) : target.toLocaleString();
+        return;
+      }
+
+      const duration = parseInt(counter.getAttribute('data-duration'), 10) || 1500;
+      const stepTime = 20;
+      const totalSteps = Math.max(Math.floor(duration / stepTime), 1);
+      let step = 0;
+
+      const timer = setInterval(() => {
+        step++;
+        const progress = Math.min(step / totalSteps, 1);
+        // Smooth cubic ease-out curve for natural running counter cadence
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const current = start + (target - start) * ease;
+
+        if (decimals > 0) {
+          counter.textContent = current.toFixed(decimals);
+        } else {
+          counter.textContent = Math.floor(current).toLocaleString();
         }
-      });
-    }, { threshold: 0.3 });
 
-    const statsSection = document.querySelector('.bp-stats-strip');
-    if (statsSection) observer.observe(statsSection);
+        if (step >= totalSteps) {
+          clearInterval(timer);
+          if (decimals > 0) {
+            counter.textContent = target.toFixed(decimals);
+          } else {
+            counter.textContent = target.toLocaleString();
+          }
+        }
+      }, stepTime);
+    };
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      counters.forEach(counter => observer.observe(counter));
+    } else {
+      counters.forEach(counter => animateCounter(counter));
+    }
   };
 
   /**
