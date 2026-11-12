@@ -3524,3 +3524,87 @@ img, svg, canvas, video {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
 }
+
+/* --------------------------------------------------------------------------
+   Responsive Desktop Optimization for 992px - 1199.98px (e.g. 1024px Tablets & Laptops)
+   -------------------------------------------------------------------------- */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .bp-navbar:not(.bp-navbar-dashboard) .bp-navbar-container {
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .bp-navbar:not(.bp-navbar-dashboard) .bp-brand {
+    font-size: 1.15rem !important;
+    gap: 0.45rem !important;
+  }
+
+  .bp-navbar:not(.bp-navbar-dashboard) .bp-brand-icon {
+    width: 35px !important;
+    height: 35px !important;
+    min-width: 35px !important;
+    font-size: 1rem !important;
+  }
+
+  .bp-navbar:not(.bp-navbar-dashboard) .bp-brand span.d-block {
+    font-size: 0.62rem !important;
+  }
+
+  .bp-navbar:not(.bp-navbar-dashboard) .navbar-collapse {
+    gap: 0.4rem !important;
+  }
+
+  .bp-navbar:not(.bp-navbar-dashboard) .navbar-nav {
+    gap: 0.15rem !important;
+    margin: 0 auto !important;
+  }
+
+  .bp-navbar:not(.bp-navbar-dashboard) .bp-nav-link {
+    padding: 0 0.52rem !important;
+    font-size: 0.84rem !important;
+    height: 34px !important;
+  }
+
+  .bp-navbar:not(.bp-navbar-dashboard) .bp-nav-link::after {
+    bottom: 2px !important;
+    width: 16px !important;
+  }
+
+  .bp-navbar:not(.bp-navbar-dashboard) .bp-nav-link:hover::after,
+  .bp-navbar:not(.bp-navbar-dashboard) .bp-nav-link.active::after {
+    width: 20px !important;
+  }
+
+  .bp-navbar:not(.bp-navbar-dashboard) .bp-controls-group {
+    margin-left: 0.4rem !important;
+    margin-right: 0 !important;
+    gap: 0.35rem !important;
+  }
+
+  [dir="rtl"] .bp-navbar:not(.bp-navbar-dashboard) .bp-controls-group {
+    margin-right: 0.4rem !important;
+    margin-left: 0 !important;
+  }
+
+  .bp-navbar:not(.bp-navbar-dashboard) .rtl-toggle-btn {
+    height: 34px !important;
+    padding: 0 0.55rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .bp-navbar:not(.bp-navbar-dashboard) .bp-icon-btn {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+  }
+
+  .bp-navbar:not(.bp-navbar-dashboard) .bp-controls-group .btn {
+    height: 34px !important;
+    padding: 0 0.65rem !important;
+    font-size: 0.8rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
