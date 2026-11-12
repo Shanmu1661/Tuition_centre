@@ -484,3 +484,25 @@
   border-color: var(--bp-border) !important;
   box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5) !important;
 }
+
+
+/* Dark Mode Trial CTA Banner */
+[data-theme="dark"] .bp-trial-cta-banner,
+[data-bs-theme="dark"] .bp-trial-cta-banner {
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="dark"] .bp-trial-cta-bg,
+[data-bs-theme="dark"] .bp-trial-cta-bg {
+  filter: brightness(0.70) contrast(1.1);
+}
+
+[data-theme="dark"] .bp-trial-cta-overlay,
+[data-bs-theme="dark"] .bp-trial-cta-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.92) 0%,
+    rgba(30, 58, 138, 0.85) 50%,
+    rgba(6, 78, 59, 0.88) 100%
+  ) !important;
+}

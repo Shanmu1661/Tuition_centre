@@ -3890,4 +3890,35 @@ img, svg, canvas, video {
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
   line-height: 1 !important;
-}
+}
+
+/* Trial Session CTA Banner with Relevant Background Image */
+.bp-trial-cta-banner {
+  position: relative;
+  overflow: hidden;
+  background-color: #1e3a8a;
+  box-shadow: 0 20px 40px -15px rgba(30, 58, 138, 0.35);
+}
+
+.bp-trial-cta-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/classroom-video-poster.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  filter: brightness(0.92) contrast(1.05);
+  transform: scale(1.02);
+  z-index: 1;
+}
+
+.bp-trial-cta-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.88) 0%,
+    rgba(37, 99, 235, 0.80) 50%,
+    rgba(5, 150, 105, 0.84) 100%
+  );
+}
