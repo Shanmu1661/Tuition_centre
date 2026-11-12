@@ -677,23 +677,21 @@
 
 
 /* Hero Highlight Text in Dark Mode */
-
 [data-theme="dark"] .bp-hero-highlight,
-
 [data-bs-theme="dark"] .bp-hero-highlight {
-
   color: #60a5fa;
-
-  background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 45%, #34d399 100%);
-
-  -webkit-background-clip: text;
-
-  background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-
+  font-weight: 800;
   text-shadow: none !important;
+}
 
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  [data-theme="dark"] .bp-hero-highlight,
+  [data-bs-theme="dark"] .bp-hero-highlight {
+    background: linear-gradient(135deg, #bfdbfe 0%, #60a5fa 50%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 
