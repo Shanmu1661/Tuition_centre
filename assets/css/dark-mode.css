@@ -422,4 +422,17 @@
 
 [data-theme="dark"] .bp-tutor-spotlight-card .text-accent {
   color: #fbbf24 !important;
+}
+/* Dark Mode Method Section Step Labels */
+[data-theme="dark"] .bp-method-step-label.text-primary {
+  color: #60a5fa !important;
+}
+[data-theme="dark"] .bp-method-step-label.text-secondary {
+  color: #34d399 !important;
+}
+[data-theme="dark"] .bp-method-step-label.text-purple {
+  color: #c084fc !important;
+}
+[data-theme="dark"] .bp-method-step-label.text-warning {
+  color: #fbbf24 !important;
 }
