@@ -563,3 +563,19 @@
 [data-bs-theme="dark"] .bp-vetting-card p {
   color: #cbd5e1 !important;
 }
+
+/* Tutor Pairing Roadmap Cards Dark Mode */
+[data-theme="dark"] .bp-pairing-card,
+[data-bs-theme="dark"] .bp-pairing-card {
+  background-color: var(--bp-card-dark, #1e293b) !important;
+}
+
+[data-theme="dark"] .bp-pairing-card h4,
+[data-bs-theme="dark"] .bp-pairing-card h4 {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .bp-pairing-card p,
+[data-bs-theme="dark"] .bp-pairing-card p {
+  color: #cbd5e1 !important;
+}
