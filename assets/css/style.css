@@ -1316,8 +1316,8 @@ img.rounded-circle,
 }
 
 .btn-bp-outline {
-  background-color: transparent;
-  border: 1px solid var(--bp-border);
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
   color: var(--bp-text-main);
   font-weight: 600;
   padding: 0.65rem 1.35rem;
@@ -1328,13 +1328,26 @@ img.rounded-circle,
   justify-content: center;
   gap: 0.5rem;
   transition: var(--bp-transition);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
   white-space: nowrap;
 }
 
-.btn-bp-outline:hover {
-  background-color: var(--bp-bg-surface-secondary);
+.btn-bp-outline i {
   color: var(--bp-primary);
+  transition: transform 0.2s ease;
+}
+
+.btn-bp-outline:hover {
+  background-color: var(--bp-primary-light);
+  color: var(--bp-primary-hover);
   border-color: var(--bp-primary);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.18);
+  transform: translateY(-2px);
+}
+
+.btn-bp-outline:hover i {
+  color: var(--bp-primary-hover);
+  transform: scale(1.08);
 }
 
 .btn-bp-ghost {
@@ -1720,6 +1733,49 @@ section.bg-light-subtle.border-top.border-light-subtle .col-md-4 > .bp-card .bor
   padding: 1.5rem;
 }
 
+/* Tablet & Desktop Equal Alignment */
+@media (min-width: 768px) {
+  .bp-pillar-card-body .font-heading {
+    min-height: 2.85rem;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+  .bp-pillar-card-body > p {
+    min-height: 4.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .bp-pillar-card ul {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+  .bp-pillar-card ul li {
+    min-height: 2.75rem;
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+/* 4-Column Grid (992px to 1199.98px): Equalize taller wrapped descriptions */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .bp-pillar-card-body .font-heading {
+    min-height: 3.35rem;
+  }
+  .bp-pillar-card-body > p {
+    min-height: 5.75rem;
+  }
+}
+
+/* 4-Column Grid (1200px+): Comfortable standard desktop alignment */
+@media (min-width: 1200px) {
+  .bp-pillar-card-body .font-heading {
+    min-height: 3.1rem;
+  }
+  .bp-pillar-card-body > p {
+    min-height: 4.85rem;
+  }
+}
+
 .bp-pillar-card .bp-icon-box {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -1752,10 +1808,72 @@ section.bg-light-subtle.border-top.border-light-subtle .col-md-4 > .bp-card .bor
 /* How It Works / Learning Method Section */
 .bp-method-section {
   position: relative;
-  background-color: var(--bp-bg-surface);
+  overflow: hidden;
   border-top: 1px solid var(--bp-border);
   border-bottom: 1px solid var(--bp-border);
-  padding: 4.5rem 0;
+  padding: 5rem 0;
+}
+
+.bp-method-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/classroom-hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  filter: blur(2px);
+  transform: scale(1.04);
+  z-index: 0;
+}
+
+.bp-method-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.93) 0%, rgba(241, 245, 249, 0.88) 100%);
+  z-index: 1;
+}
+
+.bp-method-content {
+  position: relative;
+  z-index: 2;
+}
+
+.bp-method-card {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--bp-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bp-method-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.12);
+}
+
+.bp-method-card-title {
+  min-height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bp-method-card-desc {
+  min-height: 5.5rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .bp-method-card-desc {
+    min-height: 6.85rem;
+  }
+}
+
+.bp-method-card-footer {
+  border-top: 1px dashed var(--bp-border);
+  margin-top: auto;
+  padding-top: 0.75rem;
 }
 
 .bp-step-badge {
@@ -3608,3 +3726,144 @@ img, svg, canvas, video {
     justify-content: center !important;
   }
 }
+
+
+/* Suppress all floating card image overlay badges across all pages */
+.bp-program-overlay-badge {
+  display: none !important;
+}
+
+/* ==========================================================================
+   Trust & Impact Stats Strip Uniform Alignment
+   ========================================================================== */
+.bp-impact-strip {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--bp-border) !important;
+  border-radius: var(--bp-radius-lg) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+  text-align: center !important;
+}
+
+.bp-impact-strip .font-heading,
+.bp-impact-strip .display-6 {
+  text-align: center !important;
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+
+.bp-impact-strip .bp-stat-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--bp-text-main);
+  text-align: center !important;
+  min-height: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.bp-impact-strip .bp-stat-desc {
+  font-size: 0.8rem;
+  color: var(--bp-text-muted);
+  text-align: center !important;
+  min-height: 2.25rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1.35;
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .bp-impact-strip .bp-stat-col:not(:last-child) {
+    border-right: 1px solid var(--bp-border);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bp-impact-strip .bp-stat-col:nth-child(odd) {
+    border-right: 1px solid var(--bp-border);
+  }
+  .bp-impact-strip .bp-stat-col:nth-child(-n+2) {
+    border-bottom: 1px solid var(--bp-border);
+    padding-bottom: 1rem;
+  }
+  .bp-impact-strip .bp-stat-col:nth-child(n+3) {
+    padding-top: 1rem;
+  }
+}
+
+/* ==========================================================================
+   Dedicated Educator Spotlight Card Uniform Alignment
+   ========================================================================== */
+.bp-tutor-spotlight-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  text-align: center !important;
+}
+
+.bp-tutor-spotlight-card .bp-tutor-avatar-wrap {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.25rem;
+}
+
+.bp-tutor-spotlight-card .bp-tutor-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--bp-radius-full);
+  object-fit: cover;
+  border: 4px solid var(--bp-bg-surface);
+  box-shadow: var(--bp-shadow-md);
+}
+
+.bp-tutor-spotlight-card .bp-tutor-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  min-height: 1.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center !important;
+}
+
+.bp-tutor-spotlight-card .bp-tutor-role-wrap {
+  min-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.bp-tutor-spotlight-card .bp-tutor-role {
+  text-align: center !important;
+}
+
+.bp-tutor-spotlight-card .bp-tutor-desc {
+  font-size: 0.85rem;
+  min-height: 4.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1.45;
+  text-align: center !important;
+  margin-bottom: 1rem;
+}
+
+.bp-tutor-spotlight-card .bp-tutor-card-footer {
+  margin-top: auto !important;
+  width: 100%;
+}
+
+.bp-tutor-spotlight-card .bp-tutor-stars {
+  min-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

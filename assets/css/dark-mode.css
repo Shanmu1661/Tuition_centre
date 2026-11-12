@@ -83,16 +83,31 @@
 
 [data-theme="dark"] .btn-bp-outline,
 [data-bs-theme="dark"] .btn-bp-outline {
-  background-color: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.18);
+  background-color: rgba(30, 41, 59, 0.85);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
   color: #f8fafc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .btn-bp-outline i,
+[data-bs-theme="dark"] .btn-bp-outline i {
+  color: #60a5fa;
+  transition: transform 0.2s ease;
 }
 
 [data-theme="dark"] .btn-bp-outline:hover,
 [data-bs-theme="dark"] .btn-bp-outline:hover {
-  background-color: rgba(37, 99, 235, 0.2);
+  background-color: rgba(37, 99, 235, 0.25);
   border-color: #3b82f6;
   color: #93c5fd;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .btn-bp-outline:hover i,
+[data-bs-theme="dark"] .btn-bp-outline:hover i {
+  color: #93c5fd;
+  transform: scale(1.08);
 }
 
 [data-theme="dark"] .bp-icon-btn,
@@ -320,3 +335,91 @@
   color: #cbd5e1 !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
+
+
+/* Hero Highlight Text in Dark Mode */
+[data-theme="dark"] .bp-hero-highlight,
+[data-bs-theme="dark"] .bp-hero-highlight {
+  color: #60a5fa;
+  background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 45%, #34d399 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none !important;
+}
+
+/* Dark Mode BrightPath Method Section */
+[data-theme="dark"] .bp-method-overlay,
+[data-bs-theme="dark"] .bp-method-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.94) 0%,
+    rgba(15, 23, 42, 0.90) 50%,
+    rgba(15, 23, 42, 0.96) 100%
+  ) !important;
+}
+
+[data-theme="dark"] .bp-method-section .bp-card,
+[data-bs-theme="dark"] .bp-method-section .bp-card {
+  background-color: rgba(30, 41, 59, 0.88) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .bp-method-section .bp-card:hover,
+[data-bs-theme="dark"] .bp-method-section .bp-card:hover {
+  border-color: rgba(96, 165, 250, 0.45) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Dark Mode Impact Strip */
+[data-theme="dark"] .bp-impact-strip,
+[data-bs-theme="dark"] .bp-impact-strip {
+  background-color: rgba(30, 41, 59, 0.88) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ==========================================================================
+   Dedicated Educator Spotlight Dark Mode Contrast & Colors
+   ========================================================================== */
+[data-theme="dark"] .bp-educators-spotlight {
+  background-color: var(--bp-bg-card) !important;
+}
+
+[data-theme="dark"] .bp-tutor-spotlight-card {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] .bp-tutor-spotlight-card .bp-tutor-avatar {
+  border-color: #1e293b !important;
+}
+
+[data-theme="dark"] .bp-tutor-spotlight-card .bp-tutor-name {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .bp-tutor-spotlight-card .bp-tutor-desc {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .bp-tutor-spotlight-card .bp-tutor-stars .text-muted {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .bp-tutor-spotlight-card .text-primary {
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] .bp-tutor-spotlight-card .text-secondary {
+  color: #34d399 !important;
+}
+
+[data-theme="dark"] .bp-tutor-spotlight-card .text-purple {
+  color: #c084fc !important;
+}
+
+[data-theme="dark"] .bp-tutor-spotlight-card .text-accent {
+  color: #fbbf24 !important;
+}

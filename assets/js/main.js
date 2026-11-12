@@ -306,77 +306,153 @@ const BrightPath = (() => {
    * 7. Accessible Form Validation & Strict Input Sanitization
    */
   const initFormValidation = () => {
-    const nameRegex = /^[A-Za-zÀ-ÿ\s'\-]+$/;
-
-    // 1. Strict Name Validation & Key Interception (Blocks numbers completely)
+    const nameRegex = /^[A-Za-z\u00C0-\u00FF\s'\-]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+    // Helper to update field feedback and state
+    const setFieldState = (field, isValid, message = '') => {
+      if (!field) return;
+      const parent = field.closest('.col-md-6, .col-12, .mb-3, .form-group') || field.parentElement;
+      let feedback = parent ? parent.querySelector('.invalid-feedback') : null;
+      if (isValid) {
+        field.setCustomValidity('');
+        field.classList.remove('is-invalid');
+        field.classList.add('is-valid');
+      } else {
+        field.setCustomValidity(message || 'Please provide a valid entry.');
+        field.classList.remove('is-valid');
+        field.classList.add('is-invalid');
+        if (feedback && message) {
+          feedback.textContent = message;
+        }
+      }
+    };
+    // 1. Name validation helper
+    const validateNameField = (input, isBlur = false) => {
+      const val = input.value.trim();
+      const isRequired = input.required;
+      if (!val) {
+        if (isRequired && isBlur) {
+          setFieldState(input, false, 'This name field is required.');
+          return false;
+        }
+        if (!isRequired) {
+          input.classList.remove('is-valid', 'is-invalid');
+          input.setCustomValidity('');
+          return true;
+        }
+        return false;
+      }
+      if (/[0-9]/.test(val)) {
+        setFieldState(input, false, 'Names cannot contain numbers.');
+        return false;
+      }
+      if (val.length < 2) {
+        setFieldState(input, false, 'Please enter at least 2 letters.');
+        return false;
+      }
+      if (!nameRegex.test(val)) {
+        setFieldState(input, false, 'Please use letters, spaces, hyphens, or apostrophes only.');
+        return false;
+      }
+      setFieldState(input, true);
+      return true;
+    };
+    // 2. Phone validation helper
+    const validatePhoneField = (input, isBlur = false) => {
+      const cleanDigits = input.value.replace(/\D/g, '');
+      const isRequired = input.required;
+      if (!cleanDigits) {
+        if (isRequired && isBlur) {
+          setFieldState(input, false, 'Mobile phone number is required.');
+          return false;
+        }
+        if (!isRequired) {
+          input.classList.remove('is-valid', 'is-invalid');
+          input.setCustomValidity('');
+          return true;
+        }
+        return false;
+      }
+      if (cleanDigits.length !== 10 && !(cleanDigits.length === 11 && cleanDigits.startsWith('1'))) {
+        if (isBlur || cleanDigits.length > 10) {
+          setFieldState(input, false, 'Please enter a valid 10-digit phone number.');
+        }
+        return false;
+      }
+      setFieldState(input, true);
+      return true;
+    };
+    // 3. Select validation helper
+    const validateSelectField = (select, isBlur = false) => {
+      const val = select.value;
+      const isRequired = select.required;
+      if (!val || val === '') {
+        if (isRequired && (isBlur || select.form?.classList.contains('was-validated'))) {
+          setFieldState(select, false, 'Please select an option.');
+          return false;
+        }
+        return !isRequired;
+      }
+      setFieldState(select, true);
+      return true;
+    };
+    // 4. Email validation helper
+    const validateEmailField = (input, isBlur = false) => {
+      const val = input.value.trim();
+      const isRequired = input.required;
+      if (!val) {
+        if (isRequired && isBlur) {
+          setFieldState(input, false, 'Email address is required.');
+          return false;
+        }
+        if (!isRequired) {
+          input.classList.remove('is-valid', 'is-invalid');
+          input.setCustomValidity('');
+          return true;
+        }
+        return false;
+      }
+      if (!emailRegex.test(val)) {
+        if (isBlur || val.includes('@')) {
+          setFieldState(input, false, 'Please enter a valid email address (e.g. parent@example.com).');
+        }
+        return false;
+      }
+      setFieldState(input, true);
+      return true;
+    };
+    // Attach to Name Inputs
     const nameInputs = document.querySelectorAll(
-      'input[data-type="name"], ' +
-      '#regParentFirstName, #regParentLastName, #regStudentName, ' +
-      '#contactParentName, #trialParentName, #trialStudentName'
+      'input[data-type="name"], #regParentFirstName, #regParentLastName, #regStudentName, #contactParentName, #trialParentName, #trialStudentName, #assessParentName, #assessStudentName'
     );
-
     nameInputs.forEach(input => {
-      // Prevent numeric keys from being typed
       input.addEventListener('keydown', e => {
-        // Allow navigation, deletion, shortcuts (Ctrl+A, Ctrl+C, Ctrl+V, etc.)
         if (e.ctrlKey || e.metaKey || e.altKey) return;
         if (['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab', 'Home', 'End'].includes(e.key)) return;
-
-        // Block numeric digits 0-9
         if (/^[0-9]$/.test(e.key)) {
           e.preventDefault();
           showToast('Name fields cannot accept numbers.', 'warning');
         }
       });
-
-      // Strip numbers if pasted or autocompleted and validate
       input.addEventListener('input', () => {
         if (/[0-9]/.test(input.value)) {
           input.value = input.value.replace(/[0-9]/g, '');
           showToast('Numbers are not permitted in name fields.', 'warning');
         }
-
-        const val = input.value.trim();
-        if (val.length > 0 && !nameRegex.test(val)) {
-          input.setCustomValidity('Please use letters only (no numbers or special symbols).');
-        } else if (val.length > 0 && val.length < 2) {
-          input.setCustomValidity('Name must be at least 2 characters long.');
-        } else {
-          input.setCustomValidity('');
-        }
-
-        if (input.form && input.form.classList.contains('was-validated')) {
-          if (input.checkValidity()) {
-            input.classList.remove('is-invalid');
-            input.classList.add('is-valid');
-          } else {
-            input.classList.remove('is-valid');
-            input.classList.add('is-invalid');
-          }
+        if (input.classList.contains('is-invalid') || input.form?.classList.contains('was-validated') || input.value.trim().length >= 2) {
+          validateNameField(input, false);
         }
       });
-
       input.addEventListener('blur', () => {
-        const val = input.value.trim();
-        if (input.required && val.length === 0) {
-          input.setCustomValidity('This field is required.');
-        } else if (val.length > 0 && !nameRegex.test(val)) {
-          input.setCustomValidity('Please use letters only (no numbers or special symbols).');
-        } else if (val.length > 0 && val.length < 2) {
-          input.setCustomValidity('Name must be at least 2 characters long.');
-        } else {
-          input.setCustomValidity('');
-        }
+        validateNameField(input, true);
       });
     });
-
-    // 2. Phone Formatting & Validation
+    // Attach to Phone Inputs
     const phoneInputs = document.querySelectorAll(
-      'input[type="tel"], input[data-type="phone"], #regParentPhone, #contactPhone, #trialPhone'
+      'input[type="tel"], input[data-type="phone"], #regParentPhone, #contactPhone, #trialPhone, #assessPhone'
     );
     phoneInputs.forEach(input => {
       input.addEventListener('input', () => {
-        // Keep digits only for formatting
         const digits = input.value.replace(/\D/g, '');
         if (digits.length > 10) {
           input.value = digits.replace(/^1?(\d{3})(\d{3})(\d{4}).*$/, '($1) $2-$3');
@@ -385,130 +461,99 @@ const BrightPath = (() => {
         } else if (digits.length >= 4) {
           input.value = digits.replace(/^(\d{3})(\d{0,3})$/, '($1) $2');
         }
-
         const cleanDigits = input.value.replace(/\D/g, '');
-        if (cleanDigits.length > 0 && (cleanDigits.length < 10 || cleanDigits.length > 11)) {
-          input.setCustomValidity('Please enter a valid 10-digit phone number.');
-        } else {
-          input.setCustomValidity('');
-        }
-
-        if (input.form && input.form.classList.contains('was-validated')) {
-          if (input.checkValidity()) {
-            input.classList.remove('is-invalid');
-            input.classList.add('is-valid');
-          } else {
-            input.classList.remove('is-valid');
-            input.classList.add('is-invalid');
-          }
+        if (cleanDigits.length === 10 || input.classList.contains('is-invalid') || input.form?.classList.contains('was-validated')) {
+          validatePhoneField(input, false);
         }
       });
+      input.addEventListener('blur', () => {
+        validatePhoneField(input, true);
+      });
     });
-
-    // 3. Email Validation
-    const emailRegex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+    // Attach to Email Inputs
     const emailInputs = document.querySelectorAll('input[type="email"]');
     emailInputs.forEach(input => {
       input.addEventListener('input', () => {
-        const val = input.value.trim();
-        if (val.length > 0 && !emailRegex.test(val)) {
-          input.setCustomValidity('Please enter a valid email address (e.g. parent@example.com).');
-        } else {
-          input.setCustomValidity('');
-        }
-
-        if (input.form && input.form.classList.contains('was-validated')) {
-          if (input.checkValidity()) {
-            input.classList.remove('is-invalid');
-            input.classList.add('is-valid');
-          } else {
-            input.classList.remove('is-valid');
-            input.classList.add('is-invalid');
-          }
+        if (input.classList.contains('is-invalid') || input.form?.classList.contains('was-validated')) {
+          validateEmailField(input, false);
         }
       });
-    });
-
-    // 4. Live form field change monitoring for forms with .was-validated
-    const allFormControls = document.querySelectorAll('.needs-validation input, .needs-validation select, .needs-validation textarea');
-    allFormControls.forEach(ctrl => {
-      ctrl.addEventListener('change', () => {
-        if (ctrl.form && ctrl.form.classList.contains('was-validated')) {
-          if (ctrl.checkValidity()) {
-            ctrl.classList.remove('is-invalid');
-            ctrl.classList.add('is-valid');
-          } else {
-            ctrl.classList.remove('is-valid');
-            ctrl.classList.add('is-invalid');
-          }
-        }
+      input.addEventListener('blur', () => {
+        validateEmailField(input, true);
       });
     });
-
+    // Attach to Select Inputs in all forms
+    const selectInputs = document.querySelectorAll('.needs-validation select');
+    selectInputs.forEach(select => {
+      select.addEventListener('change', () => {
+        validateSelectField(select, false);
+      });
+      select.addEventListener('blur', () => {
+        validateSelectField(select, true);
+      });
+    });
     // 5. Accessible Form Submission
     const forms = document.querySelectorAll('.needs-validation');
-
     Array.from(forms).forEach(form => {
       form.addEventListener('submit', event => {
-        // Run any custom validations before checkValidity
-        const nameFields = form.querySelectorAll(
-          'input[data-type="name"], #regParentFirstName, #regParentLastName, #regStudentName, #contactParentName, #trialParentName, #trialStudentName'
-        );
-        nameFields.forEach(nf => {
-          const val = nf.value.trim();
-          if (/[0-9]/.test(val)) {
-            nf.setCustomValidity('Names cannot contain numbers.');
-          } else if (nf.required && val.length < 2) {
-            nf.setCustomValidity('Please enter at least 2 letters.');
-          } else if (!nameRegex.test(val) && val.length > 0) {
-            nf.setCustomValidity('Please use letters only.');
-          } else {
-            nf.setCustomValidity('');
+        event.preventDefault();
+        // Run full validation check across all fields in this form
+        let isFormValid = true;
+        // Check names
+        form.querySelectorAll('input[data-type="name"], #regParentFirstName, #regParentLastName, #regStudentName, #contactParentName, #trialParentName, #trialStudentName, #assessParentName, #assessStudentName').forEach(input => {
+          if (!validateNameField(input, true)) isFormValid = false;
+        });
+        // Check phones
+        form.querySelectorAll('input[type="tel"], input[data-type="phone"], #regParentPhone, #contactPhone, #trialPhone, #assessPhone').forEach(input => {
+          if (!validatePhoneField(input, true)) isFormValid = false;
+        });
+        // Check emails
+        form.querySelectorAll('input[type="email"]').forEach(input => {
+          if (!validateEmailField(input, true)) isFormValid = false;
+        });
+        // Check selects
+        form.querySelectorAll('select').forEach(select => {
+          if (!validateSelectField(select, true)) isFormValid = false;
+        });
+        // Check other required inputs (text, password, etc.)
+        form.querySelectorAll('input:not([data-type="name"]):not([type="tel"]):not([type="email"]), textarea').forEach(ctrl => {
+          if (ctrl.required && !ctrl.value.trim()) {
+            setFieldState(ctrl, false, 'This field is required.');
+            isFormValid = false;
+          } else if (ctrl.checkValidity && !ctrl.checkValidity()) {
+            setFieldState(ctrl, false, ctrl.validationMessage || 'Please provide a valid entry.');
+            isFormValid = false;
+          } else if (ctrl.value.trim()) {
+            setFieldState(ctrl, true);
           }
         });
-
-        if (!form.checkValidity()) {
-          event.preventDefault();
+        if (!isFormValid || !form.checkValidity()) {
           event.stopPropagation();
           form.classList.add('was-validated');
-
-          // Highlight invalid controls
-          const invalidControls = form.querySelectorAll(':invalid');
-          invalidControls.forEach(c => {
-            c.classList.add('is-invalid');
-            c.classList.remove('is-valid');
-          });
-
           // Focus first invalid element smoothly
-          const firstInvalid = form.querySelector(':invalid, .is-invalid');
+          const firstInvalid = form.querySelector('.is-invalid, :invalid');
           if (firstInvalid) {
             firstInvalid.focus();
             if (firstInvalid.scrollIntoView) {
               firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
           }
-
-          showToast('Please correct the highlighted fields before submitting.', 'warning');
+          showToast('Please complete all required fields correctly before submitting.', 'warning');
           return;
         }
-
-        event.preventDefault();
         form.classList.add('was-validated');
-
         // Show simulated loading button state
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn ? submitBtn.innerHTML : '';
         if (submitBtn) {
           submitBtn.disabled = true;
-          submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Processing...';
+          submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Confirming Trial Slot...';
         }
-
         setTimeout(() => {
           if (submitBtn) {
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalText;
           }
-
           // Handle registration form redirection to dashboard
           if (form.id === 'enrollmentForm' || form.getAttribute('action') === 'dashboard.html') {
             showToast('Enrollment complete! Welcome to BrightPath Academy. Opening Parent Dashboard...', 'success');
@@ -517,9 +562,8 @@ const BrightPath = (() => {
             }, 800);
             return;
           }
-
           // Handle trial booking modal
-          if (form.id === 'trialBookingForm' || form.closest('#trialBookingModal')) {
+          if (form.id === 'trialBookingForm' || form.closest('#trialBookingModal') || form.id === 'assessmentBookingForm') {
             showToast('Trial session reserved! A coordinator will text you confirmation within 1 hour.', 'success');
             const openModal = bootstrap.Modal.getInstance(document.getElementById('trialBookingModal'));
             if (openModal) openModal.hide();
@@ -528,7 +572,6 @@ const BrightPath = (() => {
             form.querySelectorAll('.is-valid, .is-invalid').forEach(el => el.classList.remove('is-valid', 'is-invalid'));
             return;
           }
-
           // Handle slot booking on dashboard
           if (form.id === 'slotBookingForm' || form.closest('#bookSessionModal')) {
             showToast('After-school study slot successfully booked for Leo!', 'success');
@@ -542,7 +585,6 @@ const BrightPath = (() => {
             form.querySelectorAll('.is-valid, .is-invalid').forEach(el => el.classList.remove('is-valid', 'is-invalid'));
             return;
           }
-
           // Handle contact form
           if (form.id === 'contactForm') {
             showToast('Inquiry sent! Our admissions team will respond within 24 business hours.', 'success');
@@ -551,25 +593,22 @@ const BrightPath = (() => {
             form.querySelectorAll('.is-valid, .is-invalid').forEach(el => el.classList.remove('is-valid', 'is-invalid'));
             return;
           }
-
           // General form / newsletter
           form.reset();
           form.classList.remove('was-validated');
           form.querySelectorAll('.is-valid, .is-invalid').forEach(el => el.classList.remove('is-valid', 'is-invalid'));
           showToast('Thank you! Your information has been securely received.', 'success');
-
-          // If inside any open modal, close it
           const openModal = bootstrap.Modal.getInstance(document.querySelector('.modal.show'));
           if (openModal) openModal.hide();
-        }, 1200);
+        }, 700);
       }, false);
     });
   };
-
   /**
    * 8. Skeleton Loader Handler
    * Simulates dynamic loading states smoothly
    */
+  
   const initSkeletonSimulation = () => {
     const skeletonWrappers = document.querySelectorAll('[data-skeleton-wrapper]');
     if (!skeletonWrappers.length) return;
@@ -793,7 +832,11 @@ const BrightPath = (() => {
   };
 })();
 
-// Initialize on DOM Ready
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize on DOM Ready or immediately if DOM is already ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    BrightPath.init();
+  });
+} else {
   BrightPath.init();
-});
+}
