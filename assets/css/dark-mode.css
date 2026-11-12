@@ -506,3 +506,44 @@
     rgba(6, 78, 59, 0.88) 100%
   ) !important;
 }
+
+
+/* Dark Mode Bootcamps Section */
+[data-theme="dark"] .bp-bootcamps-bg,
+[data-bs-theme="dark"] .bp-bootcamps-bg {
+  filter: brightness(0.65) contrast(1.1);
+}
+
+[data-theme="dark"] .bp-bootcamps-overlay,
+[data-bs-theme="dark"] .bp-bootcamps-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.95) 0%,
+    rgba(15, 23, 42, 0.78) 25%,
+    rgba(15, 23, 42, 0.70) 65%,
+    rgba(15, 23, 42, 0.95) 100%
+  ) !important;
+}
+
+[data-theme="dark"] .bp-bootcamps-section h2#bootcamps-heading {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .bp-bootcamps-section .bp-section-desc,
+[data-bs-theme="dark"] .bp-bootcamps-section .bp-section-desc {
+  color: #f1f5f9 !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="dark"] .bp-bootcamps-section .bp-card,
+[data-bs-theme="dark"] .bp-bootcamps-section .bp-card {
+  background-color: rgba(30, 41, 59, 0.88) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .bp-bootcamps-section .bp-card:hover,
+[data-bs-theme="dark"] .bp-bootcamps-section .bp-card:hover {
+  border-color: rgba(96, 165, 250, 0.45) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45) !important;
+}

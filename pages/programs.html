@@ -129,8 +129,8 @@
     </div>
   </header>
 
-  <main id="main-content" class="py-5">
-    <div class="container">
+  <main id="main-content">
+    <div class="container py-5">
       
       <!-- Subject Filter Buttons -->
       <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" role="toolbar" aria-label="Filter programs by academic subject">
@@ -320,12 +320,18 @@
         </div>
       </div>
 
-      <!-- Specialized Weekend & Accelerated Bootcamps (New 3-Card Section) -->
-      <section class="mt-5 pt-5 border-top border-light-subtle" aria-labelledby="bootcamps-heading">
+      </div>
+    </div>
+
+    <!-- Specialized Weekend & Accelerated Bootcamps (With Relevant Image Background) -->
+    <section class="bp-section bp-bootcamps-section position-relative overflow-hidden" aria-labelledby="bootcamps-heading">
+      <div class="bp-bootcamps-bg" aria-hidden="true"></div>
+      <div class="bp-bootcamps-overlay" aria-hidden="true"></div>
+      <div class="container position-relative" style="z-index: 3;">
         <div class="text-center mb-5">
           <span class="bp-badge bp-badge-accent mb-2">Specialized Acceleration</span>
           <h2 id="bootcamps-heading" class="font-heading fs-2 mb-2">Weekend & Accelerated Bootcamps</h2>
-          <p class="text-muted mx-auto" style="max-width: 680px;">
+          <p class="bp-section-desc mx-auto" style="max-width: 680px;">
             Intensive small-group workshops designed for competition readiness, creative engineering, and high-stakes test preparation.
           </p>
         </div>
@@ -421,10 +427,12 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Plan Comparison Table -->
-      <div class="mt-5 pt-4">
+    <!-- Plan Comparison Table -->
+    <div class="container py-5">
+      <div class="pt-2">
         <div class="text-center mb-4">
           <span class="bp-badge bp-badge-secondary">Transparent Enrollment</span>
           <h2 class="font-heading fs-2">Compare Enrollment Options</h2>
