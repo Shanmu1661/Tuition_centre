@@ -136,18 +136,33 @@
     <!-- Main Content Area -->
     <main id="main-content" class="bp-dash-main">
       
-      <!-- Welcome Header -->
-      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3" id="overview-section">
-        <div>
-          <h1 class="font-heading fs-2 mb-1">Parent Dashboard</h1>
-          <p class="text-muted small mb-0">Track daily homework logs, reserve after-school time slots, and verify attendance records.</p>
-        </div>
-        <div class="d-flex gap-2">
-          <button class="btn btn-bp-primary" data-bs-toggle="modal" data-bs-target="#bookSessionModal">
-            <i class="fa-solid fa-plus me-1"></i> Book After-School Slot
-          </button>
-        </div>
-      </div>
+      <!-- Welcome Header Banner Section with Relevant Academic Background -->
+      <section class="bp-dash-overview-card mb-4" id="overview-section" aria-label="Parent Dashboard Overview">
+        <div class="bp-dash-overview-content d-flex flex-wrap justify-content-between align-items-center gap-3">
+          <div>
+            <div class="d-inline-flex align-items-center gap-2 mb-2">
+              <span class="bp-dash-hero-badge">
+                <i class="fa-solid fa-shield-halved"></i> Active Family Portal
+              </span>
+              <span class="bp-dash-hero-pill d-none d-sm-inline-flex">
+                <i class="fa-solid fa-graduation-cap"></i> 2026–2027 Academic Year
+              </span>
+            </div>
+            <h1 class="font-heading fs-2 mb-1 text-white">Parent Dashboard</h1>
+            <p class="bp-dash-overview-lead mb-0">
+              Track daily verified homework notes, reserve after-school study pods, and review real-time attendance logs.
+            </p>
+          </div>
+          <div class="d-flex flex-wrap gap-2 align-items-center">
+            <button class="btn btn-light text-primary fw-bold px-3 py-2 shadow-sm" data-bs-toggle="modal" data-bs-target="#bookSessionModal">
+              <i class="fa-solid fa-calendar-plus me-1"></i> Book After-School Slot
+            </button>
+            <a href="#homework-section" class="btn btn-outline-light px-3 py-2 fw-semibold">
+              <i class="fa-solid fa-clipboard-check me-1"></i> Homework Notes
+            </a>
+          </div>
+        </div>
+      </section>
 
       <!-- Quick KPI Stat Widgets -->
       <div class="row g-3 mb-4">

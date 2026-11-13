@@ -5413,13 +5413,12 @@ section.bg-light-subtle.border-top.border-light-subtle .col-md-4 > .bp-card .bor
    -------------------------------------------------------------------------- */
 
 .bp-dashboard-layout {
-
   min-height: 100vh;
-
   display: flex;
-
-  background-color: var(--bp-bg-body);
-
+  background-color: #f1f5f9;
+  background-image: 
+    radial-gradient(at 100% 0%, rgba(37, 99, 235, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(5, 150, 105, 0.04) 0px, transparent 50%);
 }
 
 
@@ -8399,4 +8398,109 @@ img, svg, canvas, video {
 .bp-login-glass-item:hover {
   background: rgba(15, 23, 42, 0.58);
   transform: translateX(4px);
+}
+
+
+/* --------------------------------------------------------------------------
+   8a. Dashboard Overview Card & Refined Background Styling
+   -------------------------------------------------------------------------- */
+.bp-dash-overview-card {
+  position: relative;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 45%, #2563eb 100%);
+  border-radius: var(--bp-radius-xl, 16px);
+  padding: 1.85rem 2.25rem;
+  color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 1.75rem;
+}
+
+.bp-dash-overview-card::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  right: -15%;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.14) 0%, transparent 68%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.bp-dash-overview-card::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: 20%;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.bp-dash-overview-content {
+  position: relative;
+  z-index: 2;
+}
+
+.bp-dash-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.28rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  color: #ffffff;
+}
+
+.bp-dash-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.28rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(15, 23, 42, 0.24);
+  border-radius: 9999px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.bp-dash-overview-lead {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 680px;
+}
+
+/* Dark Mode Overrides for Dashboard Layout & Overview Card */
+[data-theme="dark"] .bp-dashboard-layout {
+  background-color: #0b1120 !important;
+  background-image: 
+    radial-gradient(at 100% 0%, rgba(30, 58, 138, 0.16) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(15, 23, 42, 0.6) 0px, transparent 50%) !important;
+}
+
+[data-theme="dark"] .bp-dash-overview-card {
+  background: linear-gradient(135deg, #0b1727 0%, #172554 50%, #1e3a8a 100%);
+  border-color: rgba(59, 130, 246, 0.25);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767.98px) {
+  .bp-dash-overview-card {
+    padding: 1.5rem 1.25rem;
+  }
+  .bp-dash-overview-card .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
