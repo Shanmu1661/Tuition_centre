@@ -56,8 +56,26 @@
       <!-- Navigation Links (ONLY: Home, Programs, Tutor, Study Tips, Contact, Dashboard) -->
       <div class="collapse navbar-collapse" id="navbarMainContent">
         <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link" href="index.html">Home</a>
+                    <!-- Home Dropdown (Home 1 & Home 2) -->
+          <li class="nav-item dropdown bp-nav-dropdown">
+            <a class="nav-link bp-nav-link dropdown-toggle d-flex align-items-center gap-1" href="index.html" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down small" style="font-size: 0.72rem;"></i>
+            </a>
+            <ul class="dropdown-menu bp-dropdown-menu shadow-sm" aria-labelledby="homeDropdown">
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="index.html">
+                  <span class="bp-dropdown-title"><i class="fa-solid fa-house me-1 text-primary"></i> Home 1</span>
+                  <span class="bp-dropdown-desc">Classic Academy Overview &amp; Routine</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item bp-dropdown-item" href="home-2.html">
+                  <span class="bp-dropdown-title"><i class="fa-solid fa-graduation-cap me-1 text-primary"></i> Home 2</span>
+                  <span class="bp-dropdown-desc">Homework Support &amp; Pod Finder</span>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link bp-nav-link active" href="programs.html" aria-current="page">Programs</a>
