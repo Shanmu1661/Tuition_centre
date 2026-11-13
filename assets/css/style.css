@@ -8976,3 +8976,27 @@ img, svg, canvas, video {
   border-color: rgba(255, 255, 255, 0.12) !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
+
+/* ==========================================================================
+   Programs Page - Parent Dashboard Link Banner
+   ========================================================================== */
+.bp-programs-dash-cta {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e0edff 45%, #eef2ff 100%) !important;
+  border: 1px solid rgba(37, 99, 235, 0.2) !important;
+  border-radius: var(--bp-radius-xl, 16px);
+}
+
+[data-theme="dark"] .bp-programs-dash-cta {
+  background: linear-gradient(135deg, #0f172a 0%, #172554 50%, #1e293b 100%) !important;
+  border-color: rgba(59, 130, 246, 0.28) !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .bp-programs-dash-cta h3 {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .bp-programs-dash-cta p {
+  color: #cbd5e1 !important;
+}
