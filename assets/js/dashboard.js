@@ -665,7 +665,7 @@ const ParentDashboard = (() => {
 
 // Auto initialize if on dashboard page
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById('dashChildSelector')) {
+  if (document.getElementById('dashChildSelector') || document.querySelector('.bp-dashboard-layout')) {
     ParentDashboard.init();
   }
 });

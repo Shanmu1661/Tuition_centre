@@ -46,21 +46,6 @@
         </div>
       </a>
 
-      <!-- Student Selector Widget (Active Child Switcher) -->
-      <div class="dash-student-selector d-flex align-items-center gap-2 ms-3 bg-light-subtle px-3 py-1 rounded-pill border">
-        <svg class="bp-icon-svg text-primary" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-          <circle cx="9" cy="7" r="4"></circle>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-        </svg>
-        <label for="dashChildSelector" class="small fw-bold text-muted mb-0 text-nowrap">Student:</label>
-        <select class="form-select form-select-sm border-0 bg-transparent fw-bold text-primary shadow-none py-0" id="dashChildSelector" style="width: auto; cursor: pointer;">
-          <option value="child-1" selected>Leo Miller (4th Grade)</option>
-          <option value="child-2">Maya Miller (7th Grade)</option>
-        </select>
-      </div>
-
       <!-- Action Controls: RTL and Dark Mode Support -->
       <div class="bp-controls-group ms-auto d-flex align-items-center gap-2">
         <!-- RTL Layout Switcher -->
@@ -85,14 +70,23 @@
     
     <!-- Left Navigation Sidebar -->
     <aside class="bp-dash-sidebar" aria-label="Parent Dashboard Navigation">
-      <!-- Child Profile Brief -->
-      <div class="d-flex align-items-center gap-3 p-2 mb-3 bg-light-subtle rounded-3 border">
-        <img id="dashChildAvatar" src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=150&q=80" 
-             alt="Student Avatar" class="rounded-circle" width="46" height="46" style="object-fit: cover;">
-        <div>
-          <h6 class="mb-0 font-heading" id="dashChildName">Leo Miller</h6>
-          <span class="badge bg-primary-subtle text-primary" id="dashChildGrade">4th Grade</span>
-        </div>
+      <!-- Child Profile Brief & Switcher -->
+      <div class="p-2 mb-3 bg-light-subtle rounded-3 border">
+        <div class="d-flex align-items-center gap-3 mb-2">
+          <img id="dashChildAvatar" src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=150&q=80" 
+               alt="Student Avatar" class="rounded-circle" width="46" height="46" style="object-fit: cover;">
+          <div>
+            <h6 class="mb-0 font-heading" id="dashChildName">Leo Miller</h6>
+            <span class="badge bg-primary-subtle text-primary" id="dashChildGrade">4th Grade</span>
+          </div>
+        </div>
+        <div class="pt-2 border-top">
+          <label for="dashChildSelector" class="visually-hidden">Select Active Student</label>
+          <select class="form-select form-select-sm bg-surface border text-primary fw-semibold" id="dashChildSelector" aria-label="Select Active Student">
+            <option value="child-1" selected>Leo Miller (4th Grade)</option>
+            <option value="child-2">Maya Miller (7th Grade)</option>
+          </select>
+        </div>
       </div>
 
       <!-- Navigation Links -->
