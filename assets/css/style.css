@@ -8855,3 +8855,55 @@ img, svg, canvas, video {
 [data-theme="dark"] .bp-method-img-wrapper {
   background-color: #1e293b;
 }
+
+
+/* ==========================================================================
+   Program Detail Pages - Curriculum & Learning Modules Visuals
+   ========================================================================== */
+.bp-module-card {
+  border-radius: var(--bp-radius-lg, 16px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  background-color: var(--bp-card-bg, #ffffff);
+}
+
+.bp-module-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12) !important;
+  border-color: rgba(37, 99, 235, 0.35) !important;
+}
+
+.bp-module-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  border-top-left-radius: calc(var(--bp-radius-lg, 16px) - 1px);
+  border-top-right-radius: calc(var(--bp-radius-lg, 16px) - 1px);
+  background-color: var(--bp-bg-surface-secondary, #f8fafc);
+}
+
+.bp-module-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bp-module-card:hover .bp-module-card-img {
+  transform: scale(1.08);
+}
+
+[data-theme="dark"] .bp-module-card {
+  background-color: rgba(30, 41, 59, 0.88);
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-theme="dark"] .bp-module-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45) !important;
+  border-color: rgba(96, 165, 250, 0.45) !important;
+}
+
+[data-theme="dark"] .bp-module-img-wrapper {
+  background-color: #1e293b;
+}
