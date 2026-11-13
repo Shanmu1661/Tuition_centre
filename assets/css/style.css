@@ -8569,3 +8569,254 @@ img, svg, canvas, video {
 [data-theme="dark"] .bp-stat-thumb-wrapper {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
+
+
+/* ==========================================================================
+   Dashboard Mobile Responsiveness & Centered Content Alignment Engine
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  /* Dashboard Main Container Centering */
+  .bp-dash-main {
+    padding: 1rem 0.75rem !important;
+    text-align: center;
+  }
+
+  /* 1. Overview Card Centering */
+  .bp-dash-overview-card {
+    padding: 1.5rem 1.25rem !important;
+    text-align: center !important;
+  }
+
+  .bp-dash-overview-content {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 1rem !important;
+  }
+
+  .bp-dash-overview-content > div:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .bp-dash-overview-content .d-inline-flex {
+    justify-content: center !important;
+    margin: 0 auto 0.65rem !important;
+    width: 100% !important;
+  }
+
+  .bp-dash-overview-card h1 {
+    font-size: clamp(1.4rem, 5vw, 1.85rem) !important;
+    text-align: center !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .bp-dash-overview-lead {
+    font-size: 0.875rem !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+
+  .bp-dash-overview-content .d-flex.flex-wrap.gap-2 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 0.65rem !important;
+  }
+
+  .bp-dash-overview-card .btn {
+    width: 100% !important;
+    max-width: 300px !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* 2. Quick KPI Stat Widgets Centering */
+  .bp-dash-stat-widget {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 1.25rem 1rem !important;
+    gap: 0.65rem !important;
+    min-height: auto !important;
+  }
+
+  .bp-dash-stat-widget .bp-stat-thumb-wrapper {
+    margin: 0 auto 0.25rem !important;
+  }
+
+  .bp-dash-stat-widget .flex-grow-1 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .bp-dash-stat-widget .font-heading,
+  .bp-dash-stat-widget h3,
+  .bp-dash-stat-widget h4 {
+    text-align: center !important;
+    margin: 0.2rem auto !important;
+  }
+
+  .bp-dash-stat-widget .text-muted,
+  .bp-dash-stat-widget span {
+    text-align: center !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* 3. Section Headers Centering */
+  #booking-section .bp-card,
+  #homework-section,
+  #attendance-section {
+    padding: 1.25rem 1rem !important;
+    text-align: center !important;
+  }
+
+  #booking-section .d-flex.justify-content-between,
+  #homework-section .d-flex.flex-wrap.justify-content-between,
+  #attendance-section .d-flex.flex-wrap.justify-content-between {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 1rem !important;
+  }
+
+  #booking-section .d-flex.justify-content-between > div,
+  #homework-section .d-flex.flex-wrap.justify-content-between > div:first-child,
+  #attendance-section .d-flex.flex-wrap.justify-content-between > div:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  #homework-section .d-flex.align-items-center.gap-2.mb-1,
+  #attendance-section .bp-badge {
+    justify-content: center !important;
+    margin: 0 auto 0.4rem !important;
+  }
+
+  #booking-section h4,
+  #homework-section h4,
+  #attendance-section h4 {
+    text-align: center !important;
+    font-size: 1.15rem !important;
+  }
+
+  #booking-section p,
+  #homework-section p,
+  #attendance-section p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Filter & Control Groups Centering on Mobile */
+  #homework-section .d-flex.flex-wrap.align-items-center.gap-2,
+  #attendance-section .d-flex.gap-2 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 0.65rem !important;
+  }
+
+  #homework-section .input-group,
+  #homework-section select,
+  #homework-section button,
+  #attendance-section select,
+  #attendance-section button {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+  }
+
+  #booking-section .btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
+  }
+
+  /* 4. Upcoming Sessions & Homework Cards Centering on Mobile */
+  .bp-hw-item {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.85rem !important;
+    padding: 1rem !important;
+  }
+
+  .bp-hw-item > div:first-child {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    gap: 0.5rem !important;
+  }
+
+  .bp-hw-item .small.text-muted {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .bp-hw-item .font-heading {
+    text-align: center !important;
+  }
+
+  .bp-hw-item > div:last-child {
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  /* Slot reservation buttons */
+  #slotBookingForm {
+    text-align: center !important;
+  }
+
+  #slotBookingForm label {
+    text-align: center !important;
+    display: block !important;
+  }
+
+  #slotBookingForm .form-select,
+  #slotBookingForm .form-control {
+    text-align: center !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+
+  #slotBookingForm .d-grid {
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+
+  #slotBookingForm button[type="submit"] {
+    max-width: 320px !important;
+    margin: 1rem auto 0 !important;
+  }
+
+  /* Attendance Table Centering */
+  #attendance-section .table th,
+  #attendance-section .table td {
+    text-align: center !important;
+  }
+}
