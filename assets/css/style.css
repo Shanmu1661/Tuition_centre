@@ -2152,7 +2152,27 @@ textarea:focus-visible {
 
   .bp-navbar-dashboard .bp-navbar-container {
 
-    flex-wrap: wrap !important;
+    display: flex !important;
+
+    flex-wrap: nowrap !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    width: 100% !important;
+
+    gap: 0.5rem !important;
+
+  }
+
+
+
+  .bp-navbar-dashboard .bp-brand {
+
+    flex-shrink: 0 !important;
+
+    margin-right: 0 !important;
 
   }
 
@@ -2374,21 +2394,35 @@ textarea:focus-visible {
 
   .bp-navbar-dashboard .bp-controls-group {
 
-    display: flex !important;
+    display: inline-flex !important;
 
-    flex-wrap: wrap !important;
+    flex-direction: row !important;
+
+    flex-wrap: nowrap !important;
 
     align-items: center !important;
 
-    justify-content: space-between !important;
+    justify-content: flex-end !important;
 
-    width: 100% !important;
+    width: auto !important;
 
-    padding-top: 0.75rem !important;
+    padding-top: 0 !important;
 
-    border-top: 1px solid var(--bp-border) !important;
+    border-top: none !important;
 
     gap: 0.5rem !important;
+
+    margin-left: auto !important;
+
+    flex-shrink: 0 !important;
+
+  }
+
+
+
+  [dir="rtl"] .bp-navbar-dashboard .bp-controls-group {
+
+    margin-right: auto !important;
 
     margin-left: 0 !important;
 
