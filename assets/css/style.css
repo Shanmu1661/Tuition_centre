@@ -9159,3 +9159,41 @@ img, svg, canvas, video {
 [data-theme="dark"] .bp-schedule-about-img-wrapper {
   background-color: #1e293b;
 }
+
+/* ==========================================================================
+   Blog Details - Related Educational Guides Section Background
+   ========================================================================== */
+.bp-blog-related-section {
+  background: linear-gradient(180deg, #eef6ff 0%, #f8faff 50%, #edf5ff 100%) !important;
+  border-top: 1px solid rgba(37, 99, 235, 0.15) !important;
+  border-bottom: 1px solid rgba(37, 99, 235, 0.08) !important;
+  position: relative;
+}
+
+.bp-blog-related-section .bp-card {
+  background-color: var(--bp-bg-surface, #ffffff) !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05) !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease !important;
+}
+
+.bp-blog-related-section .bp-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.12) !important;
+}
+
+[data-theme="dark"] .bp-blog-related-section {
+  background: linear-gradient(180deg, #0b1329 0%, #0f172a 100%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-theme="dark"] .bp-blog-related-section .bp-card {
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .bp-blog-related-section .bp-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5) !important;
+}
