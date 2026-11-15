@@ -809,47 +809,71 @@
 
 
       <!-- Common Book Slot CTA Below Tutors Grid -->
-      <div class="bp-book-slot-cta-card text-center mt-5 mb-4 shadow-sm">
+      <div class="bp-book-slot-cta-card mt-5 mb-4 shadow-sm p-4 p-lg-5">
         <div class="position-relative z-1">
-          <!-- Availability Pill -->
-          <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-white text-primary small fw-semibold shadow-xs mb-3 border border-primary-subtle">
-            <span class="slot-live-indicator">
-              <span class="slot-pulse-ring"></span>
-              <span class="slot-pulse-dot"></span>
-            </span>
-            <span>Live Tutor Scheduling • Fall &amp; Spring Term Open</span>
-          </div>
-
-          <h3 class="font-heading fs-4 fw-bold mb-2">Ready to Match Your Child with an Expert Tutor?</h3>
-          <p class="text-muted mx-auto mb-4" style="max-width: 620px; font-size: 0.95rem;">
-            Lock in a personalized 1-on-1 diagnostic assessment or small group pod session. Includes our risk-free <strong>100% Chemistry Guarantee</strong>.
-          </p>
-
-          <!-- Action Buttons Group -->
-          <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
-            <a href="dashboard.html" class="btn-slot-enhanced">
-              <span class="slot-btn-icon">
-                <i class="fa-solid fa-calendar-check"></i>
-              </span>
-              <div class="btn-slot-content">
-                <span class="btn-slot-title">Book a Tutor Slot</span>
-                <span class="btn-slot-subtitle">Instant Confirmation • No Upfront Fee</span>
+          <div class="row align-items-center g-4 g-lg-5">
+            <!-- Left Column: Content & Actions -->
+            <div class="col-lg-7 text-center text-lg-start">
+              <!-- Availability Pill -->
+              <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-white text-primary small fw-semibold shadow-xs mb-3 border border-primary-subtle">
+                <span class="slot-live-indicator">
+                  <span class="slot-pulse-ring"></span>
+                  <span class="slot-pulse-dot"></span>
+                </span>
+                <span>Live Tutor Scheduling • Fall &amp; Spring Term Open</span>
               </div>
-              <span class="slot-btn-arrow">
-                <i class="fa-solid fa-arrow-right"></i>
-              </span>
-            </a>
 
-            <a href="contact.html" class="btn btn-bp-outline px-4 py-2" style="border-radius: 9999px; min-height: 48px; font-weight: 600;">
-              <i class="fa-solid fa-comments me-2"></i>Talk to an Advisor
-            </a>
-          </div>
+              <h3 class="font-heading fs-3 fw-bold mb-2">Ready to Match Your Child with an Expert Tutor?</h3>
+              <p class="text-muted mb-4" style="max-width: 580px; font-size: 0.95rem; line-height: 1.65;">
+                Lock in a personalized 1-on-1 diagnostic assessment or small group pod session. Includes our risk-free <strong>100% Chemistry Guarantee</strong>.
+              </p>
 
-          <!-- Trust Badges Row -->
-          <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 mt-4 pt-2 text-muted small">
-            <span><i class="fa-solid fa-shield-halved text-success me-1"></i> FBI/DOJ Fingerprinted</span>
-            <span><i class="fa-solid fa-star text-warning me-1"></i> 4.9/5 Average Rating</span>
-            <span><i class="fa-solid fa-rotate-left text-primary me-1"></i> Free Rescheduling</span>
+              <!-- Action Buttons Group -->
+              <div class="d-flex flex-wrap justify-content-center justify-content-lg-start align-items-center gap-3">
+                <a href="dashboard.html" class="btn-slot-enhanced">
+                  <span class="slot-btn-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                  </span>
+                  <div class="btn-slot-content">
+                    <span class="btn-slot-title">Book a Tutor Slot</span>
+                    <span class="btn-slot-subtitle">Instant Confirmation • No Upfront Fee</span>
+                  </div>
+                  <span class="slot-btn-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </a>
+
+                <a href="contact.html" class="btn btn-bp-outline bg-white px-4 py-2" style="border-radius: 9999px; min-height: 48px; font-weight: 600;">
+                  <i class="fa-solid fa-comments me-2"></i>Talk to an Advisor
+                </a>
+              </div>
+
+              <!-- Trust Badges Row -->
+              <div class="d-flex flex-wrap justify-content-center justify-content-lg-start align-items-center gap-3 gap-md-4 mt-4 pt-2 text-muted small">
+                <span><i class="fa-solid fa-shield-halved text-success me-1"></i> FBI/DOJ Fingerprinted</span>
+                <span><i class="fa-solid fa-star text-warning me-1"></i> 4.9/5 Average Rating</span>
+                <span><i class="fa-solid fa-rotate-left text-primary me-1"></i> Free Rescheduling</span>
+              </div>
+            </div>
+
+            <!-- Right Column: Visual Showcase -->
+            <div class="col-lg-5">
+              <div class="position-relative">
+                <div class="rounded-4 overflow-hidden border shadow-sm" style="height: 290px;">
+                  <img src="../assets/images/tutor-match-cta.jpg" alt="Dedicated educator conducting an encouraging 1-on-1 tutoring and mentoring session with student" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
+                </div>
+                <!-- Floating Trust Badge -->
+                <div class="position-absolute bottom-0 start-0 m-3 px-3 py-2 rounded-3 shadow-md bg-white border d-flex align-items-center gap-2" style="backdrop-filter: blur(8px); background-color: rgba(255, 255, 255, 0.94) !important;">
+                  <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center flex-shrink-0" style="width: 28px; height: 28px; font-size: 0.85rem;">
+                    <i class="fa-solid fa-handshake"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold text-dark small lh-1">100% Chemistry Fit</div>
+                    <div class="text-muted" style="font-size: 0.72rem;">Free Tutor Rematch Guarantee</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
