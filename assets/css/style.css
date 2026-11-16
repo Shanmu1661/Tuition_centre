@@ -9811,6 +9811,11 @@ img, svg, canvas, video {
 }
 
 /* Auth Page Minimal Header */
+.bp-auth-navbar {
+  position: relative !important;
+  top: auto !important;
+}
+
 .bp-auth-navbar .bp-controls-group {
   display: inline-flex !important;
   align-items: center !important;
