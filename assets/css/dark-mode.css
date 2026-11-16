@@ -1500,3 +1500,71 @@
   color: #4ade80 !important;
 }
 
+
+
+/* Dark Mode: Consultation CTA Section */
+[data-theme="dark"] .bp-consultation-card,
+[data-bs-theme="dark"] .bp-consultation-card {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0b1120 100%) !important;
+  border-color: rgba(59, 130, 246, 0.25) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .bp-consultation-card h2,
+[data-bs-theme="dark"] .bp-consultation-card h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .bp-consultation-card p.text-muted,
+[data-bs-theme="dark"] .bp-consultation-card p.text-muted {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .bp-consultation-feature,
+[data-bs-theme="dark"] .bp-consultation-feature {
+  background: rgba(30, 41, 59, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .bp-consultation-feature span,
+[data-bs-theme="dark"] .bp-consultation-feature span {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .bp-consultation-feature:hover,
+[data-bs-theme="dark"] .bp-consultation-feature:hover {
+  background: rgba(30, 41, 59, 0.95) !important;
+  border-color: rgba(96, 165, 250, 0.35) !important;
+}
+
+[data-theme="dark"] .bp-consultation-visual,
+[data-bs-theme="dark"] .bp-consultation-visual {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .bp-consultation-float-top,
+[data-bs-theme="dark"] .bp-consultation-float-top,
+[data-theme="dark"] .bp-consultation-float-bottom,
+[data-bs-theme="dark"] .bp-consultation-float-bottom {
+  background: rgba(15, 23, 42, 0.88) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #f8fafc !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .bp-consultation-card .btn-bp-outline,
+[data-bs-theme="dark"] .bp-consultation-card .btn-bp-outline {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+  color: #e2e8f0 !important;
+  border-color: rgba(148, 163, 184, 0.35) !important;
+}
+
+[data-theme="dark"] .bp-consultation-card .btn-bp-outline:hover,
+[data-bs-theme="dark"] .bp-consultation-card .btn-bp-outline:hover {
+  background-color: var(--bp-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--bp-primary) !important;
+}
+

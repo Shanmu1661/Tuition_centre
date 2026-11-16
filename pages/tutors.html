@@ -46,9 +46,9 @@
 
   <!-- Main Stylesheets -->
 
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=2.7">
 
-  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=2.7">
 
   <link rel="stylesheet" href="../assets/css/rtl.css">
 
@@ -1794,49 +1794,104 @@
 
 
 
-  <!-- Section 7: Free Consultation & Diagnostic CTA -->
-
-  <section class="py-5">
-
+  <!-- Section 7: Free Consultation & Diagnostic CTA (Modern 2-Column Split Showcase) -->
+  <section class="py-5 bp-consultation-section">
     <div class="container">
+      <div class="bp-consultation-card position-relative overflow-hidden rounded-4 border shadow-lg">
+        <!-- Subtle Ambient Glows -->
+        <div class="bp-consultation-glow-1" aria-hidden="true"></div>
+        <div class="bp-consultation-glow-2" aria-hidden="true"></div>
 
-      <div class="bp-consultation-banner position-relative overflow-hidden rounded-4 p-3 p-md-5 text-center shadow-lg">
-        <!-- Background Image Layer -->
-        <div class="bp-consultation-banner-bg"></div>
-        <!-- Ambient Vignette Overlay -->
-        <div class="bp-consultation-banner-overlay"></div>
+        <div class="row g-0 align-items-center position-relative" style="z-index: 1;">
+          <!-- Left Column: Content, Assessment Features & Actions -->
+          <div class="col-lg-7 p-4 p-md-5">
+            <div class="d-inline-flex align-items-center gap-2 mb-3">
+              <span class="bp-badge bp-badge-primary shadow-xs">
+                <i class="fa-solid fa-sparkles me-1"></i>Free Consultation
+              </span>
+              <span class="badge bg-success-subtle text-success border border-success-subtle fw-semibold">
+                <i class="fa-solid fa-clock me-1"></i>20-Min Diagnostic
+              </span>
+            </div>
 
-        <!-- Glassmorphic Content Card Island -->
-        <div class="bp-consultation-glass-card">
-          <span class="bp-badge bp-badge-primary mb-3 shadow-xs">
-            <i class="fa-solid fa-sparkles me-1"></i>Free Consultation
-          </span>
+            <h2 class="font-heading fs-2 mb-3 text-start">Not Sure Which Mentor Is Right for Your Child?</h2>
 
-          <h2 class="font-heading fs-2 mb-3">Not Sure Which Mentor Is Right for Your Child?</h2>
+            <p class="text-muted mb-4 text-start" style="line-height: 1.7; max-width: 580px;">
+              Schedule a complimentary 20-minute diagnostic session with our Academic Director. We'll assess your child’s learning style, review recent homework roadblocks, and pair them with the ideal certified tutor.
+            </p>
 
-          <p class="text-muted mx-auto mb-4" style="max-width: 660px; line-height: 1.7;">
-            Schedule a complimentary 20-minute diagnostic session with our Academic Director. We'll assess your child’s learning style, review recent homework roadblocks, and pair them with the ideal certified tutor.
-          </p>
+            <!-- 3 Key Assessment Highlights -->
+            <div class="row g-3 mb-4 text-start">
+              <div class="col-sm-4">
+                <div class="bp-consultation-feature d-flex align-items-center gap-2">
+                  <div class="bp-feature-icon-circle text-primary bg-primary-subtle rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 32px; height: 32px;">
+                    <i class="fa-solid fa-user-check small"></i>
+                  </div>
+                  <span class="small fw-semibold">1:1 Diagnostic</span>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="bp-consultation-feature d-flex align-items-center gap-2">
+                  <div class="bp-feature-icon-circle text-warning bg-warning-subtle rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 32px; height: 32px;">
+                    <i class="fa-solid fa-map-location-dot small"></i>
+                  </div>
+                  <span class="small fw-semibold">Custom Roadmap</span>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="bp-consultation-feature d-flex align-items-center gap-2">
+                  <div class="bp-feature-icon-circle text-success bg-success-subtle rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 32px; height: 32px;">
+                    <i class="fa-solid fa-handshake small"></i>
+                  </div>
+                  <span class="small fw-semibold">Chemistry Match</span>
+                </div>
+              </div>
+            </div>
 
-          <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
-            <a href="contact.html" class="btn btn-bp-primary px-4 py-2 shadow-sm">
-              <i class="fa-solid fa-calendar-plus me-1"></i> Request Free Consultation
-            </a>
-            <a href="programs.html" class="btn btn-bp-outline bg-white px-4 py-2 shadow-sm">
-              <i class="fa-solid fa-book-open me-1"></i> View All Programs
-            </a>
+            <!-- Action Buttons -->
+            <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+              <a href="contact.html" class="btn btn-bp-primary px-4 py-2 shadow-sm">
+                <i class="fa-solid fa-calendar-plus me-1"></i> Request Free Consultation
+              </a>
+              <a href="programs.html" class="btn btn-bp-outline px-4 py-2 shadow-sm">
+                <i class="fa-solid fa-book-open me-1"></i> View All Programs
+              </a>
+            </div>
+
+            <!-- Trust Badges Line -->
+            <div class="d-flex flex-wrap gap-3 pt-3 border-top small text-muted">
+              <span><i class="fa-solid fa-circle-check text-success me-1"></i>No Obligation Consultation</span>
+              <span><i class="fa-solid fa-circle-check text-success me-1"></i>100% Free Chemistry Guarantee</span>
+              <span><i class="fa-solid fa-circle-check text-success me-1"></i>Same-Day Pairing</span>
+            </div>
           </div>
 
-          <div class="d-flex flex-wrap justify-content-center gap-4 text-muted small fw-semibold">
-            <span><i class="fa-solid fa-circle-check text-success me-1"></i>No Obligation Consultation</span>
-            <span><i class="fa-solid fa-circle-check text-success me-1"></i>100% Free Chemistry Guarantee</span>
-            <span><i class="fa-solid fa-circle-check text-success me-1"></i>Tailored Academic Roadmap</span>
+          <!-- Right Column: Visual Showcase Card -->
+          <div class="col-lg-5 p-4 p-md-5 pt-0 pt-lg-5">
+            <div class="bp-consultation-visual position-relative rounded-4 overflow-hidden shadow-md">
+              <img src="../assets/images/tutor-match-cta.jpg" alt="Certified Academic Director conducting a 1:1 student diagnostic matching session" class="w-100" style="object-fit: cover; min-height: 380px; max-height: 440px;" loading="lazy">
+              
+              <!-- Floating Top Pill -->
+              <div class="bp-consultation-float-top position-absolute top-0 start-0 m-3 px-3 py-2 rounded-3 shadow-sm d-flex align-items-center gap-2">
+                <span class="badge bg-primary text-white rounded-pill px-2 py-1"><i class="fa-solid fa-circle-check"></i> Free</span>
+                <span class="small fw-bold">20-Min 1:1 Matching Session</span>
+              </div>
+
+              <!-- Floating Bottom Card -->
+              <div class="bp-consultation-float-bottom position-absolute bottom-0 start-0 end-0 m-3 p-3 rounded-3 shadow-md d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="text-warning">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="small fw-bold">Certified Tutor Pairing</span>
+                </div>
+                <span class="badge bg-success-subtle text-success small fw-semibold">Next: Today</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
-
   </section>
 
 
