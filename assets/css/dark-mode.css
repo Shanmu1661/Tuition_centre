@@ -1568,3 +1568,30 @@
   border-color: var(--bp-primary) !important;
 }
 
+/* Dark Mode: Parent Newsletter Card */
+[data-theme="dark"] .bp-newsletter-card,
+[data-bs-theme="dark"] .bp-newsletter-card {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0b1120 100%) !important;
+  border-color: rgba(59, 130, 246, 0.22) !important;
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.06) !important;
+}
+
+[data-theme="dark"] .bp-newsletter-card h3,
+[data-bs-theme="dark"] .bp-newsletter-card h3 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .bp-newsletter-card p.text-muted,
+[data-bs-theme="dark"] .bp-newsletter-card p.text-muted,
+[data-theme="dark"] .bp-newsletter-card .text-muted,
+[data-bs-theme="dark"] .bp-newsletter-card .text-muted {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .bp-newsletter-visual,
+[data-bs-theme="dark"] .bp-newsletter-visual {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 14px 32px -8px rgba(0, 0, 0, 0.6) !important;
+}
+
+
