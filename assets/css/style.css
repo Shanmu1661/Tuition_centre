@@ -9810,4 +9810,17 @@ img, svg, canvas, video {
   text-align: right !important;
 }
 
+/* Auth Page Minimal Header */
+.bp-auth-navbar .bp-controls-group {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin-left: auto !important;
+}
+
+[dir="rtl"] .bp-auth-navbar .bp-controls-group {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+
 

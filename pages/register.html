@@ -22,17 +22,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
   <!-- Main Stylesheets -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=2.8">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=2.8">
   <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
 <body class="bg-body">
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Main Navigation Header -->
-  <nav class="navbar navbar-expand-lg bp-navbar sticky-top" aria-label="Main Navigation">
-    <div class="bp-navbar-container">
+    <!-- Auth Page Header: Logo, RTL & Dark Mode Only -->
+  <nav class="navbar bp-navbar sticky-top bp-auth-navbar py-3" aria-label="Authentication Navigation">
+    <div class="bp-navbar-container d-flex align-items-center justify-content-between w-100">
       <!-- Brand Logo -->
       <a class="bp-brand" href="index.html">
         <div class="bp-brand-icon">
@@ -46,79 +46,21 @@
         </div>
       </a>
 
-      <!-- Navbar Toggler for Mobile -->
-      <button class="navbar-toggler bp-navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="bp-toggler-bar"></span>
-        <span class="bp-toggler-bar"></span>
-        <span class="bp-toggler-bar"></span>
-      </button>
+      <!-- Action Controls: RTL & Dark Mode Only -->
+      <div class="bp-controls-group d-flex align-items-center gap-2">
+        <!-- RTL Layout Switcher -->
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle Right-to-Left Layout">
+          <span class="rtl-status-label">RTL</span>
+        </button>
 
-      <!-- Navigation Links (ONLY: Home, Programs, Tutor, Study Tips, Contact, Dashboard) -->
-      <div class="collapse navbar-collapse" id="navbarMainContent">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-                    <!-- Home Dropdown (Home 1 & Home 2) -->
-          <li class="nav-item dropdown bp-nav-dropdown">
-            <a class="nav-link bp-nav-link dropdown-toggle d-flex align-items-center gap-1" href="index.html" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <span>Home</span>
-              <i class="fa-solid fa-chevron-down small" style="font-size: 0.72rem;"></i>
-            </a>
-            <ul class="dropdown-menu bp-dropdown-menu shadow-sm" aria-labelledby="homeDropdown">
-              <li>
-                <a class="dropdown-item bp-dropdown-item" href="index.html">
-                  <span class="bp-dropdown-title"><i class="fa-solid fa-house me-1 text-primary"></i> Home 1</span>
-                  <span class="bp-dropdown-desc">Classic Academy Overview &amp; Routine</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item bp-dropdown-item" href="home-2.html">
-                  <span class="bp-dropdown-title"><i class="fa-solid fa-graduation-cap me-1 text-primary"></i> Home 2</span>
-                  <span class="bp-dropdown-desc">Homework Support &amp; Pod Finder</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link" href="programs.html">Programs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link" href="tutors.html">Tutor</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link" href="blog.html">Study Tips</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bp-nav-link active" href="dashboard.html" aria-current="page">Dashboard</a>
-          </li>
-        </ul>
-
-        <!-- Action Controls & Portals -->
-        <div class="bp-controls-group">
-          <!-- RTL Layout Switcher -->
-          <button class="rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle Right-to-Left Layout">
-            <span class="rtl-status-label">RTL</span>
-          </button>
-
-          <!-- Dark/Light Mode Switcher -->
-          <button class="bp-icon-btn theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
-            <span class="theme-toggle-svg-wrap">
-              <svg class="bp-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-              </svg>
-            </span>
-          </button>
-
-          <!-- Parent Login Portal Button -->
-          <a href="login.html" class="btn btn-bp-outline btn-sm">
-            <span>Sign In</span>
-          </a>
-          <!-- Register CTA Button -->
-          <a href="register.html" class="btn btn-bp-primary btn-sm d-none d-sm-inline-flex">
-            <span>Free Trial Pass</span>
-          </a>
-        </div>
+        <!-- Dark/Light Mode Switcher -->
+        <button class="bp-icon-btn theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <span class="theme-toggle-svg-wrap">
+            <svg class="bp-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </span>
+        </button>
       </div>
     </div>
   </nav>
