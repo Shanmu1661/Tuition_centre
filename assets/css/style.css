@@ -9544,3 +9544,90 @@ img, svg, canvas, video {
   color: var(--bp-text-muted, #64748b);
 }
 
+
+
+/* Educational Pillars Uniform Card Footer Alignment */
+.bp-card-footer-action {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 0.875rem !important;
+  border-top: 1px solid var(--bp-border, rgba(226, 232, 240, 0.8)) !important;
+  margin-top: auto !important;
+  min-height: 56px;
+  gap: 0.5rem;
+}
+.bp-card-footer-action .btn {
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.bp-card-footer-action .bp-pillar-price {
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: baseline !important;
+  gap: 0.25rem;
+  line-height: 1.2;
+  font-size: 0.88rem;
+}
+.bp-card-footer-action .bp-pillar-price.fs-6 {
+  font-size: 1rem !important;
+}
+
+
+
+/* Program Benefits Section (programs.html) */
+.bp-program-benefits-section {
+  position: relative;
+}
+
+.bp-program-benefits-content {
+  text-align: start !important;
+}
+
+.bp-program-benefits-content h2,
+.bp-program-benefits-content h3,
+.bp-program-benefits-content p,
+.bp-program-benefits-content span {
+  text-align: start !important;
+}
+
+.bp-benefit-item {
+  background-color: var(--bp-bg-surface, #ffffff);
+  border: 1px solid var(--bp-border, #e2e8f0);
+  border-radius: var(--bp-radius, 12px);
+  padding: 1rem 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.bp-benefit-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  border-color: var(--bp-primary-subtle, #bfdbfe);
+}
+
+.bp-benefit-icon-box {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: rgba(34, 197, 94, 0.12);
+  color: #16a34a;
+  font-size: 1.1rem;
+}
+
+[dir="rtl"] .bp-program-benefits-content,
+[dir="rtl"] .bp-program-benefits-content h2,
+[dir="rtl"] .bp-program-benefits-content h3,
+[dir="rtl"] .bp-program-benefits-content p {
+  text-align: right !important;
+}
+
+[dir="rtl"] .bp-benefit-item:hover {
+  transform: translateX(-4px);
+}
+

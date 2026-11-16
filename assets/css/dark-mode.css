@@ -1451,3 +1451,52 @@
   color: #94a3b8 !important;
 }
 
+
+
+[data-theme="dark"] .bp-card-footer-action,
+[data-bs-theme="dark"] .bp-card-footer-action {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+
+/* Dark Mode: Program Benefits Section (programs.html) */
+[data-theme="dark"] .bp-program-benefits-section,
+[data-bs-theme="dark"] .bp-program-benefits-section {
+  background-color: var(--bp-bg-surface-secondary, #0f172a);
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .bp-program-benefits-content h2,
+[data-bs-theme="dark"] .bp-program-benefits-content h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .bp-program-benefits-content p.text-muted,
+[data-bs-theme="dark"] .bp-program-benefits-content p.text-muted {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .bp-benefit-item,
+[data-bs-theme="dark"] .bp-benefit-item {
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .bp-benefit-item:hover,
+[data-bs-theme="dark"] .bp-benefit-item:hover {
+  border-color: rgba(96, 165, 250, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .bp-benefit-item h3,
+[data-bs-theme="dark"] .bp-benefit-item h3 {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .bp-benefit-icon-box,
+[data-bs-theme="dark"] .bp-benefit-icon-box {
+  background-color: rgba(34, 197, 94, 0.2) !important;
+  color: #4ade80 !important;
+}
+

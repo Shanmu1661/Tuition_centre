@@ -58,7 +58,7 @@
 
   <!-- Main Stylesheets -->
 
-  <link rel="stylesheet" href="../assets/css/style.css?v=2.4">
+  <link rel="stylesheet" href="../assets/css/style.css?v=2.5">
 
   <style>
 
@@ -534,9 +534,46 @@
   color: #94a3b8 !important;
 }
 
+
+/* Educational Pillars Uniform Card Footer Alignment */
+.bp-card-footer-action {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 0.875rem !important;
+  border-top: 1px solid var(--bp-border, rgba(226, 232, 240, 0.8)) !important;
+  margin-top: auto !important;
+  min-height: 56px;
+  gap: 0.5rem;
+}
+.bp-card-footer-action .btn {
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.bp-card-footer-action .bp-pillar-price {
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: baseline !important;
+  gap: 0.25rem;
+  line-height: 1.2;
+  font-size: 0.88rem;
+}
+.bp-card-footer-action .bp-pillar-price.fs-6 {
+  font-size: 1rem !important;
+}
+
+
+[data-theme="dark"] .bp-card-footer-action,
+[data-bs-theme="dark"] .bp-card-footer-action {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
   </style>
 
-  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=2.4">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=2.5">
 
   <link rel="stylesheet" href="../assets/css/rtl.css">
 
@@ -1102,12 +1139,9 @@
 
                 </div>
 
-                <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
-
-                  <span class="fw-bold fs-6">$280 <small class="text-muted fw-normal">/ month</small></span>
-
+                <div class="bp-card-footer-action d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                  <span class="bp-pillar-price fw-bold fs-6 text-nowrap">$280 <small class="text-muted fw-normal">/ month</small></span>
                   <a href="homework-tutoring.html" class="btn btn-sm btn-bp-primary">Explore Details</a>
-
                 </div>
 
               </div>
@@ -1158,12 +1192,9 @@
 
                 </div>
 
-                <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
-
-                  <span class="fw-bold fs-6">$310 <small class="text-muted fw-normal">/ month</small></span>
-
+                <div class="bp-card-footer-action d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                  <span class="bp-pillar-price fw-bold fs-6 text-nowrap">$310 <small class="text-muted fw-normal">/ month</small></span>
                   <a href="academic-enrichment.html" class="btn btn-sm btn-bp-primary">Explore Details</a>
-
                 </div>
 
               </div>
@@ -1214,12 +1245,9 @@
 
                 </div>
 
-                <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
-
-                  <span class="fw-bold fs-6">Included <small class="text-muted fw-normal">in Core Plan</small></span>
-
+                <div class="bp-card-footer-action d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                  <span class="bp-pillar-price fw-bold fs-6 text-nowrap">Included <small class="text-muted fw-normal">in Core Plan</small></span>
                   <a href="enrichment-clubs.html" class="btn btn-sm btn-bp-primary">Explore Clubs</a>
-
                 </div>
 
               </div>
@@ -1270,12 +1298,9 @@
 
                 </div>
 
-                <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
-
-                  <span class="fw-bold fs-6">$340 <small class="text-muted fw-normal">/ week</small></span>
-
+                <div class="bp-card-footer-action d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                  <span class="bp-pillar-price fw-bold fs-6 text-nowrap">$340 <small class="text-muted fw-normal">/ week</small></span>
                   <a href="seasonal-camps.html" class="btn btn-sm btn-bp-primary">View Camp Schedule</a>
-
                 </div>
 
               </div>
@@ -1326,12 +1351,9 @@
 
                 </div>
 
-                <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
-
-                  <span class="fw-bold fs-6">Pickup Options Available</span>
-
+                <div class="bp-card-footer-action d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                  <span class="bp-pillar-price fw-bold text-nowrap" style="font-size: 0.88rem;">Pickup Options Available</span>
                   <a href="schedule-transportation.html" class="btn btn-sm btn-bp-primary">Check Routes</a>
-
                 </div>
 
               </div>
@@ -1382,12 +1404,9 @@
 
                 </div>
 
-                <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
-
-                  <span class="fw-bold fs-6">Safety First Academy</span>
-
+                <div class="bp-card-footer-action d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                  <span class="bp-pillar-price fw-bold text-nowrap" style="font-size: 0.88rem;">Safety First Academy</span>
                   <a href="safety-staff.html" class="btn btn-sm btn-bp-primary">View Standards</a>
-
                 </div>
 
               </div>
