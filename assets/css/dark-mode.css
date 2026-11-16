@@ -1281,3 +1281,173 @@
   background: rgba(15, 23, 42, 0.60) !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
+
+/* ==========================================================================
+   Home 2 Hero Section Dark Mode Contrast Fix
+   ========================================================================== */
+[data-theme="dark"] .bp-home2-hero,
+[data-bs-theme="dark"] .bp-home2-hero {
+  background-color: #0b1120 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .bp-home2-hero-bg,
+[data-bs-theme="dark"] .bp-home2-hero-bg {
+  opacity: 0.45 !important;
+  filter: contrast(115%) saturate(115%) brightness(88%) !important;
+}
+
+[data-theme="dark"] .bp-home2-hero-overlay,
+[data-bs-theme="dark"] .bp-home2-hero-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 0.94) 0%,
+    rgba(15, 23, 42, 0.84) 44%,
+    rgba(15, 23, 42, 0.55) 70%,
+    rgba(15, 23, 42, 0.25) 100%
+  ) !important;
+}
+
+[dir="rtl"][data-theme="dark"] .bp-home2-hero-overlay,
+[dir="rtl"][data-bs-theme="dark"] .bp-home2-hero-overlay {
+  background: linear-gradient(
+    270deg,
+    rgba(15, 23, 42, 0.94) 0%,
+    rgba(15, 23, 42, 0.84) 44%,
+    rgba(15, 23, 42, 0.55) 70%,
+    rgba(15, 23, 42, 0.25) 100%
+  ) !important;
+}
+
+[data-theme="dark"] .bp-home2-hero-glow-1,
+[data-bs-theme="dark"] .bp-home2-hero-glow-1 {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, rgba(59, 130, 246, 0) 70%) !important;
+}
+
+[data-theme="dark"] .bp-home2-hero-glow-2,
+[data-bs-theme="dark"] .bp-home2-hero-glow-2 {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.10) 0%, rgba(245, 158, 11, 0) 70%) !important;
+}
+
+[data-theme="dark"] .bp-home2-badge,
+[data-bs-theme="dark"] .bp-home2-badge {
+  background-color: rgba(30, 58, 138, 0.55) !important;
+  border-color: rgba(96, 165, 250, 0.35) !important;
+  color: #bfdbfe !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .bp-home2-title,
+[data-bs-theme="dark"] .bp-home2-title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85) !important;
+}
+
+[data-theme="dark"] .bp-home2-lead,
+[data-bs-theme="dark"] .bp-home2-lead {
+  color: #f8fafc !important;
+  font-weight: 500;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.85) !important;
+}
+
+[data-theme="dark"] .bp-home2-trust-badges .bp-home2-trust-item,
+[data-bs-theme="dark"] .bp-home2-trust-badges .bp-home2-trust-item {
+  color: #ffffff !important;
+  font-weight: 600;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8) !important;
+}
+
+[data-theme="dark"] .bp-home2-hero .text-success,
+[data-bs-theme="dark"] .bp-home2-hero .text-success {
+  color: #4ade80 !important;
+  filter: drop-shadow(0 0 4px rgba(74, 222, 128, 0.4)) !important;
+}
+
+[data-theme="dark"] .bp-home2-card,
+[data-bs-theme="dark"] .bp-home2-card {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Fallback for general hero elements in home-2 when theme is dark */
+[data-theme="dark"] .bp-home2-hero .text-muted,
+[data-bs-theme="dark"] .bp-home2-hero .text-muted {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .bp-home2-hero .text-main,
+[data-bs-theme="dark"] .bp-home2-hero .text-main {
+  color: #ffffff !important;
+}
+
+
+/* Dark Mode: Routine & Testimonials Sections (Home 2) */
+[data-theme="dark"] .bp-routine-section,
+[data-bs-theme="dark"] .bp-routine-section {
+  background: linear-gradient(rgba(15, 23, 42, 0.93), rgba(15, 23, 42, 0.95)), url('../assets/images/hero-classroom-bg.jpg') center / cover no-repeat !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+[data-theme="dark"] .bp-routine-section .font-heading,
+[data-bs-theme="dark"] .bp-routine-section .font-heading {
+  color: #ffffff !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+[data-theme="dark"] .bp-routine-section .text-muted,
+[data-bs-theme="dark"] .bp-routine-section .text-muted {
+  color: #cbd5e1 !important;
+}
+[data-theme="dark"] .bp-routine-section .bp-badge,
+[data-bs-theme="dark"] .bp-routine-section .bp-badge {
+  background-color: rgba(37, 99, 235, 0.25) !important;
+  color: #93c5fd !important;
+  border: 1px solid rgba(147, 197, 253, 0.35) !important;
+}
+[data-theme="dark"] .bp-routine-section .bp-card,
+[data-bs-theme="dark"] .bp-routine-section .bp-card {
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.45) !important;
+}
+[data-theme="dark"] .bp-routine-section .bp-card .font-heading,
+[data-bs-theme="dark"] .bp-routine-section .bp-card .font-heading {
+  color: #f8fafc !important;
+}
+[data-theme="dark"] .bp-routine-section .bp-card .text-muted,
+[data-bs-theme="dark"] .bp-routine-section .bp-card .text-muted {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .bp-testimonials-section,
+[data-bs-theme="dark"] .bp-testimonials-section {
+  background: linear-gradient(rgba(15, 23, 42, 0.93), rgba(15, 23, 42, 0.95)), url('../assets/images/testimonials-bg.jpg') center / cover no-repeat !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+[data-theme="dark"] .bp-testimonials-section .font-heading,
+[data-bs-theme="dark"] .bp-testimonials-section .font-heading {
+  color: #ffffff !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+[data-theme="dark"] .bp-testimonials-section .text-muted,
+[data-bs-theme="dark"] .bp-testimonials-section .text-muted {
+  color: #cbd5e1 !important;
+}
+[data-theme="dark"] .bp-testimonials-section .bp-badge,
+[data-bs-theme="dark"] .bp-testimonials-section .bp-badge {
+  background-color: rgba(37, 99, 235, 0.25) !important;
+  color: #93c5fd !important;
+  border: 1px solid rgba(147, 197, 253, 0.35) !important;
+}
+[data-theme="dark"] .bp-testimonials-section .bp-card,
+[data-bs-theme="dark"] .bp-testimonials-section .bp-card {
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.45) !important;
+}
+[data-theme="dark"] .bp-testimonials-section .bp-card .font-heading,
+[data-bs-theme="dark"] .bp-testimonials-section .bp-card .font-heading {
+  color: #f8fafc !important;
+}
+[data-theme="dark"] .bp-testimonials-section .bp-card .text-muted,
+[data-bs-theme="dark"] .bp-testimonials-section .bp-card .text-muted {
+  color: #94a3b8 !important;
+}
+
