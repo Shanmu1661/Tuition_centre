@@ -9859,5 +9859,20 @@ img, svg, canvas, video {
   background: rgba(100, 116, 139, 0.7);
 }
 
+/* Standalone Breadcrumbs Bar Background */
+.bp-breadcrumb-bar,
+nav[aria-label="breadcrumb"]:not(.bp-page-banner nav):not(.d-none) {
+  background-color: var(--bp-bg-surface-secondary, #f1f5f9) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
+}
+
+[data-theme="dark"] .bp-breadcrumb-bar,
+[data-theme="dark"] nav[aria-label="breadcrumb"]:not(.bp-page-banner nav):not(.d-none),
+[data-bs-theme="dark"] .bp-breadcrumb-bar,
+[data-bs-theme="dark"] nav[aria-label="breadcrumb"]:not(.bp-page-banner nav):not(.d-none) {
+  background-color: var(--bp-bg-surface-secondary, #0f172a) !important;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.8) !important;
+}
+
 
 
