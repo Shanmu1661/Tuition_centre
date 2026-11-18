@@ -9680,6 +9680,10 @@ img, svg, canvas, video {
 }
 
 .bp-consultation-feature {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-height: 58px;
   padding: 0.6rem 0.75rem;
   background: #ffffff;
   border: 1px solid rgba(226, 232, 240, 0.95);
@@ -9825,6 +9829,34 @@ img, svg, canvas, video {
 [dir="rtl"] .bp-auth-navbar .bp-controls-group {
   margin-left: 0 !important;
   margin-right: auto !important;
+}
+
+/* Scrollable Sticky Sidebar for Blog Details & Long Columns */
+.bp-sticky-sidebar {
+  position: sticky;
+  top: 90px;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px;
+  scrollbar-width: thin;
+}
+
+.bp-sticky-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.bp-sticky-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bp-sticky-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 4px;
+}
+
+.bp-sticky-sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.7);
 }
 
 
