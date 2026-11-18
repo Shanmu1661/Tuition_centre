@@ -7252,6 +7252,14 @@ img, svg, canvas, video {
 
   }
 
+  .bp-card.bp-card-hover,
+  .bp-card:has(.bp-card-body),
+  .bp-card:has(.bp-program-img-wrapper) {
+
+    padding: 0 !important;
+
+  }
+
 
 
   /* Quick finder form on mobile */
@@ -9551,6 +9559,7 @@ img, svg, canvas, video {
 /* Educational Pillars Uniform Card Footer Alignment */
 .bp-card-footer-action {
   display: flex !important;
+  flex-wrap: wrap !important;
   justify-content: space-between !important;
   align-items: center !important;
   padding-top: 0.875rem !important;
@@ -9576,6 +9585,39 @@ img, svg, canvas, video {
 }
 .bp-card-footer-action .bp-pillar-price.fs-6 {
   font-size: 1rem !important;
+}
+
+/* Mobile & Small Screen Card Alignment: Stack Price & Full-Width Button */
+@media (max-width: 575.98px) {
+  .bp-card.bp-card-hover {
+    padding: 0 !important;
+  }
+  .bp-card .bp-card-body.p-4 {
+    padding: 1.25rem 1rem !important;
+  }
+  .bp-card-footer-action {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+    min-height: auto !important;
+  }
+  .bp-card-footer-action .bp-pillar-price {
+    white-space: normal !important;
+    font-size: 0.95rem !important;
+    width: 100% !important;
+  }
+  .bp-card-footer-action .bp-pillar-price.fs-6 {
+    font-size: 0.95rem !important;
+  }
+  .bp-card-footer-action .btn {
+    width: 100% !important;
+    min-height: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.875rem !important;
+  }
 }
 
 
