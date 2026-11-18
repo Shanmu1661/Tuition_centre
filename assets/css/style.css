@@ -9920,3 +9920,17 @@ nav[aria-label="breadcrumb"]:not(.bp-page-banner nav):not(.d-none) {
 
 
 
+
+
+/* Program Detail Page Back CTA Responsive Centering */
+.bp-program-back-cta {
+  display: block;
+}
+
+@media (max-width: 991.98px) {
+  .bp-program-back-cta {
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+}
