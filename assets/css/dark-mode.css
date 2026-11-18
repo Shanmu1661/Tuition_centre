@@ -1599,6 +1599,17 @@
   color: #cbd5e1 !important;
 }
 
+[data-theme="dark"] .bp-newsletter-perks-box,
+[data-bs-theme="dark"] .bp-newsletter-perks-box {
+  background: rgba(30, 41, 59, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .bp-newsletter-perks-box span,
+[data-bs-theme="dark"] .bp-newsletter-perks-box span {
+  color: #cbd5e1 !important;
+}
+
 [data-theme="dark"] .bp-newsletter-visual,
 [data-bs-theme="dark"] .bp-newsletter-visual {
   border-color: rgba(255, 255, 255, 0.12) !important;

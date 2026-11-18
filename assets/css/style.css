@@ -9846,6 +9846,20 @@ img, svg, canvas, video {
   text-align: start !important;
 }
 
+.bp-newsletter-perks-box {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  max-width: 540px;
+}
+
+.bp-newsletter-perks-box span {
+  color: #334155 !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
 .bp-newsletter-visual {
   position: relative;
   overflow: hidden;
