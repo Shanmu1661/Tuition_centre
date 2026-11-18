@@ -7252,7 +7252,6 @@ img, svg, canvas, video {
 
   }
 
-  .bp-card.bp-card-hover,
   .bp-card:has(.bp-card-body),
   .bp-card:has(.bp-program-img-wrapper) {
 
@@ -9589,7 +9588,8 @@ img, svg, canvas, video {
 
 /* Mobile & Small Screen Card Alignment: Stack Price & Full-Width Button */
 @media (max-width: 575.98px) {
-  .bp-card.bp-card-hover {
+  .bp-card:has(.bp-card-body),
+  .bp-card:has(.bp-program-img-wrapper) {
     padding: 0 !important;
   }
   .bp-card .bp-card-body.p-4 {
@@ -9933,4 +9933,15 @@ nav[aria-label="breadcrumb"]:not(.bp-page-banner nav):not(.d-none) {
     justify-content: center !important;
     text-align: center !important;
   }
+}
+
+
+/* Tutor Cards: View Bio Button and Bottom Border Spacing */
+.tutor-card-item .bp-card {
+  padding-bottom: 1.5rem !important;
+}
+
+.tutor-card-item .mt-auto {
+  margin-top: auto !important;
+  padding-bottom: 0.5rem !important;
 }

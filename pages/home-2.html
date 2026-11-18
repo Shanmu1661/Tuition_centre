@@ -568,7 +568,8 @@
 
 /* Mobile & Small Screen Card Alignment: Stack Price & Full-Width Button */
 @media (max-width: 575.98px) {
-  .bp-card.bp-card-hover {
+  .bp-card:has(.bp-card-body),
+  .bp-card:has(.bp-program-img-wrapper) {
     padding: 0 !important;
   }
   .bp-card .bp-card-body.p-4 {
