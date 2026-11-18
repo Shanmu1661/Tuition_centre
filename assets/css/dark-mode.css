@@ -1538,6 +1538,17 @@
   border-color: rgba(96, 165, 250, 0.35) !important;
 }
 
+[data-theme="dark"] .bp-consultation-trust-box,
+[data-bs-theme="dark"] .bp-consultation-trust-box {
+  background: rgba(30, 41, 59, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .bp-consultation-trust-box span,
+[data-bs-theme="dark"] .bp-consultation-trust-box span {
+  color: #cbd5e1 !important;
+}
+
 [data-theme="dark"] .bp-consultation-visual,
 [data-bs-theme="dark"] .bp-consultation-visual {
   border-color: rgba(255, 255, 255, 0.12) !important;
