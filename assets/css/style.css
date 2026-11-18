@@ -1584,7 +1584,7 @@ textarea:focus-visible {
 
 
 
-  .bp-navbar:not(.bp-navbar-dashboard) .bp-brand {
+  .bp-navbar:not(.bp-navbar-dashboard):not(.bp-auth-navbar) .bp-brand {
 
     margin-right: 0 !important;
 
@@ -1868,7 +1868,7 @@ textarea:focus-visible {
 
 
 
-  .bp-navbar:not(.bp-navbar-dashboard) .bp-controls-group {
+  .bp-navbar:not(.bp-navbar-dashboard):not(.bp-auth-navbar) .bp-controls-group {
 
     flex-wrap: wrap;
 
@@ -1886,7 +1886,7 @@ textarea:focus-visible {
 
 
 
-  .bp-navbar:not(.bp-navbar-dashboard) .bp-controls-group .btn {
+  .bp-navbar:not(.bp-navbar-dashboard):not(.bp-auth-navbar) .bp-controls-group .btn {
 
     flex: 1 1 auto;
 
@@ -9885,21 +9885,59 @@ img, svg, canvas, video {
   text-align: right !important;
 }
 
-/* Auth Page Minimal Header */
+/* Auth Page Minimal Header (login.html, register.html) */
 .bp-auth-navbar {
   position: relative !important;
   top: auto !important;
+  padding: 0.75rem 0 !important;
+}
+
+.bp-auth-navbar .bp-navbar-container {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
+.bp-auth-navbar .bp-brand {
+  flex-shrink: 0 !important;
+  max-width: none !important;
+  margin-right: 0 !important;
 }
 
 .bp-auth-navbar .bp-controls-group {
   display: inline-flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   align-items: center !important;
+  justify-content: flex-end !important;
+  width: auto !important;
   margin-left: auto !important;
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  padding-top: 0 !important;
+  border: none !important;
+  border-top: none !important;
+  gap: 0.5rem !important;
+}
+
+.bp-auth-navbar .bp-controls-group .btn,
+.bp-auth-navbar .bp-controls-group button {
+  flex: 0 0 auto !important;
 }
 
 [dir="rtl"] .bp-auth-navbar .bp-controls-group {
   margin-left: 0 !important;
   margin-right: auto !important;
+}
+
+[dir="rtl"] .bp-auth-navbar .bp-brand {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 /* Scrollable Sticky Sidebar for Blog Details & Long Columns */
